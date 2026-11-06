@@ -1,0 +1,17 @@
+# Unity 工程通过目录联接挂在 Project/*/unity/
+# 真实工程有独立仓库，勿把 Library / 嵌套 .git 推进本仓库
+Project/*/unity/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.swp
+.vs/
+*.user
+*.suo
+
+# Local logs / caches
+*.log
+.cache/

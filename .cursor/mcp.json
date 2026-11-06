@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "unity": {
+      "command": "C:\\Users\\Administrator\\AppData\\Local\\Unity\\bin\\unity.exe",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
+}

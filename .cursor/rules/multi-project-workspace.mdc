@@ -1,0 +1,37 @@
+---
+description: 多游戏工作区隔离、文档维护与开发顺序（始终生效）
+alwaysApply: true
+---
+
+# 多游戏工作区
+
+工作区根：`E:\Unity Development\`  
+游戏枢纽：`Project/<GameName>/`  
+当前已关联：`Project/Kingdom Of Cloud/` ↔ `D:\Kingdom Of Cloud`（`unity` 目录联接）
+
+## 隔离与放置
+
+- **关联开发**：Unity 工程留在原盘符；文档/拆解/记忆只在枢纽；`unity/` 仅联接
+- 不要把整套 Unity 工程搬进 `Project/`（Library、Hub 注册、体积）
+- 一次任务只服务一个 `Project/<Game>/`；禁止跨游戏改动
+- 游戏工程内不存放过程文档目录
+
+## 开发顺序
+
+1. `docs/` 项目文档  
+2. `breakdown/` 开发拆解  
+3. 在对应 `unity/`（真实工程）按拆解实现  
+4. 更新该游戏 `memory/CURRENT.md`
+
+## 文档维护（强制）
+
+- **已有文件**：整文件覆盖重写；禁止在旧文末追加「另见 / 补充 / 引用」
+- **没有的主题**：才新增文件或新章节
+
+## 路径速查 — Kingdom Of Cloud
+
+| 用途 | 路径 |
+|------|------|
+| 枢纽 | `Project/Kingdom Of Cloud/` |
+| Unity | `Project/Kingdom Of Cloud/unity/` → `D:\Kingdom Of Cloud` |
+| 编辑器 | Unity 6000.6.4f1 @ `D:\Unity\6000.6.4f1` |
