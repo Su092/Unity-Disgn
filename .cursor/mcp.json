@@ -1,10 +1,21 @@
 {
   "mcpServers": {
-    "unity": {
-      "command": "C:\\Users\\Administrator\\AppData\\Local\\Unity\\bin\\unity.exe",
+    "blender": {
+      "command": "C:\\Users\\Administrator\\.local\\bin\\uvx.exe",
       "args": [
-        "mcp"
-      ]
+        "--python",
+        "3.11",
+        "blender-mcp"
+      ],
+      "env": {
+        "UV_PYTHON_PREFERENCE": "only-managed",
+        "BLENDER_HOST": "127.0.0.1",
+        "BLENDER_PORT": "9876"
+      }
+    },
+    "unityMCP": {
+      "url": "http://127.0.0.1:8765/mcp",
+      "type": "http"
     }
   }
 }

@@ -1,0 +1,14 @@
+---
+description: APIMart 生图调用约定：跳过链路测试，直接生成正式资源
+alwaysApply: true
+---
+
+# APIMart 生图约定
+
+- 生图统一走 `apimart-image` skill，入口
+  `.cursor/skills/apimart-image/scripts/apimart_image.py`
+- **不要先跑 1k 测试图验证链路**，直接按需求生成正式资源
+- 密钥已在 `tools/.apimart.key`（已 gitignore），不要重复询问或写入
+- 例外只有两种：用户明确要求「验证一下」；API 实际报错需要定位
+- 新素材往清单 `tools/apimart-assets.json` 里加条目，不要散落临时命令
+- 产物按用途落到目标工程的 `Assets/` 子目录，交付前确认能在引擎内正常显示
