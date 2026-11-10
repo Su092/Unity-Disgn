@@ -37,9 +37,10 @@ $env:APIMART_API_KEY = "sk-你的新密钥"
 仓库根目录执行。脚本只用 Python 标准库，无需 pip 安装。
 
 ```bash
-# 单张
+# 单张（在仓库根执行，--out 写相对仓库根的路径）
 python .cursor/skills/apimart-image/scripts/apimart_image.py \
-  --prompt "提示词" --out Assets/Resources/Art/Generated/my-asset.png \
+  --prompt "提示词" \
+  --out "Project/Kingdom Of Cloud/unity/Assets/_Game/Res/Art/my-asset.png" \
   --size 9:16 --resolution 2k
 
 # 批量：按清单里的 id
@@ -54,6 +55,10 @@ python .cursor/skills/apimart-image/scripts/apimart_image.py \
 清单格式见 `tools/apimart-assets.json`：顶层 `style` 是全局风格后缀，
 `assets[]` 每项 `{id, out, size, resolution, prompt, no_global_style?}`。
 **新素材一律往这个清单里加条目**，不要散落成一堆临时命令。
+
+本工作区是多游戏枢纽，清单初始为空（`style` 留空字符串，脚本会自动跳过拼接）。
+`style` 是跨条目共用的后缀，只在同一批素材属于同一游戏、同一画风时才填；
+不同游戏混在一条清单里时，把风格写进各自的 `prompt`。
 
 ## 关键坑：本机 DNS 被污染
 
@@ -91,8 +96,8 @@ python .cursor/skills/apimart-image/scripts/apimart_image.py \
 
 ## 提示词写法
 
-- 全局风格后缀（赛璐璐、深紫星空、霓虹青/品红、无文字无 UI）在清单 `style` 里，**不要重复**；
-  需要脱离该风格时给该条加 `"no_global_style": true`。
+- 同一批素材的共用画风后缀写在清单 `style` 里，条目 prompt 里**不要重复**；
+  需要脱离该后缀时给该条加 `"no_global_style": true`（单张 `--prompt` 模式自动跳过 style）。
 - 地图类：写清 "top-down orthographic"、"portrait framing"、"the whole frame is the ground plane"，
   并逐项列出**不要**的东西（NO buildings / towers / gates / characters / text / UI）。
   负面清单要写具体物件名，泛泛的 "no extraneous elements" 不管用。
@@ -101,21 +106,16 @@ python .cursor/skills/apimart-image/scripts/apimart_image.py \
 
 ## 生成后的接入
 
-1. 产物放到 `Assets/Resources/Art/` 下对应子目录（`UI/`、`Sprites/`、`Backgrounds/`）。
-2. Unity 会自动导入；贴图导入规则在 `Assets/Scripts/Editor/STAssetPostprocessor.cs`
-   （Sprite 类型、九宫格边距、压缩设置）。改了导入规则需重新导入资源。
-3. 若是换掉已有同名贴图，直接覆盖文件即可，`.meta` 会保留原 GUID，引用不会断。
-4. 验证：`powershell -ExecutionPolicy Bypass -File scripts/check.ps1 -Task verify`
+1. 产物按用途落到**目标游戏工程内**：`Project/<游戏>/unity/Assets/...`
+   云端王国（Kingdom Of Cloud）用 `Assets/_Game/Res/` 下的 `Art/`、`UI/`、`Sprites/` 等子目录。
+2. 生成的 PNG 由 Unity 自动导入；Sprite 类型、九宫格边距、压缩等导入规则由各游戏工程
+   自己的 AssetPostprocessor 决定，工程没有统一规则时在 Inspector 里单独调。
+3. 覆盖同名贴图时直接覆盖文件即可，`.meta` 保留原 GUID，引用不会断。
+4. 验证：文件已落盘、体积正常（脚本已挡 <10KB），再回编辑器确认贴图与 Sprite 设置正确。
 
 ## 交付前必查
 
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts/check.ps1 -Task verify
-powershell -ExecutionPolicy Bypass -File scripts/check.ps1 -Task build
-& ".\Build\ST.exe" -autoshot -screen-width 540 -screen-height 960 -screen-fullscreen 0
-```
-
-截图会输出到 `Shots/`，确认新素材在实机里显示正常。
-
-> 本工作区未安装 Starlane 的 `scripts/check.ps1` 与 `Build/ST.exe`；在这里只需确认
-> 产物文件已落盘、体积正常、能在对应 Unity 工程中正常导入显示。
+- 产物落在目标游戏 `unity/Assets/` 内，路径与该游戏既有资源目录一致。
+- 文件体积合理，能在 Unity 里正常导入显示（不是错误页、不是半透明空洞）。
+- 本次新增素材已登记到 `tools/apimart-assets.json`。
+- 跨游戏时不要复用一个 `out` 路径，素材不共享。
