@@ -8,6 +8,10 @@
 Unity Development/
 ├── README.md                 # 本文件：工作区总览
 ├── .cursor/                  # Cursor MCP / rules / skills（工作区级）
+├── .agents/                  # Codex 侧 skills（内容与 .cursor/skills 对应）
+├── .codex/                   # Codex MCP 配置
+├── tools/                    # APIMart 凭据与素材清单（凭据与 IP 缓存已 gitignore）
+├── apimart-image/            # apimart skill 的独立副本（与 .cursor/skills 同内容）
 └── Project/
     ├── README.md             # 游戏注册表与新建规范
     └── <GameName>/           # 单一游戏的文档与开发枢纽（互不共享）
@@ -31,10 +35,22 @@ Unity Development/
 - 工作区级 `.cursor/skills`、MCP 配置可共用；各游戏的规则与记忆互不覆盖。
 - 新游戏只在 `Project/` 下新增同级目录，不改既有游戏目录。
 
+## 工作区工具
+
+| 工具 | 入口 | 说明 |
+|------|------|------|
+| APIMart 生图 | skill `apimart-image` → `.cursor/skills/apimart-image/scripts/apimart_image.py` | 只用 Python 标准库；`gpt-image-2`；约定见 `.cursor/rules/apimart-image.mdc` |
+| Unity CLI 工作流 | skill `unity-6000-cli` | 6000.6 的 `unity` CLI、batchmode、`-executeMethod` 与 MCP 取舍 |
+| MCP · blender | `.cursor/mcp.json` → `uvx blender-mcp` | 需 Blender 开启对应插件并监听 9876 |
+| MCP · unityMCP | `.cursor/mcp.json` → `http://127.0.0.1:8765/mcp` | 需 Unity 编辑器打开工程并启动 MCP 桥 |
+
+新增/修改 skill 时，`.cursor/skills`、`.agents/skills` 与根 `apimart-image/` 三处副本要一起更新（MCP 配置同理：`.cursor/mcp.json` 与 `.codex/config.toml`）。
+
 ## 已注册游戏
 
 | 游戏 | 枢纽目录 | Unity 工程 |
 |------|----------|------------|
 | 云端王国 (Kingdom Of Cloud) | `Project/Kingdom Of Cloud/` | `D:\Kingdom Of Cloud`（联接为 `Project/Kingdom Of Cloud/unity`） |
+| 星轨防线 (Star Defanse) | `Project/Star Defanse/` | `E:\Star Defanse`（联接为 `Project/Star Defanse/unity`） |
 
 编辑器目标族：**Unity 6000.6.x**（以各游戏 `PROJECT.md` 为准）。

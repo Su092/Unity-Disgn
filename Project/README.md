@@ -7,6 +7,7 @@
 | 目录名 | 显示名 | Unity 工程路径 | 状态 |
 |--------|--------|----------------|------|
 | `Kingdom Of Cloud` | 云端王国 | `D:\Kingdom Of Cloud` | 已关联 |
+| `Star Defanse` | 星轨防线 STARLANE BULWARK | `E:\Star Defanse` | 已关联 |
 
 ## 新建游戏（检查清单）
 
