@@ -57,12 +57,23 @@
 | `-Task build` | `RESULT Succeeded`，`SIZE 271718913`，`ERRORS 0`，`TIME 34.9 s`；OUTPUT = `E:/Unity Development/Project/Star Defanse/unity/Build/ST.exe`（新路径，旧日志的 `E:/omg test` 问题已消除） |
 | `-Task shots` | `INPUT 6/6`、`MODEL 4/4`、`FACING 3/3`、`SAVE 2/2`、`FX 2/2`；`UI SLICE` 4/4·6/6·10/10·6/6·6/6·10/10、`UI TEXT` 6/6·25/25·65/65·9/9·10/10·30/30 全绿；20 张截图写入 `Shots/` |
 
+## 已推送（2026-11-10）
+
+| 仓库 | 提交 | 说明 |
+|------|------|------|
+| `Unity-Disgn`（枢纽） | `a4033d1` | `chore(skill)`：apimart-image 适配多游戏工作区 + `tools/apimart-assets.json` 骨架 + `.gitignore` 补 `__pycache__` |
+| `Unity-Disgn`（枢纽） | `bfe3eab` | `docs(project)`：新增 `Project/Star Defanse/`（17 文件 / +1082），注册表与工作区规则同步 |
+| `Star-Defanse`（工程） | `2370041` | `docs`：文档迁出工程 + 过程产物归档（73 文件 / −260，70 个删除） |
+
+两个仓库工作树均为 clean，`origin/main` 已对齐。
+
 ## 未决 / 注意
 
-- 工程侧改动尚未在 `Star-Defanse` 仓库提交（含 70 个删除，提交后仓库体积不再包含这 87 MB 位图）
 - 归档导致四组工具脚本的相对路径暂时失效：`tower_cut/trim/overview` 写死 `TowerDesigns/`，
   `ui_install/ui_borders/border_measure/ui_c_compare` 写死 `UiStyleTests/`；要重跑先把目录移回或用清单重新生成
+- 87 MB 位图只是退出跟踪，Git **历史**里仍在；要彻底瘦身需 `filter-repo` 重写历史（未做）
 - `Shots/` 里还留着 `_c6-*.png`、`_v1.png`、`_v2.png` 三组旧试验图（已 gitignore，不影响出包）
+- 工程 `.gitignore` 原有中文注释是混合编码（部分 GBK 字节），本次只做 ASCII 追加，未重写旧行
 - `Art/Sprites/` 27 张位图已废弃，仅 `STBuild.CheckSprites` 仍在校验
 - 数值未做实机校准（星级阈值、`nexus` 车道、召唤/强化涨价曲线、BOSS 波可解性）
 - Unity 未打开时 MCP 桥不通；用 `python unity/tools/mcp_bridge_check.py` 定位
