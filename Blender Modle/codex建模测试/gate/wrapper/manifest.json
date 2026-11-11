@@ -1,0 +1,33 @@
+﻿{
+    "tool":  "blender-gate.ps1",
+    "created":  "2026-11-11 13:31:32",
+    "blender":  "Blender 5.2.3 LTS",
+    "skill_version":  "VERSION = \"1.0.0\"",
+    "inputs":  {
+                   "blend":  "E:\\Unity Development\\Blender Modle\\codex建模测试\\out\\church.blend",
+                   "fbx":  "E:\\Unity Development\\Blender Modle\\codex建模测试\\export\\Modle_WoodenGothicChurch.fbx",
+                   "md5":  {
+                               "blend":  "a1186553593fbfaa2a50241870736a51",
+                               "fbx":  "fa199bc42bfaffa2d67827bba53ec3c6"
+                           }
+               },
+    "params":  {
+                   "objects":  "",
+                   "min_mm":  0,
+                   "resolution_mm":  0,
+                   "expect":  "",
+                   "tol_mm":  3,
+                   "max_tris":  60000,
+                   "no_bone":  true,
+                   "require_floor":  true,
+                   "contract_only":  true
+               },
+    "verdicts":  [
+                     {
+                         "label":  "fbx/contract",
+                         "verdict":  "pass",
+                         "file":  "E:\\Unity Development\\Blender Modle\\codex建模测试\\gate\\wrapper\\contract-fbx.json"
+                     }
+                 ],
+    "exit_code":  0
+}

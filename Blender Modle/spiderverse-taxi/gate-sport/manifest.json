@@ -1,0 +1,53 @@
+{
+    "tool":  "blender-gate.ps1",
+    "created":  "2026-11-10 14:49:20",
+    "blender":  "Blender 5.2.3 LTS",
+    "skill_version":  "VERSION = \"1.0.0\"",
+    "inputs":  {
+                   "blend":  "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\out\\sportscar.blend",
+                   "fbx":  "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\out\\Modle_Vehicle_SpiderSport.fbx",
+                   "md5":  {
+                               "blend":  "7d39ebb3541296a90bcc28c8fd4054f7",
+                               "fbx":  "7214efffae30bf1eb6787b170a0a31cd"
+                           }
+               },
+    "params":  {
+                   "objects":  "GEO-SportSpider",
+                   "min_mm":  5,
+                   "resolution_mm":  0,
+                   "expect":  "4200,1780,1215",
+                   "tol_mm":  3,
+                   "max_tris":  60000,
+                   "no_bone":  true,
+                   "require_floor":  true,
+                   "contract_only":  false
+               },
+    "verdicts":  [
+                     {
+                         "label":  "blend/gates",
+                         "verdict":  "pass",
+                         "file":  "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\gate-sport\\decided-blend.json"
+                     },
+                     {
+                         "label":  "uv/blend",
+                         "verdict":  "pass",
+                         "file":  "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\gate-sport\\uv-blend.json"
+                     },
+                     {
+                         "label":  "fbx/gates",
+                         "verdict":  "pass",
+                         "file":  "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\gate-sport\\decided-fbx.json"
+                     },
+                     {
+                         "label":  "uv/fbx",
+                         "verdict":  "pass",
+                         "file":  "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\gate-sport\\uv-fbx.json"
+                     },
+                     {
+                         "label":  "fbx/contract",
+                         "verdict":  "pass",
+                         "file":  "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\gate-sport\\contract-fbx.json"
+                     }
+                 ],
+    "exit_code":  0
+}

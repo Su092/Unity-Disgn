@@ -1,0 +1,88 @@
+{
+  "gate": "thickness",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Body": {
+      "verdict": "pass",
+      "object": "GEO-Body",
+      "min_mm": 128.1875,
+      "median_mm": 436.6142,
+      "samples": 112,
+      "samples_below": 0,
+      "min_mm_threshold": 15.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-WheelFL_tire": {
+      "verdict": "pass",
+      "object": "GEO-WheelFL_tire",
+      "min_mm": 189.1184,
+      "median_mm": 189.7855,
+      "samples": 280,
+      "samples_below": 0,
+      "min_mm_threshold": 15.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-WheelFL_rim": {
+      "verdict": "pass",
+      "object": "GEO-WheelFL_rim",
+      "min_mm": 179.9898,
+      "median_mm": 337.8522,
+      "samples": 30,
+      "samples_below": 0,
+      "min_mm_threshold": 15.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-Windshield": {
+      "verdict": "pass",
+      "object": "GEO-Windshield",
+      "min_mm": 16.24,
+      "median_mm": 17.0232,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 15.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-SeatCushionL": {
+      "verdict": "pass",
+      "object": "GEO-SeatCushionL",
+      "min_mm": 79.99,
+      "median_mm": 339.99,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 15.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-SidePipeL": {
+      "verdict": "pass",
+      "object": "GEO-SidePipeL",
+      "min_mm": 108.6356,
+      "median_mm": 108.6357,
+      "samples": 22,
+      "samples_below": 0,
+      "min_mm_threshold": 15.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-GrillePanel": {
+      "verdict": "pass",
+      "object": "GEO-GrillePanel",
+      "min_mm": 39.9892,
+      "median_mm": 231.2194,
+      "samples": 30,
+      "samples_below": 0,
+      "min_mm_threshold": 15.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · thickness · 7 对象"
+}

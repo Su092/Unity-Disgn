@@ -255,8 +255,15 @@ def run_one(key, item, global_style=""):
     prompt = item["prompt"]
     if global_style and not item.get("no_global_style"):
         prompt = prompt + " " + global_style
+    # 工作区口径：贴图 2k / 参考图 1k。清单条目应当显式写 resolution，
+    # 缺失时按 out 路径猜一次并告警 —— 静默用默认档位极易在计费或细节上出错。
+    if not item.get("resolution"):
+        guess = "1k" if ("/refs/" in item["out"] or item["out"].startswith("refs/")) else "2k"
+        print("  WARN: [%s] 清单未写 resolution，按 out 路径推断为 %s"
+              "（贴图应写 2k、参考图应写 1k）" % (item["id"], guess))
+        item["resolution"] = guess
     print("[%s] submitting (%s / %s)" % (item["id"], item.get("size", "auto"),
-                                         item.get("resolution", "1k")))
+                                         item.get("resolution")))
     tid = submit(key, prompt, item.get("size"), item.get("resolution"),
                  item.get("image_urls"), item.get("nsfw_check", False))
     print("  task_id=%s" % tid)

@@ -1,0 +1,4582 @@
+{
+  "gate": "selfint",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Plinth": {
+      "verdict": "pass",
+      "object": "GEO-Plinth",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PlinthStep": {
+      "verdict": "pass",
+      "object": "GEO-PlinthStep",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerShaft": {
+      "verdict": "pass",
+      "object": "GEO-TowerShaft",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerCorner_0_-30": {
+      "verdict": "pass",
+      "object": "GEO-TowerCorner_0_-30",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerCorner_0_27": {
+      "verdict": "pass",
+      "object": "GEO-TowerCorner_0_27",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerCorner_57_-30": {
+      "verdict": "pass",
+      "object": "GEO-TowerCorner_57_-30",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerCorner_57_27": {
+      "verdict": "pass",
+      "object": "GEO-TowerCorner_57_27",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerCornice": {
+      "verdict": "pass",
+      "object": "GEO-TowerCornice",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerSpire": {
+      "verdict": "pass",
+      "object": "GEO-TowerSpire",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerPinnacle0": {
+      "verdict": "pass",
+      "object": "GEO-TowerPinnacle0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerPinnacle1": {
+      "verdict": "pass",
+      "object": "GEO-TowerPinnacle1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerPinnacle2": {
+      "verdict": "pass",
+      "object": "GEO-TowerPinnacle2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerPinnacle3": {
+      "verdict": "pass",
+      "object": "GEO-TowerPinnacle3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerBand40": {
+      "verdict": "pass",
+      "object": "GEO-TowerBand40",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerBand80": {
+      "verdict": "pass",
+      "object": "GEO-TowerBand80",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerBand120": {
+      "verdict": "pass",
+      "object": "GEO-TowerBand120",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseRing": {
+      "verdict": "pass",
+      "object": "GEO-RoseRing",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseGlass": {
+      "verdict": "pass",
+      "object": "GEO-RoseGlass",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseHub": {
+      "verdict": "pass",
+      "object": "GEO-RoseHub",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseSpoke0": {
+      "verdict": "pass",
+      "object": "GEO-RoseSpoke0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseSpoke1": {
+      "verdict": "pass",
+      "object": "GEO-RoseSpoke1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseSpoke2": {
+      "verdict": "pass",
+      "object": "GEO-RoseSpoke2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseSpoke3": {
+      "verdict": "pass",
+      "object": "GEO-RoseSpoke3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseSpoke4": {
+      "verdict": "pass",
+      "object": "GEO-RoseSpoke4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseSpoke5": {
+      "verdict": "pass",
+      "object": "GEO-RoseSpoke5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseSpoke6": {
+      "verdict": "pass",
+      "object": "GEO-RoseSpoke6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RoseSpoke7": {
+      "verdict": "pass",
+      "object": "GEO-RoseSpoke7",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-Porch": {
+      "verdict": "pass",
+      "object": "GEO-Porch",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PorchGable": {
+      "verdict": "pass",
+      "object": "GEO-PorchGable",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PorchRoof_S": {
+      "verdict": "pass",
+      "object": "GEO-PorchRoof_S",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PorchRoof_N": {
+      "verdict": "pass",
+      "object": "GEO-PorchRoof_N",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-MainDoor": {
+      "verdict": "pass",
+      "object": "GEO-MainDoor",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-DoorPlank0": {
+      "verdict": "pass",
+      "object": "GEO-DoorPlank0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-DoorPlank1": {
+      "verdict": "pass",
+      "object": "GEO-DoorPlank1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-DoorPlank2": {
+      "verdict": "pass",
+      "object": "GEO-DoorPlank2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-DoorPlank3": {
+      "verdict": "pass",
+      "object": "GEO-DoorPlank3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-DoorHinge0": {
+      "verdict": "pass",
+      "object": "GEO-DoorHinge0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-DoorHinge1": {
+      "verdict": "pass",
+      "object": "GEO-DoorHinge1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-DoorHinge2": {
+      "verdict": "pass",
+      "object": "GEO-DoorHinge2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-NaveWallS": {
+      "verdict": "pass",
+      "object": "GEO-NaveWallS",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-NaveWallN": {
+      "verdict": "pass",
+      "object": "GEO-NaveWallN",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-NaveEndE": {
+      "verdict": "pass",
+      "object": "GEO-NaveEndE",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWallS": {
+      "verdict": "pass",
+      "object": "GEO-AisleWallS",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWallN": {
+      "verdict": "pass",
+      "object": "GEO-AisleWallN",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleEndW_S": {
+      "verdict": "pass",
+      "object": "GEO-AisleEndW_S",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleEndW_N": {
+      "verdict": "pass",
+      "object": "GEO-AisleEndW_N",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleEndE_S": {
+      "verdict": "pass",
+      "object": "GEO-AisleEndE_S",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleEndE_N": {
+      "verdict": "pass",
+      "object": "GEO-AisleEndE_N",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-NaveRoof_S": {
+      "verdict": "pass",
+      "object": "GEO-NaveRoof_S",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-NaveRoof_N": {
+      "verdict": "pass",
+      "object": "GEO-NaveRoof_N",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleRoofS": {
+      "verdict": "pass",
+      "object": "GEO-AisleRoofS",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleRoofN": {
+      "verdict": "pass",
+      "object": "GEO-AisleRoofN",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RidgeBeam": {
+      "verdict": "pass",
+      "object": "GEO-RidgeBeam",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS1": {
+      "verdict": "pass",
+      "object": "GEO-BattenS1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS2": {
+      "verdict": "pass",
+      "object": "GEO-BattenS2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS3": {
+      "verdict": "pass",
+      "object": "GEO-BattenS3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS4": {
+      "verdict": "pass",
+      "object": "GEO-BattenS4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS5": {
+      "verdict": "pass",
+      "object": "GEO-BattenS5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS6": {
+      "verdict": "pass",
+      "object": "GEO-BattenS6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS7": {
+      "verdict": "pass",
+      "object": "GEO-BattenS7",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS8": {
+      "verdict": "pass",
+      "object": "GEO-BattenS8",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS9": {
+      "verdict": "pass",
+      "object": "GEO-BattenS9",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS10": {
+      "verdict": "pass",
+      "object": "GEO-BattenS10",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS11": {
+      "verdict": "pass",
+      "object": "GEO-BattenS11",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenS12": {
+      "verdict": "pass",
+      "object": "GEO-BattenS12",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN1": {
+      "verdict": "pass",
+      "object": "GEO-BattenN1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN2": {
+      "verdict": "pass",
+      "object": "GEO-BattenN2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN3": {
+      "verdict": "pass",
+      "object": "GEO-BattenN3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN4": {
+      "verdict": "pass",
+      "object": "GEO-BattenN4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN5": {
+      "verdict": "pass",
+      "object": "GEO-BattenN5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN6": {
+      "verdict": "pass",
+      "object": "GEO-BattenN6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN7": {
+      "verdict": "pass",
+      "object": "GEO-BattenN7",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN8": {
+      "verdict": "pass",
+      "object": "GEO-BattenN8",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN9": {
+      "verdict": "pass",
+      "object": "GEO-BattenN9",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN10": {
+      "verdict": "pass",
+      "object": "GEO-BattenN10",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN11": {
+      "verdict": "pass",
+      "object": "GEO-BattenN11",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-BattenN12": {
+      "verdict": "pass",
+      "object": "GEO-BattenN12",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenS1": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenS1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenS2": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenS2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenS3": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenS3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenS4": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenS4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenS5": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenS5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenS6": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenS6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenS7": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenS7",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenS8": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenS8",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenN1": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenN1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenN2": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenN2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenN3": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenN3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenN4": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenN4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenN5": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenN5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenN6": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenN6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenN7": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenN7",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleBattenN8": {
+      "verdict": "pass",
+      "object": "GEO-AisleBattenN8",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-Apse": {
+      "verdict": "pass",
+      "object": "GEO-Apse",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseRoof": {
+      "verdict": "pass",
+      "object": "GEO-ApseRoof",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseBand": {
+      "verdict": "pass",
+      "object": "GEO-ApseBand",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressLowS0": {
+      "verdict": "pass",
+      "object": "GEO-ButtressLowS0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressUpS0": {
+      "verdict": "pass",
+      "object": "GEO-ButtressUpS0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressPinS0": {
+      "verdict": "pass",
+      "object": "GEO-ButtressPinS0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressLowS1": {
+      "verdict": "pass",
+      "object": "GEO-ButtressLowS1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressUpS1": {
+      "verdict": "pass",
+      "object": "GEO-ButtressUpS1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressPinS1": {
+      "verdict": "pass",
+      "object": "GEO-ButtressPinS1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressLowS2": {
+      "verdict": "pass",
+      "object": "GEO-ButtressLowS2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressUpS2": {
+      "verdict": "pass",
+      "object": "GEO-ButtressUpS2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressPinS2": {
+      "verdict": "pass",
+      "object": "GEO-ButtressPinS2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressLowS3": {
+      "verdict": "pass",
+      "object": "GEO-ButtressLowS3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressUpS3": {
+      "verdict": "pass",
+      "object": "GEO-ButtressUpS3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressPinS3": {
+      "verdict": "pass",
+      "object": "GEO-ButtressPinS3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressLowN0": {
+      "verdict": "pass",
+      "object": "GEO-ButtressLowN0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressUpN0": {
+      "verdict": "pass",
+      "object": "GEO-ButtressUpN0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressPinN0": {
+      "verdict": "pass",
+      "object": "GEO-ButtressPinN0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressLowN1": {
+      "verdict": "pass",
+      "object": "GEO-ButtressLowN1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressUpN1": {
+      "verdict": "pass",
+      "object": "GEO-ButtressUpN1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressPinN1": {
+      "verdict": "pass",
+      "object": "GEO-ButtressPinN1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressLowN2": {
+      "verdict": "pass",
+      "object": "GEO-ButtressLowN2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressUpN2": {
+      "verdict": "pass",
+      "object": "GEO-ButtressUpN2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressPinN2": {
+      "verdict": "pass",
+      "object": "GEO-ButtressPinN2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressLowN3": {
+      "verdict": "pass",
+      "object": "GEO-ButtressLowN3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressUpN3": {
+      "verdict": "pass",
+      "object": "GEO-ButtressUpN3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ButtressPinN3": {
+      "verdict": "pass",
+      "object": "GEO-ButtressPinN3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_jambL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_jambR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_sill": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archL0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archL1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archL2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archL3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archL4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archL5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archL6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archR0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archR1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archR2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archR3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archR4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archR5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_archR6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_mullion": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_transomL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS0_transomR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS0_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleGlassS0": {
+      "verdict": "pass",
+      "object": "GEO-AisleGlassS0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_jambL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_jambR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_sill": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archL0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archL1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archL2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archL3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archL4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archL5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archL6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archR0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archR1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archR2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archR3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archR4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archR5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_archR6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_mullion": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_transomL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS1_transomR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS1_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleGlassS1": {
+      "verdict": "pass",
+      "object": "GEO-AisleGlassS1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_jambL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_jambR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_sill": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archL0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archL1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archL2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archL3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archL4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archL5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archL6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archR0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archR1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archR2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archR3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archR4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archR5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_archR6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_mullion": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_transomL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS2_transomR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS2_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleGlassS2": {
+      "verdict": "pass",
+      "object": "GEO-AisleGlassS2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_jambL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_jambR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_sill": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archL0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archL1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archL2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archL3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archL4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archL5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archL6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archR0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archR1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archR2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archR3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archR4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archR5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_archR6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_mullion": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_transomL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinS3_transomR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinS3_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleGlassS3": {
+      "verdict": "pass",
+      "object": "GEO-AisleGlassS3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_jambL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_jambR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_sill": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archL0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archL1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archL2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archL3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archL4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archL5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archL6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archR0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archR1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archR2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archR3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archR4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archR5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_archR6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_mullion": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_transomL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN0_transomR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN0_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleGlassN0": {
+      "verdict": "pass",
+      "object": "GEO-AisleGlassN0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_jambL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_jambR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_sill": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archL0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archL1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archL2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archL3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archL4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archL5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archL6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archR0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archR1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archR2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archR3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archR4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archR5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_archR6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_mullion": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_transomL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN1_transomR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN1_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleGlassN1": {
+      "verdict": "pass",
+      "object": "GEO-AisleGlassN1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_jambL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_jambR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_sill": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archL0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archL1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archL2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archL3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archL4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archL5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archL6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archR0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archR1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archR2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archR3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archR4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archR5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_archR6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_mullion": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_transomL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN2_transomR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN2_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleGlassN2": {
+      "verdict": "pass",
+      "object": "GEO-AisleGlassN2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_jambL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_jambR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_sill": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archL0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archL1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archL2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archL3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archL4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archL5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archL6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archR0": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archR1": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archR2": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archR3": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archR4": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archR5": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_archR6": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_mullion": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_transomL": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleWinN3_transomR": {
+      "verdict": "pass",
+      "object": "GEO-AisleWinN3_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-AisleGlassN3": {
+      "verdict": "pass",
+      "object": "GEO-AisleGlassN3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_sill": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS0_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS0_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerGlassS0": {
+      "verdict": "pass",
+      "object": "GEO-ClerGlassS0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_sill": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS1_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS1_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerGlassS1": {
+      "verdict": "pass",
+      "object": "GEO-ClerGlassS1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_sill": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS2_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS2_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerGlassS2": {
+      "verdict": "pass",
+      "object": "GEO-ClerGlassS2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_sill": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinS3_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinS3_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerGlassS3": {
+      "verdict": "pass",
+      "object": "GEO-ClerGlassS3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_sill": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN0_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN0_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerGlassN0": {
+      "verdict": "pass",
+      "object": "GEO-ClerGlassN0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_sill": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN1_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN1_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerGlassN1": {
+      "verdict": "pass",
+      "object": "GEO-ClerGlassN1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_sill": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN2_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN2_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerGlassN2": {
+      "verdict": "pass",
+      "object": "GEO-ClerGlassN2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_sill": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerWinN3_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ClerWinN3_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ClerGlassN3": {
+      "verdict": "pass",
+      "object": "GEO-ClerGlassN3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_jambL": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_jambR": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_sill": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archL0": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archL1": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archL2": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archL3": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archL4": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archL5": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archL6": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archR0": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archR1": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archR2": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archR3": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archR4": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archR5": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_archR6": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_mullion": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_transomL": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverW_transomR": {
+      "verdict": "pass",
+      "object": "GEO-LouverW_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_jambL": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_jambR": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_sill": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archL0": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archL1": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archL2": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archL3": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archL4": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archL5": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archL6": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archR0": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archR1": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archR2": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archR3": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archR4": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archR5": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_archR6": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_mullion": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_transomL": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverE_transomR": {
+      "verdict": "pass",
+      "object": "GEO-LouverE_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_jambL": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_jambR": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_sill": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archL0": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archL1": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archL2": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archL3": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archL4": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archL5": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archL6": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archR0": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archR1": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archR2": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archR3": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archR4": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archR5": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_archR6": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_mullion": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_transomL": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverS_transomR": {
+      "verdict": "pass",
+      "object": "GEO-LouverS_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_jambL": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_jambR": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_sill": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archL0": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archL1": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archL2": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archL3": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archL4": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archL5": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archL6": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archR0": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archR1": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archR2": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archR3": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archR4": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archR5": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_archR6": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_mullion": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_transomL": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverN_transomR": {
+      "verdict": "pass",
+      "object": "GEO-LouverN_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverPanelW": {
+      "verdict": "pass",
+      "object": "GEO-LouverPanelW",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverPanelE": {
+      "verdict": "pass",
+      "object": "GEO-LouverPanelE",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverPanelS": {
+      "verdict": "pass",
+      "object": "GEO-LouverPanelS",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-LouverPanelN": {
+      "verdict": "pass",
+      "object": "GEO-LouverPanelN",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_sill": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin0_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin0_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseGlass0": {
+      "verdict": "pass",
+      "object": "GEO-ApseGlass0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_sill": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin1_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin1_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseGlass1": {
+      "verdict": "pass",
+      "object": "GEO-ApseGlass1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_jambL": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_jambL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_jambR": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_jambR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_sill": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_sill",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archL0": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archL0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archL1": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archL1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archL2": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archL2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archL3": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archL3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archL4": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archL4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archL5": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archL5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archL6": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archL6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archR0": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archR0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archR1": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archR1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archR2": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archR2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archR3": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archR3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archR4": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archR4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archR5": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archR5",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_archR6": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_archR6",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_mullion": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_mullion",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_transomL": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_transomL",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseWin2_transomR": {
+      "verdict": "pass",
+      "object": "GEO-ApseWin2_transomR",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-ApseGlass2": {
+      "verdict": "pass",
+      "object": "GEO-ApseGlass2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostS0": {
+      "verdict": "pass",
+      "object": "GEO-PostS0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostS1": {
+      "verdict": "pass",
+      "object": "GEO-PostS1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostS2": {
+      "verdict": "pass",
+      "object": "GEO-PostS2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostS3": {
+      "verdict": "pass",
+      "object": "GEO-PostS3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostS4": {
+      "verdict": "pass",
+      "object": "GEO-PostS4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS00": {
+      "verdict": "pass",
+      "object": "GEO-RailS00",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS01": {
+      "verdict": "pass",
+      "object": "GEO-RailS01",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS02": {
+      "verdict": "pass",
+      "object": "GEO-RailS02",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS03": {
+      "verdict": "pass",
+      "object": "GEO-RailS03",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS10": {
+      "verdict": "pass",
+      "object": "GEO-RailS10",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS11": {
+      "verdict": "pass",
+      "object": "GEO-RailS11",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS12": {
+      "verdict": "pass",
+      "object": "GEO-RailS12",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS13": {
+      "verdict": "pass",
+      "object": "GEO-RailS13",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS20": {
+      "verdict": "pass",
+      "object": "GEO-RailS20",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS21": {
+      "verdict": "pass",
+      "object": "GEO-RailS21",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS22": {
+      "verdict": "pass",
+      "object": "GEO-RailS22",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailS23": {
+      "verdict": "pass",
+      "object": "GEO-RailS23",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-StringCourseS": {
+      "verdict": "pass",
+      "object": "GEO-StringCourseS",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostN0": {
+      "verdict": "pass",
+      "object": "GEO-PostN0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostN1": {
+      "verdict": "pass",
+      "object": "GEO-PostN1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostN2": {
+      "verdict": "pass",
+      "object": "GEO-PostN2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostN3": {
+      "verdict": "pass",
+      "object": "GEO-PostN3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PostN4": {
+      "verdict": "pass",
+      "object": "GEO-PostN4",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN00": {
+      "verdict": "pass",
+      "object": "GEO-RailN00",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN01": {
+      "verdict": "pass",
+      "object": "GEO-RailN01",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN02": {
+      "verdict": "pass",
+      "object": "GEO-RailN02",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN03": {
+      "verdict": "pass",
+      "object": "GEO-RailN03",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN10": {
+      "verdict": "pass",
+      "object": "GEO-RailN10",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN11": {
+      "verdict": "pass",
+      "object": "GEO-RailN11",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN12": {
+      "verdict": "pass",
+      "object": "GEO-RailN12",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN13": {
+      "verdict": "pass",
+      "object": "GEO-RailN13",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN20": {
+      "verdict": "pass",
+      "object": "GEO-RailN20",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN21": {
+      "verdict": "pass",
+      "object": "GEO-RailN21",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN22": {
+      "verdict": "pass",
+      "object": "GEO-RailN22",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-RailN23": {
+      "verdict": "pass",
+      "object": "GEO-RailN23",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-StringCourseN": {
+      "verdict": "pass",
+      "object": "GEO-StringCourseN",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerPost0": {
+      "verdict": "pass",
+      "object": "GEO-TowerPost0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerPost1": {
+      "verdict": "pass",
+      "object": "GEO-TowerPost1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerPost2": {
+      "verdict": "pass",
+      "object": "GEO-TowerPost2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerPost3": {
+      "verdict": "pass",
+      "object": "GEO-TowerPost3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerRail0": {
+      "verdict": "pass",
+      "object": "GEO-TowerRail0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerRail1": {
+      "verdict": "pass",
+      "object": "GEO-TowerRail1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerRail2": {
+      "verdict": "pass",
+      "object": "GEO-TowerRail2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-TowerRail3": {
+      "verdict": "pass",
+      "object": "GEO-TowerRail3",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PorchPost0": {
+      "verdict": "pass",
+      "object": "GEO-PorchPost0",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PorchPost1": {
+      "verdict": "pass",
+      "object": "GEO-PorchPost1",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PorchPost2": {
+      "verdict": "pass",
+      "object": "GEO-PorchPost2",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-PorchRail": {
+      "verdict": "pass",
+      "object": "GEO-PorchRail",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-CrossV": {
+      "verdict": "pass",
+      "object": "GEO-CrossV",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    },
+    "GEO-CrossH": {
+      "verdict": "pass",
+      "object": "GEO-CrossH",
+      "pair_count": 0,
+      "pairs": [],
+      "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · selfint · 653 对象"
+}

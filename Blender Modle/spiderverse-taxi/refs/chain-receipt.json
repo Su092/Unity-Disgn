@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sport-ref-anchor",
+    "task_id": "task_01M721VWF36SVAXZT7B0SNSSWC",
+    "url": "https://getapib.org/image/9998205708302687-5b306481-dbda-4810-8465-a0fdb109fba6-image_task_01M721X16W08PKRTC0XWN1PS7K_0.png",
+    "out": "E:\\Unity Development\\Blender Modle/spiderverse-taxi/refs/sport-ref-anchor.png",
+    "seconds": 52.8
+  },
+  {
+    "id": "sport-ref-side",
+    "task_id": "task_01M721XBS2DFTYM2M9BHCEB1KN",
+    "url": "https://getapib.org/image/9998205708245338-8acef608-7278-4332-a260-e11cc08175c8-image_task_01M721XBS2DFTYM2M9BHCEB1KN.png",
+    "out": "E:\\Unity Development\\Blender Modle/spiderverse-taxi/refs/sport-ref-side.png",
+    "seconds": 53.6
+  },
+  {
+    "id": "sport-ref-front",
+    "task_id": "task_01M721Z0HYTPFY799KY772BJY8",
+    "url": "https://getapib.org/image/9998205708083875-19db2392-dd98-4587-83f4-9e3428fbd264-image_task_01M721Z0HYTPFY799KY772BJY8.png",
+    "out": "E:\\Unity Development\\Blender Modle/spiderverse-taxi/refs/sport-ref-front.png",
+    "seconds": 163.8
+  },
+  {
+    "id": "sport-ref-rear34",
+    "task_id": "task_01M7223ZVJ5228WREXPD9X2PJR",
+    "url": "https://getapib.org/image/9998205708021417-5ec08b24-65c6-48df-a4e8-b8b1f9d126ec-image_img_4f9fb54d95e240c7a48a66d5a9f313d1_0.png",
+    "out": "E:\\Unity Development\\Blender Modle/spiderverse-taxi/refs/sport-ref-rear34.png",
+    "seconds": 60.2
+  }
+]

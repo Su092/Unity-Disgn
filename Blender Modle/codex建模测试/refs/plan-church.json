@@ -1,0 +1,33 @@
+{
+  "_note": "Codex 建模测试 · 木制哥特式教堂参考图。anchor 先生成，其余视角以 anchor 为参考，保证同一座建筑。",
+  "anchor": {
+    "id": "church-ref-hero",
+    "out": "Blender Modle/codex建模测试/refs/church-ref-hero.png",
+    "size": "16:9",
+    "resolution": "2k",
+    "prompt": "Three-quarter exterior view of a Gothic church built ENTIRELY of wood. This is a timber-framed Gothic church, not a stone one: every visible surface is wood. The whole building is centered and fully inside the frame with clear margins. Clean studio presentation on a plain flat neutral light-grey background, even flat lighting, no cast shadow on the ground, no other buildings, no people, no trees, no text, no watermark, no border. ARCHITECTURE, unmistakably Gothic: one tall square west bell tower with a slender octagonal wooden spire and four small corner pinnacles; a large circular rose window with wooden tracery on the west face above a tall pointed-arch portal; a steep high-pitched gabled nave roof running east; lower single-slope aisle roofs on both sides; stepped buttresses with small pinnacles dividing the long walls into four bays; tall pointed-arch lancet windows with wooden mullions in every bay; a lower polygonal apse at the east end with its own small roof; a small cross finial on the spire. CONSTRUCTION, unmistakably timber: exposed dark timber framing on all walls - vertical studs, horizontal rails, diagonal braces and corner posts clearly proud of pale infill plank panels; walls made of vertical wooden boards with visible seams; roofs clad in wooden shingles; wooden mullions, wooden tracery, wooden doors with vertical plank battens and iron strap hinges; every edge crisp and faceted, no stone masonry, no ashlar blocks, no mortar joints. Two main wood tones: dark weathered brown structural timber and pale honey-colored wood plank infill, with the roof shingles a mid grey-brown. Style: clean stylized game-asset look, faceted hard-surface reads, crisp geometric planes, flat readable color bands, subtle ambient occlusion in the recesses, no painterly texture, no photorealism, no lens effects."
+  },
+  "views": [
+    {
+      "id": "church-ref-west",
+      "out": "Blender Modle/codex建模测试/refs/church-ref-west.png",
+      "size": "2:3",
+      "resolution": "2k",
+      "prompt": "Same exact wooden Gothic church as the reference image, now shown as a PURE ORTHOGRAPHIC WEST ELEVATION: perfectly flat, zero perspective, camera exactly perpendicular to the west facade, parallel vertical lines stay parallel, the whole building centered and fully inside the frame with clear margins, ground line exactly horizontal near the bottom. Keep identical architecture, identical proportions, identical tower and spire shape, identical rose window, identical timber colors and identical timber framing as the reference. Emphasize the facade details: one tall central square bell tower with an octagonal wooden spire and four corner pinnacles, a large circular rose window with wooden tracery, a tall pointed-arch portal with a vertical plank door and iron hinges, narrow pointed-arch lancet windows on the tower face, exposed dark timber studs, rails and diagonal braces framing pale plank panels, stepped buttresses at the outer corners, the low side-aisle roofs visible at the left and right edges. Plain flat neutral light-grey background, even flat lighting, no cast shadow, no perspective distortion, no ground shadow, no other objects, no text, no watermark, no border. Clean stylized game-asset look with crisp geometric planes."
+    },
+    {
+      "id": "church-ref-side",
+      "out": "Blender Modle/codex建模测试/refs/church-ref-side.png",
+      "size": "16:9",
+      "resolution": "2k",
+      "prompt": "Same exact wooden Gothic church as the reference image, now shown as a PURE ORTHOGRAPHIC SOUTH SIDE ELEVATION: perfectly flat, zero perspective, camera exactly perpendicular to the long side wall, the whole building centered and fully inside the frame with clear margins, ground line exactly horizontal near the bottom. Keep identical architecture, identical proportions, identical timber colors and identical timber framing as the reference. Emphasize the long side silhouette: four identical bays from west to east, each bay divided by a stepped buttress with a small pinnacle; each bay has a tall pointed-arch lancet window with wooden mullions above a lower aisle wall; a lower single-slope aisle roof running the whole length; the steep high-pitched main nave roof rising behind it with clear wooden shingle rows and a ridge line; at the west end the tall bell tower rises with its octagonal spire; at the east end a lower polygonal apse with its own small roof; exposed dark timber framing with vertical studs, horizontal rails and diagonal braces over pale plank infill panels throughout. Plain flat neutral light-grey background, even flat lighting, no cast shadow, no perspective distortion, no other objects, no text, no watermark, no border. Clean stylized game-asset look with crisp geometric planes."
+    },
+    {
+      "id": "church-ref-top",
+      "out": "Blender Modle/codex建模测试/refs/church-ref-top.png",
+      "size": "16:9",
+      "resolution": "2k",
+      "prompt": "Same exact wooden Gothic church as the reference image, now shown as a TOP-DOWN ROOF PLAN seen from directly above, orthographic aerial view, perfectly flat with zero perspective, the whole building centered and fully inside the frame with clear margins, the long axis running horizontally across the frame. Keep identical architecture, identical proportions, identical tower and spire placement as the reference. Must read as a timber-framed Gothic church seen from above: a long rectangular nave roof with a clear ridge line and wooden shingle rows, lower aisle roofs running parallel on both sides with their own ridges, one tall square bell tower at the west end with an octagonal pyramidal spire cap, a polygonal apse projecting at the east end, buttresses reading as small rectangular blocks stepping out along both long walls at regular intervals, and the roof of the west portal projecting slightly from the facade. Wooden shingle texture with visible rows, dark timber ridges and hips, pale plank sheathing. Plain flat neutral light-grey background, even flat lighting, no cast shadow, no perspective distortion, no other objects, no text, no watermark, no border. Clean stylized game-asset look with crisp geometric planes."
+    }
+  ]
+}

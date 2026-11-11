@@ -1,0 +1,47 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-WheelFL_tire": {
+      "verdict": "pass",
+      "object": "GEO-WheelFL_tire",
+      "min_mm": [
+        910.0,
+        784.894,
+        0.0
+      ],
+      "max_mm": [
+        1590.0,
+        975.106,
+        680.0
+      ],
+      "size_mm": [
+        680.0,
+        190.211,
+        680.0
+      ],
+      "center_mm": [
+        1250.0,
+        880.0,
+        340.0
+      ],
+      "expect_mm": [
+        680.0,
+        190.2,
+        680.0
+      ],
+      "dev_mm": [
+        0.0,
+        0.011,
+        0.0
+      ],
+      "tol_mm": 5.0,
+      "out_of_tolerance": []
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 1 对象"
+}

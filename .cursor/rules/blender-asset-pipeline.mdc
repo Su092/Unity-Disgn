@@ -1,0 +1,75 @@
+# Blender 资产管线约定
+
+方法论文档在 skill `blender-asset-pipeline`（`.cursor/skills/blender-asset-pipeline/`，**单一源头**）。
+本规则只定工作区的**执行口径**。
+
+## 入口（唯一）
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\blender-gate.ps1 `
+ -Blend <源.blend> -Fbx <导出.fbx> -Objects <对象名> `
+ -MinMm 1.2 -Expect "1000,1000,2000" -RequireFloor
+```
+
+它依次跑：门自检（`blender_gate` 11/11 + `blender_buried_true` 3/3 + `blender_uv_gate` 6/6）→ `.blend` 数值门
+（+ `-UvUnwrap` 时 UV 可用性门）→ **FBX 重新导入**后同上 + 契约门 → 写 `tools/_gate/manifest.json`。
+
+存量件 / 分件装配体用 `-ContractOnly` 只跑契约门；批量体检用 `tools\blender-audit-models.ps1`。
+
+## 四条硬纪律
+
+1. **先跑 selftest**。门 11/11 与 buried-true 3/3 不通过时，任何"模型很干净"的结论都不成立。
+2. **degraded 不是通过**。退出码 `0=pass / 1=fail / 2=degraded`；`2` 必须补查后重跑，不许写成"没问题"。
+3. **交付物要有两条通路**：`.blend` 是构建通路，导出的 FBX 才是交付物。只跑 `.blend` 等于没验交付。
+4. **判据要能对拍**。新加任何一道门，必须自带"该抓的抓到、不该抓的不误杀"的用例；
+   `tools/blender_buried_true.py` 的三例就是模板（clean / 重叠 / 凹腔）。
+
+## 判据边界
+
+- **单体件**：数值门①–⑥ + 契约门全跑。
+- **分件装配体**（多网格拼装，如塔 = Base/Yaw/Head/Barrel/Muzzle）：`nonmanifold` / `buried` / `selfint`
+  天然非 0，那是装配语义。只跑契约门（`-ContractOnly`），或先 Boolean UNION 成实体再跑数值门。
+- **`buried` 是启发式**：口径为"沿外法线打射线命中别的面"，把**被遮挡但看得见**的面一并算进去
+  （屋顶挡住托盘顶面、竖梃内侧朝对面竖梃、底座台肩朝上被环箍挡住……）。
+  **闭合流形单壳在数学上不可能有内部面**，所以这类网格 `buried>0` 恒为遮挡，不是缺陷。
+  真判据在 `tools/blender_buried_true.py`：闭合单壳按定理判 0；多壳逐壳做壳间包含检测
+  （A 的面中心是否落在其他壳体积内），射线只打别的壳。`blender-gate.ps1` 已把该项判决交给它，
+  启发式数字保留作对照 —— 日志形如 `pass（真内部 0 张 / 启发式 144 张）`。
+- **导入通路的非单位变换**（旋转/缩放）是 FBX 轴转换与骨骼传播的合法产物，只作报告；
+  硬判 rot=0 / scale=1 只对源 `.blend` 成立。
+- **贴图节点 ≠ 贴图可用**：只有 `TEX_IMAGE` 节点、没有 UV 层时采样固定在一个纹素上，渲染一片死色。
+  契约门硬判 UV 层存在且未退化为单点。
+- **UV 层存在 ≠ UV 展开可用**：箱式/柱面投影的 UV 层存在且不退化，但多套投影叠在同一 UV 空间
+  （实测面级包围盒重叠 2001 对、UV 范围 `[-0.25, 4.0]`），烘焙 / AO / 光照贴图 / 非平铺贴图全废。
+  单体件交付请加 `-UvUnwrap`，由 `tools/blender_uv_gate.py` 判：岛间重叠 0、全在 [0,1]²、
+  texel 密度比 ≤ 1.10、覆盖率 ≥ 15%。展开用 data API 自己做（分桶分岛 → 平面投影 → 按面积统一密度 → 装箱），
+  不要碰 `bpy.ops.uv.*`（headless 下 poll 会挂）。
+- **贴图三件套**：① 纹理节点 Vector 口**显式**接 `UVMap` 节点；② 图 **pack 进 `.blend`**（先 pack 再改相对路径）；
+  ③ 文件名与 FBX 同名后缀 `<stem>_basecolor.jpg`。缺一就会出现"贴图未引用"。
+- **Boolean `TRANSFER` 会搬进空材质槽**：`modifier_apply` 后网格出现 `None` 槽，
+  `append` 之后变两槽，Unity 多出 submesh。apply 完必须清槽、面 `material_index` 归 0、再赋唯一材质。
+- **存档要留可用状态**：最后渲染的机位/分辨率会被存进 `.blend`。交付前把相机与渲染设置调回英雄机位，
+  否则下次打开按 F12 得到的是局部裁切。
+
+## 导出与命名
+
+- 一律用 `tools\blender_export_unity.py` 导出，不要手点：它固定 Unity 侧读取的轴（Forward -Z / Up Y）、单位、Legacy 动画前提，并打印导入参数回执。
+- `Modle_<名字>.fbx` 带网格（+骨架），`Anim_<名字>.fbx` 只带动画；前缀不符脚本直接拒导。
+- 瞄准骨骼必须**直接叫 `Yaw`**；Unity 的轨道剔除只认"路径末段恰好是 Yaw"。
+- 贴图不嵌 FBX，按同目录 `<名字>_basecolor.jpg` 由 Unity 运行时重建。
+
+## 脚本维护
+
+- `tools/*.ps1` 必须存成 **UTF-8 with BOM**。无 BOM 时 PowerShell 5.1 按 GBK 解码，
+  中文字符串会把引号对齐搞乱，报 `Unexpected token ')'` 且行号指向无关位置——极易误判成语法错误。
+- 读门输出的 JSON 一律 `Get-Content -Raw -Encoding UTF8`，否则 5.1 会读坏中文导致 `ConvertFrom-Json` 失败。
+- 一个脚本打印多块 JSON 时，判决要从**落盘文件**读，不要用"首 `{` 到末 `}`"截取。
+
+## 禁止
+
+- 用单张成品图断言几何正确（L3 beauty 只能给人看，不作判据）
+- 在法线未验证前下"穿模/内含"结论
+- 把 `obj.dimensions` 的数值当交付尺寸（验证必须走 `matrix_world @ v.co`）
+- 修改器未 apply 就导 FBX
+- 在 `Project/<Game>/unity/` 或仓库根另建 skill 副本（`.cursor/skills/` 是单一源头；工程内已有的一份属存量，不要再扩散）
+- 把启发式判据的 `fail` 直接改判成 `pass`（要么修几何，要么换一条**能对拍**的判据）

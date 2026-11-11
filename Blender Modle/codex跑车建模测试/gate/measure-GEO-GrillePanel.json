@@ -1,0 +1,47 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-GrillePanel": {
+      "verdict": "pass",
+      "object": "GEO-GrillePanel",
+      "min_mm": [
+        2130.0,
+        -420.0,
+        340.0
+      ],
+      "max_mm": [
+        2170.0,
+        420.0,
+        600.0
+      ],
+      "size_mm": [
+        40.0,
+        840.0,
+        260.0
+      ],
+      "center_mm": [
+        2150.0,
+        0.0,
+        470.0
+      ],
+      "expect_mm": [
+        40.0,
+        840.0,
+        260.0
+      ],
+      "dev_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tol_mm": 5.0,
+      "out_of_tolerance": []
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 1 对象"
+}

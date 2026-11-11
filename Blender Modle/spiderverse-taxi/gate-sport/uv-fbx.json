@@ -1,0 +1,32 @@
+{
+  "gate": "uv",
+  "verdict": "pass",
+  "plugin": "blender_uv_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "source": "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\out\\Modle_Vehicle_SpiderSport.fbx",
+  "objects": {
+    "GEO-SportSpider": {
+      "object": "GEO-SportSpider",
+      "uv_islands": 546,
+      "island_bbox_overlaps": 0,
+      "stacked_islands": 0,
+      "coverage": 0.6319,
+      "texel_density_ratio": 1.0055,
+      "degenerate_faces": 0,
+      "uv_range": [
+        [
+          0.0,
+          0.995
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "verdict": "pass",
+      "note": "展开可用：546 岛 / 0 重叠 / 覆盖 63% / 密度比 1.006"
+    }
+  },
+  "summary": "verdict=pass · uv 可用性 · 1 对象"
+}

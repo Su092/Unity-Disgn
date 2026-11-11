@@ -74,7 +74,8 @@ python tools/tower_overview.py   # 出 8 塔对照图（人工检查用）
 ```
 
 3D 模型是外部制作后导入的 FBX（`Assets/Resources/Art/Models/`），不是生图产物。
-导入规则与动画轨道剔除见 `technical-design.md` 的「关键实现约定」。
+导入规则与动画轨道剔除见 `technical-design.md` 的「关键实现约定」；
+建模侧的数值门、契约门与导出约定见 `model-pipeline.md`。
 
 ## 4. 导入规则（`STAssetPostprocessor`）
 

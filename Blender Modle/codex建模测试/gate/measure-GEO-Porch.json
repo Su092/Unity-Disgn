@@ -1,0 +1,47 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Porch": {
+      "verdict": "pass",
+      "object": "GEO-Porch",
+      "min_mm": [
+        -1850.0,
+        -2200.0,
+        350.0
+      ],
+      "max_mm": [
+        200.0,
+        2200.0,
+        5200.0
+      ],
+      "size_mm": [
+        2050.0,
+        4400.0,
+        4850.0
+      ],
+      "center_mm": [
+        -825.0,
+        0.0,
+        2775.0
+      ],
+      "expect_mm": [
+        2050.0,
+        4400.0,
+        4850.0
+      ],
+      "dev_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tol_mm": 5.0,
+      "out_of_tolerance": []
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 1 对象"
+}

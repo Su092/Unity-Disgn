@@ -1,0 +1,21 @@
+{
+  "gate": "decided",
+  "verdict": "pass",
+  "buried_source": "blender_buried_true.py（奇偶交点法）",
+  "from": "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\gate\\gate-fbx.json",
+  "objects": {
+    "GEO-TaxiSpider": {
+      "verdict": "pass",
+      "gates_used": {
+        "mesh": "pass",
+        "normals": "pass",
+        "selfint": "pass",
+        "thickness": "pass",
+        "measure": "pass",
+        "buried_true": "pass"
+      },
+      "buried_note": "启发式 buried=fail，真判据 buried_true=pass"
+    }
+  },
+  "summary": "verdict=pass · decided（buried 由真判据裁定）· 1 对象"
+}

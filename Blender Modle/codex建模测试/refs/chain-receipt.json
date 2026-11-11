@@ -1,0 +1,40 @@
+[
+  {
+    "id": "church-ref-hero",
+    "task_id": "task_01M74EER8PHAA5RSMXCWFYDFZ1",
+    "url": "https://getapib.org/image/9998205628001070-27b4b037-8c1a-4560-8437-68bf975194f7-image_task_01M74EFMX5RGK190EMRKKY9SY9_0.png",
+    "out": "E:\\Unity Development\\Blender Modle/codex建模测试/refs/church-ref-hero.png",
+    "refs": [],
+    "seconds": 40.9
+  },
+  {
+    "id": "church-ref-west",
+    "task_id": "task_01M74EFZWQQHYNRN8BYRRQS82Y",
+    "url": "https://getapib.org/image/9998205627945924-0ee8785f-21e4-4e4a-b768-49903e436382-image_task_01M74EHAQK7Q4DC3BJCGPWWXM1_0.png",
+    "out": "E:\\Unity Development\\Blender Modle/codex建模测试/refs/church-ref-west.png",
+    "refs": [
+      "https://getapib.org/image/9998205628001070-27b4b037-8c1a-4560-8437-68bf975194f7-image_task_01M74EFMX5RGK190EMRKKY9SY9_0.png"
+    ],
+    "seconds": 51.0
+  },
+  {
+    "id": "church-ref-side",
+    "task_id": "task_01M74EHJP84PT7SH6D20XC5MPG",
+    "url": "https://getapib.org/image/9998205627908109-02ec4cd7-00f2-424b-b08c-98311863b0ee-image_task_01M74EJF7XSZACHAD74DNXH475_0.png",
+    "out": "E:\\Unity Development\\Blender Modle/codex建模测试/refs/church-ref-side.png",
+    "refs": [
+      "https://getapib.org/image/9998205628001070-27b4b037-8c1a-4560-8437-68bf975194f7-image_task_01M74EFMX5RGK190EMRKKY9SY9_0.png"
+    ],
+    "seconds": 37.8
+  },
+  {
+    "id": "church-ref-top",
+    "task_id": "task_01M74EJPF87SQCQQXENXGT07XK",
+    "url": "https://getapib.org/image/9998205627718580-76b69f45-817e-416f-9f89-e09855eea139-image_task_01M74EJPF87SQCQQXENXGT07XK.png",
+    "out": "E:\\Unity Development\\Blender Modle/codex建模测试/refs/church-ref-top.png",
+    "refs": [
+      "https://getapib.org/image/9998205628001070-27b4b037-8c1a-4560-8437-68bf975194f7-image_task_01M74EFMX5RGK190EMRKKY9SY9_0.png"
+    ],
+    "seconds": 193.7
+  }
+]

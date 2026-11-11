@@ -1,0 +1,32 @@
+{
+  "gate": "uv",
+  "verdict": "pass",
+  "plugin": "blender_uv_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "source": "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\out\\Modle_Vehicle_SpiderTaxi.fbx",
+  "objects": {
+    "GEO-TaxiSpider": {
+      "object": "GEO-TaxiSpider",
+      "uv_islands": 530,
+      "island_bbox_overlaps": 0,
+      "stacked_islands": 0,
+      "coverage": 0.6792,
+      "texel_density_ratio": 1.006,
+      "degenerate_faces": 0,
+      "uv_range": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.9043
+        ]
+      ],
+      "verdict": "pass",
+      "note": "展开可用：530 岛 / 0 重叠 / 覆盖 68% / 密度比 1.006"
+    }
+  },
+  "summary": "verdict=pass · uv 可用性 · 1 对象"
+}

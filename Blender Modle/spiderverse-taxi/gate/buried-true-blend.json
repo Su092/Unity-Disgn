@@ -1,0 +1,22 @@
+{
+  "gate": "buried-true",
+  "verdict": "pass",
+  "plugin": "blender_buried_true.py",
+  "version": "1.1.0",
+  "blender": "5.2.3 LTS",
+  "source": "E:\\Unity Development\\Blender Modle\\spiderverse-taxi\\out\\taxi.blend",
+  "objects": {
+    "GEO-TaxiSpider": {
+      "object": "GEO-TaxiSpider",
+      "faces": 4381,
+      "shells": 5,
+      "open_edges": 0,
+      "heuristic_buried": 1296,
+      "true_buried": 0,
+      "true_buried_sample": [],
+      "verdict": "pass",
+      "note": "5 个壳闭合且互不包含 ⇒ 无内部面"
+    }
+  },
+  "summary": "verdict=pass · buried-true · 1 对象"
+}

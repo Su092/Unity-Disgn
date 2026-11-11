@@ -29,6 +29,18 @@ alwaysApply: true
 3. 在对应 `unity/`（真实工程）按拆解实现
 4. 更新该游戏 `memory/CURRENT.md`
 
+## 3D 建模顺序
+
+1. 量参考图定 spec（mm 数字，冻结）
+2. blockout → 粗形 → 精修（每步跑数值门）
+3. 修改器栈按**目标**排序（没有通用顺序），改序就重跑门
+4. 清理 / 修法线 → 复检
+5. `tools\blender_export_unity.py` 导出 `Modle_*` / `Anim_*`
+6. `tools\blender-gate.ps1` 全门 pass（含 FBX 重新导入的第二通路）
+7. 落进工程后跑该游戏 `check.ps1`
+
+纪律与口径见 `.cursor/rules/blender-asset-pipeline.mdc`，游戏细节见其 `docs/model-pipeline.md`。
+
 ## 文档维护（强制）
 
 - **已有文件**：整文件覆盖重写；禁止在旧文末追加「另见 / 补充 / 引用」
@@ -40,7 +52,10 @@ alwaysApply: true
 | 项 | 值 |
 |----|-----|
 | 编辑器（两款游戏共用） | Unity 6000.6.4f1 @ `D:\Unity\6000.6.4f1` |
-| 客户端 skill（apimart-image） | `.cursor/skills/`、`.agents/skills/`、根 `apimart-image/` 三处副本，改一处要同步三处 |
+| 客户端 skill（apimart-image） | **只一处**：`.cursor/skills/apimart-image/`（`.agents/skills/` 与根 `apimart-image/` 已在 2026-11 删除，不要再建副本） |
+| Blender skill（blender-asset-pipeline） | **只一处**：`.cursor/skills/blender-asset-pipeline/`（`.codex/skills/` 下那份是 Codex 宿主的**派生改写版**，带 `ADAPTATION.md`，内容有意不同，不要同步） |
+| Blender 可执行 | `E:\SteamLibrary\steamapps\common\Blender\blender.exe`（5.2.3 LTS） |
+| 3D 交付门 | `tools/blender-gate.ps1`（+ `blender_contract.py` / `blender_export_unity.py` / `blender_buried_true.py`） |
 | 工作区 MCP 配置 | `.cursor/mcp.json` + `.codex/config.toml`（改一处要同步另一处） |
 | 工作区凭据 | `tools/.apimart.key`（已 gitignore） |
 

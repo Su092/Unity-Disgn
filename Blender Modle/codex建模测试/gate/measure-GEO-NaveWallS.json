@@ -1,0 +1,47 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-NaveWallS": {
+      "verdict": "pass",
+      "object": "GEO-NaveWallS",
+      "min_mm": [
+        6000.0,
+        4350.0,
+        350.0
+      ],
+      "max_mm": [
+        20000.0,
+        4650.0,
+        7200.0
+      ],
+      "size_mm": [
+        14000.0,
+        300.0,
+        6850.0
+      ],
+      "center_mm": [
+        13000.0,
+        4500.0,
+        3775.0
+      ],
+      "expect_mm": [
+        14000.0,
+        300.0,
+        6850.0
+      ],
+      "dev_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tol_mm": 5.0,
+      "out_of_tolerance": []
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 1 对象"
+}

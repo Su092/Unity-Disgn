@@ -21,3 +21,16 @@ __pycache__/
 # APIMart 凭据与 DNS 缓存
 tools/.apimart.key
 tools/.apimart-ip.json
+
+# Blender 门的运行产物（manifest + 各门 JSON）与冒烟测试件
+tools/_gate/
+tools/_gate_*/
+tools/_gate_smoke/
+*.blend1
+
+# 建模测试的大体积过程产物（可重生成，prompt/规格都已在 json+md 里）
+# 实测 2026-11：Blender Modle/ 共 90.7 MB，其中 refs 51.4 MB + renders 28.9 MB
+# 入源码的只有 1.79 MB（.py/.md/.json/.ps1）。.blend/.fbx 交付件保留（仅 5.8 MB）。
+Blender Modle/**/renders/
+Blender Modle/**/refs/*.png
+Blender Modle/**/refs/*.jpg

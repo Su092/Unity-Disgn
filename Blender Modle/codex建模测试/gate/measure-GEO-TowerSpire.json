@@ -1,0 +1,47 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-TowerSpire": {
+      "verdict": "pass",
+      "object": "GEO-TowerSpire",
+      "min_mm": [
+        89.779,
+        -2910.221,
+        15350.0
+      ],
+      "max_mm": [
+        5910.221,
+        2910.221,
+        23500.0
+      ],
+      "size_mm": [
+        5820.441,
+        5820.441,
+        8150.0
+      ],
+      "center_mm": [
+        3000.0,
+        0.0,
+        19425.0
+      ],
+      "expect_mm": [
+        5820.0,
+        5820.0,
+        8150.0
+      ],
+      "dev_mm": [
+        0.441,
+        0.441,
+        0.0
+      ],
+      "tol_mm": 5.0,
+      "out_of_tolerance": []
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 1 对象"
+}

@@ -1,0 +1,86 @@
+{
+  "gate": "uv",
+  "verdict": "fail",
+  "plugin": "blender_uv_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "source": "E:\\Unity Development\\Blender Modle\\codex跑车建模测试\\out\\sports_car.blend",
+  "objects": {
+    "GEO-Body": {
+      "object": "GEO-Body",
+      "mode": "atlas",
+      "uv_islands": 6,
+      "island_bbox_overlaps": 15,
+      "stacked_islands": 2,
+      "coverage": 16.033,
+      "uv_aspect": 2.55,
+      "geo_aspect": 7.73,
+      "slender_exempt": false,
+      "texel_density_ratio": 1.1489,
+      "degenerate_faces": 0,
+      "uv_range": [
+        [
+          -2.1,
+          2.15
+        ],
+        [
+          -0.8324,
+          0.8324
+        ]
+      ],
+      "verdict": "fail",
+      "note": "UV 超出 [0,1]²（u -2.100..2.150, v -0.832..0.832）; 15 对岛包围盒重叠（其中 2 对完全叠合）; texel density 比 1.15 > 1.10"
+    },
+    "GEO-Windshield": {
+      "object": "GEO-Windshield",
+      "mode": "atlas",
+      "uv_islands": 6,
+      "island_bbox_overlaps": 6,
+      "stacked_islands": 2,
+      "coverage": 0.7096,
+      "uv_aspect": 1.46,
+      "geo_aspect": 6.11,
+      "slender_exempt": false,
+      "texel_density_ratio": 1.1742,
+      "degenerate_faces": 0,
+      "uv_range": [
+        [
+          -0.55,
+          0.55
+        ],
+        [
+          -0.55,
+          1.06
+        ]
+      ],
+      "verdict": "fail",
+      "note": "UV 超出 [0,1]²（u -0.550..0.550, v -0.550..1.060）; 6 对岛包围盒重叠（其中 2 对完全叠合）; texel density 比 1.17 > 1.10"
+    },
+    "GEO-WheelFL_tire": {
+      "object": "GEO-WheelFL_tire",
+      "mode": "atlas",
+      "uv_islands": 10,
+      "island_bbox_overlaps": 21,
+      "stacked_islands": 4,
+      "coverage": 1.1536,
+      "uv_aspect": 1.23,
+      "geo_aspect": 3.57,
+      "slender_exempt": false,
+      "texel_density_ratio": 1.0633,
+      "degenerate_faces": 0,
+      "uv_range": [
+        [
+          0.8212,
+          1.5709
+        ],
+        [
+          0.0191,
+          0.9388
+        ]
+      ],
+      "verdict": "fail",
+      "note": "UV 超出 [0,1]²（u 0.821..1.571, v 0.019..0.939）; 21 对岛包围盒重叠（其中 4 对完全叠合）"
+    }
+  },
+  "summary": "verdict=fail · uv 可用性 · 3 对象"
+}

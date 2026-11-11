@@ -1,0 +1,398 @@
+{
+  "gate": "all",
+  "verdict": "fail",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-SportSpider": {
+      "verdict": "fail",
+      "gates": {
+        "mesh": {
+          "verdict": "pass",
+          "object": "GEO-SportSpider",
+          "closed": true,
+          "counts": {
+            "verts": 5808,
+            "edges": 10267,
+            "faces": 4431,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "degenerate_faces": 0,
+            "loose_verts": 0,
+            "loose_edges": 0,
+            "wire_edges": 0,
+            "tris": 11672
+          },
+          "defects": [],
+          "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+        },
+        "normals": {
+          "verdict": "pass",
+          "object": "GEO-SportSpider",
+          "shell_count": 5,
+          "shells": [
+            {
+              "verts": 2660,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 3.581102,
+              "bbox_min": [
+                -2.1,
+                -0.89,
+                0.17
+              ],
+              "bbox_max": [
+                2.1,
+                0.89,
+                1.215
+              ],
+              "state": "pass",
+              "nested": false
+            },
+            {
+              "verts": 790,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 0.084097,
+              "bbox_min": [
+                0.9,
+                0.63,
+                0.0
+              ],
+              "bbox_max": [
+                1.6,
+                0.878,
+                0.7
+              ],
+              "state": "pass",
+              "nested": false
+            },
+            {
+              "verts": 784,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 0.084097,
+              "bbox_min": [
+                0.9,
+                -0.878,
+                0.0
+              ],
+              "bbox_max": [
+                1.6,
+                -0.63,
+                0.7
+              ],
+              "state": "pass",
+              "nested": false
+            },
+            {
+              "verts": 790,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 0.084097,
+              "bbox_min": [
+                -1.6,
+                0.63,
+                0.0
+              ],
+              "bbox_max": [
+                -0.9,
+                0.878,
+                0.7
+              ],
+              "state": "pass",
+              "nested": false
+            },
+            {
+              "verts": 784,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 0.084097,
+              "bbox_min": [
+                -1.6,
+                -0.878,
+                0.0
+              ],
+              "bbox_max": [
+                -0.9,
+                -0.63,
+                0.7
+              ],
+              "state": "pass",
+              "nested": false
+            }
+          ],
+          "reasons": [],
+          "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+        },
+        "buried": {
+          "verdict": "fail",
+          "object": "GEO-SportSpider",
+          "buried_count": 1329,
+          "total_faces": 4431,
+          "buried": [
+            {
+              "face": 36,
+              "dist": 0.085625,
+              "hit_face": 421,
+              "normal": [
+                -0.3737,
+                -0.824,
+                -0.4259
+              ]
+            },
+            {
+              "face": 37,
+              "dist": 0.097565,
+              "hit_face": 421,
+              "normal": [
+                -0.4099,
+                -0.8953,
+                -0.1742
+              ]
+            },
+            {
+              "face": 44,
+              "dist": 0.011867,
+              "hit_face": 1021,
+              "normal": [
+                -0.5348,
+                -0.2391,
+                0.8105
+              ]
+            },
+            {
+              "face": 48,
+              "dist": 0.011868,
+              "hit_face": 1021,
+              "normal": [
+                -0.5349,
+                0.2391,
+                0.8104
+              ]
+            },
+            {
+              "face": 65,
+              "dist": 0.023377,
+              "hit_face": 1296,
+              "normal": [
+                -0.166,
+                -0.9667,
+                -0.1946
+              ]
+            },
+            {
+              "face": 74,
+              "dist": 0.023531,
+              "hit_face": 1168,
+              "normal": [
+                -0.166,
+                0.9672,
+                -0.1924
+              ]
+            },
+            {
+              "face": 97,
+              "dist": 0.007612,
+              "hit_face": 1225,
+              "normal": [
+                0.0153,
+                -0.9798,
+                -0.1996
+              ]
+            },
+            {
+              "face": 106,
+              "dist": 0.007598,
+              "hit_face": 1094,
+              "normal": [
+                0.0153,
+                0.9796,
+                -0.2002
+              ]
+            },
+            {
+              "face": 133,
+              "dist": 0.00758,
+              "hit_face": 1225,
+              "normal": [
+                -0.014,
+                -0.9797,
+                -0.2002
+              ]
+            },
+            {
+              "face": 142,
+              "dist": 0.007594,
+              "hit_face": 1094,
+              "normal": [
+                -0.014,
+                0.9798,
+                -0.1995
+              ]
+            },
+            {
+              "face": 212,
+              "dist": 0.045107,
+              "hit_face": 1285,
+              "normal": [
+                -0.4169,
+                -0.909,
+                -0.0
+              ]
+            },
+            {
+              "face": 216,
+              "dist": 0.01219,
+              "hit_face": 1021,
+              "normal": [
+                -0.4706,
+                -0.0,
+                0.8824
+              ]
+            },
+            {
+              "face": 218,
+              "dist": 0.045107,
+              "hit_face": 1159,
+              "normal": [
+                -0.4169,
+                0.909,
+                -0.0
+              ]
+            },
+            {
+              "face": 222,
+              "dist": 0.009295,
+              "hit_face": 1302,
+              "normal": [
+                -0.1695,
+                -0.9855,
+                0.0
+              ]
+            },
+            {
+              "face": 224,
+              "dist": 0.0014,
+              "hit_face": 1299,
+              "normal": [
+                -0.1695,
+                -0.9855,
+                0.0
+              ]
+            },
+            {
+              "face": 228,
+              "dist": 0.0014,
+              "hit_face": 1165,
+              "normal": [
+                -0.1695,
+                0.9855,
+                0.0
+              ]
+            },
+            {
+              "face": 229,
+              "dist": 0.009295,
+              "hit_face": 1172,
+              "normal": [
+                -0.1695,
+                0.9855,
+                0.0
+              ]
+            },
+            {
+              "face": 241,
+              "dist": 0.039934,
+              "hit_face": 1635,
+              "normal": [
+                0.1275,
+                -0.0,
+                0.9918
+              ]
+            },
+            {
+              "face": 256,
+              "dist": 0.241013,
+              "hit_face": 1660,
+              "normal": [
+                0.0062,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face": 296,
+              "dist": 0.02633,
+              "hit_face": 715,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+        },
+        "selfint": {
+          "verdict": "pass",
+          "object": "GEO-SportSpider",
+          "pair_count": 0,
+          "pairs": [],
+          "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+        },
+        "thickness": {
+          "verdict": "pass",
+          "object": "GEO-SportSpider",
+          "min_mm": 10.1755,
+          "median_mm": 224.63,
+          "samples": 393,
+          "samples_below": 0,
+          "min_mm_threshold": 5.0,
+          "notes": [],
+          "note": "内向射线近似；曲率大处会低估"
+        },
+        "measure": {
+          "verdict": "pass",
+          "object": "GEO-SportSpider",
+          "min_mm": [
+            -2100.0,
+            -890.0,
+            0.0
+          ],
+          "max_mm": [
+            2100.0,
+            890.0,
+            1215.0
+          ],
+          "size_mm": [
+            4200.0,
+            1780.0,
+            1215.0
+          ],
+          "center_mm": [
+            0.0,
+            0.0,
+            607.5
+          ],
+          "expect_mm": [
+            4200.0,
+            1780.0,
+            1215.0
+          ],
+          "dev_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tol_mm": 3.0,
+          "out_of_tolerance": []
+        }
+      }
+    }
+  },
+  "missing": [],
+  "summary": "verdict=fail · all · 1 对象",
+  "hint": "fail = 确有缺陷，看各对象里的 counts/defects/buried_count/pair_count"
+}

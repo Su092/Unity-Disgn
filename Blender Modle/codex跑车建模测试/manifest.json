@@ -1,0 +1,91 @@
+{
+  "asset": "RedRoadster",
+  "project": "codex跑车建模测试",
+  "created": "2026-11-11",
+  "units": "m",
+  "blender": "5.2.3 LTS",
+  "source_blend": "out/sports_car.blend",
+  "export": {
+    "fbx": "export/Modle_RedRoadster.fbx",
+    "textures": [
+      "export/Modle_PaintRed_basecolor.jpg",
+      "export/Modle_Chrome_basecolor.jpg",
+      "export/Modle_Rubber_basecolor.jpg",
+      "export/Modle_Interior_basecolor.jpg",
+      "export/Modle_Glass_basecolor.jpg",
+      "export/Modle_Silver_basecolor.jpg",
+      "export/Modle_RedLens_basecolor.jpg",
+      "export/Modle_DarkGrille_basecolor.jpg",
+      "export/Modle_Perf_basecolor.jpg"
+    ]
+  },
+  "reference": {
+    "source_dir": "E:/Unity Development/Blender Modle/spiderverse-taxi/refs",
+    "used": [
+      "refs/sport-ref-anchor.png",
+      "refs/sport-ref-side.png",
+      "refs/sport-ref-front.png",
+      "refs/sport-ref-rear34.png"
+    ],
+    "note": "只读参考图；未读取 spiderverse-taxi 的脚本、规格或已有模型。"
+  },
+  "objects": 135,
+  "tris": 12996,
+  "bbox_mm": [4480.0, 2020.0, 1130.0],
+  "floor_mm": 0.0,
+  "materials": [
+    "M_PaintRed", "M_Chrome", "M_Rubber", "M_Interior", "M_Glass",
+    "M_Silver", "M_RedLens", "M_DarkGrille", "M_Perf"
+  ],
+  "gates": {
+    "mesh": "pass",
+    "normals": "pass",
+    "selfint": "pass",
+    "buried_true": "pass",
+    "thickness": "pass",
+    "measure": "pass",
+    "contract_blend": "pass",
+    "contract_fbx": "pass",
+    "wrapper_contract_only": "pass",
+    "uv_atlas": "fail"
+  },
+  "gate_files": {
+    "mesh": "gate/mesh.json",
+    "normals": "gate/normals.json",
+    "selfint": "gate/selfint.json",
+    "buried_true": "gate/buried-true.json",
+    "thickness": "gate/thickness.json",
+    "aabb": "gate/aabb.json",
+    "contract_blend": "gate/contract-blend.json",
+    "contract_fbx": "gate/contract-fbx.json",
+    "wrapper_manifest": "gate/wrapper/manifest.json",
+    "uv": "gate/uv.json",
+    "ref_compare": "gate/ref-compare.json"
+  },
+  "shape_check": {
+    "front_w_over_h": { "ref": 1.6877, "model": 1.7840, "delta": 0.0962 },
+    "side_w_over_h": { "ref": 2.4682, "model": 3.9464, "delta": 1.4782 },
+    "note": "正前比例有效；正侧参考图含柔阴影，掩膜把阴影纳入包围盒，侧向比例不作 pass/fail。"
+  },
+  "known_limits": [
+    "参考图是手绘/概念图，无相机标定；尺寸为设计输入。",
+    "低多边形风格化车身；翼子板是独立鼓包，不是连续冲压曲面。",
+    "UV 为全局平铺投影，UV atlas 门 fail；不适合烘焙或光照贴图。",
+    "135 个独立对象便于逐件验收，不是性能优化后的合并网格。",
+    "没有悬挂、刹车盘、发动机舱内部、开合件、骨骼或动画。",
+    "跨对象装配干涉未单独建门；隐藏交叠按设计保留。"
+  ],
+  "hashes_sha256": {
+    "out/sports_car.blend": "BAEA89C66C64FCE2888B5DF012102E40E4B83B9A00514DCDFD156B8E2BF163C9",
+    "export/Modle_RedRoadster.fbx": "8FE836B787A8193D6A3BAC1010DD4828867A3A4C55E303907D93F3C004D5D7BB",
+    "export/Modle_Chrome_basecolor.jpg": "1636377EF2C865190FE5D5B7242C89A83E283BC0C7C2A0E0BB8C0F1271A8420B",
+    "export/Modle_DarkGrille_basecolor.jpg": "093BD6033F761D3AF758A6B1AA0E94190FA4507780EA9BD635A9662D8E7BE6B9",
+    "export/Modle_Glass_basecolor.jpg": "7EA437C5A320768605766565C4BBB928B25CAD06130E436DC3808820D762D638",
+    "export/Modle_Interior_basecolor.jpg": "203CDD9359A170869162F5AE75FBB5E7EE7CE68BE3D7731E941F15F15782AC39",
+    "export/Modle_PaintRed_basecolor.jpg": "EC1B14FDE903BE6E087C805A1856EBADD0FF95ACBA1128901D35C3CBC0B7837D",
+    "export/Modle_Perf_basecolor.jpg": "86E7F0AE9F0A368B925B43C78F84DEC867EA48BF53D6484B74023F7DBADF65B2",
+    "export/Modle_RedLens_basecolor.jpg": "3A7450C37068312351F03B7914E4B78B505937618C4B35E8EC55CA6CCAACCD68",
+    "export/Modle_Rubber_basecolor.jpg": "8051A52BDDAC7175C8BE14B96D6F23BD7DE1F60F176FD5CCCD808831E2627364",
+    "export/Modle_Silver_basecolor.jpg": "C8A817638DEE8252178F606D111B763AA35BDDAB8004F76EE88F98E8000F119E"
+  }
+}

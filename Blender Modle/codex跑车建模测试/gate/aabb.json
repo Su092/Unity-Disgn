@@ -1,0 +1,26 @@
+{
+  "blend": "E:\\Unity Development\\Blender Modle\\codex跑车建模测试\\out\\sports_car.blend",
+  "objects": 135,
+  "tris": 12996,
+  "min_m": [
+    -2.24,
+    -1.01,
+    0.0
+  ],
+  "max_m": [
+    2.24,
+    1.01,
+    1.13
+  ],
+  "size_m": [
+    4.48,
+    2.02,
+    1.13
+  ],
+  "size_mm": [
+    4480.0,
+    2020.0,
+    1130.0
+  ],
+  "floor_mm": 0.0
+}

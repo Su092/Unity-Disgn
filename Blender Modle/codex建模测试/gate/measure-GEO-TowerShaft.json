@@ -1,0 +1,47 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-TowerShaft": {
+      "verdict": "pass",
+      "object": "GEO-TowerShaft",
+      "min_mm": [
+        0.0,
+        -3000.0,
+        350.0
+      ],
+      "max_mm": [
+        6000.0,
+        3000.0,
+        15000.0
+      ],
+      "size_mm": [
+        6000.0,
+        6000.0,
+        14650.0
+      ],
+      "center_mm": [
+        3000.0,
+        0.0,
+        7675.0
+      ],
+      "expect_mm": [
+        6000.0,
+        6000.0,
+        14650.0
+      ],
+      "dev_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tol_mm": 5.0,
+      "out_of_tolerance": []
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 1 对象"
+}

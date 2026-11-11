@@ -10,6 +10,7 @@
 | `technical-design.md` | 分层架构、数据流、确定性、关键实现约束、自检体系 |
 | `art-style.md` | 视觉规范「深空赛璐璐」：配色、面板、九宫格、素材规格 |
 | `asset-pipeline.md` | 素材生产管线：APIMart 清单、车道绘制、九宫格边距、模型导入 |
+| `model-pipeline.md` | 3D 模型管线：Blender 数值门 + 契约门、FBX 导出契约、修法速查 |
 
 ## 与工程的关系
 

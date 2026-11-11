@@ -1,0 +1,34 @@
+{
+  "_note": "链式参考图：anchor 先生成，其余视角以 anchor 的图片 URL 作 image_urls 参考。产物 refs/sport-ref-*.png",
+  "anchor": {
+    "id": "sport-ref-anchor",
+    "out": "Blender Modle/spiderverse-taxi/refs/sport-ref-anchor.png",
+    "size": "16:9",
+    "resolution": "1k",
+    "prompt": "Three-quarter front view of a stylized 1960s red convertible sports roadster, clean studio presentation: the whole car centered, fully inside the frame, clear margins, sitting on one invisible horizontal ground line, plain flat neutral light-grey background, even flat studio lighting, no cast shadow, no other objects, no text, no watermark, no border. Design must be unmistakable and readable: very long low hood with a single central chrome hood rib, short bobbed tail, two round chrome-ringed headlights, wide low oval chrome grille with horizontal slats, slim chrome front bumper, chrome side exhaust pipe running low along the side of the body, black five-spoke wheels with chrome center caps, open cockpit with a low wraparound windshield frame, folded dark leather soft top behind the seats, two headrest humps, chrome windshield surround. Proportions: extremely low stance, hood about 55 percent of the length, cockpit set far back, big wheels close to the corners, exaggerated chunky cartoon volumes. Body in saturated warm red paint. Style: Spider-Man: Into the Spider-Verse visual language, bold variable-weight black ink outlines, flat cel-shaded color bands, crisp graphic shapes, visible halftone dot screens in the shadow areas, slight red and cyan chromatic fringing at the silhouettes, painterly paper grain, saturated limited palette, high contrast."
+  },
+  "views": [
+    {
+      "id": "sport-ref-side",
+      "out": "Blender Modle/spiderverse-taxi/refs/sport-ref-side.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "Same exact vehicle as the reference image, now shown as a pure orthographic side elevation: perfectly flat zero perspective, camera exactly perpendicular to the side, whole car centered and fully inside the frame with clear margins, tires resting on one invisible horizontal ground line near the bottom. Keep identical design, identical red color, identical wheel design, identical chrome details and identical ink-line style as the reference. Emphasize the side silhouette: long low hood, short bobbed tail, open cockpit, folded soft top, chrome side exhaust, five-spoke wheels with chrome caps, low windshield frame. Plain flat neutral light-grey background, even flat studio light, no cast shadow, no perspective distortion, no other objects, no text, no watermark, no border."
+    },
+    {
+      "id": "sport-ref-front",
+      "out": "Blender Modle/spiderverse-taxi/refs/sport-ref-front.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "Same exact vehicle as the reference image, now shown as a pure orthographic front elevation: perfectly symmetric, perfectly flat zero perspective, camera exactly head-on, whole car centered and fully inside the frame with clear margins, tires resting on one invisible horizontal ground line near the bottom. Keep identical design, identical red color, identical chrome details and identical ink-line style as the reference. Emphasize the front face: two round chrome-ringed headlights, wide low oval chrome grille with horizontal slats, slim chrome bumper bar, low wraparound windshield, wide low stance, front wheels visible at the corners. Plain flat neutral light-grey background, even flat studio light, no cast shadow, no perspective distortion, no other objects, no text, no watermark, no border."
+    },
+    {
+      "id": "sport-ref-rear34",
+      "out": "Blender Modle/spiderverse-taxi/refs/sport-ref-rear34.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "Same exact vehicle as the reference image, now shown as a rear three-quarter view: whole car centered and fully inside the frame with clear margins, sitting on one invisible horizontal ground line near the bottom. Keep identical design, identical red color, identical chrome details, identical wheels and identical ink-line style as the reference. Emphasize the rear: short bobbed tail, small round twin taillights, slim chrome rear bumper, chrome exhaust tip exiting low at the rear corner, folded dark leather soft top and two headrest humps visible above the rear deck, tiny trunk lid seam. Plain flat neutral light-grey background, even flat studio light, no cast shadow, no other objects, no text, no watermark, no border."
+    }
+  ]
+}
+

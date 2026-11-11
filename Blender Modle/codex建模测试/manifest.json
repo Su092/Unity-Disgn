@@ -1,0 +1,80 @@
+{
+  "asset": "WoodenGothicChurch",
+  "project": "codex建模测试",
+  "created": "2026-11-11",
+  "units": "m",
+  "blender": "5.2.3 LTS",
+  "source_blend": "out/church.blend",
+  "export": {
+    "fbx": "export/Modle_WoodenGothicChurch.fbx",
+    "textures": [
+      "export/Modle_TimberDark_basecolor.jpg",
+      "export/Modle_PlankPale_basecolor.jpg",
+      "export/Modle_Shingle_basecolor.jpg",
+      "export/Modle_Glass_basecolor.jpg",
+      "export/Modle_Iron_basecolor.jpg"
+    ]
+  },
+  "reference": {
+    "plan": "refs/plan-church.json",
+    "receipt": "refs/chain-receipt.json",
+    "images": [
+      "refs/church-ref-hero.png",
+      "refs/church-ref-west.png",
+      "refs/church-ref-side.png",
+      "refs/church-ref-top.png"
+    ]
+  },
+  "objects": 653,
+  "tris": 9224,
+  "bbox_mm": [27300.0, 15400.0, 24600.0],
+  "floor_mm": 0.0,
+  "materials": ["M_TimberDark", "M_PlankPale", "M_Shingle", "M_Glass", "M_Iron"],
+  "gates": {
+    "mesh": "pass",
+    "normals": "pass",
+    "selfint": "pass",
+    "buried_true": "pass",
+    "thickness": "pass",
+    "measure": "pass",
+    "contract_blend": "pass",
+    "contract_fbx": "pass",
+    "wrapper_contract_only": "pass",
+    "uv_atlas": "fail"
+  },
+  "gate_files": {
+    "mesh": "gate/mesh.json",
+    "normals": "gate/normals.json",
+    "selfint": "gate/selfint.json",
+    "buried_true": "gate/buried-true.json",
+    "thickness": "gate/thickness.json",
+    "aabb": "gate/aabb.json",
+    "contract_blend": "gate/contract-blend.json",
+    "contract_fbx": "gate/contract-fbx.json",
+    "wrapper_manifest": "gate/wrapper/manifest.json",
+    "uv": "gate/uv.json",
+    "ref_compare": "gate/ref-compare.json"
+  },
+  "shape_check": {
+    "west_h_over_w": { "ref": 1.7704, "model": 1.5974, "delta": -0.173 },
+    "side_h_over_w": { "ref": 0.6285, "model": 0.9022, "delta": 0.2737 },
+    "note": "AI 概念图不是标定图；只比轮廓比例。模型是紧凑单塔教堂，参考图是长中殿大教堂，比例偏差已记录。"
+  },
+  "known_limits": [
+    "参考图为 AI 概念图，无真实标定；尺寸是设计输入，不是从照片反推的毫米级实测。",
+    "形体比例与参考图有偏差：侧视 H/L 模型 0.9022 vs 参考 0.6285；模型更紧凑、参考中殿更长。",
+    "UV 是全局平铺投影：UV 超出 [0,1] 且岛重叠，UV atlas 门 fail；适合无缝平铺木纹/瓦片，不适合烘焙贴图或光照贴图。",
+    "612 个独立对象便于逐件验收，但不是性能优化后的合并网格；Unity 侧可按材质合并。",
+    "逐件数值门通过；跨对象装配干涉未单独建门，隐藏交叠按设计保留。",
+    "几何脚本不裁定结构强度。"
+  ],
+  "hashes_sha256": {
+    "out/church.blend": "AC53231E91AC2F76858D8B812F1D1F66991B936D0D591E4A62D1E83E9518B81E",
+    "export/Modle_WoodenGothicChurch.fbx": "14A0C78D3839EF1BB60ED8A3751D437DA6A4AFA5091D723C9CCAE8D5EF5B56D6",
+    "export/Modle_Glass_basecolor.jpg": "B17F74E9BE97EFD40F91E3FB12D1BD887698394108577C80F83A3C605152BCFF",
+    "export/Modle_Iron_basecolor.jpg": "135B768F361CD7B87617644318509C5552C619530C7E0D8C6F5F2D07CA922811",
+    "export/Modle_PlankPale_basecolor.jpg": "9C804145C4A56167F611854FE68A99212B7DB4676107B211A5C65F11A480EDAF",
+    "export/Modle_Shingle_basecolor.jpg": "C56DA8CF435761928D5BDF55AA62C133F618E9A7F725B98E558790FF284F3FA4",
+    "export/Modle_TimberDark_basecolor.jpg": "3767450500E785A1B6220E46E96E4ADE30DDC4B08945D5D0E427242EF9B88DF9"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Apse": {
+      "verdict": "pass",
+      "object": "GEO-Apse",
+      "min_mm": [
+        15565.378,
+        -4434.622,
+        350.0
+      ],
+      "max_mm": [
+        24434.622,
+        4434.622,
+        6500.0
+      ],
+      "size_mm": [
+        8869.244,
+        8869.244,
+        6150.0
+      ],
+      "center_mm": [
+        20000.0,
+        0.0,
+        3425.0
+      ],
+      "expect_mm": [
+        8869.0,
+        8869.0,
+        6150.0
+      ],
+      "dev_mm": [
+        0.244,
+        0.244,
+        0.0
+      ],
+      "tol_mm": 5.0,
+      "out_of_tolerance": []
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 1 对象"
+}

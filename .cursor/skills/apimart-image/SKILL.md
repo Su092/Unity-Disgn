@@ -1,4 +1,4 @@
----
+﻿---
 name: apimart-image
 description: Generate images via APIMart (gpt-image-2) and save them into this project. Use when the user asks to create or regenerate art assets — level maps, character portraits, enemy/threat illustrations, UI pieces, icons, textures — or mentions APIMart, gpt-image-2, 生图, 生成素材, 生成贴图.
 ---
@@ -26,6 +26,25 @@ Set-Content tools/.apimart.key "sk-你的新密钥"
 $env:APIMART_API_KEY = "sk-你的新密钥"
 ```
 
+## 分辨率约定（强制）
+
+**贴图用 2k，参考图用 1k。** 这是本工作区的固定口径，不是按需选择。
+
+| 用途 | resolution | 理由 |
+| --- | --- | --- |
+| **贴图**（basecolor / 材质图 / UI 贴图） | **`2k`** | 贴图会被采样到模型表面，2k 是细节与体积的平衡点；1k 在近景会糊，4k 体积翻 4 倍且收益递减 |
+| **参考图**（多视角正交图 / 立绘参考 / 概念图） | **`1k`** | 参考图只用于**量测比例与结构**、以及给建模时对照，不直接进引擎；1k 足够读数，且省一半计费与下载时间 |
+
+**落地方式**：
+
+- 清单 `tools/apimart-assets.json` 里，贴图条目写 `"resolution": "2k"`，
+  参考图条目写 `"resolution": "1k"`。**不要留空**（脚本默认值不保证符合本约定）。
+- 链式参考图（`apimart_ref_chain.py`）的 `anchor` 与全部 `views` 一律 `1k`。
+- 单张 `--prompt` 模式：贴图显式传 `--resolution 2k`，参考图显式传 `--resolution 1k`。
+
+**例外**：只有当某个用途明确需要更高精度（例如 4k 整屏地图作为游戏内背景，
+或 1k 参考图量测时掩膜分辨率不足）才升档，并在该条目附近写明理由。
+
 ## 调用约定（强制）
 
 - **不要先跑测试图验证链路**。需要素材时直接按需求生成正式资源。
@@ -37,11 +56,17 @@ $env:APIMART_API_KEY = "sk-你的新密钥"
 仓库根目录执行。脚本只用 Python 标准库，无需 pip 安装。
 
 ```bash
-# 单张（在仓库根执行，--out 写相对仓库根的路径）
+# 贴图（1:1 / 2k）
 python .cursor/skills/apimart-image/scripts/apimart_image.py \
   --prompt "提示词" \
-  --out "Project/Kingdom Of Cloud/unity/Assets/_Game/Res/Art/my-asset.png" \
-  --size 9:16 --resolution 2k
+  --out "Project/Kingdom Of Cloud/unity/Assets/_Game/Res/Art/my-texture.jpg" \
+  --size 1:1 --resolution 2k
+
+# 参考图（比例按主体，1k）
+python .cursor/skills/apimart-image/scripts/apimart_image.py \
+  --prompt "提示词" \
+  --out "Project/<Game>/refs/my-ref.png" \
+  --size 16:9 --resolution 1k
 
 # 批量：按清单里的 id
 python .cursor/skills/apimart-image/scripts/apimart_image.py \
@@ -52,6 +77,36 @@ python .cursor/skills/apimart-image/scripts/apimart_image.py \
   --task-id task_xxx --out Assets/Resources/Art/Generated/foo.png
 ```
 
+
+## 多视角一致性（链式，强制用于多视角参考图）
+
+模型/立绘这类**多视角参考图**不要用清单并行跑：每条只拿到同一段文字，四张图各画各的
+（灯形、条纹位置、比例都不一致），量测也没法互相印证。
+
+用链式脚本：主视角先跑完 → 拿结果 URL → 作为 `image_urls` 提交其余视角。
+
+```bash
+python .cursor/skills/apimart-image/scripts/apimart_ref_chain.py \
+  --plan "Project/<Game>/refs/plan-xxx.json"
+```
+
+plan 结构（`anchor` 无参考，`views` 逐条以 anchor 为参考）：
+
+```json
+{
+  "anchor": {"id","prompt","size","resolution","out"},
+  "views":  [{"id","prompt","size","resolution","out"}]
+}
+```
+
+- **`resolution` 一律写 `"1k"`**（参考图口径，见「分辨率约定」）。链式产物是参考图，
+  不直接进引擎，1k 足够量测比例；2k 只会让下载与计费翻倍。
+- `--ref-mode prev`：改成"上一张"作参考，逐张累积（链越长越容易漂）
+- `--only side,front`：只补跑指定视角（anchor 仍会重跑）
+- 回执落在 plan 同目录 `chain-receipt.json`（task_id / URL / 秒数；结果 URL 约 24h 有效）
+- 视角提示词里要写 "Same exact vehicle/character as the reference image"，并明确"只换机位"
+
+链式产物要落进目标工程的 `refs/`（参考图）或 `Assets/`（正式素材），两者不要混。
 清单格式见 `tools/apimart-assets.json`：顶层 `style` 是全局风格后缀，
 `assets[]` 每项 `{id, out, size, resolution, prompt, no_global_style?}`。
 **新素材一律往这个清单里加条目**，不要散落成一堆临时命令。
@@ -80,7 +135,8 @@ python .cursor/skills/apimart-image/scripts/apimart_image.py \
 
 - `size`：比例字符串（`1:1` / `3:2` / `2:3` / `4:3` / `3:4` / `16:9` / `9:16` / `2:1` / `1:2` / `21:9` …）
   或直接给像素（`1080x1920`）。
-- `resolution`：`1k` / `2k` / `4k`，决定实际像素档位，**按档位计费**；调试用 `1k`。
+- `resolution`：`1k` / `2k` / `4k`，决定实际像素档位，**按档位计费**。
+  **本工作区固定：贴图 `2k`、参考图 `1k`**（见上节「分辨率约定」）。
 - `n`：必须传纯数字（本脚本固定 1）。
 - 结果只返回 `url`（有效期约 24h），需自行下载：`data.result.images[0].url[0]`。
   脚本会自动下载并校验体积（<10KB 视为失败，防止拿到错误页）。
@@ -89,10 +145,13 @@ python .cursor/skills/apimart-image/scripts/apimart_image.py \
 
 | 用途 | size | resolution |
 | --- | --- | --- |
-| 竖屏整屏地图 / 立绘 | `9:16` | `2k` |
-| 竖幅卡片 | `2:3` | `2k` |
-| 方形图标 | `1:1` | `1k` |
-| 横屏横幅 | `16:9` | `2k` |
+| **参考图**：正交立面 / 侧立面 / 俯视 | 按主体，多用 `16:9` 或 `2:3` | **`1k`** |
+| **参考图**：3/4 主视角（anchor） | `16:9` | **`1k`** |
+| **贴图**：basecolor / 材质 | `1:1` | **`2k`** |
+| 竖屏整屏地图 / 立绘（成品） | `9:16` | `2k` |
+| 竖幅卡片（成品） | `2:3` | `2k` |
+| 方形图标（成品） | `1:1` | `1k` |
+| 横屏横幅（成品） | `16:9` | `2k` |
 
 ## 提示词写法
 

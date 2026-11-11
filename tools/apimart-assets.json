@@ -1,4 +1,87 @@
 {
-  "style": "",
-  "assets": []
+    "style":  "",
+    "assets":  [
+                   {
+                       "id":  "cathedral-timber-dark",
+                       "out":  "Blender Modle/gothic-timber-cathedral/out/Modle_TimberDark_basecolor.jpg",
+                       "size":  "1:1",
+                       "resolution":  "2k",
+                       "prompt":  "Seamless tileable PBR basecolor texture of OLD WEATHERED STRUCTURAL TIMBER, the kind used for exposed beams and posts in a centuries-old timber-framed building. Grain runs vertically. Deep espresso-brown to near-black aged oak heartwood with visible long straight grain, fine checks and hairline drying cracks, occasional darker resin streaks, small iron-stain patches, worn edges where the wood has silvered slightly grey. Strongly weathered, matte, no surface sheen, high contrast grain so it reads as dark structural wood next to pale infill panels. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no plank edges, no text, no watermark. The whole frame is one continuous piece of timber, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
+                   },
+                   {
+                       "id":  "cathedral-plank-pale",
+                       "out":  "Blender Modle/gothic-timber-cathedral/out/Modle_PlankPale_basecolor.jpg",
+                       "size":  "1:1",
+                       "resolution":  "2k",
+                       "prompt":  "Seamless tileable PBR basecolor texture of aged oak PLANK BOARDING used as wall infill in a timber-framed building. Grain runs vertically. MEDIUM-DARK warm brown and greige tones, clearly NOT white and NOT pale cream: an overall mid-tone value around fifty percent grey-brown, like weathered oak that has darkened with age. Distinct vertical grain lines in darker umber, long straight fibers, a few small tight knots, faint plane marks, some silvering and grime along the edges. Dry, matte, no sheen. Must read as real wooden boards, clearly darker than white plaster and clearly lighter than the dark structural beams. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no plank edges, no text, no watermark. The whole frame is one continuous piece of aged timber, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
+                   },
+                   {
+                       "id":  "cathedral-shingle",
+                       "out":  "Blender Modle/gothic-timber-cathedral/out/Modle_Shingle_basecolor.jpg",
+                       "size":  "1:1",
+                       "resolution":  "2k",
+                       "prompt":  "Seamless tileable PBR basecolor texture of weathered WOODEN SHINGLES on a church roof, seen straight on from above. Rectangular hand-split oak shakes laid in neat overlapping horizontal rows with regular vertical joints, each row offset from the one below, individual shingles varying slightly in width, tone and weathering. Grey-brown weathered timber, some shingles darker charcoal, some lighter silvered grey, fine grain visible on each face, small splits and lifted corners, a few tiny patches of pale lichen. Strong clear row shadow lines so the shingle pattern reads unmistakably. Completely flat even lighting, no cast shadows beyond the row edges, no highlights, no vignetting, no background, no text, no watermark. The whole frame is continuous shingle coverage, perfectly tileable in both directions, uniform detail density, sharp focus, 2D texture map only."
+                   },
+                   {
+                       "id":  "cathedral-iron",
+                       "out":  "Blender Modle/gothic-timber-cathedral/out/Modle_Iron_basecolor.jpg",
+                       "size":  "1:1",
+                       "resolution":  "2k",
+                       "prompt":  "Seamless tileable PBR basecolor texture of hand-forged WROUGHT IRON door hardware from a medieval building. Near-black iron with dark grey scale, faint hammer marks and forge seams, irregular patches of warm orange-brown rust bloom concentrated in pits, slightly darker where worn by hands. Matte, unpolished, no specular highlights. Completely flat even lighting, no shadows, no vignetting, no background, no text, no watermark. The whole frame is one continuous piece of iron, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
+                   },
+                   {
+                       "id":  "wood-crate-basecolor",
+                       "out":  "Blender Modle/wooden-crate/out/Modle_Prop_WoodCrate_basecolor.jpg",
+                       "size":  "1:1",
+                       "resolution":  "2k",
+                       "prompt":  "Seamless tileable PBR basecolor texture of unfinished pine board, wood grain runs vertically from the top edge to the bottom edge of the frame. HIGH CONTRAST, bold and clearly readable grain: dense dark umber growth-ring lines, strong parallel longitudinal fibers, pronounced cathedral arches and long sweeping figure, wide lighter early-wood bands alternating with narrow dark late-wood bands, several distinct dark knots with surrounding swirling grain, occasional narrow pitch streaks and small drying cracks. Warm honey-tan heartwood with pale cream sapwood streaks and deep chocolate-brown grain lines, natural lumber color, strong tonal separation so the grain reads clearly from a distance. Completely flat even lighting, no shadows, no highlights, no specular sheen, no vignetting, no background, no plank edges, no board seams, no text, no watermark. The entire frame is one continuous piece of wood, edge to edge, perfectly tileable, uniform detail density across the whole frame, sharp focus, 2D texture map only."
+                   },
+                   {
+                       "id":  "street-lamp-basecolor",
+                       "out":  "Blender Modle/medieval-street-lamp/out/Modle_Prop_StreetLamp_basecolor.jpg",
+                       "size":  "1:1",
+                       "resolution":  "2k",
+                       "prompt":  "Seamless tileable PBR basecolor texture of aged cast iron from a medieval street lamp. Dark charcoal-grey iron with subtle warm rust patina in the recesses, fine casting grain and pitting, faint hammer marks. Perfectly flat even lighting, no shadows, no highlights, no vignetting, no background, no text. Orthographic front-facing, fills the entire frame edge to edge, high detail, 2D texture map only."
+                   },
+                   {
+                       "id":  "taxi-ref-side",
+                       "out":  "Blender Modle/spiderverse-taxi/refs/taxi-ref-side.png",
+                       "size":  "16:9",
+                       "resolution":  "1k",
+                       "prompt":  "Orthographic side elevation of a stylized 1970s New York yellow taxi cab, seen exactly from the side, perfectly flat with zero perspective, the whole vehicle centered and fully inside the frame with clear margins, tires resting on one invisible horizontal ground line near the bottom of the frame. Chunky exaggerated cartoon proportions: very short front and rear overhangs, tall rounded greenhouse with slim pillars, big fat wheels with thick black tires and simple disc hubcaps, wide slab bumpers, rooftop TAXI light box, black and white checker stripe running along the doors, thick graphic panel seams, small round headlights. Vehicle body is saturated taxi yellow with deep purple-black shadow shapes. Flat plain light warm-grey background, even flat studio light, no cast shadow on the ground, no perspective distortion, no motion blur, no other objects, no text except the letters TAXI on the roof sign, no frame, no border, no watermark, no UI. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens in the shadows, slight chromatic color separation with red and cyan fringing, painterly paper grain, saturated limited palette."
+                   },
+                   {
+                       "id":  "taxi-ref-front",
+                       "out":  "Blender Modle/spiderverse-taxi/refs/taxi-ref-front.png",
+                       "size":  "16:9",
+                       "resolution":  "1k",
+                       "prompt":  "Orthographic front elevation of a stylized 1970s New York yellow taxi cab, seen exactly head-on from the front, perfectly symmetric, perfectly flat with zero perspective, whole vehicle centered and fully inside the frame with clear margins, tires resting on one invisible horizontal ground line near the bottom. Chunky exaggerated cartoon proportions: wide low body, big fat wheels with thick black tires, wide slab front bumper, two round headlights, wide grille, low windshield, rooftop TAXI light box visible above the roof. Vehicle body is saturated taxi yellow with deep purple-black shadow shapes. Flat plain light warm-grey background, even flat studio light, no cast shadow on the ground, no perspective distortion, no motion blur, no other objects, no text except the letters TAXI on the roof sign, no frame, no border, no watermark, no UI. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens in the shadows, slight chromatic color separation with red and cyan fringing, painterly paper grain, saturated limited palette."
+                   },
+                   {
+                       "id":  "taxi-ref-hero",
+                       "out":  "Blender Modle/spiderverse-taxi/refs/taxi-ref-hero.png",
+                       "size":  "16:9",
+                       "resolution":  "1k",
+                       "prompt":  "Cinematic three-quarter front hero shot of a stylized 1970s New York yellow taxi cab speeding through a stylized New York street, low wide-angle impossible camera, dynamic perspective, the car tilted with visible speed energy. Chunky exaggerated cartoon proportions: short overhangs, tall rounded greenhouse, big fat wheels with thick black tires, wide slab bumpers, rooftop TAXI light box, black and white checker stripe on the doors, round headlights throwing graphic light cones. Background: abstract purple and teal city blocks, big halftone dot sky, radiating comic speed lines, floating dust motes. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens, aggressive chromatic color separation with red and cyan fringing on the edges, painterly paper grain, saturated limited palette, strong rim light. No text except the letters TAXI on the roof sign, no watermark, no frame, no UI, no characters."
+                   }
+               ],
+    "_chains":  [
+                    {
+                        "id":  "cathedral-ref-chain",
+                        "plan":  "Blender Modle/gothic-timber-cathedral/refs/plan-cathedral.json",
+                        "script":  ".cursor/skills/apimart-image/scripts/apimart_ref_chain.py",
+                        "mode":  "anchor",
+                        "out_dir":  "Blender Modle/gothic-timber-cathedral/refs/",
+                        "note":  "哥特式木构教堂 5 视角链式参考图（西立面/侧立面/俯视/室内 + 3/4 主视角）"
+                    },
+                    {
+                        "id":  "sport-ref-chain",
+                        "plan":  "Blender Modle/spiderverse-taxi/refs/plan-sport.json",
+                        "script":  ".cursor/skills/apimart-image/scripts/apimart_ref_chain.py",
+                        "mode":  "anchor",
+                        "out_dir":  "Blender Modle/spiderverse-taxi/refs/",
+                        "note":  "多视角参考图串行：anchor 先出，其余视角以它为 image_urls 参考"
+                    }
+                ]
 }
+

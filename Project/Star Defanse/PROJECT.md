@@ -22,9 +22,9 @@
 
 | 路径 | 用途 |
 |------|------|
-| `docs/` | 概念、玩法数值、技术设计、美术规范、素材管线（唯一权威） |
+| `docs/` | 概念、玩法数值、技术设计、美术规范、素材管线、3D 模型管线（唯一权威） |
 | `breakdown/` | 开发拆解与任务切片 |
-| `control/` | 长期操作规范（工程流程、编辑器/MCP、生图） |
+| `control/` | 长期操作规范（工程流程、编辑器/MCP、生图与 3D 落地） |
 | `memory/` | `CURRENT.md` 与阶段记忆 |
 | `unity/` | 联接至真实工程：只在此树下改代码与资源 |
 
@@ -41,6 +41,16 @@
 | `unity/scripts/check.ps1` | tests / verify / build / shots 统一入口 |
 | `unity/tools/` | APIMart 清单与素材加工脚本（`*.py`、`*.json`） |
 | `unity/tools/_archive/` | 已归档的旧试验与旧日志（`TowerDesigns/`、`UiStyleTests/`、`UiC6/`、`canvas/`、`logs/`），已 gitignore |
+
+## 3D 模型入口（工作区级）
+
+| 路径 | 用途 |
+|------|------|
+| `E:\Unity Development\tools\blender-gate.ps1` | 门自检 → `.blend` 数值门 → FBX 交付通路 → manifest |
+| `E:\Unity Development\tools\blender_export_unity.py` | 按 Unity 导入契约导出 `Modle_*` / `Anim_*` FBX |
+| `E:\Unity Development\tools\blender_contract.py` | 导入契约门（单位/变换/根/命名/三角/材质/骨架/落地） |
+
+口径见 `docs/model-pipeline.md`。**`degraded`（退出码 2）必须补查，不许当通过。**
 
 ## 开发顺序
 

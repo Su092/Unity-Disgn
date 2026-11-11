@@ -34,6 +34,20 @@
 3. 地图类**只生成地形**，车道一律 `tools/paint_lane.py` / `paint_thumb.py` 按 `sldata.json` 的 `path[]` 绘制。
 4. 生成后跑 `scripts/check.ps1 -Task verify`，再看 `Shots/` 截图确认实机显示。
 
+## 3D 模型（与生图分开）
+
+建模不走 APIMart，走 Blender；口径见 `../docs/model-pipeline.md`。
+
+| 场景 | 命令 |
+|------|------|
+| 体检已有 FBX（无 `.blend`） | `tools\blender-gate.ps1 -Fbx <路径> -NoBone` |
+| 新件交付前 | `tools\blender-gate.ps1 -Blend <源> -Fbx <导出> -MinMm 1.2 -Expect "..." -RequireFloor` |
+| 导出 | `tools\blender_export_unity.py`（固定轴/单位/Legacy 前提，前缀不符拒导） |
+
+- 退出码 `2`（degraded）必须补查，不许当通过。
+- 存量 18 个 FBX 是已验收资源，**不要为了过门去改**；体检结论只作记录。
+- 换模型后仍要跑 `check.ps1 -Task verify`（动画轨道与 basecolor 断言在那边）。
+
 ## 不要做
 
 - 用浏览器或别的生图通道替代 APIMart

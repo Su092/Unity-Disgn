@@ -1,0 +1,398 @@
+{
+  "gate": "all",
+  "verdict": "fail",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-TaxiSpider": {
+      "verdict": "fail",
+      "gates": {
+        "mesh": {
+          "verdict": "pass",
+          "object": "GEO-TaxiSpider",
+          "closed": true,
+          "counts": {
+            "verts": 5799,
+            "edges": 10170,
+            "faces": 4381,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "degenerate_faces": 0,
+            "loose_verts": 0,
+            "loose_edges": 0,
+            "wire_edges": 0,
+            "tris": 11578
+          },
+          "defects": [],
+          "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+        },
+        "normals": {
+          "verdict": "pass",
+          "object": "GEO-TaxiSpider",
+          "shell_count": 5,
+          "shells": [
+            {
+              "verts": 2995,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 7.671409,
+              "bbox_min": [
+                -2.6,
+                -0.95,
+                0.272
+              ],
+              "bbox_max": [
+                2.6,
+                0.95,
+                1.72
+              ],
+              "state": "pass",
+              "nested": false
+            },
+            {
+              "verts": 700,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 0.124586,
+              "bbox_min": [
+                1.3,
+                0.628,
+                0.0
+              ],
+              "bbox_max": [
+                2.1,
+                0.9,
+                0.8
+              ],
+              "state": "pass",
+              "nested": false
+            },
+            {
+              "verts": 702,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 0.124586,
+              "bbox_min": [
+                1.3,
+                -0.9,
+                0.0
+              ],
+              "bbox_max": [
+                2.1,
+                -0.628,
+                0.8
+              ],
+              "state": "pass",
+              "nested": false
+            },
+            {
+              "verts": 700,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 0.124587,
+              "bbox_min": [
+                -2.1,
+                0.628,
+                0.0
+              ],
+              "bbox_max": [
+                -1.3,
+                0.9,
+                0.8
+              ],
+              "state": "pass",
+              "nested": false
+            },
+            {
+              "verts": 702,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 0.124587,
+              "bbox_min": [
+                -2.1,
+                -0.9,
+                0.0
+              ],
+              "bbox_max": [
+                -1.3,
+                -0.628,
+                0.8
+              ],
+              "state": "pass",
+              "nested": false
+            }
+          ],
+          "reasons": [],
+          "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+        },
+        "buried": {
+          "verdict": "fail",
+          "object": "GEO-TaxiSpider",
+          "buried_count": 1296,
+          "total_faces": 4381,
+          "buried": [
+            {
+              "face": 140,
+              "dist": 0.001354,
+              "hit_face": 1410,
+              "normal": [
+                0.0,
+                0.0,
+                -1.0
+              ]
+            },
+            {
+              "face": 150,
+              "dist": 0.028845,
+              "hit_face": 2179,
+              "normal": [
+                -0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face": 171,
+              "dist": 0.00799,
+              "hit_face": 962,
+              "normal": [
+                0.0,
+                -1.0,
+                0.0
+              ]
+            },
+            {
+              "face": 177,
+              "dist": 0.00799,
+              "hit_face": 915,
+              "normal": [
+                0.0,
+                1.0,
+                0.0
+              ]
+            },
+            {
+              "face": 187,
+              "dist": 0.044343,
+              "hit_face": 304,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face": 188,
+              "dist": 0.051647,
+              "hit_face": 307,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face": 223,
+              "dist": 0.024991,
+              "hit_face": 730,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "face": 333,
+              "dist": 0.005661,
+              "hit_face": 2043,
+              "normal": [
+                -0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face": 391,
+              "dist": 0.406158,
+              "hit_face": 2443,
+              "normal": [
+                -0.9239,
+                0.0,
+                -0.3827
+              ]
+            },
+            {
+              "face": 392,
+              "dist": 0.405746,
+              "hit_face": 2969,
+              "normal": [
+                -0.9239,
+                0.0,
+                -0.3827
+              ]
+            },
+            {
+              "face": 397,
+              "dist": 0.201627,
+              "hit_face": 215,
+              "normal": [
+                -0.9239,
+                0.0,
+                0.3827
+              ]
+            },
+            {
+              "face": 398,
+              "dist": 0.201627,
+              "hit_face": 220,
+              "normal": [
+                -0.9239,
+                0.0,
+                0.3827
+              ]
+            },
+            {
+              "face": 401,
+              "dist": 0.000537,
+              "hit_face": 1419,
+              "normal": [
+                0.9239,
+                -0.0,
+                -0.3827
+              ]
+            },
+            {
+              "face": 419,
+              "dist": 0.057468,
+              "hit_face": 128,
+              "normal": [
+                -1.0,
+                -0.0,
+                0.0
+              ]
+            },
+            {
+              "face": 420,
+              "dist": 0.069933,
+              "hit_face": 113,
+              "normal": [
+                -1.0,
+                -0.0,
+                0.0
+              ]
+            },
+            {
+              "face": 423,
+              "dist": 0.01199,
+              "hit_face": 1340,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "face": 460,
+              "dist": 0.394259,
+              "hit_face": 3960,
+              "normal": [
+                0.9239,
+                0.0,
+                -0.3827
+              ]
+            },
+            {
+              "face": 461,
+              "dist": 0.393981,
+              "hit_face": 3434,
+              "normal": [
+                0.9239,
+                0.0,
+                -0.3827
+              ]
+            },
+            {
+              "face": 466,
+              "dist": 0.1015,
+              "hit_face": 152,
+              "normal": [
+                0.9239,
+                0.0,
+                0.3827
+              ]
+            },
+            {
+              "face": 467,
+              "dist": 0.1015,
+              "hit_face": 148,
+              "normal": [
+                0.9239,
+                0.0,
+                0.3827
+              ]
+            }
+          ],
+          "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+        },
+        "selfint": {
+          "verdict": "pass",
+          "object": "GEO-TaxiSpider",
+          "pair_count": 0,
+          "pairs": [],
+          "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+        },
+        "thickness": {
+          "verdict": "pass",
+          "object": "GEO-TaxiSpider",
+          "min_mm": 11.99,
+          "median_mm": 293.1328,
+          "samples": 394,
+          "samples_below": 0,
+          "min_mm_threshold": 5.0,
+          "notes": [],
+          "note": "内向射线近似；曲率大处会低估"
+        },
+        "measure": {
+          "verdict": "pass",
+          "object": "GEO-TaxiSpider",
+          "min_mm": [
+            -2600.0,
+            -950.0,
+            0.0
+          ],
+          "max_mm": [
+            2600.0,
+            950.0,
+            1720.0
+          ],
+          "size_mm": [
+            5200.0,
+            1900.0,
+            1720.0
+          ],
+          "center_mm": [
+            0.0,
+            0.0,
+            860.0
+          ],
+          "expect_mm": [
+            5200.0,
+            1900.0,
+            1720.0
+          ],
+          "dev_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tol_mm": 3.0,
+          "out_of_tolerance": []
+        }
+      }
+    }
+  },
+  "missing": [],
+  "summary": "verdict=fail · all · 1 对象",
+  "hint": "fail = 确有缺陷，看各对象里的 counts/defects/buried_count/pair_count"
+}

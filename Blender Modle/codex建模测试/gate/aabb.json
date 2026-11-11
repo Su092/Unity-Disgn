@@ -1,0 +1,26 @@
+{
+  "blend": "E:\\Unity Development\\Blender Modle\\codex建模测试\\out\\church.blend",
+  "objects": 653,
+  "tris": 9224,
+  "min_m": [
+    -2.1,
+    -7.7,
+    0.0
+  ],
+  "max_m": [
+    25.2,
+    7.7,
+    24.6
+  ],
+  "size_m": [
+    27.3,
+    15.4,
+    24.6
+  ],
+  "size_mm": [
+    27300.0,
+    15400.0,
+    24600.0
+  ],
+  "floor_mm": 0.0
+}

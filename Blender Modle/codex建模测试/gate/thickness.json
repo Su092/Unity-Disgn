@@ -1,0 +1,176 @@
+{
+  "gate": "thickness",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-NaveWallS": {
+      "verdict": "pass",
+      "object": "GEO-NaveWallS",
+      "min_mm": 299.9901,
+      "median_mm": 6849.9899,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-NaveWallN": {
+      "verdict": "pass",
+      "object": "GEO-NaveWallN",
+      "min_mm": 299.9901,
+      "median_mm": 6849.9899,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-AisleWallS": {
+      "verdict": "pass",
+      "object": "GEO-AisleWallS",
+      "min_mm": 299.9897,
+      "median_mm": 3849.9897,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-AisleWallN": {
+      "verdict": "pass",
+      "object": "GEO-AisleWallN",
+      "min_mm": 299.9897,
+      "median_mm": 3849.9897,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-TowerShaft": {
+      "verdict": "pass",
+      "object": "GEO-TowerShaft",
+      "min_mm": 5999.9905,
+      "median_mm": 5999.9905,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-Porch": {
+      "verdict": "pass",
+      "object": "GEO-Porch",
+      "min_mm": 2049.9899,
+      "median_mm": 4399.9906,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-Apse": {
+      "verdict": "pass",
+      "object": "GEO-Apse",
+      "min_mm": 6149.9906,
+      "median_mm": 8869.2331,
+      "samples": 10,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-NaveRoof_S": {
+      "verdict": "pass",
+      "object": "GEO-NaveRoof_S",
+      "min_mm": 153.1143,
+      "median_mm": 206.6385,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-NaveRoof_N": {
+      "verdict": "pass",
+      "object": "GEO-NaveRoof_N",
+      "min_mm": 153.1143,
+      "median_mm": 206.6385,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-AisleRoofS": {
+      "verdict": "pass",
+      "object": "GEO-AisleRoofS",
+      "min_mm": 166.6565,
+      "median_mm": 183.6038,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-AisleRoofN": {
+      "verdict": "pass",
+      "object": "GEO-AisleRoofN",
+      "min_mm": 166.6561,
+      "median_mm": 183.6039,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-ApseRoof": {
+      "verdict": "pass",
+      "object": "GEO-ApseRoof",
+      "min_mm": 853.1205,
+      "median_mm": 853.1206,
+      "samples": 9,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-PorchRoof_S": {
+      "verdict": "pass",
+      "object": "GEO-PorchRoof_S",
+      "min_mm": 174.5228,
+      "median_mm": 186.1086,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-PorchRoof_N": {
+      "verdict": "pass",
+      "object": "GEO-PorchRoof_N",
+      "min_mm": 174.5228,
+      "median_mm": 186.1086,
+      "samples": 6,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    },
+    "GEO-TowerSpire": {
+      "verdict": "pass",
+      "object": "GEO-TowerSpire",
+      "min_mm": 4722.3902,
+      "median_mm": 4722.3907,
+      "samples": 9,
+      "samples_below": 0,
+      "min_mm_threshold": 20.0,
+      "notes": [],
+      "note": "内向射线近似；曲率大处会低估"
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · thickness · 15 对象"
+}

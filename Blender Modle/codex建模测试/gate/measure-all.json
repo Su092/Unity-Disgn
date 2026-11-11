@@ -1,0 +1,155 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-TowerShaft": {
+      "verdict": "pass",
+      "object": "GEO-TowerShaft",
+      "min_mm": [
+        0.0,
+        -3000.0,
+        350.0
+      ],
+      "max_mm": [
+        6000.0,
+        3000.0,
+        15000.0
+      ],
+      "size_mm": [
+        6000.0,
+        6000.0,
+        14650.0
+      ],
+      "center_mm": [
+        3000.0,
+        0.0,
+        7675.0
+      ]
+    },
+    "GEO-TowerSpire": {
+      "verdict": "pass",
+      "object": "GEO-TowerSpire",
+      "min_mm": [
+        89.779,
+        -2910.221,
+        15350.0
+      ],
+      "max_mm": [
+        5910.221,
+        2910.221,
+        23500.0
+      ],
+      "size_mm": [
+        5820.441,
+        5820.441,
+        8150.0
+      ],
+      "center_mm": [
+        3000.0,
+        0.0,
+        19425.0
+      ]
+    },
+    "GEO-NaveWallS": {
+      "verdict": "pass",
+      "object": "GEO-NaveWallS",
+      "min_mm": [
+        6000.0,
+        4350.0,
+        350.0
+      ],
+      "max_mm": [
+        20000.0,
+        4650.0,
+        7200.0
+      ],
+      "size_mm": [
+        14000.0,
+        300.0,
+        6850.0
+      ],
+      "center_mm": [
+        13000.0,
+        4500.0,
+        3775.0
+      ]
+    },
+    "GEO-AisleWallS": {
+      "verdict": "pass",
+      "object": "GEO-AisleWallS",
+      "min_mm": [
+        6000.0,
+        6650.0,
+        350.0
+      ],
+      "max_mm": [
+        20000.0,
+        6950.0,
+        4200.0
+      ],
+      "size_mm": [
+        14000.0,
+        300.0,
+        3850.0
+      ],
+      "center_mm": [
+        13000.0,
+        6800.0,
+        2275.0
+      ]
+    },
+    "GEO-Apse": {
+      "verdict": "pass",
+      "object": "GEO-Apse",
+      "min_mm": [
+        15565.378,
+        -4434.622,
+        350.0
+      ],
+      "max_mm": [
+        24434.622,
+        4434.622,
+        6500.0
+      ],
+      "size_mm": [
+        8869.244,
+        8869.244,
+        6150.0
+      ],
+      "center_mm": [
+        20000.0,
+        0.0,
+        3425.0
+      ]
+    },
+    "GEO-Porch": {
+      "verdict": "pass",
+      "object": "GEO-Porch",
+      "min_mm": [
+        -1850.0,
+        -2200.0,
+        350.0
+      ],
+      "max_mm": [
+        200.0,
+        2200.0,
+        5200.0
+      ],
+      "size_mm": [
+        2050.0,
+        4400.0,
+        4850.0
+      ],
+      "center_mm": [
+        -825.0,
+        0.0,
+        2775.0
+      ]
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 6 对象"
+}

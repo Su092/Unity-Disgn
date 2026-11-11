@@ -1,0 +1,47 @@
+{
+  "gate": "measure",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Windshield": {
+      "verdict": "pass",
+      "object": "GEO-Windshield",
+      "min_mm": [
+        360.0,
+        -550.0,
+        800.0
+      ],
+      "max_mm": [
+        540.0,
+        550.0,
+        1060.0
+      ],
+      "size_mm": [
+        180.0,
+        1100.0,
+        260.0
+      ],
+      "center_mm": [
+        450.0,
+        0.0,
+        930.0
+      ],
+      "expect_mm": [
+        180.0,
+        1100.0,
+        260.0
+      ],
+      "dev_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tol_mm": 5.0,
+      "out_of_tolerance": []
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · measure · 1 对象"
+}

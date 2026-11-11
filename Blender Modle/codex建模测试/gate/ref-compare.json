@@ -1,0 +1,33 @@
+{
+  "note": "AI 参考图不是标定图；这里只比轮廓比例，不作毫米级结论。",
+  "views": [
+    {
+      "view": "west",
+      "ref_px": [
+        1076,
+        1905
+      ],
+      "model_px": [
+        462,
+        738
+      ],
+      "ref_h_over_w": 1.7704,
+      "model_h_over_w": 1.5974,
+      "delta": -0.173
+    },
+    {
+      "view": "side",
+      "ref_px": [
+        1833,
+        1152
+      ],
+      "model_px": [
+        777,
+        701
+      ],
+      "ref_h_over_w": 0.6285,
+      "model_h_over_w": 0.9022,
+      "delta": 0.2737
+    }
+  ]
+}
