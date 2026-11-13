@@ -1,0 +1,562 @@
+{
+  "gate": "mesh",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Carapace": {
+      "verdict": "pass",
+      "object": "GEO-Carapace",
+      "closed": true,
+      "counts": {
+        "verts": 151,
+        "edges": 343,
+        "faces": 194,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 298
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Underbody": {
+      "verdict": "pass",
+      "object": "GEO-Underbody",
+      "closed": true,
+      "counts": {
+        "verts": 174,
+        "edges": 392,
+        "faces": 220,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 344
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-HeadCore": {
+      "verdict": "pass",
+      "object": "GEO-HeadCore",
+      "closed": true,
+      "counts": {
+        "verts": 136,
+        "edges": 273,
+        "faces": 139,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 268
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Brow": {
+      "verdict": "pass",
+      "object": "GEO-Brow",
+      "closed": true,
+      "counts": {
+        "verts": 64,
+        "edges": 148,
+        "faces": 86,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 124
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Jaw": {
+      "verdict": "pass",
+      "object": "GEO-Jaw",
+      "closed": true,
+      "counts": {
+        "verts": 71,
+        "edges": 163,
+        "faces": 94,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 138
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Visor": {
+      "verdict": "pass",
+      "object": "GEO-Visor",
+      "closed": true,
+      "counts": {
+        "verts": 48,
+        "edges": 90,
+        "faces": 44,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 92
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Stripe-R": {
+      "verdict": "pass",
+      "object": "GEO-Stripe-R",
+      "closed": true,
+      "counts": {
+        "verts": 64,
+        "edges": 154,
+        "faces": 92,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 124
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Stripe-L": {
+      "verdict": "pass",
+      "object": "GEO-Stripe-L",
+      "closed": true,
+      "counts": {
+        "verts": 64,
+        "edges": 154,
+        "faces": 92,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 124
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Vent-L-1": {
+      "verdict": "pass",
+      "object": "GEO-Vent-L-1",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Vent-L-2": {
+      "verdict": "pass",
+      "object": "GEO-Vent-L-2",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Vent-R-1": {
+      "verdict": "pass",
+      "object": "GEO-Vent-R-1",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Vent-R-2": {
+      "verdict": "pass",
+      "object": "GEO-Vent-R-2",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Front-R-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Upper",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Front-R-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Lower",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Front-R-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Band",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Front-R-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Foot",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Front-L-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Upper",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Front-L-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Lower",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Front-L-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Band",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Front-L-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Foot",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Rear-R-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Upper",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Rear-R-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Lower",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Rear-R-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Band",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Rear-R-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Foot",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Rear-L-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Upper",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Rear-L-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Lower",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Rear-L-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Band",
+      "closed": true,
+      "counts": {
+        "verts": 40,
+        "edges": 84,
+        "faces": 46,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 76
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Leg-Rear-L-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Foot",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    },
+    "GEO-Rear-Bumper": {
+      "verdict": "pass",
+      "object": "GEO-Rear-Bumper",
+      "closed": true,
+      "counts": {
+        "verts": 24,
+        "edges": 48,
+        "faces": 26,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "degenerate_faces": 0,
+        "loose_verts": 0,
+        "loose_edges": 0,
+        "wire_edges": 0,
+        "tris": 44
+      },
+      "defects": [],
+      "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · mesh · 29 对象"
+}

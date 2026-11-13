@@ -1,0 +1,82 @@
+{
+  "gate": "contract",
+  "verdict": "pass",
+  "plugin": "blender_contract.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "source": "E:\\Unity Development\\Blender Modle\\cursor enemy\\export\\Modle_Enemy_Crawler.fbx",
+  "objects": [
+    "GEO-Enemy-Crawler"
+  ],
+  "checks": [
+    {
+      "name": "单位 1 BU = 1 m",
+      "state": "pass",
+      "detail": "system=METRIC scale_length=1.0",
+      "fix": ""
+    },
+    {
+      "name": "对象变换（导入通路：只硬判负缩放）",
+      "state": "pass",
+      "detail": "带非单位变换 0 个（轴转换/骨骼传播，合法）；负缩放 0 个",
+      "offenders": [],
+      "notes": [
+        "导入通路的旋转与缩放仅作报告；构建通路（源 .blend）才硬判 rot=0 / scale=1"
+      ],
+      "fix": ""
+    },
+    {
+      "name": "单一网格根（≤1）",
+      "state": "pass",
+      "detail": "root_count=1（GEO-Enemy-Crawler）",
+      "fix": ""
+    },
+    {
+      "name": "对象命名 GEO- 前缀",
+      "state": "pass",
+      "detail": "已加前缀",
+      "fix": ""
+    },
+    {
+      "name": "三角面预算",
+      "state": "pass",
+      "detail": "tris=1292 / 预算 6000",
+      "per_object": {
+        "GEO-Enemy-Crawler": 1292
+      },
+      "fix": ""
+    },
+    {
+      "name": "材质 + 贴图随件",
+      "state": "pass",
+      "detail": "缺材质=无（FBX 通路不验贴图节点：FBX 不携带节点树，Unity 侧按 *_basecolor.jpg 重建）",
+      "fix": ""
+    },
+    {
+      "name": "材质槽无空槽/重复/越界",
+      "state": "pass",
+      "detail": "空槽=无 重复=无 索引越界=无",
+      "fix": ""
+    },
+    {
+      "name": "UV 层可用（贴图不被压成死色）",
+      "state": "pass",
+      "detail": "缺 UV=无 退化为单点=无",
+      "fix": ""
+    },
+    {
+      "name": "骨架契约",
+      "state": "pass",
+      "detail": "该件不要求瞄准骨骼；实际骨骼 0 根（无骨架）",
+      "bones": [],
+      "fix": ""
+    },
+    {
+      "name": "落地基准（世界最低点 z≈0）",
+      "state": "pass",
+      "detail": "floor_gap_mm=-0.0 · 已判",
+      "fix": ""
+    }
+  ],
+  "summary": "verdict=pass · contract · 1 网格"
+}

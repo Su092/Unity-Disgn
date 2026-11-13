@@ -1,0 +1,326 @@
+{
+  "gate": "all",
+  "verdict": "fail",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Enemy-Crawler": {
+      "verdict": "fail",
+      "gates": {
+        "mesh": {
+          "verdict": "pass",
+          "object": "GEO-Enemy-Crawler",
+          "closed": true,
+          "counts": {
+            "verts": 648,
+            "edges": 1204,
+            "faces": 558,
+            "boundary_edges": 0,
+            "nonmanifold_edges": 0,
+            "degenerate_faces": 0,
+            "loose_verts": 0,
+            "loose_edges": 0,
+            "wire_edges": 0,
+            "tris": 1292
+          },
+          "defects": [],
+          "note": "boundary_edges>0 只说明是开放网格；对壳类件才算缺陷"
+        },
+        "normals": {
+          "verdict": "pass",
+          "object": "GEO-Enemy-Crawler",
+          "shell_count": 1,
+          "shells": [
+            {
+              "verts": 648,
+              "closed": true,
+              "open_edges": 0,
+              "signed_volume": 1.291512,
+              "bbox_min": [
+                -0.737,
+                -1.157,
+                0.0
+              ],
+              "bbox_max": [
+                0.737,
+                0.98,
+                1.387
+              ],
+              "state": "pass",
+              "nested": false
+            }
+          ],
+          "reasons": [],
+          "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+        },
+        "buried": {
+          "verdict": "fail",
+          "object": "GEO-Enemy-Crawler",
+          "buried_count": 94,
+          "total_faces": 558,
+          "buried": [
+            {
+              "face": 24,
+              "dist": 0.069546,
+              "hit_face": 362,
+              "normal": [
+                0.8024,
+                0.4489,
+                -0.3933
+              ]
+            },
+            {
+              "face": 29,
+              "dist": 0.070351,
+              "hit_face": 431,
+              "normal": [
+                -0.7964,
+                0.4372,
+                -0.4178
+              ]
+            },
+            {
+              "face": 40,
+              "dist": 0.133239,
+              "hit_face": 376,
+              "normal": [
+                0.8011,
+                0.1929,
+                -0.5666
+              ]
+            },
+            {
+              "face": 43,
+              "dist": 0.001392,
+              "hit_face": 376,
+              "normal": [
+                0.8909,
+                0.2005,
+                -0.4076
+              ]
+            },
+            {
+              "face": 44,
+              "dist": 0.562486,
+              "hit_face": 328,
+              "normal": [
+                0.6314,
+                0.1795,
+                -0.7544
+              ]
+            },
+            {
+              "face": 47,
+              "dist": 0.553346,
+              "hit_face": 401,
+              "normal": [
+                -0.6378,
+                0.1838,
+                -0.748
+              ]
+            },
+            {
+              "face": 49,
+              "dist": 0.001436,
+              "hit_face": 447,
+              "normal": [
+                -0.8961,
+                0.2017,
+                -0.3953
+              ]
+            },
+            {
+              "face": 97,
+              "dist": 0.058235,
+              "hit_face": 226,
+              "normal": [
+                0.6678,
+                -0.0697,
+                -0.7411
+              ]
+            },
+            {
+              "face": 101,
+              "dist": 0.003253,
+              "hit_face": 308,
+              "normal": [
+                -0.7885,
+                0.0507,
+                -0.6129
+              ]
+            },
+            {
+              "face": 176,
+              "dist": 0.69299,
+              "hit_face": 318,
+              "normal": [
+                0.0,
+                1.0,
+                0.0
+              ]
+            },
+            {
+              "face": 177,
+              "dist": 1.198135,
+              "hit_face": 381,
+              "normal": [
+                -0.7539,
+                0.6569,
+                0.0
+              ]
+            },
+            {
+              "face": 178,
+              "dist": 0.87799,
+              "hit_face": 243,
+              "normal": [
+                -1.0,
+                0.0,
+                -0.0
+              ]
+            },
+            {
+              "face": 185,
+              "dist": 0.548527,
+              "hit_face": 82,
+              "normal": [
+                -0.3018,
+                0.2609,
+                0.917
+              ]
+            },
+            {
+              "face": 186,
+              "dist": 0.578013,
+              "hit_face": 98,
+              "normal": [
+                -0.4706,
+                0.0,
+                0.8824
+              ]
+            },
+            {
+              "face": 192,
+              "dist": 0.730136,
+              "hit_face": 334,
+              "normal": [
+                0.0,
+                0.9999,
+                0.0115
+              ]
+            },
+            {
+              "face": 193,
+              "dist": 1.230416,
+              "hit_face": 404,
+              "normal": [
+                -0.7598,
+                0.6502,
+                -0.0011
+              ]
+            },
+            {
+              "face": 194,
+              "dist": 0.90607,
+              "hit_face": 259,
+              "normal": [
+                -1.0,
+                0.0,
+                -0.0077
+              ]
+            },
+            {
+              "face": 208,
+              "dist": 0.71699,
+              "hit_face": 350,
+              "normal": [
+                0.0,
+                1.0,
+                0.0
+              ]
+            },
+            {
+              "face": 209,
+              "dist": 1.21007,
+              "hit_face": 412,
+              "normal": [
+                -0.7597,
+                0.6498,
+                -0.0253
+              ]
+            },
+            {
+              "face": 210,
+              "dist": 0.885465,
+              "hit_face": 275,
+              "normal": [
+                -0.9994,
+                0.0,
+                -0.0333
+              ]
+            }
+          ],
+          "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+        },
+        "selfint": {
+          "verdict": "pass",
+          "object": "GEO-Enemy-Crawler",
+          "pair_count": 0,
+          "pairs": [],
+          "note": "三角级相交对数；相邻共点面已排除。贴合接触可能给出 1+，需结合装配语义解释"
+        },
+        "thickness": {
+          "verdict": "pass",
+          "object": "GEO-Enemy-Crawler",
+          "min_mm": 7.2341,
+          "median_mm": 436.603,
+          "samples": 325,
+          "samples_below": 0,
+          "min_mm_threshold": 1.2,
+          "notes": [],
+          "note": "内向射线近似；曲率大处会低估"
+        },
+        "measure": {
+          "verdict": "pass",
+          "object": "GEO-Enemy-Crawler",
+          "min_mm": [
+            -737.0,
+            -1157.0,
+            -0.0
+          ],
+          "max_mm": [
+            737.0,
+            980.0,
+            1387.0
+          ],
+          "size_mm": [
+            1474.0,
+            2137.0,
+            1387.0
+          ],
+          "center_mm": [
+            0.0,
+            -88.5,
+            693.5
+          ],
+          "expect_mm": [
+            1474.0,
+            2137.0,
+            1387.0
+          ],
+          "dev_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tol_mm": 3.0,
+          "out_of_tolerance": []
+        }
+      }
+    }
+  },
+  "missing": [],
+  "summary": "verdict=fail · all · 1 对象",
+  "hint": "fail = 确有缺陷，看各对象里的 counts/defects/buried_count/pair_count"
+}

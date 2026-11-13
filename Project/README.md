@@ -8,6 +8,7 @@
 |--------|--------|----------------|------|
 | `Kingdom Of Cloud` | 云端王国 | `D:\Kingdom Of Cloud` | 已关联 |
 | `Star Defanse` | 星轨防线 STARLANE BULWARK | `E:\Star Defanse` | 已关联 |
+| `S` | S（配件构筑型 FPS Roguelite） | `E:\S` | 已关联，垂直切片可玩 |
 
 ## 新建游戏（检查清单）
 

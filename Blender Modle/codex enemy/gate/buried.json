@@ -1,0 +1,243 @@
+{
+  "gate": "buried",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Carapace": {
+      "verdict": "pass",
+      "object": "GEO-Carapace",
+      "buried_count": 0,
+      "total_faces": 194,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Underbody": {
+      "verdict": "pass",
+      "object": "GEO-Underbody",
+      "buried_count": 0,
+      "total_faces": 220,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-HeadCore": {
+      "verdict": "pass",
+      "object": "GEO-HeadCore",
+      "buried_count": 0,
+      "total_faces": 139,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Brow": {
+      "verdict": "pass",
+      "object": "GEO-Brow",
+      "buried_count": 0,
+      "total_faces": 86,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Jaw": {
+      "verdict": "pass",
+      "object": "GEO-Jaw",
+      "buried_count": 0,
+      "total_faces": 94,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Visor": {
+      "verdict": "pass",
+      "object": "GEO-Visor",
+      "buried_count": 0,
+      "total_faces": 44,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Stripe-R": {
+      "verdict": "pass",
+      "object": "GEO-Stripe-R",
+      "buried_count": 0,
+      "total_faces": 92,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Stripe-L": {
+      "verdict": "pass",
+      "object": "GEO-Stripe-L",
+      "buried_count": 0,
+      "total_faces": 92,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Vent-L-1": {
+      "verdict": "pass",
+      "object": "GEO-Vent-L-1",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Vent-L-2": {
+      "verdict": "pass",
+      "object": "GEO-Vent-L-2",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Vent-R-1": {
+      "verdict": "pass",
+      "object": "GEO-Vent-R-1",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Vent-R-2": {
+      "verdict": "pass",
+      "object": "GEO-Vent-R-2",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Front-R-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Upper",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Front-R-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Lower",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Front-R-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Band",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Front-R-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Foot",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Front-L-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Upper",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Front-L-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Lower",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Front-L-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Band",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Front-L-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Foot",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Rear-R-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Upper",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Rear-R-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Lower",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Rear-R-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Band",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Rear-R-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Foot",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Rear-L-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Upper",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Rear-L-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Lower",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Rear-L-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Band",
+      "buried_count": 0,
+      "total_faces": 46,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Leg-Rear-L-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Foot",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    },
+    "GEO-Rear-Bumper": {
+      "verdict": "pass",
+      "object": "GEO-Rear-Bumper",
+      "buried_count": 0,
+      "total_faces": 26,
+      "buried": [],
+      "note": "Delete Loose 删不掉这些（它只删孤立点/边）。处置见 references/六条坑.md §坑二"
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · buried · 29 对象"
+}

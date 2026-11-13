@@ -1,0 +1,22 @@
+{
+  "gate": "buried-true",
+  "verdict": "pass",
+  "plugin": "blender_buried_true.py",
+  "version": "1.1.0",
+  "blender": "5.2.3 LTS",
+  "source": "E:\\Unity Development\\Blender Modle\\cursor enemy\\crawler.blend",
+  "objects": {
+    "GEO-Enemy-Crawler": {
+      "object": "GEO-Enemy-Crawler",
+      "faces": 558,
+      "shells": 1,
+      "open_edges": 0,
+      "heuristic_buried": 94,
+      "true_buried": 0,
+      "true_buried_sample": [],
+      "verdict": "pass",
+      "note": "闭合流形单壳：数学上不存在内部面；启发式报的 94 张是凹腔/遮挡的可见面"
+    }
+  },
+  "summary": "verdict=pass · buried-true · 1 对象"
+}

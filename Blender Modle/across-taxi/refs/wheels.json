@@ -1,0 +1,29 @@
+{
+  "image": "E:\\Unity Development\\Blender Modle\\across-taxi\\refs\\ref-side.png",
+  "size": [
+    1672,
+    941
+  ],
+  "x_span": [
+    22,
+    1651
+  ],
+  "length_px": 1630,
+  "scale": {
+    "L_mm": 5200.0,
+    "px_per_mm": 0.313462
+  },
+  "candidates": [
+    {
+      "cx": 1607.0,
+      "cy": 631.5,
+      "r_px_median": 69.0,
+      "r_samples": 71,
+      "r_spread": [
+        41.0,
+        245.0
+      ]
+    }
+  ],
+  "pair": null
+}

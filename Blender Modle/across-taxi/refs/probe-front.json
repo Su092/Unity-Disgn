@@ -1,0 +1,293 @@
+{
+  "image": "E:\\Unity Development\\Blender Modle\\across-taxi\\refs\\ref-front.png",
+  "size": [
+    1672,
+    941
+  ],
+  "x_span": [
+    353,
+    1319
+  ],
+  "y_span": [
+    24,
+    894
+  ],
+  "width_px": 967,
+  "height_px": 871,
+  "scale": {
+    "W_mm": 1950.0,
+    "px_per_mm": 0.495897
+  },
+  "mm": {
+    "width": 1950.0,
+    "height": 1756.4,
+    "w_over_h": 1.1102,
+    "tire_w": 248.0,
+    "track_outer": 1649.5,
+    "track_center": 1403.5,
+    "headlight_d": [
+      209.7,
+      203.7,
+      100.8,
+      98.8,
+      94.8,
+      92.8
+    ],
+    "headlight_cx": [
+      821.0,
+      144.0,
+      686.0,
+      279.0,
+      888.0,
+      77.0
+    ]
+  },
+  "row_widths": {
+    "0%": {
+      "y": 24,
+      "body": [
+        721,
+        943
+      ],
+      "body_mm": 447.7,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "5%": {
+      "y": 67,
+      "body": [
+        699,
+        975
+      ],
+      "body_mm": 556.6,
+      "yellow": [
+        707,
+        967
+      ],
+      "yellow_mm": 524.3
+    },
+    "10%": {
+      "y": 111,
+      "body": [
+        682,
+        991
+      ],
+      "body_mm": 623.1,
+      "yellow": [
+        690,
+        983
+      ],
+      "yellow_mm": 590.8
+    },
+    "15%": {
+      "y": 154,
+      "body": [
+        530,
+        1141
+      ],
+      "body_mm": 1232.1,
+      "yellow": [
+        540,
+        1131
+      ],
+      "yellow_mm": 1191.8
+    },
+    "20%": {
+      "y": 198,
+      "body": [
+        511,
+        1160
+      ],
+      "body_mm": 1308.7,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "25%": {
+      "y": 241,
+      "body": [
+        497,
+        1173
+      ],
+      "body_mm": 1363.2,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "30%": {
+      "y": 285,
+      "body": [
+        407,
+        1262
+      ],
+      "body_mm": 1724.1,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "35%": {
+      "y": 328,
+      "body": [
+        397,
+        1274
+      ],
+      "body_mm": 1768.5,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "40%": {
+      "y": 372,
+      "body": [
+        437,
+        1234
+      ],
+      "body_mm": 1607.2,
+      "yellow": [
+        459,
+        1213
+      ],
+      "yellow_mm": 1520.5
+    },
+    "45%": {
+      "y": 415,
+      "body": [
+        387,
+        1284
+      ],
+      "body_mm": 1808.8,
+      "yellow": [
+        397,
+        1273
+      ],
+      "yellow_mm": 1766.5
+    },
+    "50%": {
+      "y": 459,
+      "body": [
+        367,
+        1304
+      ],
+      "body_mm": 1889.5,
+      "yellow": [
+        376,
+        1295
+      ],
+      "yellow_mm": 1853.2
+    },
+    "55%": {
+      "y": 502,
+      "body": [
+        362,
+        1309
+      ],
+      "body_mm": 1909.7,
+      "yellow": [
+        450,
+        1229
+      ],
+      "yellow_mm": 1570.9
+    },
+    "60%": {
+      "y": 546,
+      "body": [
+        360,
+        1311
+      ],
+      "body_mm": 1917.7,
+      "yellow": [
+        383,
+        1288
+      ],
+      "yellow_mm": 1825.0
+    },
+    "65%": {
+      "y": 589,
+      "body": [
+        354,
+        1317
+      ],
+      "body_mm": 1941.9,
+      "yellow": [
+        392,
+        1279
+      ],
+      "yellow_mm": 1788.7
+    },
+    "70%": {
+      "y": 633,
+      "body": [
+        353,
+        1318
+      ],
+      "body_mm": 1946.0,
+      "yellow": [
+        401,
+        1270
+      ],
+      "yellow_mm": 1752.4
+    },
+    "75%": {
+      "y": 676,
+      "body": [
+        356,
+        1318
+      ],
+      "body_mm": 1939.9,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "80%": {
+      "y": 720,
+      "body": [
+        359,
+        1312
+      ],
+      "body_mm": 1921.8,
+      "yellow": [
+        434,
+        1236
+      ],
+      "yellow_mm": 1617.3
+    },
+    "85%": {
+      "y": 763,
+      "body": [
+        369,
+        1302
+      ],
+      "body_mm": 1881.4,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "90%": {
+      "y": 807,
+      "body": [
+        371,
+        1300
+      ],
+      "body_mm": 1873.4,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "95%": {
+      "y": 850,
+      "body": [
+        373,
+        1298
+      ],
+      "body_mm": 1865.3,
+      "yellow": null,
+      "yellow_mm": null
+    },
+    "100%": {
+      "y": 894,
+      "body": [
+        434,
+        1242
+      ],
+      "body_mm": 1629.4,
+      "yellow": null,
+      "yellow_mm": null
+    }
+  },
+  "tires": [
+    {
+      "bbox_px": [
+        

@@ -1,0 +1,35 @@
+{
+  "asset": "Modle_Vehicle_AcrossTaxi",
+  "units": "mm",
+  "objects": [
+    "GEO-TaxiAcross"
+  ],
+  "dims_mm": [
+    5200.0,
+    1950.0,
+    2250.0
+  ],
+  "expected_mm": [
+    5200.0,
+    1950.0,
+    2250.0
+  ],
+  "verts": 7449,
+  "faces": 5788,
+  "tris": 14902,
+  "shells": 5,
+  "nonmanifold_edges": 0,
+  "materials": [
+    "M_Taxi_Paint",
+    "M_Taxi_Glass",
+    "M_Taxi_Chrome",
+    "M_Taxi_Dark",
+    "M_Taxi_Tire",
+    "M_Taxi_CheckerW",
+    "M_Taxi_Sign",
+    "M_Taxi_Amber",
+    "M_Taxi_Red"
+  ],
+  "texture": "Modle_Vehicle_AcrossTaxi_basecolor.jpg",
+  "spec": "spec.md"
+}

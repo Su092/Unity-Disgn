@@ -1,0 +1,50 @@
+[
+  {
+    "id": "hero34",
+    "task_id": "task_01M77EDDKA7JPP3N5VYPSQ6SEV",
+    "url": "https://getapib.org/f/image/5853517531975861-05c36de6-9c9e-4fd2-8eae-377c7dbc535a-image_758R2XN58AT612RGY0KMSW66XF_0.png",
+    "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-hero34.png",
+    "refs": [],
+    "seconds": 31.2
+  },
+  {
+    "id": "side",
+    "task_id": "task_01M77EEC0PR9YED1EBH4C7XKT9",
+    "url": "https://getapib.org/f/image/5343765015513839-74d0a9d4-adec-4967-9a68-c54164ab976a-image_07XVS0BFBKKY115A697FCKSK3F_0.png",
+    "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-side.png",
+    "refs": [
+      "https://getapib.org/f/image/5853517531975861-05c36de6-9c9e-4fd2-8eae-377c7dbc535a-image_758R2XN58AT612RGY0KMSW66XF_0.png"
+    ],
+    "seconds": 37.4
+  },
+  {
+    "id": "front",
+    "task_id": "task_01M77EFGBN3T7WV91NM56KP6CV",
+    "url": "https://getapib.org/f/image/6884135880129099-2b20d8c3-5d69-400e-800b-bea25a56207a-image_5EYPP25CZYSN4SMCS56M33J2B6_0.png",
+    "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-front.png",
+    "refs": [
+      "https://getapib.org/f/image/5853517531975861-05c36de6-9c9e-4fd2-8eae-377c7dbc535a-image_758R2XN58AT612RGY0KMSW66XF_0.png"
+    ],
+    "seconds": 30.8
+  },
+  {
+    "id": "rear",
+    "task_id": "task_01M77EGEM8623CJ8WA02EWEXJ1",
+    "url": "https://getapib.org/f/image/9131275296151544-4f2759fc-cf65-43b9-b65b-e5de99c212cd-image_7CQQ0ZK5BQVCNBGVCV8YSVMRB0_0.png",
+    "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-rear.png",
+    "refs": [
+      "https://getapib.org/f/image/5853517531975861-05c36de6-9c9e-4fd2-8eae-377c7dbc535a-image_758R2XN58AT612RGY0KMSW66XF_0.png"
+    ],
+    "seconds": 37.7
+  },
+  {
+    "id": "top",
+    "task_id": "task_01M77EHK2TCD3MRR86S7ZBVYS9",
+    "url": "https://getapib.org/f/image/5779759358052793-e3c21014-e0a6-4fa0-a8d8-3309e7d39180-image_0DEC3J18A7QM95KJXQ2KGJ5TMY_0.png",
+    "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-top.png",
+    "refs": [
+      "https://getapib.org/f/image/5853517531975861-05c36de6-9c9e-4fd2-8eae-377c7dbc535a-image_758R2XN58AT612RGY0KMSW66XF_0.png"
+    ],
+    "seconds": 36.0
+  }
+]

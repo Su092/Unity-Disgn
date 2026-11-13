@@ -1,0 +1,72 @@
+{
+  "asset": "Modle_Vehicle_AcrossTaxi",
+  "source_blend": "E:\\Unity Development\\Blender Modle\\across-taxi\\out\\taxi_look.blend",
+  "units": "mm",
+  "unit_scale_length": 1.0,
+  "forward_axis": "-Y",
+  "up_axis": "Z",
+  "objects": [
+    "GEO-TaxiAcross"
+  ],
+  "dims_mm": [
+    5200.0,
+    1950.0,
+    2250.0
+  ],
+  "bbox_mm": {
+    "x": [
+      -2600.0,
+      2600.0
+    ],
+    "y": [
+      -975.0,
+      975.0
+    ],
+    "z": [
+      0.0,
+      2250.0
+    ]
+  },
+  "verts": 7449,
+  "faces": 5788,
+  "tris": 14902,
+  "materials": [
+    "M_Taxi_Paint",
+    "M_Taxi_Glass",
+    "M_Taxi_Chrome",
+    "M_Taxi_Dark",
+    "M_Taxi_Tire",
+    "M_Taxi_CheckerW",
+    "M_Taxi_Sign",
+    "M_Taxi_Amber",
+    "M_Taxi_Red"
+  ],
+  "uv_layers": [
+    "UVMap"
+  ],
+  "textures": [
+    "Modle_Vehicle_AcrossTaxi_basecolor.jpg"
+  ],
+  "files": [
+    {
+      "name": "Modle_Vehicle_AcrossTaxi.fbx",
+      "bytes": 312876,
+      "md5": "f09d6c293d92c473a40a1ae17a83c07c"
+    },
+    {
+      "name": "Modle_Vehicle_AcrossTaxi.glb",
+      "bytes": 1063972,
+      "md5": "8ade83a8c917b9c6e49dd4e427e8986b"
+    },
+    {
+      "name": "Modle_Vehicle_AcrossTaxi.obj",
+      "bytes": 924837,
+      "md5": "41e87323a98abdc795410262f44cf699"
+    },
+    {
+      "name": "Modle_Vehicle_AcrossTaxi_basecolor.jpg",
+      "bytes": 142304,
+      "md5": "277ce64b77ee3b45bcc45d6198cac46f"
+    }
+  ]
+}

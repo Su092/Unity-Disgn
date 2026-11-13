@@ -96,5 +96,6 @@ Blender 版本速查：Steam 版 `E:\SteamLibrary\steamapps\common\Blender\blend
 |------|----------|------------|
 | 云端王国 (Kingdom Of Cloud) | `Project/Kingdom Of Cloud/` | `D:\Kingdom Of Cloud`（联接为 `Project/Kingdom Of Cloud/unity`） |
 | 星轨防线 (Star Defanse) | `Project/Star Defanse/` | `E:\Star Defanse`（联接为 `Project/Star Defanse/unity`） |
+| S (ProjectS) | `Project/S/` | `E:\S`（联接为 `Project/S/unity`） |
 
 编辑器目标族：**Unity 6000.6.x**（以各游戏 `PROJECT.md` 为准）。

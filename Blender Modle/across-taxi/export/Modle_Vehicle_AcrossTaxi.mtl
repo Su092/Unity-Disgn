@@ -1,0 +1,92 @@
+# Blender 5.2.3 LTS MTL File: 'taxi_look.blend'
+# www.blender.org
+
+newmtl M_Taxi_Amber
+Ns 490.000000
+Ka 0.200000 0.200000 0.200000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg
+
+newmtl M_Taxi_CheckerW
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg
+
+newmtl M_Taxi_Chrome
+Ns 705.600098
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg
+
+newmtl M_Taxi_Dark
+Ns 202.500000
+Ka 0.150000 0.150000 0.150000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg
+
+newmtl M_Taxi_Glass
+Ns 810.000000
+Ka 0.150000 0.150000 0.150000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg
+
+newmtl M_Taxi_Paint
+Ns 384.399994
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg
+
+newmtl M_Taxi_Red
+Ns 518.400024
+Ka 0.200000 0.200000 0.200000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg
+
+newmtl M_Taxi_Sign
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.060000 0.042000 0.003000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg
+
+newmtl M_Taxi_Tire
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Modle_Vehicle_AcrossTaxi_basecolor.jpg

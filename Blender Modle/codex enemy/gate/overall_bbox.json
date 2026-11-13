@@ -1,0 +1,31 @@
+{
+  "verdict": "pass",
+  "gate": "overall_bbox",
+  "expected_mm": [
+    3100.0,
+    3300.0,
+    1930.0
+  ],
+  "actual_mm": [
+    3099.9999,
+    3300.0001,
+    1929.9999
+  ],
+  "tolerance_mm": 2.0,
+  "min_mm": [
+    -1550.0,
+    -1480.0,
+    0.0
+  ],
+  "max_mm": [
+    1550.0,
+    1820.0001,
+    1929.9999
+  ],
+  "floor_contact": true,
+  "metric_units": true,
+  "object_count": 29,
+  "vertices": 1468,
+  "triangles": 2820,
+  "issues": []
+}

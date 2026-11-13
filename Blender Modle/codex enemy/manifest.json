@@ -1,0 +1,105 @@
+{
+  "asset": "codex_crawler",
+  "units": "m",
+  "unit_scale": 1.0,
+  "reference": "ref_crawler.png",
+  "source_blend": "codex_crawler.blend",
+  "bbox_mm": [
+    3099.9999,
+    3300.0001,
+    1929.9999
+  ],
+  "bbox_min_mm": [
+    -1550.0,
+    -1480.0,
+    0.0
+  ],
+  "bbox_max_mm": [
+    1550.0,
+    1820.0,
+    1930.0
+  ],
+  "object_count": 29,
+  "objects": [
+    "GEO-Brow",
+    "GEO-Carapace",
+    "GEO-HeadCore",
+    "GEO-Jaw",
+    "GEO-Leg-Front-L-Band",
+    "GEO-Leg-Front-L-Foot",
+    "GEO-Leg-Front-L-Lower",
+    "GEO-Leg-Front-L-Upper",
+    "GEO-Leg-Front-R-Band",
+    "GEO-Leg-Front-R-Foot",
+    "GEO-Leg-Front-R-Lower",
+    "GEO-Leg-Front-R-Upper",
+    "GEO-Leg-Rear-L-Band",
+    "GEO-Leg-Rear-L-Foot",
+    "GEO-Leg-Rear-L-Lower",
+    "GEO-Leg-Rear-L-Upper",
+    "GEO-Leg-Rear-R-Band",
+    "GEO-Leg-Rear-R-Foot",
+    "GEO-Leg-Rear-R-Lower",
+    "GEO-Leg-Rear-R-Upper",
+    "GEO-Rear-Bumper",
+    "GEO-Stripe-L",
+    "GEO-Stripe-R",
+    "GEO-Underbody",
+    "GEO-Vent-L-1",
+    "GEO-Vent-L-2",
+    "GEO-Vent-R-1",
+    "GEO-Vent-R-2",
+    "GEO-Visor"
+  ],
+  "materials": [
+    "MAT-Armor-Navy",
+    "MAT-Armor-Red",
+    "MAT-Head-Armor",
+    "MAT-Head-Core",
+    "MAT-Jaw-Dark",
+    "MAT-Stripe-Amber",
+    "MAT-Vent-Cyan",
+    "MAT-Visor-Amber"
+  ],
+  "vertices": 1468,
+  "triangles": 2820,
+  "exports": [
+    {
+      "path": "codex_crawler.blend",
+      "bytes": 136072,
+      "sha256": "f2a489586211aa93a833fe15e3010656c045172e333a1b3648be82e72a6f6b27"
+    },
+    {
+      "path": "export/codex_crawler.fbx",
+      "bytes": 128668,
+      "sha256": "74d48d7d4e9894b09f731ab3a74c892781f6ace2a24f777f61f9084da0e270d4"
+    },
+    {
+      "path": "export/codex_crawler.glb",
+      "bytes": 180688,
+      "sha256": "d6812316a4f13ed81e1b3bf636189d66ecc3cc4ef9330c6950cca47eb7d40676"
+    }
+  ],
+  "export_roundtrip": {
+    "fbx": "pass: 29 meshes, bbox 3.1 x 3.3 x 1.93 m, 8 materials",
+    "glb": "pass: 29 meshes, bbox 3.1 x 3.3 x 1.93 m, 8 materials"
+  },
+  "renders": [
+    "renders/codex_crawler_hero.png",
+    "renders/codex_crawler_rear.png"
+  ],
+  "gates": {
+    "mesh": "pass",
+    "normals": "pass",
+    "buried": "pass",
+    "selfint": "pass",
+    "thickness": "pass",
+    "overall_bbox": "pass"
+  },
+  "known_limits": [
+    "尺寸为根据单张透视图估算的 provisional 3.1 x 3.3 x 1.93 m。",
+    "材质为纯色 Principled 材质，无 UV/贴图烘焙。",
+    "未制作骨骼、动画、碰撞体或 LOD。",
+    "跨件装配干涉/浮空未做自动门检。"
+  ]
+}

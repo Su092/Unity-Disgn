@@ -1,0 +1,39 @@
+{
+  "anchor": {
+    "id": "hero34",
+    "prompt": "Reference sheet for a 3D asset: a classic New York yellow taxi cab, designed in the hand-drawn animated style of the movie 'Spider-Man: Across the Spider-Verse'. Chunky exaggerated cartoon proportions: long low body, big rounded wheel arches, thick chunky bumpers, upright boxy greenhouse with slightly raked windshield, wide stance, relatively large wheels. Canary-yellow body with a black-and-white checker band running along the doors and rear quarter, black lower rocker and fenders, pale chrome bumpers, plain blank yellow roof sign on the roof, round headlights, simple horizontal grille, thin chrome window trim. Bold black ink outlines, halftone dot shading, visible painted brush texture, slight chromatic aberration at the edges, flat graphic comic-book colour blocking with hard shadow shapes. Three-quarter front view seen from slightly above, whole vehicle fully inside the frame, centered, plain mid-grey studio background, soft studio light from upper left. No people, no text, no watermark, no UI.",
+    "size": "16:9",
+    "resolution": "1k",
+    "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-hero34.png"
+  },
+  "views": [
+    {
+      "id": "side",
+      "prompt": "Same exact vehicle as the reference image: identical model, identical yellow body colour, identical black-and-white checker band position, identical wheels, bumpers, roof sign and windows. Only the camera angle changes. Pure left-side profile view, orthographic, camera exactly level with the middle of the body, whole car from front bumper to rear bumper fully inside the frame with small margin. Plain mid-grey background, soft even lighting, bold ink outlines and halftone shading preserved. No people, no text, no watermark.",
+      "size": "16:9",
+      "resolution": "1k",
+      "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-side.png"
+    },
+    {
+      "id": "front",
+      "prompt": "Same exact vehicle as the reference image: identical model, identical yellow body colour, identical checker band, headlights, grille, bumper and roof sign. Only the camera angle changes. Straight-on front view, orthographic, camera at mid-body height, whole car fully inside the frame with small margin, wheels and track width clearly visible. Plain mid-grey background, soft even lighting, bold ink outlines and halftone shading preserved. No people, no text, no watermark.",
+      "size": "16:9",
+      "resolution": "1k",
+      "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-front.png"
+    },
+    {
+      "id": "rear",
+      "prompt": "Same exact vehicle as the reference image: identical model, identical yellow body colour, identical checker band, identical tail lights, rear bumper and roof sign. Only the camera angle changes. Straight-on rear view, orthographic, camera at mid-body height, whole car fully inside the frame with small margin. Plain mid-grey background, soft even lighting, bold ink outlines and halftone shading preserved. No people, no text, no watermark.",
+      "size": "16:9",
+      "resolution": "1k",
+      "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-rear.png"
+    },
+    {
+      "id": "top",
+      "prompt": "Same exact vehicle as the reference image: identical model, identical yellow body colour, identical roof sign, hood, trunk and wheel placement. Only the camera angle changes. Top-down orthographic bird's-eye view looking straight down at the car, whole car fully inside the frame, flat lighting, bold ink outlines. Plain mid-grey background. No people, no text, no watermark.",
+      "size": "16:9",
+      "resolution": "1k",
+      "out": "E:/Unity Development/Blender Modle/across-taxi/refs/ref-top.png"
+    }
+  ]
+}

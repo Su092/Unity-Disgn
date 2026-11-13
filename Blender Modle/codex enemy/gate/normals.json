@@ -1,0 +1,794 @@
+{
+  "gate": "normals",
+  "verdict": "pass",
+  "plugin": "blender_gate.py",
+  "version": "1.0.0",
+  "blender": "5.2.3 LTS",
+  "objects": {
+    "GEO-Carapace": {
+      "verdict": "pass",
+      "object": "GEO-Carapace",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 151,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 3.472265,
+          "bbox_min": [
+            -1.04,
+            -1.42,
+            0.88
+          ],
+          "bbox_max": [
+            1.04,
+            1.03,
+            1.93
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Underbody": {
+      "verdict": "pass",
+      "object": "GEO-Underbody",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 174,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 2.355846,
+          "bbox_min": [
+            -0.909,
+            -1.36,
+            0.459
+          ],
+          "bbox_max": [
+            0.909,
+            0.88,
+            1.251
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-HeadCore": {
+      "verdict": "pass",
+      "object": "GEO-HeadCore",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 136,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 1.013656,
+          "bbox_min": [
+            -0.72,
+            0.5,
+            0.48
+          ],
+          "bbox_max": [
+            0.719,
+            1.66,
+            1.31
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Brow": {
+      "verdict": "pass",
+      "object": "GEO-Brow",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 64,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.167092,
+          "bbox_min": [
+            -0.708,
+            1.03,
+            0.911
+          ],
+          "bbox_max": [
+            0.708,
+            1.82,
+            1.307
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Jaw": {
+      "verdict": "pass",
+      "object": "GEO-Jaw",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 71,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.181259,
+          "bbox_min": [
+            -0.599,
+            1.05,
+            0.43
+          ],
+          "bbox_max": [
+            0.599,
+            1.82,
+            0.779
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Visor": {
+      "verdict": "pass",
+      "object": "GEO-Visor",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 48,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.010634,
+          "bbox_min": [
+            -0.58,
+            1.675,
+            0.76
+          ],
+          "bbox_max": [
+            0.58,
+            1.735,
+            0.93
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Stripe-R": {
+      "verdict": "pass",
+      "object": "GEO-Stripe-R",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 64,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.004711,
+          "bbox_min": [
+            0.672,
+            -1.251,
+            0.596
+          ],
+          "bbox_max": [
+            0.903,
+            0.722,
+            0.924
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Stripe-L": {
+      "verdict": "pass",
+      "object": "GEO-Stripe-L",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 64,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.004711,
+          "bbox_min": [
+            -0.903,
+            -1.251,
+            0.596
+          ],
+          "bbox_max": [
+            -0.672,
+            0.722,
+            0.924
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Vent-L-1": {
+      "verdict": "pass",
+      "object": "GEO-Vent-L-1",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.000567,
+          "bbox_min": [
+            -0.741,
+            -0.01,
+            1.775
+          ],
+          "bbox_max": [
+            -0.665,
+            0.51,
+            1.819
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Vent-L-2": {
+      "verdict": "pass",
+      "object": "GEO-Vent-L-2",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.000567,
+          "bbox_min": [
+            -0.886,
+            -0.05,
+            1.71
+          ],
+          "bbox_max": [
+            -0.81,
+            0.47,
+            1.754
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Vent-R-1": {
+      "verdict": "pass",
+      "object": "GEO-Vent-R-1",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.000567,
+          "bbox_min": [
+            0.665,
+            -0.01,
+            1.775
+          ],
+          "bbox_max": [
+            0.741,
+            0.51,
+            1.819
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Vent-R-2": {
+      "verdict": "pass",
+      "object": "GEO-Vent-R-2",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.000567,
+          "bbox_min": [
+            0.81,
+            -0.05,
+            1.71
+          ],
+          "bbox_max": [
+            0.886,
+            0.47,
+            1.754
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Front-R-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Upper",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.08221,
+          "bbox_min": [
+            0.659,
+            0.375,
+            0.461
+          ],
+          "bbox_max": [
+            1.307,
+            0.923,
+            1.147
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Front-R-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Lower",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.034877,
+          "bbox_min": [
+            1.052,
+            0.54,
+            0.176
+          ],
+          "bbox_max": [
+            1.415,
+            0.901,
+            0.631
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Front-R-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Band",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.009005,
+          "bbox_min": [
+            1.057,
+            0.532,
+            0.395
+          ],
+          "bbox_max": [
+            1.389,
+            0.92,
+            0.559
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Front-R-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-R-Foot",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.062479,
+          "bbox_min": [
+            1.07,
+            0.45,
+            0.0
+          ],
+          "bbox_max": [
+            1.55,
+            1.06,
+            0.22
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Front-L-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Upper",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.08221,
+          "bbox_min": [
+            -1.307,
+            0.375,
+            0.461
+          ],
+          "bbox_max": [
+            -0.659,
+            0.923,
+            1.147
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Front-L-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Lower",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.034877,
+          "bbox_min": [
+            -1.415,
+            0.54,
+            0.176
+          ],
+          "bbox_max": [
+            -1.052,
+            0.901,
+            0.631
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Front-L-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Band",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.009005,
+          "bbox_min": [
+            -1.389,
+            0.532,
+            0.395
+          ],
+          "bbox_max": [
+            -1.057,
+            0.92,
+            0.559
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Front-L-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Front-L-Foot",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.062479,
+          "bbox_min": [
+            -1.55,
+            0.45,
+            0.0
+          ],
+          "bbox_max": [
+            -1.07,
+            1.06,
+            0.22
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Rear-R-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Upper",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.08221,
+          "bbox_min": [
+            0.659,
+            -1.023,
+            0.461
+          ],
+          "bbox_max": [
+            1.307,
+            -0.475,
+            1.147
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Rear-R-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Lower",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.034877,
+          "bbox_min": [
+            1.052,
+            -1.001,
+            0.176
+          ],
+          "bbox_max": [
+            1.415,
+            -0.64,
+            0.631
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Rear-R-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Band",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.009005,
+          "bbox_min": [
+            1.057,
+            -1.02,
+            0.395
+          ],
+          "bbox_max": [
+            1.389,
+            -0.632,
+            0.559
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Rear-R-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-R-Foot",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.062479,
+          "bbox_min": [
+            1.07,
+            -1.16,
+            0.0
+          ],
+          "bbox_max": [
+            1.55,
+            -0.55,
+            0.22
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Rear-L-Upper": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Upper",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.08221,
+          "bbox_min": [
+            -1.307,
+            -1.023,
+            0.461
+          ],
+          "bbox_max": [
+            -0.659,
+            -0.475,
+            1.147
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Rear-L-Lower": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Lower",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.034877,
+          "bbox_min": [
+            -1.415,
+            -1.001,
+            0.176
+          ],
+          "bbox_max": [
+            -1.052,
+            -0.64,
+            0.631
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Rear-L-Band": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Band",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 40,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.009005,
+          "bbox_min": [
+            -1.389,
+            -1.02,
+            0.395
+          ],
+          "bbox_max": [
+            -1.057,
+            -0.632,
+            0.559
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Leg-Rear-L-Foot": {
+      "verdict": "pass",
+      "object": "GEO-Leg-Rear-L-Foot",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.062479,
+          "bbox_min": [
+            -1.55,
+            -1.16,
+            0.0
+          ],
+          "bbox_max": [
+            -1.07,
+            -0.55,
+            0.22
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    },
+    "GEO-Rear-Bumper": {
+      "verdict": "pass",
+      "object": "GEO-Rear-Bumper",
+      "shell_count": 1,
+      "shells": [
+        {
+          "verts": 24,
+          "closed": true,
+          "open_edges": 0,
+          "signed_volume": 0.069176,
+          "bbox_min": [
+            -0.61,
+            -1.48,
+            0.7
+          ],
+          "bbox_max": [
+            0.61,
+            -1.32,
+            1.06
+          ],
+          "state": "pass",
+          "nested": false
+        }
+      ],
+      "reasons": [],
+      "note": "★ 逐壳判，不看聚合 signed_volume（大正向壳会抵消小反向壳）"
+    }
+  },
+  "missing": [],
+  "summary": "verdict=pass · normals · 29 对象"
+}

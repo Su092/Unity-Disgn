@@ -1,87 +1,532 @@
 {
-    "style":  "",
-    "assets":  [
-                   {
-                       "id":  "cathedral-timber-dark",
-                       "out":  "Blender Modle/gothic-timber-cathedral/out/Modle_TimberDark_basecolor.jpg",
-                       "size":  "1:1",
-                       "resolution":  "2k",
-                       "prompt":  "Seamless tileable PBR basecolor texture of OLD WEATHERED STRUCTURAL TIMBER, the kind used for exposed beams and posts in a centuries-old timber-framed building. Grain runs vertically. Deep espresso-brown to near-black aged oak heartwood with visible long straight grain, fine checks and hairline drying cracks, occasional darker resin streaks, small iron-stain patches, worn edges where the wood has silvered slightly grey. Strongly weathered, matte, no surface sheen, high contrast grain so it reads as dark structural wood next to pale infill panels. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no plank edges, no text, no watermark. The whole frame is one continuous piece of timber, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
-                   },
-                   {
-                       "id":  "cathedral-plank-pale",
-                       "out":  "Blender Modle/gothic-timber-cathedral/out/Modle_PlankPale_basecolor.jpg",
-                       "size":  "1:1",
-                       "resolution":  "2k",
-                       "prompt":  "Seamless tileable PBR basecolor texture of aged oak PLANK BOARDING used as wall infill in a timber-framed building. Grain runs vertically. MEDIUM-DARK warm brown and greige tones, clearly NOT white and NOT pale cream: an overall mid-tone value around fifty percent grey-brown, like weathered oak that has darkened with age. Distinct vertical grain lines in darker umber, long straight fibers, a few small tight knots, faint plane marks, some silvering and grime along the edges. Dry, matte, no sheen. Must read as real wooden boards, clearly darker than white plaster and clearly lighter than the dark structural beams. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no plank edges, no text, no watermark. The whole frame is one continuous piece of aged timber, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
-                   },
-                   {
-                       "id":  "cathedral-shingle",
-                       "out":  "Blender Modle/gothic-timber-cathedral/out/Modle_Shingle_basecolor.jpg",
-                       "size":  "1:1",
-                       "resolution":  "2k",
-                       "prompt":  "Seamless tileable PBR basecolor texture of weathered WOODEN SHINGLES on a church roof, seen straight on from above. Rectangular hand-split oak shakes laid in neat overlapping horizontal rows with regular vertical joints, each row offset from the one below, individual shingles varying slightly in width, tone and weathering. Grey-brown weathered timber, some shingles darker charcoal, some lighter silvered grey, fine grain visible on each face, small splits and lifted corners, a few tiny patches of pale lichen. Strong clear row shadow lines so the shingle pattern reads unmistakably. Completely flat even lighting, no cast shadows beyond the row edges, no highlights, no vignetting, no background, no text, no watermark. The whole frame is continuous shingle coverage, perfectly tileable in both directions, uniform detail density, sharp focus, 2D texture map only."
-                   },
-                   {
-                       "id":  "cathedral-iron",
-                       "out":  "Blender Modle/gothic-timber-cathedral/out/Modle_Iron_basecolor.jpg",
-                       "size":  "1:1",
-                       "resolution":  "2k",
-                       "prompt":  "Seamless tileable PBR basecolor texture of hand-forged WROUGHT IRON door hardware from a medieval building. Near-black iron with dark grey scale, faint hammer marks and forge seams, irregular patches of warm orange-brown rust bloom concentrated in pits, slightly darker where worn by hands. Matte, unpolished, no specular highlights. Completely flat even lighting, no shadows, no vignetting, no background, no text, no watermark. The whole frame is one continuous piece of iron, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
-                   },
-                   {
-                       "id":  "wood-crate-basecolor",
-                       "out":  "Blender Modle/wooden-crate/out/Modle_Prop_WoodCrate_basecolor.jpg",
-                       "size":  "1:1",
-                       "resolution":  "2k",
-                       "prompt":  "Seamless tileable PBR basecolor texture of unfinished pine board, wood grain runs vertically from the top edge to the bottom edge of the frame. HIGH CONTRAST, bold and clearly readable grain: dense dark umber growth-ring lines, strong parallel longitudinal fibers, pronounced cathedral arches and long sweeping figure, wide lighter early-wood bands alternating with narrow dark late-wood bands, several distinct dark knots with surrounding swirling grain, occasional narrow pitch streaks and small drying cracks. Warm honey-tan heartwood with pale cream sapwood streaks and deep chocolate-brown grain lines, natural lumber color, strong tonal separation so the grain reads clearly from a distance. Completely flat even lighting, no shadows, no highlights, no specular sheen, no vignetting, no background, no plank edges, no board seams, no text, no watermark. The entire frame is one continuous piece of wood, edge to edge, perfectly tileable, uniform detail density across the whole frame, sharp focus, 2D texture map only."
-                   },
-                   {
-                       "id":  "street-lamp-basecolor",
-                       "out":  "Blender Modle/medieval-street-lamp/out/Modle_Prop_StreetLamp_basecolor.jpg",
-                       "size":  "1:1",
-                       "resolution":  "2k",
-                       "prompt":  "Seamless tileable PBR basecolor texture of aged cast iron from a medieval street lamp. Dark charcoal-grey iron with subtle warm rust patina in the recesses, fine casting grain and pitting, faint hammer marks. Perfectly flat even lighting, no shadows, no highlights, no vignetting, no background, no text. Orthographic front-facing, fills the entire frame edge to edge, high detail, 2D texture map only."
-                   },
-                   {
-                       "id":  "taxi-ref-side",
-                       "out":  "Blender Modle/spiderverse-taxi/refs/taxi-ref-side.png",
-                       "size":  "16:9",
-                       "resolution":  "1k",
-                       "prompt":  "Orthographic side elevation of a stylized 1970s New York yellow taxi cab, seen exactly from the side, perfectly flat with zero perspective, the whole vehicle centered and fully inside the frame with clear margins, tires resting on one invisible horizontal ground line near the bottom of the frame. Chunky exaggerated cartoon proportions: very short front and rear overhangs, tall rounded greenhouse with slim pillars, big fat wheels with thick black tires and simple disc hubcaps, wide slab bumpers, rooftop TAXI light box, black and white checker stripe running along the doors, thick graphic panel seams, small round headlights. Vehicle body is saturated taxi yellow with deep purple-black shadow shapes. Flat plain light warm-grey background, even flat studio light, no cast shadow on the ground, no perspective distortion, no motion blur, no other objects, no text except the letters TAXI on the roof sign, no frame, no border, no watermark, no UI. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens in the shadows, slight chromatic color separation with red and cyan fringing, painterly paper grain, saturated limited palette."
-                   },
-                   {
-                       "id":  "taxi-ref-front",
-                       "out":  "Blender Modle/spiderverse-taxi/refs/taxi-ref-front.png",
-                       "size":  "16:9",
-                       "resolution":  "1k",
-                       "prompt":  "Orthographic front elevation of a stylized 1970s New York yellow taxi cab, seen exactly head-on from the front, perfectly symmetric, perfectly flat with zero perspective, whole vehicle centered and fully inside the frame with clear margins, tires resting on one invisible horizontal ground line near the bottom. Chunky exaggerated cartoon proportions: wide low body, big fat wheels with thick black tires, wide slab front bumper, two round headlights, wide grille, low windshield, rooftop TAXI light box visible above the roof. Vehicle body is saturated taxi yellow with deep purple-black shadow shapes. Flat plain light warm-grey background, even flat studio light, no cast shadow on the ground, no perspective distortion, no motion blur, no other objects, no text except the letters TAXI on the roof sign, no frame, no border, no watermark, no UI. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens in the shadows, slight chromatic color separation with red and cyan fringing, painterly paper grain, saturated limited palette."
-                   },
-                   {
-                       "id":  "taxi-ref-hero",
-                       "out":  "Blender Modle/spiderverse-taxi/refs/taxi-ref-hero.png",
-                       "size":  "16:9",
-                       "resolution":  "1k",
-                       "prompt":  "Cinematic three-quarter front hero shot of a stylized 1970s New York yellow taxi cab speeding through a stylized New York street, low wide-angle impossible camera, dynamic perspective, the car tilted with visible speed energy. Chunky exaggerated cartoon proportions: short overhangs, tall rounded greenhouse, big fat wheels with thick black tires, wide slab bumpers, rooftop TAXI light box, black and white checker stripe on the doors, round headlights throwing graphic light cones. Background: abstract purple and teal city blocks, big halftone dot sky, radiating comic speed lines, floating dust motes. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens, aggressive chromatic color separation with red and cyan fringing on the edges, painterly paper grain, saturated limited palette, strong rim light. No text except the letters TAXI on the roof sign, no watermark, no frame, no UI, no characters."
-                   }
-               ],
-    "_chains":  [
-                    {
-                        "id":  "cathedral-ref-chain",
-                        "plan":  "Blender Modle/gothic-timber-cathedral/refs/plan-cathedral.json",
-                        "script":  ".cursor/skills/apimart-image/scripts/apimart_ref_chain.py",
-                        "mode":  "anchor",
-                        "out_dir":  "Blender Modle/gothic-timber-cathedral/refs/",
-                        "note":  "哥特式木构教堂 5 视角链式参考图（西立面/侧立面/俯视/室内 + 3/4 主视角）"
-                    },
-                    {
-                        "id":  "sport-ref-chain",
-                        "plan":  "Blender Modle/spiderverse-taxi/refs/plan-sport.json",
-                        "script":  ".cursor/skills/apimart-image/scripts/apimart_ref_chain.py",
-                        "mode":  "anchor",
-                        "out_dir":  "Blender Modle/spiderverse-taxi/refs/",
-                        "note":  "多视角参考图串行：anchor 先出，其余视角以它为 image_urls 参考"
-                    }
-                ]
+  "style": "",
+  "assets": [
+    {
+      "id": "cathedral-timber-dark",
+      "out": "Blender Modle/gothic-timber-cathedral/out/Modle_TimberDark_basecolor.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of OLD WEATHERED STRUCTURAL TIMBER, the kind used for exposed beams and posts in a centuries-old timber-framed building. Grain runs vertically. Deep espresso-brown to near-black aged oak heartwood with visible long straight grain, fine checks and hairline drying cracks, occasional darker resin streaks, small iron-stain patches, worn edges where the wood has silvered slightly grey. Strongly weathered, matte, no surface sheen, high contrast grain so it reads as dark structural wood next to pale infill panels. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no plank edges, no text, no watermark. The whole frame is one continuous piece of timber, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "cathedral-plank-pale",
+      "out": "Blender Modle/gothic-timber-cathedral/out/Modle_PlankPale_basecolor.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of aged oak PLANK BOARDING used as wall infill in a timber-framed building. Grain runs vertically. MEDIUM-DARK warm brown and greige tones, clearly NOT white and NOT pale cream: an overall mid-tone value around fifty percent grey-brown, like weathered oak that has darkened with age. Distinct vertical grain lines in darker umber, long straight fibers, a few small tight knots, faint plane marks, some silvering and grime along the edges. Dry, matte, no sheen. Must read as real wooden boards, clearly darker than white plaster and clearly lighter than the dark structural beams. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no plank edges, no text, no watermark. The whole frame is one continuous piece of aged timber, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "cathedral-shingle",
+      "out": "Blender Modle/gothic-timber-cathedral/out/Modle_Shingle_basecolor.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of weathered WOODEN SHINGLES on a church roof, seen straight on from above. Rectangular hand-split oak shakes laid in neat overlapping horizontal rows with regular vertical joints, each row offset from the one below, individual shingles varying slightly in width, tone and weathering. Grey-brown weathered timber, some shingles darker charcoal, some lighter silvered grey, fine grain visible on each face, small splits and lifted corners, a few tiny patches of pale lichen. Strong clear row shadow lines so the shingle pattern reads unmistakably. Completely flat even lighting, no cast shadows beyond the row edges, no highlights, no vignetting, no background, no text, no watermark. The whole frame is continuous shingle coverage, perfectly tileable in both directions, uniform detail density, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "cathedral-iron",
+      "out": "Blender Modle/gothic-timber-cathedral/out/Modle_Iron_basecolor.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of hand-forged WROUGHT IRON door hardware from a medieval building. Near-black iron with dark grey scale, faint hammer marks and forge seams, irregular patches of warm orange-brown rust bloom concentrated in pits, slightly darker where worn by hands. Matte, unpolished, no specular highlights. Completely flat even lighting, no shadows, no vignetting, no background, no text, no watermark. The whole frame is one continuous piece of iron, perfectly tileable, uniform detail density, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "wood-crate-basecolor",
+      "out": "Blender Modle/wooden-crate/out/Modle_Prop_WoodCrate_basecolor.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of unfinished pine board, wood grain runs vertically from the top edge to the bottom edge of the frame. HIGH CONTRAST, bold and clearly readable grain: dense dark umber growth-ring lines, strong parallel longitudinal fibers, pronounced cathedral arches and long sweeping figure, wide lighter early-wood bands alternating with narrow dark late-wood bands, several distinct dark knots with surrounding swirling grain, occasional narrow pitch streaks and small drying cracks. Warm honey-tan heartwood with pale cream sapwood streaks and deep chocolate-brown grain lines, natural lumber color, strong tonal separation so the grain reads clearly from a distance. Completely flat even lighting, no shadows, no highlights, no specular sheen, no vignetting, no background, no plank edges, no board seams, no text, no watermark. The entire frame is one continuous piece of wood, edge to edge, perfectly tileable, uniform detail density across the whole frame, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "street-lamp-basecolor",
+      "out": "Blender Modle/medieval-street-lamp/out/Modle_Prop_StreetLamp_basecolor.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of aged cast iron from a medieval street lamp. Dark charcoal-grey iron with subtle warm rust patina in the recesses, fine casting grain and pitting, faint hammer marks. Perfectly flat even lighting, no shadows, no highlights, no vignetting, no background, no text. Orthographic front-facing, fills the entire frame edge to edge, high detail, 2D texture map only."
+    },
+    {
+      "id": "taxi-ref-side",
+      "out": "Blender Modle/spiderverse-taxi/refs/taxi-ref-side.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "Orthographic side elevation of a stylized 1970s New York yellow taxi cab, seen exactly from the side, perfectly flat with zero perspective, the whole vehicle centered and fully inside the frame with clear margins, tires resting on one invisible horizontal ground line near the bottom of the frame. Chunky exaggerated cartoon proportions: very short front and rear overhangs, tall rounded greenhouse with slim pillars, big fat wheels with thick black tires and simple disc hubcaps, wide slab bumpers, rooftop TAXI light box, black and white checker stripe running along the doors, thick graphic panel seams, small round headlights. Vehicle body is saturated taxi yellow with deep purple-black shadow shapes. Flat plain light warm-grey background, even flat studio light, no cast shadow on the ground, no perspective distortion, no motion blur, no other objects, no text except the letters TAXI on the roof sign, no frame, no border, no watermark, no UI. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens in the shadows, slight chromatic color separation with red and cyan fringing, painterly paper grain, saturated limited palette."
+    },
+    {
+      "id": "taxi-ref-front",
+      "out": "Blender Modle/spiderverse-taxi/refs/taxi-ref-front.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "Orthographic front elevation of a stylized 1970s New York yellow taxi cab, seen exactly head-on from the front, perfectly symmetric, perfectly flat with zero perspective, whole vehicle centered and fully inside the frame with clear margins, tires resting on one invisible horizontal ground line near the bottom. Chunky exaggerated cartoon proportions: wide low body, big fat wheels with thick black tires, wide slab front bumper, two round headlights, wide grille, low windshield, rooftop TAXI light box visible above the roof. Vehicle body is saturated taxi yellow with deep purple-black shadow shapes. Flat plain light warm-grey background, even flat studio light, no cast shadow on the ground, no perspective distortion, no motion blur, no other objects, no text except the letters TAXI on the roof sign, no frame, no border, no watermark, no UI. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens in the shadows, slight chromatic color separation with red and cyan fringing, painterly paper grain, saturated limited palette."
+    },
+    {
+      "id": "taxi-ref-hero",
+      "out": "Blender Modle/spiderverse-taxi/refs/taxi-ref-hero.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "Cinematic three-quarter front hero shot of a stylized 1970s New York yellow taxi cab speeding through a stylized New York street, low wide-angle impossible camera, dynamic perspective, the car tilted with visible speed energy. Chunky exaggerated cartoon proportions: short overhangs, tall rounded greenhouse, big fat wheels with thick black tires, wide slab bumpers, rooftop TAXI light box, black and white checker stripe on the doors, round headlights throwing graphic light cones. Background: abstract purple and teal city blocks, big halftone dot sky, radiating comic speed lines, floating dust motes. Drawn in the visual style of Spider-Man: Into the Spider-Verse: bold variable-weight black ink outlines, flat cel-shaded color bands, visible halftone dot screens, aggressive chromatic color separation with red and cyan fringing on the edges, painterly paper grain, saturated limited palette, strong rim light. No text except the letters TAXI on the roof sign, no watermark, no frame, no UI, no characters."
+    },
+    {
+      "id": "s-ui-panel",
+      "out": "Project/S/unity/Assets/Resources/UI/panel.png",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "A single empty rectangular HUD panel intended as a 9-slice UI background. Slightly rounded corners (small radius), a 1px dark outline, an inner 1px lighter bevel inset by a consistent margin, and four short amber tick marks in the corners. Interior is a flat dark surface with a barely visible fine brushed-metal grain, no pattern, completely empty so text can be drawn on top. The panel fills most of the frame and is perfectly centered and symmetric, with uniform edge thickness on all four sides so it tiles cleanly when stretched as a 9-slice. NO content inside the panel, NO buttons, NO icons, NO text. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-card-frame",
+      "out": "Project/S/unity/Assets/Resources/UI/card_frame.png",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "A single empty vertical card frame intended as a 9-slice UI border for an inventory item card. Rectangular with small rounded corners, a 2px bright steel outline, a 1px darker inner line, and a flat black transparent-looking interior with nothing inside. A narrow empty channel runs down the LEFT edge only, designed to receive a colored rarity stripe drawn separately, so that left band must be left empty and clearly delineated. Completely white-gray neutral so it can be tinted. Uniform border thickness on all sides, perfectly centered and symmetric. NO fill color, NO items, NO text, NO numbers, NO icons. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-bar-frame",
+      "out": "Project/S/unity/Assets/Resources/UI/bar_frame.png",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "A single empty horizontal progress bar slot, very wide and low, intended as a 9-slice frame. A dark recessed trough with a 1px bright steel lip on the top and bottom edges, small chamfered ends, and a completely empty flat black interior where a solid color fill will be drawn later. Neutral gray-white so it can be tinted. Perfectly horizontal, perfectly centered, uniform thickness so it stretches cleanly. NO fill, NO percentage, NO text, NO tick marks. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-icon-bullet",
+      "out": "Project/S/unity/Assets/Resources/UI/icon_bullet.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single flat white icon of a bullet projectile, seen from the side, pointing right: a small pointed conical tip with two speed dashes trailing behind it, simplified to bold geometric shapes with thick uniform strokes. Solid pure white on pure black, high contrast, no shading, no gradient, centered with generous margin. One icon only. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-icon-whole",
+      "out": "Project/S/unity/Assets/Resources/UI/icon_whole.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single flat white icon meaning 'affects all projectiles in the group': one bold dot in the center surrounded by three small dots, connected by a thin circle outline, like a radial impact symbol. Solid pure white on pure black, thick uniform strokes, geometric, no shading, centered with generous margin. One icon only. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-icon-after",
+      "out": "Project/S/unity/Assets/Resources/UI/icon_after.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single flat white icon meaning 'affects only what comes after': one bold dot on the left, then a short thick arrow pointing right toward two smaller dots fanned out. Solid pure white on pure black, thick uniform strokes, geometric, no shading, centered with generous margin. One icon only. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-icon-gun",
+      "out": "Project/S/unity/Assets/Resources/UI/icon_gun.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single flat white icon of a compact pistol grip and barrel silhouette, extremely simplified to bold angular blocks with thick uniform strokes, side profile pointing right. Solid pure white on pure black, no shading, no detail, centered with generous margin. One icon only. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-crosshair",
+      "out": "Project/S/unity/Assets/Resources/UI/crosshair.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single flat white FPS crosshair intended as a 9-slice element that grows with weapon spread: four thin equal-length straight ticks arranged in a cross with a clear empty gap at the center, plus one tiny solid 1px center dot. Perfectly symmetric, mathematically clean, uniform stroke width, no circles, no brackets, no ornamentation. Solid pure white on pure black, centered, with even margins so it tiles when scaled. One crosshair only. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-vignette",
+      "out": "Project/S/unity/Assets/Resources/UI/vignette.png",
+      "size": "16:9",
+      "resolution": "2k",
+      "prompt": "A full-frame screen vignette overlay for damage feedback: pure black at all four edges fading smoothly to fully transparent toward the center, leaving the middle two thirds completely clear. Smooth even radial falloff, no banding, no texture, no color other than black, no shapes, no symbols, no text. The transparency must be a clean alpha gradient with no gray haze in the clear area. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-banner",
+      "out": "Project/S/unity/Assets/Resources/UI/banner.png",
+      "size": "16:9",
+      "resolution": "2k",
+      "prompt": "A single wide horizontal HUD banner plate for on-screen titles, intended as a 9-slice element. Long flat dark rectangular plate with sharply cut angled ends, a thin amber accent line running along the top edge, a 1px steel outline, and a completely empty flat interior for large text to be drawn on top. Symmetric, centered, uniform thickness across the length so it stretches cleanly. NO text, NO letters, NO icons, NO ornament inside the plate. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ui-keycap",
+      "out": "Project/S/unity/Assets/Resources/UI/keycap.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single empty square keyboard keycap viewed perfectly flat from above, intended as a 9-slice element that gets a letter drawn on top. Slightly rounded square, bright 2px outer outline, thin inner bevel, flat empty dark face, a subtle bottom-edge highlight to suggest a physical cap. Neutral gray-white so it can be tinted. Symmetric and centered, uniform border thickness. NO letter, NO symbol, NO text. Visual style: Industrial sci-fi HUD element for a first-person shooter. Clean vector-like shapes, thick uniform strokes, matte flat shading, subtle brushed-metal and machined-edge detail, hard geometric angles, no gradients across large areas. Palette: near-black #0B0E12 structures, steel gray #4C525C, thin amber #E8A33D accent lines, desaturated cyan #5AA6F0 highlight. Pure black background (#000000) with NO background texture, no floor, no scene, the element floating alone. No text, no letters, no numbers, no logo, no watermark, no frame around the image, no UI mockup, no perspective, drawn perfectly flat and orthographic."
+    },
+    {
+      "id": "s-ref-crawler",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_crawler.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A quadruped melee creature for a sci-fi shooter, seen from a front three-quarter view. Body is a single chunky low angular wedge tapering toward the head, standing low on four stubby thick legs, no knees, no claws, no toes. The head is a blunt wedge with one wide horizontal amber visor slit glowing. Body charcoal with a brighter red-orange back plate in one solid piece. Absolutely no spikes, no mandibles, no tail, no eyes, no organic bumps. Build it from about ten simple flat-shaded volumes only, like a toy made of cut cardboard. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-spitter",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_spitter.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A ranged acid-spitting creature for a sci-fi shooter, seen from a front three-quarter view. Body is a rounded low capsule standing on two thick straight legs and two short arms, no fingers, no hands, no claws. In place of a head there is one large forward-facing round nozzle, a single smooth cone, glowing lime green at the tip. A single lime-green tank sits on the back as one plain cylinder. Body charcoal, limbs and tank lime yellow-green. No organic texture, no pores, no teeth, no spikes, no tail. Build it from about eight simple flat-shaded volumes only. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-shield",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_shield.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A heavy shielded soldier for a sci-fi shooter, seen from a front three-quarter view. Bulky humanoid but completely faceless and anonymous: a wide blocky torso, thick straight arms and legs, no fingers, no knee joints, no face, no helmet visor. It holds one large flat rectangular riot shield in front of the body with two short straight braces. Body charcoal with steel-blue armor plates in three plain pieces, and a single cyan glowing strip across the shield. Absolutely no spikes, no guns, no pouches, no straps, no fabric. Build it from about twelve simple flat-shaded volumes only. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-drone",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_drone.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A small flying attack drone for a sci-fi shooter, seen from a front three-quarter view. One flat hexagonal disc body with a single amber glowing lens on the front, and four straight stubby arms each ending in a flat plain rotor disc. No propeller blades, no wires, no antennas, no greebles. Body charcoal, rotor discs steel gray, lens amber. Nothing else attached. Build it from about seven simple flat-shaded volumes only. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-boss",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_boss.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A large floating boss machine for a sci-fi shooter, seen from a front three-quarter view. A single huge armored sphere body with six flat angular armor plates arranged symmetrically around it, one large purple glowing core ring around the equator, and three short thick downward arms ending in flat blunt tips. No legs, no face, no eyes, no spikes, no exposed machinery. Floating with a clear gap below the body. Body charcoal and dark violet, core ring bright magenta-purple emissive glow. Build it from about ten simple flat-shaded volumes only. Simple enough to model as a low-poly mesh. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-gun-auto",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_gun_auto.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "A compact sci-fi submachine gun prop, seen from an exact side elevation, perfectly flat with zero perspective, the whole weapon horizontal and centered with clear margins. Very simple blocky construction: one long rectangular receiver, one short straight barrel shroud with a plain ring vent, one simple grip angled back, one small rectangular magazine below the receiver, one thin amber indicator strip along the receiver side. No trigger detail, no rails, no optics, no sling, no wires, no screws. Charcoal body with steel gray shroud. Nothing held by hands, no hands, no character. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-gun-grenade",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_gun_grenade.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "A bulky sci-fi grenade launcher prop, seen from an exact side elevation, perfectly flat with zero perspective, the whole weapon horizontal and centered with clear margins. Very simple blocky construction: one thick rectangular body, one large straight cylindrical barrel with a wide flared muzzle ring, one plain rectangular drum magazine below, one simple angled grip. A single amber indicator strip along the body. No sights, no triggers, no hinges, no wires, no screws. Charcoal body with steel gray barrel. Nothing held by hands, no hands, no character. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-gun-single",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_gun_single.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "A precise sci-fi marksman rifle prop, seen from an exact side elevation, perfectly flat with zero perspective, the whole weapon horizontal and centered with clear margins. Very simple blocky construction: one long slim rectangular receiver, one long straight barrel with a plain muzzle brake block, one simple angled grip, one flat rectangular stock at the rear, one small rectangular magazine. One thin cyan indicator strip along the receiver. No scope, no bipod, no rails, no wires, no screws. Charcoal body with steel gray barrel. Nothing held by hands, no hands, no character. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-prop-crate",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_prop_crate.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single industrial cargo crate prop, seen from a front three-quarter view, resting on the ground. One plain boxy volume with two horizontal reinforced bands wrapping all the way around in one flat layer each, and a single amber stencil stripe on the front face. No handles, no hinges, no latches, no labels, no text. Charcoal box with steel gray bands. Simple enough to model as a low-poly mesh in five minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-prop-barrel",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_prop_barrel.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single industrial barrel prop, seen from a front three-quarter view, standing on the ground. One plain vertical cylinder with two flat raised rings near the top and bottom, and one solid amber band around the middle. No lid detail, no handles, no valves, no text, no warning labels. Charcoal cylinder with steel gray rings. Simple enough to model as a low-poly mesh in five minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-prop-pillar",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_prop_pillar.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "A single tall energy conduit pillar prop for a sci-fi arena, seen from a front three-quarter view, standing on the ground. One plain squared column with a slight taper, a flat heavy base plate, and a single continuous vertical magenta-purple glowing channel running down the front face. No cables, no pipes, no rivets, no text. Charcoal column with a dark violet base, channel bright magenta emissive. Simple enough to model as a low-poly mesh in five minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-ref-prop-wallsegment",
+      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_prop_wall.png",
+      "size": "16:9",
+      "resolution": "1k",
+      "prompt": "A single modular sci-fi wall panel segment for an arena, seen from a front three-quarter view, standing vertically. One flat rectangular slab with a subtle inset frame border, two plain horizontal raised ribs, and one thin amber strip near the top edge. No pipes, no vents, no doors, no text, no decals. Charcoal slab with steel gray ribs. Designed as a repeatable module. Simple enough to model as a low-poly mesh in five minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
+    },
+    {
+      "id": "s-tex-floor",
+      "out": "Project/S/unity/Assets/_Game/Art/Textures/tex_floor_metal.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of an industrial metal floor plate. Dark charcoal steel with a regular grid of shallow rectangular plate seams, fine brushed directional grain, sparse small scratches and a few faint weld marks. Matte, worn, no rust, no paint. Low contrast so game units read clearly on top of it. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no text, no watermark. The whole frame is continuous floor, perfectly tileable in both directions, uniform detail density, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "s-tex-wall",
+      "out": "Project/S/unity/Assets/_Game/Art/Textures/tex_wall_panel.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of painted industrial wall plating. Medium-dark steel gray with a regular grid of large panel seams, subtle vertical brushed grain, light edge wear where paint has rubbed thin, a few small impact dents. Matte, dry, no rust streaks, no graffiti. Low contrast. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no text, no watermark. The whole frame is continuous wall, perfectly tileable in both directions, uniform detail density, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "s-tex-rust",
+      "out": "Project/S/unity/Assets/_Game/Art/Textures/tex_metal_rust.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of heavy corroded industrial steel. Dark charcoal base metal with broad patches of orange-brown rust bloom, pitting and flaking scale, dark staining running in short vertical streaks. Matte, dry. Medium contrast, readable at a distance. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no text, no watermark. The whole frame is continuous metal, perfectly tileable in both directions, uniform detail density, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "s-tex-concrete",
+      "out": "Project/S/unity/Assets/_Game/Art/Textures/tex_floor_concrete.jpg",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable PBR basecolor texture of poured industrial concrete floor. Neutral mid-dark gray with fine aggregate speckle, subtle troweled swirl marks, a few hairline cracks and small dark oil stains. Matte, dry, no gloss. Low contrast. Completely flat even lighting, no shadows, no highlights, no vignetting, no background, no text, no watermark. The whole frame is continuous concrete, perfectly tileable in both directions, uniform detail density, sharp focus, 2D texture map only."
+    },
+    {
+      "id": "s-ui-plate-dark",
+      "out": "E:\\S\\tools\\ui-ai-raw\\plate_dark.png",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable texture of DARK BRUSHED GUNMETAL PLATE used as the background of a military HUD panel. Base tone near-black blue-grey, roughly #151A21 to #2A313B. Fine horizontal brushed grain running across the frame, faint machining marks, a few hairline micro-scratches, occasional tiny pitting and cold-weld specks, sparse very subtle darker smudges. MATTE, no specular hotspots, no reflections. Completely flat even lighting across the whole frame. The whole frame is one continuous sheet of metal: no border, no rounded corners, no bevel edge, no highlight rim, no vignette, no shadow, no object, no screws, no rivets, no text, no numbers, no watermark, no logo. Perfectly tileable, uniform detail density, sharp focus, top-down flat 2D texture map."
+    },
+    {
+      "id": "s-ui-plate-light",
+      "out": "E:\\S\\tools\\ui-ai-raw\\plate_light.png",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless tileable texture of LIGHTER BRUSHED GUNMETAL PLATE, the raised hover state of a dark mechanical HUD button. Base tone mid-grey blue, roughly #3A424E to #4A5464, clearly brighter than a near-black plate but still desaturated and cold. Fine horizontal brushed grain, subtle machining striations, a few hairline scratches, sparse faint fingerprint smudges. SATIN finish, low sheen, no mirror reflection, no bright specular streak. Completely flat even lighting across the whole frame. The whole frame is one continuous sheet of metal: no border, no rounded corners, no bevel edge, no highlight rim, no vignette, no shadow, no object, no screws, no rivets, no text, no numbers, no watermark, no logo. Perfectly tileable, uniform detail density, sharp focus, top-down flat 2D texture map."
+    },
+    {
+      "id": "s-ui-energy",
+      "out": "E:\\S\\tools\\ui-ai-raw\\energy.png",
+      "size": "1:1",
+      "resolution": "2k",
+      "prompt": "Seamless horizontal texture for the FILL of a sci-fi HUD progress bar. A desaturated near-white energy sheen: bright neutral core running horizontally through the vertical middle third of the frame, smoothly falling off to darker grey toward the top and bottom edges. Fine horizontal energy filaments and thin parallel light streaks along the core, a couple of slightly brighter pulse bands. Colour is strictly NEUTRAL grey-white (it will be tinted in engine), no hue. Completely flat even lighting, no vignette, no glow bloom outside the frame, no border, no rounded corners, no text, no numbers, no arrows, no watermark, no logo. Perfectly tileable horizontally, sharp focus, flat 2D texture map."
+    },
+    {
+      "id": "s-ui-icon-lock",
+      "out": "E:\\S\\tools\\ui-ai-raw\\icon_lock.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "Single simple UI GLYPH of a PADLOCK, locked state, drawn as flat white line art. Shackle arch over a rectangular body with a keyhole. Thick even stroke weight, hard geometric edges, minimal detail, no perspective, no shading, no gradient, no glow, no outline, no colour. Centred, occupying about 70 percent of the frame, generous empty margin around it. Pure solid black background, nothing else in frame. Pure white glyph on pure black, high contrast, crisp anti-aliased edges, no text, no watermark, no logo."
+    },
+    {
+      "id": "s-ui-icon-check",
+      "out": "E:\\S\\tools\\ui-ai-raw\\icon_check.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "Single simple UI GLYPH of a CHECKMARK, drawn as flat white line art. A bold angular tick: short down-stroke then long up-stroke, mitred ends, thick even stroke weight, hard geometric edges, no perspective, no shading, no gradient, no glow, no outline, no colour. Centred, occupying about 65 percent of the frame, generous empty margin around it. Pure solid black background. Pure white glyph on pure black, high contrast, crisp anti-aliased edges, no text, no watermark, no logo."
+    },
+    {
+      "id": "s-ui-icon-arrow",
+      "out": "E:\\S\\tools\\ui-ai-raw\\icon_arrow.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "prompt": "Single simple UI GLYPH of a RIGHT-POINTING CHEVRON ARROW, drawn as flat white line art. Two thick straight strokes meeting at a sharp apex on the right, mitred ends, hard geometric edges, no perspective, no shading, no gradient, no glow, no outline, no colour. Centred, occupying about 60 percent of the frame, generous empty margin. Pure solid black background. Pure white glyph on pure black, high contrast, crisp anti-aliased edges, no text, no watermark, no logo."
+    },
+    {
+      "id": "s-ui-item-b_slug",
+      "out": "E:/S/tools/ui-ai-raw/item_b_slug.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '制式弹'. a single standard rifle cartridge, straight side view, pointed tip up, simple raised rim at the base. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_heavy",
+      "out": "E:/S/tools/ui-ai-raw/item_b_heavy.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '重芯弹'. a heavy fat bullet with a thick blunt nose and a dense inner core ring, side view, clearly bulkier than a normal round. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_pellet",
+      "out": "E:/S/tools/ui-ai-raw/item_b_pellet.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '霰粒'. a tight cluster of seven small round pellets, three in the middle four around. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_pierce",
+      "out": "E:/S/tools/ui-ai-raw/item_b_pierce.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '穿甲钉'. a long narrow armour-piercing dart spike with sharp conical tip and tiny tail fins, pointing straight up. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_ricochet",
+      "out": "E:/S/tools/ui-ai-raw/item_b_ricochet.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '跳弹'. a bullet deflecting off a hard surface, a curved bounce arrow arcing away from the impact point and a small spark at contact. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_plasma",
+      "out": "E:/S/tools/ui-ai-raw/item_b_plasma.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '电浆团'. a compact sphere of electric plasma with three jagged lightning arcs discharging outward and a bright core. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_incend",
+      "out": "E:/S/tools/ui-ai-raw/item_b_incend.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '燃素弹'. a bullet wrapped in a stylised flame with three curling tongues of fire trailing behind it. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_cryo",
+      "out": "E:/S/tools/ui-ai-raw/item_b_cryo.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '冻结核'. a hexagonal ice crystal bullet with sharp faceted edges, three small frost shards breaking off, cold sharp geometry. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_null",
+      "out": "E:/S/tools/ui-ai-raw/item_b_null.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '空蚀弹'. a hollow bullet with an empty void core, its outline partially eaten away by erosion, a ragged hole punched through the middle. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-b_lance",
+      "out": "E:/S/tools/ui-ai-raw/item_b_lance.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '光矛'. an elongated energy spearhead made of a sharp beam of light, tapered to a needle point, two short energy fins at the base. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_dmg_up",
+      "out": "E:/S/tools/ui-ai-raw/item_m_dmg_up.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '校准套件'. a precision calibration module, a gear meshing with a small tuning wrench, a short upward arrow cut into the gear face. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_dmg_flat",
+      "out": "E:/S/tools/ui-ai-raw/item_m_dmg_flat.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '增压衬片'. a rectangular pressure shim plate seen face on with a bold upward arrow embossed on it and two bolt holes at the corners. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_crit_up",
+      "out": "E:/S/tools/ui-ai-raw/item_m_crit_up.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '激光准星'. a sniper scope reticle with a tiny laser dot at its exact centre and four short crosshair ticks, no circle housing. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_critdmg",
+      "out": "E:/S/tools/ui-ai-raw/item_m_critdmg.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '中空改造'. a hollow-point bullet cut in cross section, a deep cavity at the nose and a starburst of petals opening outward. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_spread_down",
+      "out": "E:/S/tools/ui-ai-raw/item_m_spread_down.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '稳定器'. a stabiliser fin assembly, three parallel fins converging into a narrow point, two tight inward-pointing arrows compressing them together. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_life_up",
+      "out": "E:/S/tools/ui-ai-raw/item_m_life_up.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '延时引信'. a mechanical fuse timer, a clock dial with a single bold hand and a small ignition cap on top. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_ammo_down",
+      "out": "E:/S/tools/ui-ai-raw/item_m_ammo_down.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '弹链优化'. two interlocking ammunition belt links forming a chain segment, an arrow threading through them pointing forward. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_speed_up",
+      "out": "E:/S/tools/ui-ai-raw/item_m_speed_up.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '加速器'. three stacked forward chevrons accelerating into a bullet-shaped tip with two speed lines trailing behind. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_split",
+      "out": "E:/S/tools/ui-ai-raw/item_m_split.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '量子分裂'. one solid orb splitting into three smaller orbs, thin divergence lines fanning out from a single origin point. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_pierce",
+      "out": "E:/S/tools/ui-ai-raw/item_m_pierce.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '穿透射击'. a sharp arrow passing clean through a thick plate, the exit hole visible on the far side, small fragments shedding at the entry. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_homing",
+      "out": "E:/S/tools/ui-ai-raw/item_m_homing.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '制导'. a guidance antenna with a parabolic dish and two concentric radar arcs locking onto a small target dot. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_blast",
+      "out": "E:/S/tools/ui-ai-raw/item_m_blast.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '爆裂装药'. a radial explosion burst with eight uneven jagged spikes and a compact dense core, three small debris chips flying outward. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_mag",
+      "out": "E:/S/tools/ui-ai-raw/item_m_mag.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '弹匣扩容'. an extended straight box magazine with visible rounds stacked inside, a bold plus sign embossed near the base. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_rate",
+      "out": "E:/S/tools/ui-ai-raw/item_m_rate.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '高速击发'. a lightning bolt passing through a small trigger lever, two short motion lines indicating speed at the top. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-m_recoil",
+      "out": "E:/S/tools/ui-ai-raw/item_m_recoil.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '后坐抑制'. a coiled recoil damper spring mounted on a short guide rod with a heavy end cap, two small arrows pulling inward on the spring. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    }
+  ],
+  "_chains": [
+    {
+      "id": "cathedral-ref-chain",
+      "plan": "Blender Modle/gothic-timber-cathedral/refs/plan-cathedral.json",
+      "script": ".cursor/skills/apimart-image/scripts/apimart_ref_chain.py",
+      "mode": "anchor",
+      "out_dir": "Blender Modle/gothic-timber-cathedral/refs/",
+      "note": "哥特式木构教堂 5 视角链式参考图（西立面/侧立面/俯视/室内 + 3/4 主视角）"
+    },
+    {
+      "id": "sport-ref-chain",
+      "plan": "Blender Modle/spiderverse-taxi/refs/plan-sport.json",
+      "script": ".cursor/skills/apimart-image/scripts/apimart_ref_chain.py",
+      "mode": "anchor",
+      "out_dir": "Blender Modle/spiderverse-taxi/refs/",
+      "note": "多视角参考图串行：anchor 先出，其余视角以它为 image_urls 参考"
+    }
+  ],
+  "_batches": [
+    {
+      "id": "s-ui-assets",
+      "game": "Project/S/",
+      "note": "Project S 的 HUD/背包 UI 素材（9-slice 面板 + 类别图标）。图标为纯黑底，用 Additive 显示。",
+      "only": "s-ui-panel,s-ui-card-frame,s-ui-bar-frame,s-ui-icon-bullet,s-ui-icon-whole,s-ui-icon-after,s-ui-icon-gun,s-ui-crosshair,s-ui-vignette,s-ui-banner,s-ui-keycap"
+    },
+    {
+      "id": "s-art-pass",
+      "game": "Project/S/",
+      "note": "Project S 美术管线：13 张参考图（1k，低模可建模）+ 4 张平铺贴图（2k）。参考图只用于 Blender 建模对照，贴图进引擎。",
+      "refs": "s-ref-crawler,s-ref-spitter,s-ref-shield,s-ref-drone,s-ref-boss,s-ref-gun-auto,s-ref-gun-grenade,s-ref-gun-single,s-ref-prop-crate,s-ref-prop-barrel,s-ref-prop-pillar,s-ref-prop-wallsegment",
+      "textures": "s-tex-floor,s-tex-wall,s-tex-rust,s-tex-concrete"
+    }
+  ]
 }
-
