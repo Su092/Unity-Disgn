@@ -11,7 +11,7 @@
 ## 管线（固定顺序）
 
 ```
-① APIMart 出参考图（1k）      →  _Inbox/art-refs/*.png    12 张（原料，不入库）
+① APIMart 出参考图（1k）      →  _Inbox/art-refs/*.png    12 张（原料，已入库）
 ② 按参考图写 bpy 脚本建模      →  Assets/_Game/Art/Models/*.fbx  12 件（交付件）
 ③ 尺寸门 + 装配门             →  blender_s_build_assets.py 内置
 ④ 契约门（尺寸/单位/命名/落地）  →  tools/blender-gate.ps1
@@ -22,7 +22,7 @@
 
 > 路径实名核对（2026-11-15，含原料分层）：
 > 交付件在 `Assets/_Game/Art/{Models,Textures,Shaders}`，运行时副本在 `Assets/Resources/{Models,Textures}`；
-> 原料（参考图、预览渲染）在工程根 `_Inbox/{art-refs,art-preview}`，**不入库**。工程内**没有**顶层的 `Assets/Art/`。
+> 原料（参考图、预览渲染）在工程根 `_Inbox/{art-refs,art-preview}`，**已入库**。工程内**没有**顶层的 `Assets/Art/`。
 
 ## 素材清单
 
@@ -37,7 +37,7 @@
 
 ### 参考图（1k，仅用于建模对照，不进引擎）
 
-12 张：5 个敌人/Boss + 3 把枪 + 4 个场景道具，源在工程根 `_Inbox/art-refs/`（**不入库**，可重生成）。
+12 张：5 个敌人/Boss + 3 把枪 + 4 个场景道具，源在工程根 `_Inbox/art-refs/`（**已入库**，换机直接可用）。
 
 枢纽文档区**不保留**图片副本——参考图的结论写在本节表格里，原图留在 `_Inbox/`。
 

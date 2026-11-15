@@ -64,14 +64,14 @@
 **3D（12 件低模 ≤1056 面）**
 - 5 敌人/Boss + 3 枪械 + 4 场景道具
 - 4 张 2k 平铺贴图
-- 12 张 1k 参考图（仅建模对照，在 `_Inbox/art-refs/`，**不入库**）
+- 12 张 1k 参考图（仅建模对照，在 `_Inbox/art-refs/`，**已入库**）
 - 管线：`tools/blender_s_build_assets.py`（建模 + 双门）、`tools/blender_s_preview.py`（出图在 `_Inbox/art-preview/`）
 
 **UI（11 张素材）**
 - 面板 / 卡框 / 条槽 / 横幅 / 暗角 / 准星 / 键位 + 4 个作用域图标
 - 加色材质 `mat_ui_additive` + `S/UiAdditive` shader
 - 9-slice 边距由 `Editor/SUiSpriteSetup.cs` 写入并硬校验
-- 流水线原料在 `_Inbox/{ui-ai-raw,ui-ai-src}/`（**不入库**），成品落 `Assets/Resources/UI/`
+- 流水线原料在 `_Inbox/{ui-ai-raw,ui-ai-src}/`（**已入库**），成品落 `Assets/Resources/UI/`
 
 **核心取舍**：素材当边框（质感），代码内部底（对比）。因为素材实测平均亮度仅 0.015–0.03。
 

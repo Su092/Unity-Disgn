@@ -54,14 +54,15 @@ powershell -ExecutionPolicy Bypass -File "<HUB>\machine\doctor.ps1"
 | 类别 | 位置 | 入库 | 判据 |
 |------|------|------|------|
 | **交付件** | `<GAME:id>/Assets/` | 是 | 引擎直接读取、丢了就拿不回来 |
-| **原料** | `<GAME:id>/_Inbox/` | **否**（gitignore） | AI 原图、参考图、预览渲染、中间态；可由脚本重生成 |
+| **原料** | `<GAME:id>/_Inbox/` | **是**（换机直接拿到，不用重生成） | AI 原图、参考图、预览渲染、中间态；都已入库 |
+| **运行产物** | `<GAME:id>/Shots/` 等 | **否**（gitignore） | 截图、模型对照图；每次跑脚本重生成 |
 | **结论** | `<HUB>/Project/<Game>/docs/` | 是 | 纯文字（`.md`）；图片一律不放 |
 
 - 枢纽 `docs/` **只放 markdown**。不要提交 `docs/models/`、`docs/shots/`、`docs/ui/` 这类图片副本，
-  也不要放 `.docx` / `.psd` 原件——把结论写进 markdown，原图留在 `_Inbox/`。
-- `_Inbox/` 可随时清空重来；清空后靠 `tools/*.json` 清单 + APIMart 重跑。
-- 运行产物（截图、模型对照图）写进工程内 `Shots/`，同样 gitignore。
-- 新建游戏时：工程根建 `_Inbox/`（含 `README.md` 说明），工程 `.gitignore` 加 `/_Inbox/` 与 `/Shots/`。
+  也不要放 `.docx` / `.psd` 原件——把结论写进 markdown，原图放 `_Inbox/`（`_Inbox` 是入库的）。
+- `_Inbox/` 入库：换机不用重新生图。若 Raw 体积过大（单仓库 >500 MB），再考虑 LFS。
+- 运行产物（截图、模型对照图）写进工程内 `Shots/`，**不入库**（可重生成）。
+- 新建游戏时：工程根建 `_Inbox/`（含 `README.md` 说明），工程 `.gitignore` 只加 `/Shots/` 等运行产物目录。
 
 ## 开发顺序
 
