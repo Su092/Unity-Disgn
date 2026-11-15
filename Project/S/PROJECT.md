@@ -14,7 +14,7 @@
 | 运行时根 | `unity/Assets/_Game/` |
 | 数据 | `unity/Assets/Resources/Data/sdata.json` |
 | 场景 | `unity/Assets/Scenes/Main.unity`（只有 `S` 节点） |
-| 当前阶段 | **垂直切片可玩**：逻辑断言 213/213、打包 0 error、实机自检 73/73 |
+| 当前阶段 | **对齐 MODCORE 原型**：6 枪 / 39 配件 / 7 作用域，断言 106/106、打包 0 error、自检 89/89 |
 
 ## 目录分工
 
@@ -41,7 +41,7 @@
 
 ## 开发顺序
 
-1. 在 `docs/` 写清或更新规格（配件看 `loadout-spec.md`，环境看 `gameplay-spec.md`）
+1. 在 `docs/` 写清或更新规格（配件看 `loadout-spec.md`，环境与时间轴看 `gameplay-spec.md`）
 2. 在 `breakdown/` 拆成可执行任务
 3. 打开 `unity` 对应工程，按拆解在 `Assets/_Game/` 实现
 4. 阶段结束更新 `memory/CURRENT.md`

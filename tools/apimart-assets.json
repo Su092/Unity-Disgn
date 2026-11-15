@@ -494,6 +494,318 @@
       "resolution": "1k",
       "no_global_style": true,
       "prompt": "Game UI inventory icon for a weapon attachment called '后坐抑制'. a coiled recoil damper spring mounted on a short guide rod with a heavy end cap, two small arrows pulling inward on the spring. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-std",
+      "out": "_Inbox/ui-ai-raw/item_std.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '标准弹'. a single standard rifle cartridge, straight side view, pointed tip up, simple raised rim at the base. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-light",
+      "out": "_Inbox/ui-ai-raw/item_light.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '轻型弹'. a slim short lightweight bullet, tapered nose, two small speed streaks trailing behind it. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-pellet",
+      "out": "_Inbox/ui-ai-raw/item_pellet.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '霰弹'. a tight cluster of seven small round pellets, three in the middle four around. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-ap",
+      "out": "_Inbox/ui-ai-raw/item_ap.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '穿甲弹'. a long needle-nosed armour piercing dart with an arrowhead tip and three stabiliser fins. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-laser",
+      "out": "_Inbox/ui-ai-raw/item_laser.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '激光束'. a concentrated laser beam drawn as a straight shaft with a bright core and three short refraction ticks. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-grenade",
+      "out": "_Inbox/ui-ai-raw/item_grenade.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '榴弹'. a plump teardrop shaped grenade with a rounded body, a tail fin assembly and a short fuse cap. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-bouncer",
+      "out": "_Inbox/ui-ai-raw/item_bouncer.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '弹跳弹'. a round ball with a zigzag ricochet path arrow bouncing off a right angle corner. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-missile",
+      "out": "_Inbox/ui-ai-raw/item_missile.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '追踪飞弹'. a small guided missile with four tail fins, three flat arrow fins. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-mine",
+      "out": "_Inbox/ui-ai-raw/item_mine.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '感应地雷'. a flat disc landmine seen from a low angle with four short antenna spikes. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-shock",
+      "out": "_Inbox/ui-ai-raw/item_shock.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '电网陷阱'. a flat disc emitter with four lightning bolts arcing outward from its rim. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-chain",
+      "out": "_Inbox/ui-ai-raw/item_chain.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '连锁闪电'. a jagged lightning bolt splitting into three branches between two opposing sharp tips. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-saw",
+      "out": "_Inbox/ui-ai-raw/item_saw.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '回旋锯'. a circular saw blade with twelve teeth and a circular return arrow sweeping around it. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-flame",
+      "out": "_Inbox/ui-ai-raw/item_flame.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '火焰喷射'. a three tongued flame jet spreading forward from a short wide nozzle. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-hole",
+      "out": "_Inbox/ui-ai-raw/item_hole.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '奇点'. a small black disc with concentric gravity rings collapsing inward and four motion arcs. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-trigger",
+      "out": "_Inbox/ui-ai-raw/item_trigger.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '触发弹'. a bullet with a small burst starburst at its nose and a curved recoil arc behind it. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-timer",
+      "out": "_Inbox/ui-ai-raw/item_timer.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '定时触发弹'. a bullet with a small clock face mounted at its base and a single short tick mark. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-expire",
+      "out": "_Inbox/ui-ai-raw/item_expire.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '消散触发弹'. a bullet dissolving into particles, the nose breaking up into four scattered fragments. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-dmg",
+      "out": "_Inbox/ui-ai-raw/item_dmg.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '伤害增幅'. a bold upward pointing thick arrow with a sharp chevron head. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-heavy",
+      "out": "_Inbox/ui-ai-raw/item_heavy.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '重弹头'. a heavy fat bullet with a thick blunt nose and a dense inner core ring. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-speed",
+      "out": "_Inbox/ui-ai-raw/item_speed.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '加速'. three horizontal speed lines with two forward chevrons stacked. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-pierce",
+      "out": "_Inbox/ui-ai-raw/item_pierce.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '穿透'. a spear point thrusting straight through three stacked flat plates. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-explode",
+      "out": "_Inbox/ui-ai-raw/item_explode.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '爆裂'. an eight point starburst explosion with a small core circle. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-homing",
+      "out": "_Inbox/ui-ai-raw/item_homing.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '追踪'. a curved arrow bending towards a small target diamond. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-bounce",
+      "out": "_Inbox/ui-ai-raw/item_bounce.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '弹跳'. a ball with a zigzag path arrow bouncing off two parallel flat surfaces. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-burn",
+      "out": "_Inbox/ui-ai-raw/item_burn.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '燃烧'. a single tall flame with a hollow teardrop core. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-frost",
+      "out": "_Inbox/ui-ai-raw/item_frost.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '冰霜'. a six pointed snowflake with hollow triangular arms. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-giant",
+      "out": "_Inbox/ui-ai-raw/item_giant.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '巨大化'. a small square beside a much larger square, with four outward arrows between them. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-crit",
+      "out": "_Inbox/ui-ai-raw/item_crit.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '暴击'. a sharp four point spark star with a small solid diamond at its centre. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-scatter",
+      "out": "_Inbox/ui-ai-raw/item_scatter.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '三重弹幕'. three diverging arrows spreading out from a single point. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-thrift",
+      "out": "_Inbox/ui-ai-raw/item_thrift.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '节能回路'. a downward pointing arrow beside a small battery cell with a minus notch. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_mag",
+      "out": "_Inbox/ui-ai-raw/item_g_mag.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '扩容弹匣'. a tall rectangular magazine with a double outward arrow on both sides. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_reload",
+      "out": "_Inbox/ui-ai-raw/item_g_reload.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '快速装填'. a circular reload arrow curling around a single cartridge. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_rapid",
+      "out": "_Inbox/ui-ai-raw/item_g_rapid.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '速射机构'. a gear with a lightning bolt cut through its centre. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_stable",
+      "out": "_Inbox/ui-ai-raw/item_g_stable.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '稳定器'. three parallel vertical fins converging into a narrow base plus two inward pointing arrows. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_recycle",
+      "out": "_Inbox/ui-ai-raw/item_g_recycle.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '弹药回收'. a cartridge with a circular return arrow wrapping back into its own casing. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_parallel",
+      "out": "_Inbox/ui-ai-raw/item_g_parallel.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '并联扳机'. two parallel trigger mechanisms side by side joined by a horizontal bar. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_leech",
+      "out": "_Inbox/ui-ai-raw/item_g_leech.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '汲能模块'. a hexagon module with two arrows pointing inward toward a small core dot. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_double",
+      "out": "_Inbox/ui-ai-raw/item_g_double.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '双重施放'. two identical arrows side by side pointing up, with a double tick mark above them. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
+    },
+    {
+      "id": "s-ui-item-g_triple",
+      "out": "_Inbox/ui-ai-raw/item_g_triple.png",
+      "size": "1:1",
+      "resolution": "1k",
+      "no_global_style": true,
+      "prompt": "Game UI inventory icon for a weapon attachment called '三重施放'. three identical arrows side by side pointing up, with a triple tick mark above them. Single centered abstract emblem symbol, thick bold rounded line art, uniform stroke weight, monochrome bone-white glyph on a pure solid black background, high contrast, minimalist industrial sci-fi iconography, clean silhouette readable at small size, generous empty margin around the shape, perfectly symmetric where applicable, no circle, no ring, no badge plate, no frame, no border, no text, no letters, no numbers, no watermark, no shadow, no gradient, no background texture, flat 2D vector-like, the entire background is pure black."
     }
   ],
   "_chains": [

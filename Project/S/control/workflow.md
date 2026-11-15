@@ -29,6 +29,37 @@
 
 不在 `unity/` 下新建文档目录。文档一律写枢纽。
 
+## 素材落点（硬约束）
+
+**生成素材的中间产物只放本工程的 `_Inbox`，不要落到枢纽根。**
+
+| 阶段 | 位置 |
+|------|------|
+| APIMart 原图 | `<GAME:S>\_Inbox\ui-ai-raw\` |
+| 预处理产物（抠图 + 归一） | `<GAME:S>\_Inbox\ui-ai-src\` |
+| 进引擎的成品 | `<GAME:S>\Assets\Resources\UI\` |
+| 素材清单（跨游戏共用） | `<HUB>\tools\apimart-assets.json` |
+
+**为什么这条要写死**：`apimart_image.download()` 会把**相对路径**拼到枢纽根（`REPO`）上。
+清单里的 `out` 字段是相对路径（`_Inbox/ui-ai-raw/xxx.png`），直接传进去就会写到
+`<HUB>\_Inbox`，而不是本工程的 `_Inbox` —— 实测 39 张图标全部跑偏，
+工程里 0 张，枢纽根多出一个 `_Inbox` 目录。
+
+所以调用 `download()` 前必须先把 `out` 解析成**工程根的绝对路径**：
+
+```python
+out = item["out"]
+if not os.path.isabs(out):
+    out = os.path.abspath(os.path.join(PROJ, out))   # PROJ = <GAME:S>
+api.download(url, out)
+```
+
+「判断这张图是否已存在」也要用同一套解析，否则会一直认为缺图并重复生成。
+
+**不要写死盘符**：工具脚本用「向上找含 `.cursor/skills` 的目录」得到枢纽根，
+用 `os.path.dirname(HERE)` 得到工程根。写死 `E:\...` 的脚本换机直接 import 失败。
+
+
 ## 一次改动的固定顺序
 
 1. **改规格**：`docs/loadout-spec.md`（配件）或 `docs/gameplay-spec.md`（环境）

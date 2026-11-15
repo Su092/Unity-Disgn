@@ -23,10 +23,15 @@
 |----|------|------|
 | `meta` | object | 版本与备注，运行时不用 |
 | `player` | object | 玩家基础属性 |
-| `guns` | array | 枪械（初版 3） |
-| `bullets` | array | 子弹配件（初版 10） |
-| `modifiers` | array | 衍生配件（初版 15） |
+| `guns` | array | 枪械（6 把） |
+| `bullets` | array | 子弹配件（17 件） |
+| `modifiers` | array | 衍生配件（作用于子弹，13 件） |
+| `gunModifiers` | array | 枪械向衍生件（9 件，含 2 件 `Next` 多重施放） |
 | `rarityWeights` | object | 三选一权重 |
+| `arena` | object | 单张竞技场的地形参数（无分区、无门） |
+| `timeline` | object | 刷怪时间轴：阶段、并发、间隔、Boss 入场时刻 |
+| `elite` | object | 精英强化系数与出现节奏 |
+| `boss` | object | Boss 基础属性 |
 
 ## `player`
 
@@ -46,84 +51,165 @@
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `id` | string | 唯一，`g_` 前缀 |
+| `id` | string | 唯一：`rifle` `smg` `shotgun` `sniper` `beam` `launcher` |
 | `name` | string | 显示名 |
-| `kind` | enum | `Auto` / `Grenade` / `Single` |
-| `slotCount` | int | **配件位数**（轮转长度） |
-| `fireInterval` | float | 击发间隔（秒） |
-| `magSize` | int | 弹匣上限 |
+| `desc` | string | 一句话定位（菜单卡片用） |
+| `slotCount` | int | **槽位数**（一格一件） |
+| `magSize` | int | 弹匣容量 |
 | `reloadTime` | float | 换弹秒数 |
-| `spreadBase` | float | 基础散射（度），链结算前并入每个描述符 |
-| `muzzleSpeed` | float | 基础弹速 m/s |
-| `damageMul` | float | **枪械固有伤害倍率**，链结算**之后**乘 |
-| `splashRadius` | float | 基础溅射半径 m（0 = 无）；与子弹自带取大者 |
-| `mode` | enum | `Straight`（直射）/ `Ballistic`（抛射，受 `gravity`） |
-| `gravity` | float | 抛射重力，仅 `Ballistic` 用 |
-| `starterChain` | string[] | 开局装进 1 号位的配件 id |
+| `fireInterval` | float | 基础击发间隔（秒） |
+| `spreadBase` | float | 基础散射（度），加到每个投射物上 |
+| `castCount` | int | **一次射击读取几个子弹**（霰弹枪 = 2） |
+| `baseBullet` | string | 开局预置在第 1 槽的子弹 id（玩家永远有一发可用） |
+| `color` | string | `#rrggbb`，枪模与 UI 用色 |
+| `zoom` | float | 右键瞄准时的视距（越小倍率越高） |
 
 ## `bullets[]`
 
+| 字段 | 类型 | 默认 | 说明 |
+|------|------|------|------|
+| `id` `name` `icon` `desc` | string | | `icon` 是卡片角标用的单字 |
+| `rarity` | enum | `Common` | `Common` / `Rare` / `Epic` |
+| `cost` | int | 1 | **耗弹点**（读到时扣） |
+| `delay` | float | 0 | 叠加到击发间隔（负数 = 更快） |
+| `kind` | enum | `Proj` | `Proj` / `Beam` / `Mine` / `Field` / `Chain` / `Saw` / `Hole` |
+| `damage` | float | 10 | 命中伤害 |
+| `count` | int | 1 | 投射物数量 |
+| `spread` | float | 0 | 散射（度） |
+| `speed` | float | 80 | 初速 m/s |
+| `lifetime` | float | 1.5 | 存在时间（秒） |
+| `size` | float | 0.12 | 视觉半径 |
+| `pierce` | int | 0 | 穿透数（999 = 无限） |
+| `bounce` | int | 0 | 反弹次数 |
+| `homing` | float | 0 | 追踪强度 |
+| `gravity` | float | 0 | 抛射重力（>0 才受重力） |
+| `explodeR` | float | 0 | 爆炸半径（0 = 无） |
+| `explodeDmg` | float | 0 | **爆炸伤害**（与直伤独立结算） |
+| `burn` | float | 0 | 燃烧 dps |
+| `slow` | float | 0 | 减速 0..1 |
+| `crit` | float | 0.05 | 暴击率 |
+| `critMul` | float | 2 | 暴击倍率 |
+| `knock` | float | 1 | 击退系数 |
+| `chainCount` | int | 0 | 连锁次数（仅 `Chain`） |
+| `range` | float | 60 | 射程（仅 Beam / Chain） |
+| `radius` | float | 0 | 力场/奇点半径 |
+| `duration` | float | 0 | 地雷/力场持续秒数 |
+| `trigger` | enum | `None` | `Hit` / `Timer` / `Expire` |
+| `color` | string | `#ffd25a` | 投射物颜色 |
+
+## `modifiers[]` / `gunModifiers[]`
+
+两者结构相同，只是分组存放（作用于子弹 / 作用于枪械）。
+**所有字段都是「每层叠加量」**，`t` = 同名同域在一次结算里的叠加层数。
+
+### 作用域
+
+| 字段 | 类型 | 默认 | 说明 |
+|------|------|------|------|
+| `scope` | enum | `Next` | `Next` / `Prev` / `Adj` / `N2` / `N3` / `P2` / `All` |
+| `cost` | int | 1 | 被读取时扣的弹（`Next` 才扣；被动件按吸附计） |
+| `delay` | float | 0 | 叠加到击发间隔 |
+
+### 乘法组
+
+| 字段 | 说明 |
+|------|------|
+| `damageMulAdd` | 伤害 `×(1+add·t)` |
+| `sizeMulAdd` | 体积 |
+| `speedMulAdd` | 速度 |
+| `rangeMulAdd` | 射程 |
+| `lifeMulAdd` | 存在时间 |
+| `knockMulAdd` | 击退 |
+| `countMulAdd` | 投射物数量（取整） |
+| `radiusMulAdd` | 范围半径 |
+
+### 加法组
+
+| 字段 | 说明 |
+|------|------|
+| `piercePer` | 每层穿透（最小 1/层） |
+| `bouncePer` | 每层反弹（最小 1/层） |
+| `homingPer` | 追踪强度 |
+| `burnPer` | 燃烧 dps |
+| `slowPer` | 减速（取 max） |
+| `critPer` | 暴击率 |
+| `spreadPer` | 散射（度） |
+
+### 爆裂
+
+| 字段 | 说明 |
+|------|------|
+| `explodeRBase` | 无爆裂时的半径 |
+| `explodeRAdd` | 已有爆裂时的半径加成比例 |
+| `explodeDmgFromDmg` | 爆伤 = 伤害 × 该系数 |
+| `explodeDmgFlat` | 爆伤固定加成 |
+
+### 弹药 / 枪械 / 多重施放
+
+| 字段 | 说明 |
+|------|------|
+| `ammoReduce` | 目标子弹耗弹 −N |
+| `gunMagMul` `gunReloadMul` `gunDelayMul` `gunSpreadMul` | 枪属性倍率 |
+| `gunRecycleAdd` | 免耗弹概率（叠加按 `1−(1−a)(1−b)`） |
+| `gunCastAdd` `gunMagMulIfCast` | 读取 +N（带弹匣惩罚） |
+| `gunLeech` | 击杀回血 |
+| `multicast` | 本次多读 N 发（自动归到 `Next`） |
+
+**校验**：`IsGunOnly` 为真的件会被强制设为 `scope: All`（解析时自动纠正，不报错）。
+
+## `arena`
+
+单张连续场地。**没有 `zones[]`、没有门、没有分区间隔** —— 这是与初版最大的结构差异。
+
+| 字段 | 类型 | 默认 | 说明 |
+|------|------|------|------|
+| `width` | float | 120 | 场地 X 向尺寸（m） |
+| `depth` | float | 120 | 场地 Z 向尺寸（m） |
+| `wallHeight` | float | 12 | 四周墙高；墙实心、挡人挡弹 |
+| `bossPadRadius` | float | 14 | 中央 Boss 台半径；也是掩体的最小留空半径基准 |
+| `coverCount` | int | 22 | 掩体数量（固定种子，避开中央与出生点） |
+| `highGroundCount` | int | 4 | 高台数量，均布于四边中点，带台阶 |
+| `spawnPoints` | int | 16 | 沿外缘的环形刷怪点数 |
+| `playerSpawnZ` | float | -45 | 玩家出生点的 Z 坐标（X 恒为 0） |
+
+## `timeline`
+
+时间轴是本作**唯一的节奏来源**（`gameplay-spec.md` §2.1）。
+
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `id` `name` `rarity` | | `b_` 前缀；`Starter` 不进抽取池 |
-| `damage` | float | 命中伤害 |
-| `ammo` | int | 每次施法扣的弹药点 |
-| `spreadAdd` | float | 散射加法（度） |
-| `lifetime` | float | 存在时间（秒） |
-| `crit` | float | 暴击率 0..1 |
-| `critDmg` | float | 暴击倍率（≥1） |
-| `speedMul` | float | 弹速倍率，默认 1 |
-| `pierce` | int | 可穿透敌人数 |
-| `bounce` | int | 撞墙反弹次数 |
-| `splashRadius` | float | 自带溅射半径 |
-| `burnDps` `burnTime` `burnMaxStacks` | float/float/int | 燃烧 |
-| `slowPct` `slowTime` | float | 减速 |
-| `ignoreArmor` | bool | 无视护甲（盾卫正面减伤只按 30%） |
+| `bossAt` | float | Boss 入场时刻（秒）。8:00 = 480 |
+| `threatFullAt` | float | 威胁值达到 100 的时刻（秒）；`threat = 100 × t / threatFullAt` |
+| `phases[]` | array | 阶段表，按下表字段定义 |
+| `bossPhase` | object | Boss 入场后的降档刷怪规格（同 `phases[]` 结构） |
 
-## `modifiers[]`
-
-**加法项**（先作用）
+`phases[]` / `bossPhase` 的字段：
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `damageFlat` | float | 伤害 + |
-| `critFlat` | float | 暴击率 +（0.12 = +12%） |
-| `critDmgFlat` | float | 暴击倍率 + |
-| `spreadAddFlat` | float | 散射 +（度） |
-| `lifetimeFlat` | float | 存在时间 +（秒） |
-| `pierceFlat` | int | 穿透 + |
-| `bounceFlat` | int | 反弹 + |
-| `ammoFlat` | int | 弹药消耗 +（负数为减） |
+| `at` | float | 该阶段开始时刻（秒）。首条必须为 0 |
+| `name` | string | UI 显示名（`开局` / `加压` / `混编` / `全谱` / `高压` / `BOSS`） |
+| `pool` | string[] | 敌人池，名字对应 `Enemy.Kind`：`Crawler` `Spitter` `Shield` `Drone` |
+| `concurrency` | int | 场上同时存活上限。**这是可读性保护**，不是性能参数 |
+| `interval` | float | 单只刷出间隔（秒） |
 
-**乘法项**（后作用）
+**校验**：`phases[0].at` 必须为 0；`at` 必须递增；`pool` 里的名字必须是四个合法 Kind 之一
+（拼错会静默退化成 Crawler，见 `GameRoot.SpawnFromPool`）。
 
-| 字段 | 类型 | 默认 |
-|------|------|------|
-| `damageMul` | float | 1 |
-| `critMul` | float | 1 |
-| `spreadMul` | float | 1 |
-| `lifetimeMul` | float | 1 |
-| `speedMul` | float | 1 |
+## `elite`
 
-**行为项**
+| 字段 | 类型 | 默认 | 说明 |
+|------|------|------|------|
+| `firstAt` | float | 240 | 首只精英的入场时刻（4:00） |
+| `interval` | float | 90 | 之后每只的间隔 |
+| `hpMul` | float | 3.5 | 生命倍率 |
+| `dmgMul` | float | 1.6 | 伤害倍率 |
+| `speedMul` | float | 0.85 | 速度倍率（比本体慢，给玩家反应时间） |
+| `xpMul` | int | 6 | 经验倍率 |
+| `scale` | float | 1.35 | 体积倍率；**碰撞体同步放大**（只改视觉会造成「看得见打不中」） |
+| `healOnKill` | float | 15 | 击杀回复玩家生命。单图下这是中期唯一续航来源 |
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `splashAdd` | float | 溅射半径 + |
-| `homingRate` | float | 追踪转向角速度（度/秒），0 = 无 |
-| `splitCount` | int | >1 时分裂成这么多个 |
-| `splitDamageMul` | float | 分裂体伤害倍率 |
-| `splitSpreadAdd` | float | 分裂体散射 + |
-| `splitLifetimeMul` | float | 分裂体存在时间倍率 |
-
-**枪械项**（仅 `scope: "Gun"` 使用）
-
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `gunMagAdd` | int | 弹匣 + |
-| `gunFireIntervalMul` | float | 击发间隔倍率（<1 = 更快） |
-| `gunSpreadMul` | float | 枪基础散射倍率 |
-| `gunReloadMul` | float | 换弹时间倍率 |
+精英总数由公式推导，不写死：`1 + floor((bossAt - firstAt) / interval)` = 3 只（4:00 / 5:30 / 7:00）。
 
 ## `rarityWeights`
 
@@ -145,3 +231,14 @@
    ```
    断言里的期望值写死在测试中，数值被改坏会立刻变红。
 6. 同步更新 `loadout-spec.md` / `gameplay-spec.md` 的对应表。
+7. 改 `timeline` 后必须跑 `-bench` 检查经验预算是否仍落在 13–17 级区间。
+
+## 时间轴的契约（最容易改坏的地方）
+
+| 规则 | 为什么 |
+|------|--------|
+| `timeline.phases[0].at` 必须为 0 | 否则开局到第一条 `at` 之间没有任何刷怪规格，`CurrentPhase` 为 null，场上会空着不动 |
+| `threatFullAt` 建议等于 `bossAt` | 让「威胁满」与「Boss 入场」同时发生，玩家能感到两件事是一件事 |
+| 精英上限由公式算，不写字段 | 写死的话改 `interval` 会忘记同步上限，出现「明明该出 3 只只出了 1 只」 |
+| `bossPhase.concurrency` 要低于最后一条 `phases` | Boss 战需要腾出精力应对 Boss，普通刷怪必须降档 |
+

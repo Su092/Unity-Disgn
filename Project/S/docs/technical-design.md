@@ -33,10 +33,12 @@ Tools   tools/loadout-tests（dotnet 控制台，直接链接 Core 源码跑断�
 | `Core/LoadoutTypes.cs` | Core | `ProjectileDesc` `BulletDef` `ModifierDef` `GunDef` `ChainItem` `Scope` 等 |
 | `Core/Loadout.cs` | Core | **结算核心**：`ResolveCast`（链解析）`ResolveGun`（枪械件）`ComputeAmmo` `ValidateInsert` |
 | `Core/GunRuntime.cs` | Core | 轮转指针、弹匣、换弹、射速冷却；`TryFire` 是唯一开火入口 |
-| `Core/RunState.cs` | Core | 等级曲线、威胁、背包、三选一抽取、mulberry32 |
+| `Core/RunState.cs` | Core | 等级曲线、威胁同步、背包、三选一抽取、mulberry32 |
+| `Core/RunDirector.cs` | Core | **节奏总导演**：时间轴阶段、刷怪规格、威胁曲线、精英与 Boss 触发（纯逻辑，可逐秒断言） |
 | `Core/SData.cs` | Core | `sdata.json` → 强类型；`MakeItem` `BuildStarterSlots` |
 | `Core/SDataLoader.cs` | Core(桥) | **唯一**引用 UnityEngine 的 Core 文件，从 `Resources` 读文本 |
-| `View/GameRoot.cs` | View | 场景构建、刷怪表、经验结算、威胁推进、暂停、爆炸结算 |
+| `View/GameRoot.cs` | View | 单图编排：时间轴驱动刷怪、精英、Boss、经验结算、暂停、爆炸结算 |
+| `View/ArenaBuilder.cs` | View | 单张 120×120 竞技场：地面、墙、Boss 台、掩体、高台、环形刷怪点 |
 | `View/PlayerController.cs` | View | 第一人称移动/视角/冲刺/跳跃（新 Input System 直读设备） |
 | `View/PlayerWeapons.cs` | View | 持枪、切枪、开火 → 实例化弹丸；散射在瞄准锥内随机 |
 | `View/Projectile.cs` | View | 飞行、重力、追踪、穿透、反弹、命中、爆炸 |
@@ -113,9 +115,10 @@ sdata.json ──SDataLoader──▶ SData ──┬─▶ RunState（经验/�
 | 敌人视觉是胶囊体 + 颜色 | 无打击感、无受击反馈动画 | **已解决**：12 件 `Modle_*` 低模已接入（无骨骼无动画） |
 | 敌人 AI 只有直线趋近/固定距离 | 无掩体寻路、无协同 | 初版够用；箱庭手工摆点 |
 | 无音效 | 开枪/命中/受伤全静音 | **已解决**：`SfxBank` 合成 14 clip + 16 音源池 + 类别限流 |
-| 音乐层未接线 | `MusicDirector.UpdateMix` 无调用点，实机无音乐 | 待接线（见 `audio-spec.md` 头注） |
+| 音乐层未接线 | `MusicDirector.UpdateMix` 无调用点，实机无音乐 | **已解决**：`GameRoot.Update` / `Win` 已接线 |
 | 无 Boss | 第 5 区域清完直接结算 | **已解决**：`BossState` 三阶段 + 冲击波/召唤 |
-| 世界是平面 + 立方体 | 不是真正的「箱庭」多区域 | **已解决**：`ZoneBuilder` 6 区域 + `ZoneGate` |
+| 世界是平面 + 立方体 | 不是真正的「箱庭」多区域 | **已解决**：`ArenaBuilder` 单张 120×120 竞技场（原 `ZoneBuilder` 6 区域已移除） |
+| 敌方威胁值依赖区域推进 | 清区才算完成一个循环 | **已解决**：`RunDirector` 时间轴驱动，4:00 精英 / 8:00 Boss 可逐秒断言 |
 | `SJson` 手写解析 | 无 schema 校验、错误信息不如专用库 | 数据只在开发期改，可接受 |
 | 背包网格用 `GridLayoutGroup` | 拖拽时布局重排可能抖动 | 目前可用，后续换绝对定位 |
 | 无人机爆炸按 3D 距离判定 | `GameRoot.Explode` 用 `Vector3.Distance`，空中目标与地面同判 | 已知，未修 |
@@ -124,8 +127,8 @@ sdata.json ──SDataLoader──▶ SData ──┬─▶ RunState（经验/�
 
 | 入口 | 覆盖 | 判据 |
 |------|------|------|
-| `tools/loadout-tests`（dotnet） | **213 条断言**：24 条 §9 算例、装配校验、轮转/弹药/换弹、枪械件、36 条拖拽预览、区域推进、Boss 状态机 | `RESULT n/n passed`，退出码 0 |
-| `S.exe -scheck` | 实机：数据加载、刷怪、开火扣弹、轮转、改装重算、升级、三选一、背包暂停、伤害、结算，并出 6 张截图 | `selfcheck.log` 末尾 `SELFCHECK RESULT n/n passed`，退出码 0 |
+| `tools/loadout-tests`（dotnet） | **795 条断言**：24 条 §9 算例、装配校验、轮转/弹药/换弹、枪械件、36 条拖拽预览、时间轴阶段/威胁曲线、4:00 精英与 8:00 Boss 事件、暂停语义、Boss 状态机 | `RESULT n/n passed`，退出码 0 |
+| `S.exe -scheck` | 实机：数据加载、刷怪、开火扣弹、轮转、改装重算、升级、三选一、背包暂停、伤害、竞技场构建、4:00 精英真机刷出、8:00 Boss 与四柱、结算，并出 9 张截图 | `selfcheck.log` 末尾 `SELFCHECK RESULT n/n passed`，退出码 0 |
 | `scripts/check.ps1` | 串起上面两条 + 打包 | `RESULT` 行全绿 |
 
 **前置依赖（换机必查）**：
