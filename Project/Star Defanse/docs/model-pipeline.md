@@ -11,9 +11,9 @@
 
 ```powershell
 # 建模完成后，一条命令跑完全部检查
-powershell -ExecutionPolicy Bypass -File "E:\Unity Development\tools\blender-gate.ps1" `
+powershell -ExecutionPolicy Bypass -File "<HUB>\tools\blender-gate.ps1" `
     -Blend "E:\work\tower.blend" `
-    -Fbx   "E:\Star Defanse\Assets\Resources\Art\Models\tower_assault\Modle_Tower_Assault.fbx" `
+    -Fbx   "<GAME:Star Defanse>\Assets\Resources\Art\Models\tower_assault\Modle_Tower_Assault.fbx" `
     -Objects "GEO-Tower" `
     -MinMm 1.2 -ResolutionMm 1.0 `
     -Expect "1000,1000,2000" -RequireFloor
@@ -105,8 +105,8 @@ powershell -ExecutionPolicy Bypass -File tools\blender-audit-models.ps1
 一律用 `tools\blender_export_unity.py`，不要手点导出：
 
 ```powershell
-& $b -b model.blend --python "E:\Unity Development\tools\blender_export_unity.py" -- `
-    "E:\Star Defanse\Assets\Resources\Art\Models\tower_assault\Modle_Tower_Assault.fbx" `
+& $b -b model.blend --python "<HUB>\tools\blender_export_unity.py" -- `
+    "<GAME:Star Defanse>\Assets\Resources\Art\Models\tower_assault\Modle_Tower_Assault.fbx" `
     --objects "GEO-Tower,RIG-Tower"
 ```
 
@@ -156,12 +156,12 @@ L0 不出 FAIL 不许读 L1/L2；L3 不作为几何正确性依据。每轮读�
 
 ```powershell
 # 全量体检（13 个 Modle_*，按塔/非塔自动决定是否要 Yaw 骨架）
-powershell -ExecutionPolicy Bypass -File "E:\Unity Development\tools\blender-audit-models.ps1"
+powershell -ExecutionPolicy Bypass -File "<HUB>\tools\blender-audit-models.ps1"
 
 # 单个件
-powershell -ExecutionPolicy Bypass -File "E:\Unity Development\tools\blender-gate.ps1" `
-    -Fbx "E:\Star Defanse\Assets\Resources\Art\Models\tower_assault\Modle_Tower_Assault.fbx" `
-    -ContractOnly -Out "E:\Unity Development\tools\_gate\audit-tower-assault"
+powershell -ExecutionPolicy Bypass -File "<HUB>\tools\blender-gate.ps1" `
+    -Fbx "<GAME:Star Defanse>\Assets\Resources\Art\Models\tower_assault\Modle_Tower_Assault.fbx" `
+    -ContractOnly -Out "<HUB>\tools\_gate\audit-tower-assault"
 ```
 
 2026-11-10 实测：13 件 `Modle_*` 契约门 **全部 pass**，三角数 22k–26k（预算 60000）。

@@ -37,7 +37,7 @@
 ### 3.1 UI 素材
 
 ```powershell
-cd "E:\Unity Development\Project\Star Defanse\unity"
+cd "<HUB>\Project\Star Defanse\unity"
 
 python .cursor/skills/apimart-image/scripts/apimart_image.py --manifest tools/apimart-ui-c6.json
 python tools/ui_reset_meta.py      # 删 .meta，强制按新图重导入

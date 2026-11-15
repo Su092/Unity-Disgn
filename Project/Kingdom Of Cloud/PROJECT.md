@@ -3,10 +3,10 @@
 | 项 | 值 |
 |----|-----|
 | 显示名 | 云端王国 |
-| 枢纽目录 | `E:\Unity Development\Project\Kingdom Of Cloud\` |
-| Unity 工程 | `D:\Kingdom Of Cloud` |
-| 本目录联接 | `unity\` → `D:\Kingdom Of Cloud` |
-| 编辑器 | **Unity 6000.6.4f1**（`D:\Unity\6000.6.4f1\Editor\Unity.exe`） |
+| 枢纽目录 | `<HUB>/Project/Kingdom Of Cloud/` |
+| Unity 工程 | `<GAME:Kingdom Of Cloud>`（`unity\` 为其目录联接） |
+| 工程远端 | `git@github.com:Su092/Kingdom-Of-Cloud.git`（`main`） |
+| 编辑器 | **Unity 6000.6.4f1**（`<UNITY:6000.6.4f1>`） |
 | 渲染 | URP 17.6.0 |
 | 输入 | 旧 Input Manager（未迁新 Input System） |
 | 运行时根 | `unity/Assets/_Game/` |
@@ -15,7 +15,7 @@
 
 | 路径 | 用途 |
 |------|------|
-| `docs/` | 概念、设计、规格；原始素材在 `docs/source/` |
+| `docs/` | 概念、设计、规格（纯文字；图片与原始素材不入库） |
 | `breakdown/` | 开发内容拆解与任务切片 |
 | `control/` | 长期操作规范（场景/MCP/目录） |
 | `memory/` | `CURRENT.md` 与阶段记忆 |

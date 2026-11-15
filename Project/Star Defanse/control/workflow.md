@@ -2,15 +2,15 @@
 
 ## 编辑器
 
-- 只用 **Unity 6000.6.4f1**（`D:\Unity\6000.6.4f1\Editor\Unity.exe`）
+- 只用 **Unity 6000.6.4f1**（`<UNITY:6000.6.4f1>`）
 - 勿用 2022 LTS / 团结引擎打开；勿给工程装 URP（着色器与材质全套按内置管线写死）
 
 ## 目录归属
 
 | 类型 | 位置 |
 |------|------|
-| 项目文档 / 拆解 / 控制 / 记忆 | `E:\Unity Development\Project\Star Defanse\` |
-| 代码、资源、场景、设置 | `unity/`（即 `E:\Star Defanse\`） |
+| 项目文档 / 拆解 / 控制 / 记忆 | `<HUB>\Project\Star Defanse\` |
+| 代码、资源、场景、设置 | `unity/`（即 `<GAME:Star Defanse>\`） |
 | 生图清单与素材加工脚本 | `unity/tools/`（工程自有，不属于文档） |
 
 不在 `unity/` 下新建文档目录。文档一律写枢纽。
@@ -27,7 +27,7 @@
 ## 验证命令（唯一入口）
 
 ```powershell
-$proj = "E:\Unity Development\Project\Star Defanse\unity"
+$proj = "<HUB>\Project\Star Defanse\unity"
 powershell -ExecutionPolicy Bypass -File "$proj\scripts\check.ps1" -Task tests
 powershell -ExecutionPolicy Bypass -File "$proj\scripts\check.ps1" -Task verify
 powershell -ExecutionPolicy Bypass -File "$proj\scripts\check.ps1" -Task build

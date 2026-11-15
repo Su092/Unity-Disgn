@@ -10,7 +10,7 @@
 新增 `tools/loadout-tests` 的两个基准入口：
 
 ```powershell
-cd "E:\S\tools\loadout-tests"
+cd "<GAME:S>\tools\loadout-tests"
 dotnet run -c Release -- -bench     # DPS 基准 + 经验曲线
 ```
 

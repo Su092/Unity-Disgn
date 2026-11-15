@@ -13,7 +13,7 @@
 新增 `-bench` 基准入口（`tools/loadout-tests`）：
 
 ```powershell
-cd "E:\S\tools\loadout-tests"; dotnet run -c Release -- -bench
+cd "<GAME:S>\tools\loadout-tests"; dotnet run -c Release -- -bench
 ```
 
 **蒙特卡洛弹道模拟**，不用纸面公式：

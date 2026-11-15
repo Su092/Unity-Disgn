@@ -1,15 +1,15 @@
 # 当前快照 — S
 
-更新：2026-11-12
+更新：2026-11-15
 
 ## 关联
 
-- 枢纽：`E:\Unity Development\Project\S\`
-- Unity：`E:\S`（`unity\` 目录联接，`mklink /J`）
-- 编辑器：Unity **6000.6.4f1**（`D:\Unity\6000.6.4f1`）
+- 枢纽：`<HUB>\Project\S\`
+- Unity：`<GAME:S>`（`unity\` 为其目录联接）
+- 编辑器：Unity **6000.6.4f1**（`<UNITY:6000.6.4f1>`）
 - 渲染：**URP 17.6**（`PC_RPAsset`）
 - 输入：**仅新 Input System**（`activeInputHandler = 1`）
-- 工程远端：尚未创建
+- 工程远端：`git@github.com:Su092/Project-S.git`（`main`，唯一提交 `012dbfb`）
 
 ## 已定约定
 
@@ -18,12 +18,14 @@
 - `Core/` 零 Unity 依赖（`SDataLoader.cs` 是唯一桥），结算可在 dotnet 下断言
 - 场景只有一个 `S` 节点，所有对象与 UI 由代码构建
 - 材质一律走 `SMat`，不用裸 `new Material(Shader.Find(...))`
-- 验证只认 `check.ps1`（tests / setup / build / shots）
+- 验证只认 `check.ps1`（tests / setup / assets / ui / build / smoke / shots）
 
 ## 当前状态
 
 **垂直切片 → 箱庭+Boss → 美术资产 → UI 素材 → 音效/材质池/后处理，全部可玩并通过验证。**
 
+> 下表数字来自 2026-11-12 的开发机。**2026-11-15 换机克隆后尚未复跑**
+> （本机缺 .NET SDK，见文末「环境缺口」），不要当成本地已验证。
 | 项 | 结果 |
 |----|------|
 | 逻辑断言（dotnet） | **213/213 passed** |
@@ -62,13 +64,14 @@
 **3D（12 件低模 ≤1056 面）**
 - 5 敌人/Boss + 3 枪械 + 4 场景道具
 - 4 张 2k 平铺贴图
-- 12 张 1k 参考图（仅建模对照）
-- 管线：`tools/blender_s_build_assets.py`（建模 + 双门）、`tools/blender_s_preview.py`
+- 12 张 1k 参考图（仅建模对照，在 `_Inbox/art-refs/`，**不入库**）
+- 管线：`tools/blender_s_build_assets.py`（建模 + 双门）、`tools/blender_s_preview.py`（出图在 `_Inbox/art-preview/`）
 
 **UI（11 张素材）**
 - 面板 / 卡框 / 条槽 / 横幅 / 暗角 / 准星 / 键位 + 4 个作用域图标
 - 加色材质 `mat_ui_additive` + `S/UiAdditive` shader
 - 9-slice 边距由 `Editor/SUiSpriteSetup.cs` 写入并硬校验
+- 流水线原料在 `_Inbox/{ui-ai-raw,ui-ai-src}/`（**不入库**），成品落 `Assets/Resources/UI/`
 
 **核心取舍**：素材当边框（质感），代码内部底（对比）。因为素材实测平均亮度仅 0.015–0.03。
 
@@ -91,15 +94,26 @@
 
 | 层 | 文件 |
 |----|------|
-| Core | `SJson` `LoadoutTypes` `Loadout` `GunRuntime` `RunState` `ZoneProgress` `BossState` `SData` `SDataLoader` |
-| View | `GameRoot` `ZoneBuilder` `ZoneGate` `Pillar` `BossView` `PlayerController` `PlayerWeapons` `Projectile` `Enemy` `EnemyBullet` `HudView` `InventoryView` `SMat` `SAssets` `UiAssets` `SfxBank` `SPostFx` |
-| App | `Bootstrap` `SelfCheck` |
-| Editor | `SceneBuilder` `BuildPlayer` `ShaderSetup` `SAssetPostprocessor` `SUiMaterialSetup` `SUiSpriteSetup` |
+| Core（12） | `SJson` `LoadoutTypes` `Loadout` `GunRuntime` `RunState` `ZoneProgress` `BossState` `MetaProgress` `MusicMix` `Splash` `SData` `SDataLoader` |
+| View（43） | 场景 `GameRoot` `ZoneBuilder` `ZoneGate` `Pillar` `BossView` `SpikeTelegraph`；玩家 `PlayerController` `PlayerWeapons` `Projectile` `Enemy` `EnemyBullet` `ChainCast`；UI `HudView` `HudRefs` `InventoryView` `InvRefs` `MenuView` `MenuRefs` `MenuRowRefs` `GunTabRefs` `ChainRowRefs` `CardRefs` `OfferRefs` `OfferCardRefs` `UiKit` `UiPrefab` `UiAssets` `ItemIconView` `ItemTooltip` `ItemHover` `DraggableItem` `SlotDropTarget` `ButtonHover`；表现 `SMat` `SAssets` `SfxBank` `SPostFx` `AudioMix` `MusicDirector` `RunTelemetry` `InputDeviceGuard` `MetaSave` `AutoPilot` |
+| App（5） | `Bootstrap` `SelfCheck` `SmokeTest` `AutoPlay` `MouseDiag` |
+| Editor（12） | `SceneBuilder` `BuildPlayer` `ShaderSetup` `SAssetPostprocessor` `SModelContract` `SModelSheet` `SInputFix` `SUiMaterialSetup` `SUiSpriteSetup` `SUiTextureReimport` `SUiPrefabFactory` `MouseDisableRootCause` |
 
 ### 工具
 
-- `scripts/check.ps1`（UTF-8 BOM）：tests / setup / build / shots / all；shots 前自动清理残留 exe
-- `tools/loadout-tests/`：dotnet 控制台，直接链接 Core 源码
+- `scripts/check.ps1`（UTF-8 BOM）：tests / setup / assets / ui / build / smoke / shots / all；shots 前自动清理残留 exe
+- `tools/loadout-tests/`：dotnet 控制台，直接链接 Core 源码（`-bench` 走 `DpsBench` / `XpBench`）
+- `tools/*.py`：UI 素材三段流水线、APIMart 清单登记、Blender 建模与预览
+
+### 工程内布局
+
+| 路径 | 内容 |
+|------|------|
+| `Assets/Scenes/Main.unity` | 唯一场景，只有 `S` 节点（挂 `Bootstrap`），其余全运行时构建 |
+| `Assets/Settings/` | URP 资产：`PC_RPAsset` / `PC_Renderer` / `Mobile_*` / `DefaultVolumeProfile` |
+| `Assets/Resources/Data/sdata.json` | 数值唯一来源 |
+| `Assets/Resources/Models/` | **12 件** `Modle_*` FBX（5 敌人/Boss + 3 枪 + 4 道具） |
+| `Assets/Resources/UI/` | 58 张 PNG + `Prefabs/`（UI 结构来自预制体） |
 
 ## 实机修掉的 10 个真实缺陷
 
@@ -119,19 +133,41 @@
 - **榴弹近距离自伤风险未验**：溅射 2.8m 在狭窄区是否过强
 - **模型已上，但无骨骼无动画**
 - **音效为合成音**：节奏与限流已验证，音色待换真实素材
-- **无音乐层**：探索/战斗/高压分层未做；无音量设置与混音分组
-- **`enemy_near` 已合成未接入**
+- **音乐层写了但没接线**：`MusicDirector` 已由 `GameRoot` 创建（`GameRoot.cs:137`），
+  但 `UpdateMix(...)` **全工程无调用点**，五个层音量恒为 0 —— 实机听不到音乐。
+  接线时要传 `Run.Threat` / `_bossFightActive` / `InventoryOpen` / `dt`。
+- **音量设置已可用**：`AudioMix`（Master/SFX/Music/UI，PlayerPrefs 持久化）+ `MenuView` 四个滑条已接
+- **`enemy_near` 已合成未接入**：`SfxBank.PlayEnemyNear()` 全工程无调用点
 - **作用域图标偏精细**：与「极简」略有张力，未重跑
-- **键位提示素材已生成未接入**
+- **键位提示素材已生成未接入**：`UiAssets.Keycap` 只在自检里被断言存在，玩法 UI 未使用
 - **Boss 技能简化**：只做冲击波 + 召唤
-- **无人机高度判定缺失**：`Explode` 仍按水平距离
-- **无局外成长存档**：`shard` 与解锁未实装
-- **工程未入 Git**：远端尚未创建
+- **无人机高度判定缺失**：`GameRoot.Explode` 仍按 `Vector3.Distance`（含水平 + 垂直）判定
+- **局外成长已实装**：`Core/MetaProgress`（shard / 解锁 / 图鉴）+ `View/MetaSave`（`persistentDataPath/meta.txt`）
+  已接进 `MenuView`；解锁项偏少，内容待扩
+- **`03` 方案存档未开始**：全工程无 Preset/Scheme 相关代码，配件方案保存仍未做
+- **工程已入 Git**：`git@github.com:Su092/Project-S.git`（`main`，工程根 `<GAME:S>`）
+- **`*.csproj` 被 gitignore 吞掉**：`tools/loadout-tests/` 的 `.csproj` 不入库，
+  克隆到新机后 `dotnet run` 找不到工程；且本机当前**无 .NET SDK**（`dotnet --list-sdks` 为空），
+  `check.ps1 -Task tests` 会 FAIL。补齐方式见下「环境缺口」。
 - **场景无顶**：仍是开放箱体
 - 中文日志在 PowerShell 5.1 控制台显示为乱码（`selfcheck.log` 是正确的 UTF-8，用 `Get-Content -Encoding UTF8` 读）
 
+## 环境缺口（2026-11-15 复核）
+
+| 缺口 | 现状 | 影响 |
+|------|------|------|
+| .NET SDK | 本机只有 runtime 解析器，`dotnet --list-sdks` 输出为空 | `check.ps1 -Task tests` 直接失败 |
+| `loadout-tests/*.csproj` | 工程文件不存在且被 `.gitignore` 的 `*.csproj` 规则忽略 | 即便装了 SDK 也构建不了 |
+| Coplay MCP 包 | `Packages/manifest.json` 无 `com.coplaydev.unity-mcp` | 打开工程时 Unity MCP 工具为空 |
+
+已核实可用：Unity 6000.6.4f1 @ `<UNITY:6000.6.4f1>`、Blender @ `<BLENDER>`。
+
 ## 下一步建议
 
-1. **实机节奏校准**：威胁值 / 敌人 HP 手感 / 背包容量三项都需真人跑局
-2. **`03` 剩余**：方案存档、配件扩到 40 种（扩件要在校准定稿后做）
-3. Boss 技能补全、无人机高度判定、音乐层
+1. **补齐环境缺口**（否则任何验证都跑不了）：装 .NET 8 SDK → 重建 `loadout-tests` 的 `.csproj`
+   → 工程装 `com.coplaydev.unity-mcp` → 修 Blender 路径
+2. **音乐接线**：`GameRoot.Update` 里调 `_music.UpdateMix(Run.Threat, _bossFightActive, InventoryOpen, dt)`，
+   这是「写了但听不到」的直接原因，改一行就能验
+3. **实机节奏校准**：威胁值 / 敌人 HP 手感 / 背包容量三项都需真人跑局
+4. **`03` 剩余**：方案存档、配件扩到 40 种（扩件要在校准定稿后做）
+5. Boss 技能补全、无人机高度判定

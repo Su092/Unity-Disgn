@@ -1,6 +1,6 @@
 # 项目文档总览 — 云端王国
 
-权威文档树：`E:\Unity Development\Project\Kingdom Of Cloud\docs\`
+权威文档树：`<HUB>\Project\Kingdom Of Cloud\docs\`
 
 | 文档 | 说明 |
 |------|------|

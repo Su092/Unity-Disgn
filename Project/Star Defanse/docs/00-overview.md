@@ -1,6 +1,6 @@
 # 项目文档总览 — 星轨防线
 
-权威文档树：`E:\Unity Development\Project\Star Defanse\docs\`
+权威文档树：`<HUB>\Project\Star Defanse\docs\`
 
 | 文档 | 说明 |
 |------|------|

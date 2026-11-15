@@ -103,18 +103,22 @@ sdata.json ──SDataLoader──▶ SData ──┬─▶ RunState（经验/�
 | 场景只有一个 `S` 节点 | 其余全靠代码；手拖会被运行时覆盖 |
 | 暂停一律走 `Time.timeScale = 0` | 且用 `unscaledDeltaTime` 驱动 UI 动画，否则暂停后 UI 冻结 |
 
-## 7. 已知技术债（初版接受）
+## 7. 已知技术债
 
-| 项 | 影响 | 处理 |
+> 下表已按 2026-11-15 的代码复核；「已解决」不代表换机后仍验证过。
+
+| 项 | 影响 | 状态 |
 |----|------|------|
-| 每次生成弹丸都 `new Material` | 长时间游玩会累积材质实例 | 后续换共享材质池 |
-| 敌人视觉是胶囊体 + 颜色 | 无打击感、无受击反馈动画 | 等美术资产 |
+| 每次生成弹丸都 `new Material` | 长时间游玩会累积材质实例 | **已解决**：`SMat` 按 (shader,色,smoothness) 共享缓存，改色走 `MaterialPropertyBlock` |
+| 敌人视觉是胶囊体 + 颜色 | 无打击感、无受击反馈动画 | **已解决**：12 件 `Modle_*` 低模已接入（无骨骼无动画） |
 | 敌人 AI 只有直线趋近/固定距离 | 无掩体寻路、无协同 | 初版够用；箱庭手工摆点 |
-| 无音效 | 开枪/命中/受伤全静音 | `audio-spec.md` 已写规格，未实装 |
-| 无 Boss | 第 5 区域清完直接结算 | 拆解 P2 |
-| 世界是平面 + 立方体 | 不是真正的「箱庭」多区域 | 拆解 P2 换成手工场景 |
+| 无音效 | 开枪/命中/受伤全静音 | **已解决**：`SfxBank` 合成 14 clip + 16 音源池 + 类别限流 |
+| 音乐层未接线 | `MusicDirector.UpdateMix` 无调用点，实机无音乐 | 待接线（见 `audio-spec.md` 头注） |
+| 无 Boss | 第 5 区域清完直接结算 | **已解决**：`BossState` 三阶段 + 冲击波/召唤 |
+| 世界是平面 + 立方体 | 不是真正的「箱庭」多区域 | **已解决**：`ZoneBuilder` 6 区域 + `ZoneGate` |
 | `SJson` 手写解析 | 无 schema 校验、错误信息不如专用库 | 数据只在开发期改，可接受 |
 | 背包网格用 `GridLayoutGroup` | 拖拽时布局重排可能抖动 | 目前可用，后续换绝对定位 |
+| 无人机爆炸按 3D 距离判定 | `GameRoot.Explode` 用 `Vector3.Distance`，空中目标与地面同判 | 已知，未修 |
 
 ## 8. 自检体系
 
@@ -123,6 +127,10 @@ sdata.json ──SDataLoader──▶ SData ──┬─▶ RunState（经验/�
 | `tools/loadout-tests`（dotnet） | **213 条断言**：24 条 §9 算例、装配校验、轮转/弹药/换弹、枪械件、36 条拖拽预览、区域推进、Boss 状态机 | `RESULT n/n passed`，退出码 0 |
 | `S.exe -scheck` | 实机：数据加载、刷怪、开火扣弹、轮转、改装重算、升级、三选一、背包暂停、伤害、结算，并出 6 张截图 | `selfcheck.log` 末尾 `SELFCHECK RESULT n/n passed`，退出码 0 |
 | `scripts/check.ps1` | 串起上面两条 + 打包 | `RESULT` 行全绿 |
+
+**前置依赖（换机必查）**：
+- `tools/loadout-tests` 需要 **.NET SDK**；本机若 `dotnet --list-sdks` 为空，`-Task tests` 直接失败。
+- 该目录的 `.csproj` 被工程 `.gitignore` 的 `*.csproj` 规则忽略，**不会随仓库分发**，需本地重建。
 
 **已知坑（会让 CI 莫名其妙变红）**：本工程是 Unity 播放器构建，默认开启 Force Single Instance。
 上一个 `S.exe` 未退出时，新进程**静默退出且不写 `selfcheck.log`**，
@@ -138,24 +146,26 @@ sdata.json ──SDataLoader──▶ SData ──┬─▶ RunState（经验/�
 
 ```powershell
 # 纯逻辑断言（1.6 秒）
-cd "E:\S\tools\loadout-tests"; dotnet run -c Release
+cd "<GAME:S>\tools\loadout-tests"; dotnet run -c Release
 
 # 一键全量
-powershell -ExecutionPolicy Bypass -File "E:\S\scripts\check.ps1"
+powershell -ExecutionPolicy Bypass -File "<GAME:S>\scripts\check.ps1"
 
 # 只跑实机自检
-& "E:\S\Build\Windows\S.exe" -scheck -screen-width 1600 -screen-height 900 -screen-fullscreen 0
-Get-Content "E:\S\selfcheck.log"
+& "<GAME:S>\Build\Windows\S.exe" -scheck -screen-width 1600 -screen-height 900 -screen-fullscreen 0
+Get-Content "<GAME:S>\selfcheck.log"
 ```
 
 ## 10. Unity 工程约定
 
 | 项 | 值 |
 |----|-----|
-| 工程根 | `E:\S`（枢纽内 `unity\` 为 Junction） |
+| 工程根 | `<GAME:S>`（枢纽内 `unity\` 为 Junction） |
 | 编辑器 | Unity 6000.6.4f1 |
 | 渲染 | URP 17.6（`PC_RPAsset`） |
-| 输入 | Input System 1.19+，后端 `activeInputHandler = 1`（仅新输入） |
+| 输入 | Input System 1.20.0（`Packages/manifest.json`），后端 `activeInputHandler = 1`（仅新输入） |
 | 运行时根 | `Assets/_Game/` |
-| 数据 | `Assets/Resources/Data/sdata.json` |
+| 数据 | `Assets/Resources/Data/sdata.json`（3 枪 / 10 子弹件 / 15 衍生件） |
 | 场景 | `Assets/Scenes/Main.unity`（只有 `S` 节点） |
+| 运行时资产 | `Assets/Resources/Models/`（12 件 `Modle_*`）、`Assets/Resources/UI/`（58 PNG + `Prefabs/`） |
+| URP 资产 | `Assets/Settings/PC_RPAsset` + `PC_Renderer` |

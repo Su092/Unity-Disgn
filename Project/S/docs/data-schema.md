@@ -141,7 +141,7 @@
 4. `scope: "After"` 的件在 UI 里必须能被识别为「需要放在子弹前面」，否则玩家必然配错。
 5. 改任何数值后跑：
    ```powershell
-   cd "E:\S\tools\loadout-tests"; dotnet run -c Release
+   cd "<GAME:S>\tools\loadout-tests"; dotnet run -c Release
    ```
    断言里的期望值写死在测试中，数值被改坏会立刻变红。
 6. 同步更新 `loadout-spec.md` / `gameplay-spec.md` 的对应表。

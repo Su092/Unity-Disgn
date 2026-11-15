@@ -1,8 +1,18 @@
 # 控制：工程流程与实现路径
 
+## 路径
+
+| 类型 | 逻辑路径 |
+|------|----------|
+| 工作区根 | `<HUB>\` |
+| 本游戏枢纽 | `<HUB>\Project\S\` |
+| 工程根 | `<GAME:S>`（即 `unity/`） |
+
+文档一律写上述记号；真实盘符只在 `machine/profile.local.json` 里维护，排查磁盘占用 / 联接失效时才看它。
+
 ## 编辑器
 
-- 只用 **Unity 6000.6.4f1**（`D:\Unity\6000.6.4f1\Editor\Unity.exe`）
+- 只用 **Unity 6000.6.4f1**（`<UNITY:6000.6.4f1>`）
 - 勿用 2022 LTS / 团结引擎打开
 - 渲染管线是 **URP 17.6**（本工程已配 `PC_RPAsset`）
 - 输入后端是 **仅新 Input System**（`activeInputHandler = 1`）
@@ -12,8 +22,8 @@
 
 | 类型 | 位置 |
 |------|------|
-| 项目文档 / 拆解 / 控制 / 记忆 | `E:\Unity Development\Project\S\` |
-| 代码、资源、场景、设置 | `unity/`（即 `E:\S\`） |
+| 项目文档 / 拆解 / 控制 / 记忆 | `<HUB>\Project\S\` |
+| 代码、资源、场景、设置 | `unity/`（即 `<GAME:S>\`） |
 | 验证脚本 | `unity/scripts/check.ps1`（工程内，属于运行基础设施） |
 | 结算断言工程 | `unity/tools/loadout-tests/`（dotnet，链接 Core 源码） |
 
@@ -26,13 +36,13 @@
 3. **改逻辑**：`unity/Assets/_Game/Core/`（**保持零 Unity 依赖**）
 4. **跑断言**：`dotnet run -c Release`（`tools/loadout-tests`）
 5. **改表现**：`unity/Assets/_Game/View/`（只读 Core 结果，不回写规则）
-6. **跑全量**：`check.ps1`（tests → setup → build → shots）
+6. **跑全量**：`check.ps1`（tests → setup → assets → build → smoke → shots）
 7. **写记忆**：`memory/CURRENT.md` 更新状态与未决项
 
 ## 验证命令（唯一入口）
 
 ```powershell
-$proj = "E:\Unity Development\Project\S\unity"
+$proj = "<HUB>\Project\S\unity"
 
 powershell -ExecutionPolicy Bypass -File "$proj\scripts\check.ps1"              # 全量
 powershell -ExecutionPolicy Bypass -File "$proj\scripts\check.ps1" -Task tests  # 只跑断言（1.6 秒）
@@ -44,8 +54,8 @@ powershell -ExecutionPolicy Bypass -File "$proj\scripts\check.ps1" -Task shots  
 只跑实机自检：
 
 ```powershell
-& "E:\S\Build\Windows\S.exe" -scheck -screen-width 1600 -screen-height 900 -screen-fullscreen 0
-Get-Content "E:\S\selfcheck.log"
+& "<GAME:S>\Build\Windows\S.exe" -scheck -screen-width 1600 -screen-height 900 -screen-fullscreen 0
+Get-Content "<GAME:S>\selfcheck.log"
 ```
 
 ## 禁止
@@ -79,9 +89,15 @@ Get-Content "E:\S\selfcheck.log"
 需要重建场景或应用工程设置时：
 
 ```powershell
-$unity = "D:\Unity\6000.6.4f1\Editor\Unity.exe"
-& $unity -batchmode -quit -projectPath "E:\S" `
-  -executeMethod S.EditorTools.SceneBuilder.BatchSetup -logFile "E:\S\Logs\setup.log"
+$unity = "<UNITY:6000.6.4f1>"
+& $unity -batchmode -quit -projectPath "<GAME:S>" `
+  -executeMethod S.EditorTools.SceneBuilder.BatchSetup -logFile "<GAME:S>\Logs\setup.log"
 ```
 
 或走 `check.ps1 -Task setup`。
+
+## Git
+
+- 枢纽与工程是**两个独立仓库**：枢纽属工作区仓库（真实目录 `<HUB>`），`unity/` 指向的 `<GAME:S>` 属 `Project-S.git`
+- 工作区 `.gitignore` 已忽略 `Project/*/unity/`，联接不会把工程内容带进工作区仓库
+- 改代码要在 `<GAME:S>` 里单独提交推送；改文档在工作区仓库提交

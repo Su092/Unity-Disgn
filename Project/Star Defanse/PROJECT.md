@@ -7,11 +7,10 @@
 | 项 | 值 |
 |----|-----|
 | 显示名 | 星轨防线 / STARLANE BULWARK |
-| 枢纽目录 | `E:\Unity Development\Project\Star Defanse\` |
-| Unity 工程 | `E:\Star Defanse` |
-| 本目录联接 | `unity\` → `E:\Star Defanse` |
+| 枢纽目录 | `<HUB>/Project/Star Defanse/` |
+| Unity 工程 | `<GAME:Star Defanse>`（`unity\` 为其目录联接） |
 | 工程远端 | `git@github.com:Su092/Star-Defanse.git`（`main`） |
-| 编辑器 | **Unity 6000.6.4f1**（`D:\Unity\6000.6.4f1\Editor\Unity.exe`） |
+| 编辑器 | **Unity 6000.6.4f1**（`<UNITY:6000.6.4f1>`） |
 | 渲染 | 内置管线 + 自定义赛璐璐着色器（`StarLane/ModelLit`、`StarLane/Unlit`），**未装 URP** |
 | 输入 | 旧 Input Manager（`activeInputHandler: 0`），指针事件自绘 |
 | 分辨率 | 竖屏，逻辑 1080×1920，窗口 540×960（`Check.ps1 -Task shots` 用 1080×1920） |
@@ -46,9 +45,9 @@
 
 | 路径 | 用途 |
 |------|------|
-| `E:\Unity Development\tools\blender-gate.ps1` | 门自检 → `.blend` 数值门 → FBX 交付通路 → manifest |
-| `E:\Unity Development\tools\blender_export_unity.py` | 按 Unity 导入契约导出 `Modle_*` / `Anim_*` FBX |
-| `E:\Unity Development\tools\blender_contract.py` | 导入契约门（单位/变换/根/命名/三角/材质/骨架/落地） |
+| `<HUB>\tools\blender-gate.ps1` | 门自检 → `.blend` 数值门 → FBX 交付通路 → manifest |
+| `<HUB>\tools\blender_export_unity.py` | 按 Unity 导入契约导出 `Modle_*` / `Anim_*` FBX |
+| `<HUB>\tools\blender_contract.py` | 导入契约门（单位/变换/根/命名/三角/材质/骨架/落地） |
 
 口径见 `docs/model-pipeline.md`。**`degraded`（退出码 2）必须补查，不许当通过。**
 
@@ -62,7 +61,7 @@
 ## 验证入口
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File "E:\Unity Development\Project\Star Defanse\unity\scripts\check.ps1" -Task all
+powershell -ExecutionPolicy Bypass -File "<HUB>\Project\Star Defanse\unity\scripts\check.ps1" -Task all
 ```
 
 逻辑自检（123 项断言，headless）→ 资源校验 → 打包 → 实机自检 + 截图。四项全绿才算完成。

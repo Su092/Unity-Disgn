@@ -2,11 +2,7 @@
   "mcpServers": {
     "blender": {
       "command": "C:\\Users\\Administrator\\.local\\bin\\uvx.exe",
-      "args": [
-        "--python",
-        "3.11",
-        "blender-mcp"
-      ],
+      "args": ["--python", "3.11", "blender-mcp"],
       "env": {
         "UV_PYTHON_PREFERENCE": "only-managed",
         "BLENDER_HOST": "127.0.0.1",

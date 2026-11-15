@@ -13,7 +13,7 @@
   新做的件才走完整门：tools\blender-gate.ps1 -Blend <源> -Fbx <导出>。
 
 .PARAMETER ModelRoot
-  模型根目录，默认星轨防线的 Art/Models。
+  模型根目录，默认取 profile 里 Star Defanse 的工程根下 Art/Models。
 
 .PARAMETER Out
   结果目录，默认 tools/_gate/audit-all。
@@ -22,24 +22,36 @@
   powershell -ExecutionPolicy Bypass -File tools\blender-audit-models.ps1
 #>
 param(
-    [string]$ModelRoot = "E:\Star Defanse\Assets\Resources\Art\Models",
-    [string]$Out = "E:\Unity Development\tools\_gate\audit-all"
+    [string]$ModelRoot,
+    [string]$Out
 )
 
 $ErrorActionPreference = "Continue"
-if (-not (Test-Path $Out)) { New-Item -ItemType Directory -Path $Out -Force | Out-Null }
 
 $Workspace = Split-Path $PSScriptRoot -Parent
+$ProfilePs1 = Join-Path $Workspace "machine\profile.ps1"
+if (Test-Path $ProfilePs1) { . $ProfilePs1 }
+
+if (-not $ModelRoot) {
+    $star = Get-GamePath -Id 'Star Defanse'
+    $ModelRoot = Join-Path $star "Assets\Resources\Art\Models"
+}
+if (-not $Out) { $Out = Join-Path $PSScriptRoot "_gate\audit-all" }
+
+if (-not (Test-Path $Out)) { New-Item -ItemType Directory -Path $Out -Force | Out-Null }
+
 $ContractPy = Join-Path $PSScriptRoot "blender_contract.py"
 
 $Blender = ""
-foreach ($c in @(
-    "E:\SteamLibrary\steamapps\common\Blender\blender.exe",
-    "E:\toyxyz_RGBMocap\runtime_character\blender.exe"
-)) {
-    if (Test-Path $c) { $Blender = $c; break }
+$Candidates = @()
+if ($ProfilePs1 -and (Test-Path $ProfilePs1)) { try { $Candidates += (Get-BlenderPath) } catch { } }
+if ($env:BLENDER_EXE) { $Candidates += $env:BLENDER_EXE }
+$Candidates += (Join-Path $env:ProgramFiles "Blender Foundation\Blender 5.2\blender.exe")
+
+foreach ($c in $Candidates) {
+    if ($c -and (Test-Path $c)) { $Blender = $c; break }
 }
-if (-not $Blender) { Write-Host "找不到 blender.exe" -ForegroundColor Red; exit 3 }
+if (-not $Blender) { Write-Host "找不到 blender.exe：填 machine/profile.local.json 的 tools.blender，或设 `$env:BLENDER_EXE" -ForegroundColor Red; exit 3 }
 
 $rows = @()
 

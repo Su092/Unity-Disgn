@@ -3,7 +3,7 @@
 | 项 | 值 |
 |----|-----|
 | 唯一编辑器 | Unity **6000.6.4f1** |
-| 安装路径 | `D:\Unity\6000.6.4f1\Editor\Unity.exe` |
+| 安装路径 | `<UNITY:6000.6.4f1>` |
 | 工程版本文件 | `unity/ProjectSettings/ProjectVersion.txt` 须为 `6000.6.4f1` |
 | MCP 包 | `com.coplaydev.unity-mcp` **v10.0.0**（`unity/Packages/manifest.json`，Git URL） |
 | 传输 | Streamable HTTP：`http://127.0.0.1:8765/mcp` |
@@ -37,8 +37,8 @@
 调用方式：
 
 ```powershell
-& "D:\Unity\6000.6.4f1\Editor\Unity.exe" -batchmode -quit -nographics `
-  -projectPath "E:\Star Defanse" -logFile "E:\Star Defanse\unity_verify.log" `
+& "<UNITY:6000.6.4f1>" -batchmode -quit -nographics `
+  -projectPath "<GAME:Star Defanse>" -logFile "<GAME:Star Defanse>\unity_verify.log" `
   -executeMethod StarLane.EditorTools.STBuild.VerifyResources
 ```
 

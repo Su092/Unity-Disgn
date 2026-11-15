@@ -11,8 +11,8 @@
 用法：
 
 ```powershell
-& "E:\S\Build\Windows\S.exe" -autoplay -screen-width 1600 -screen-height 900 -screen-fullscreen 0
-# 产物：E:\S\autoplay.log（含遥测详情与最终构筑）
+& "<GAME:S>\Build\Windows\S.exe" -autoplay -screen-width 1600 -screen-height 900 -screen-fullscreen 0
+# 产物：<GAME:S>\autoplay.log（含遥测详情与最终构筑）
 ```
 
 ## 实现要点

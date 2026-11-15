@@ -4,7 +4,7 @@
 
 ## 工作目录
 
-所有命令在 `E:\Unity Development\Project\Star Defanse\unity\`（= 工程根）执行。
+所有命令在 `<HUB>\Project\Star Defanse\unity\`（= 工程根）执行。
 脚本内部用 `__file__` 反推仓库根，所以从工作区根执行也能定位 `tools/`。
 
 ## 密钥

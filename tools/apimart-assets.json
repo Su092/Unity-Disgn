@@ -143,84 +143,84 @@
     },
     {
       "id": "s-ref-crawler",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_crawler.png",
+      "out": "Project/S/_Inbox/art-refs/ref_crawler.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "A quadruped melee creature for a sci-fi shooter, seen from a front three-quarter view. Body is a single chunky low angular wedge tapering toward the head, standing low on four stubby thick legs, no knees, no claws, no toes. The head is a blunt wedge with one wide horizontal amber visor slit glowing. Body charcoal with a brighter red-orange back plate in one solid piece. Absolutely no spikes, no mandibles, no tail, no eyes, no organic bumps. Build it from about ten simple flat-shaded volumes only, like a toy made of cut cardboard. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-spitter",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_spitter.png",
+      "out": "Project/S/_Inbox/art-refs/ref_spitter.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "A ranged acid-spitting creature for a sci-fi shooter, seen from a front three-quarter view. Body is a rounded low capsule standing on two thick straight legs and two short arms, no fingers, no hands, no claws. In place of a head there is one large forward-facing round nozzle, a single smooth cone, glowing lime green at the tip. A single lime-green tank sits on the back as one plain cylinder. Body charcoal, limbs and tank lime yellow-green. No organic texture, no pores, no teeth, no spikes, no tail. Build it from about eight simple flat-shaded volumes only. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-shield",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_shield.png",
+      "out": "Project/S/_Inbox/art-refs/ref_shield.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "A heavy shielded soldier for a sci-fi shooter, seen from a front three-quarter view. Bulky humanoid but completely faceless and anonymous: a wide blocky torso, thick straight arms and legs, no fingers, no knee joints, no face, no helmet visor. It holds one large flat rectangular riot shield in front of the body with two short straight braces. Body charcoal with steel-blue armor plates in three plain pieces, and a single cyan glowing strip across the shield. Absolutely no spikes, no guns, no pouches, no straps, no fabric. Build it from about twelve simple flat-shaded volumes only. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-drone",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_drone.png",
+      "out": "Project/S/_Inbox/art-refs/ref_drone.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "A small flying attack drone for a sci-fi shooter, seen from a front three-quarter view. One flat hexagonal disc body with a single amber glowing lens on the front, and four straight stubby arms each ending in a flat plain rotor disc. No propeller blades, no wires, no antennas, no greebles. Body charcoal, rotor discs steel gray, lens amber. Nothing else attached. Build it from about seven simple flat-shaded volumes only. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-boss",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_boss.png",
+      "out": "Project/S/_Inbox/art-refs/ref_boss.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "A large floating boss machine for a sci-fi shooter, seen from a front three-quarter view. A single huge armored sphere body with six flat angular armor plates arranged symmetrically around it, one large purple glowing core ring around the equator, and three short thick downward arms ending in flat blunt tips. No legs, no face, no eyes, no spikes, no exposed machinery. Floating with a clear gap below the body. Body charcoal and dark violet, core ring bright magenta-purple emissive glow. Build it from about ten simple flat-shaded volumes only. Simple enough to model as a low-poly mesh. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-gun-auto",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_gun_auto.png",
+      "out": "Project/S/_Inbox/art-refs/ref_gun_auto.png",
       "size": "16:9",
       "resolution": "1k",
       "prompt": "A compact sci-fi submachine gun prop, seen from an exact side elevation, perfectly flat with zero perspective, the whole weapon horizontal and centered with clear margins. Very simple blocky construction: one long rectangular receiver, one short straight barrel shroud with a plain ring vent, one simple grip angled back, one small rectangular magazine below the receiver, one thin amber indicator strip along the receiver side. No trigger detail, no rails, no optics, no sling, no wires, no screws. Charcoal body with steel gray shroud. Nothing held by hands, no hands, no character. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-gun-grenade",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_gun_grenade.png",
+      "out": "Project/S/_Inbox/art-refs/ref_gun_grenade.png",
       "size": "16:9",
       "resolution": "1k",
       "prompt": "A bulky sci-fi grenade launcher prop, seen from an exact side elevation, perfectly flat with zero perspective, the whole weapon horizontal and centered with clear margins. Very simple blocky construction: one thick rectangular body, one large straight cylindrical barrel with a wide flared muzzle ring, one plain rectangular drum magazine below, one simple angled grip. A single amber indicator strip along the body. No sights, no triggers, no hinges, no wires, no screws. Charcoal body with steel gray barrel. Nothing held by hands, no hands, no character. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-gun-single",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_gun_single.png",
+      "out": "Project/S/_Inbox/art-refs/ref_gun_single.png",
       "size": "16:9",
       "resolution": "1k",
       "prompt": "A precise sci-fi marksman rifle prop, seen from an exact side elevation, perfectly flat with zero perspective, the whole weapon horizontal and centered with clear margins. Very simple blocky construction: one long slim rectangular receiver, one long straight barrel with a plain muzzle brake block, one simple angled grip, one flat rectangular stock at the rear, one small rectangular magazine. One thin cyan indicator strip along the receiver. No scope, no bipod, no rails, no wires, no screws. Charcoal body with steel gray barrel. Nothing held by hands, no hands, no character. Simple enough to model as a low-poly mesh in fifteen minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-prop-crate",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_prop_crate.png",
+      "out": "Project/S/_Inbox/art-refs/ref_prop_crate.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "A single industrial cargo crate prop, seen from a front three-quarter view, resting on the ground. One plain boxy volume with two horizontal reinforced bands wrapping all the way around in one flat layer each, and a single amber stencil stripe on the front face. No handles, no hinges, no latches, no labels, no text. Charcoal box with steel gray bands. Simple enough to model as a low-poly mesh in five minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-prop-barrel",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_prop_barrel.png",
+      "out": "Project/S/_Inbox/art-refs/ref_prop_barrel.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "A single industrial barrel prop, seen from a front three-quarter view, standing on the ground. One plain vertical cylinder with two flat raised rings near the top and bottom, and one solid amber band around the middle. No lid detail, no handles, no valves, no text, no warning labels. Charcoal cylinder with steel gray rings. Simple enough to model as a low-poly mesh in five minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-prop-pillar",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_prop_pillar.png",
+      "out": "Project/S/_Inbox/art-refs/ref_prop_pillar.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "A single tall energy conduit pillar prop for a sci-fi arena, seen from a front three-quarter view, standing on the ground. One plain squared column with a slight taper, a flat heavy base plate, and a single continuous vertical magenta-purple glowing channel running down the front face. No cables, no pipes, no rivets, no text. Charcoal column with a dark violet base, channel bright magenta emissive. Simple enough to model as a low-poly mesh in five minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
     },
     {
       "id": "s-ref-prop-wallsegment",
-      "out": "Project/S/unity/Assets/_Game/Art/Refs/ref_prop_wall.png",
+      "out": "Project/S/_Inbox/art-refs/ref_prop_wall.png",
       "size": "16:9",
       "resolution": "1k",
       "prompt": "A single modular sci-fi wall panel segment for an arena, seen from a front three-quarter view, standing vertically. One flat rectangular slab with a subtle inset frame border, two plain horizontal raised ribs, and one thin amber strip near the top edge. No pipes, no vents, no doors, no text, no decals. Charcoal slab with steel gray ribs. Designed as a repeatable module. Simple enough to model as a low-poly mesh in five minutes. Visual style: Low-poly industrial sci-fi game art. Bold simplified forms built from clean geometric volumes, flat shaded surfaces, hard angular edges, no fine detail, no thin protrusions, no wires, no cables. Limited palette: charcoal #2A2F36 body, steel gray #4C525C panels, amber #E8A33D accent stripes, desaturated cyan #5AA6F0 energy glow. Strong readable silhouette, chunky proportions, designed to be modeled as a simple low-poly mesh. Neutral three-quarter view, single object centered on a plain flat mid-gray background, even studio lighting, soft contact shadow. NO text, NO letters, NO watermark, NO frame, NO environment, NO other objects."
@@ -255,49 +255,49 @@
     },
     {
       "id": "s-ui-plate-dark",
-      "out": "E:\\S\\tools\\ui-ai-raw\\plate_dark.png",
+      "out": "_Inbox/ui-ai-raw/plate_dark.png",
       "size": "1:1",
       "resolution": "2k",
       "prompt": "Seamless tileable texture of DARK BRUSHED GUNMETAL PLATE used as the background of a military HUD panel. Base tone near-black blue-grey, roughly #151A21 to #2A313B. Fine horizontal brushed grain running across the frame, faint machining marks, a few hairline micro-scratches, occasional tiny pitting and cold-weld specks, sparse very subtle darker smudges. MATTE, no specular hotspots, no reflections. Completely flat even lighting across the whole frame. The whole frame is one continuous sheet of metal: no border, no rounded corners, no bevel edge, no highlight rim, no vignette, no shadow, no object, no screws, no rivets, no text, no numbers, no watermark, no logo. Perfectly tileable, uniform detail density, sharp focus, top-down flat 2D texture map."
     },
     {
       "id": "s-ui-plate-light",
-      "out": "E:\\S\\tools\\ui-ai-raw\\plate_light.png",
+      "out": "_Inbox/ui-ai-raw/plate_light.png",
       "size": "1:1",
       "resolution": "2k",
       "prompt": "Seamless tileable texture of LIGHTER BRUSHED GUNMETAL PLATE, the raised hover state of a dark mechanical HUD button. Base tone mid-grey blue, roughly #3A424E to #4A5464, clearly brighter than a near-black plate but still desaturated and cold. Fine horizontal brushed grain, subtle machining striations, a few hairline scratches, sparse faint fingerprint smudges. SATIN finish, low sheen, no mirror reflection, no bright specular streak. Completely flat even lighting across the whole frame. The whole frame is one continuous sheet of metal: no border, no rounded corners, no bevel edge, no highlight rim, no vignette, no shadow, no object, no screws, no rivets, no text, no numbers, no watermark, no logo. Perfectly tileable, uniform detail density, sharp focus, top-down flat 2D texture map."
     },
     {
       "id": "s-ui-energy",
-      "out": "E:\\S\\tools\\ui-ai-raw\\energy.png",
+      "out": "_Inbox/ui-ai-raw/energy.png",
       "size": "1:1",
       "resolution": "2k",
       "prompt": "Seamless horizontal texture for the FILL of a sci-fi HUD progress bar. A desaturated near-white energy sheen: bright neutral core running horizontally through the vertical middle third of the frame, smoothly falling off to darker grey toward the top and bottom edges. Fine horizontal energy filaments and thin parallel light streaks along the core, a couple of slightly brighter pulse bands. Colour is strictly NEUTRAL grey-white (it will be tinted in engine), no hue. Completely flat even lighting, no vignette, no glow bloom outside the frame, no border, no rounded corners, no text, no numbers, no arrows, no watermark, no logo. Perfectly tileable horizontally, sharp focus, flat 2D texture map."
     },
     {
       "id": "s-ui-icon-lock",
-      "out": "E:\\S\\tools\\ui-ai-raw\\icon_lock.png",
+      "out": "_Inbox/ui-ai-raw/icon_lock.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "Single simple UI GLYPH of a PADLOCK, locked state, drawn as flat white line art. Shackle arch over a rectangular body with a keyhole. Thick even stroke weight, hard geometric edges, minimal detail, no perspective, no shading, no gradient, no glow, no outline, no colour. Centred, occupying about 70 percent of the frame, generous empty margin around it. Pure solid black background, nothing else in frame. Pure white glyph on pure black, high contrast, crisp anti-aliased edges, no text, no watermark, no logo."
     },
     {
       "id": "s-ui-icon-check",
-      "out": "E:\\S\\tools\\ui-ai-raw\\icon_check.png",
+      "out": "_Inbox/ui-ai-raw/icon_check.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "Single simple UI GLYPH of a CHECKMARK, drawn as flat white line art. A bold angular tick: short down-stroke then long up-stroke, mitred ends, thick even stroke weight, hard geometric edges, no perspective, no shading, no gradient, no glow, no outline, no colour. Centred, occupying about 65 percent of the frame, generous empty margin around it. Pure solid black background. Pure white glyph on pure black, high contrast, crisp anti-aliased edges, no text, no watermark, no logo."
     },
     {
       "id": "s-ui-icon-arrow",
-      "out": "E:\\S\\tools\\ui-ai-raw\\icon_arrow.png",
+      "out": "_Inbox/ui-ai-raw/icon_arrow.png",
       "size": "1:1",
       "resolution": "1k",
       "prompt": "Single simple UI GLYPH of a RIGHT-POINTING CHEVRON ARROW, drawn as flat white line art. Two thick straight strokes meeting at a sharp apex on the right, mitred ends, hard geometric edges, no perspective, no shading, no gradient, no glow, no outline, no colour. Centred, occupying about 60 percent of the frame, generous empty margin. Pure solid black background. Pure white glyph on pure black, high contrast, crisp anti-aliased edges, no text, no watermark, no logo."
     },
     {
       "id": "s-ui-item-b_slug",
-      "out": "E:/S/tools/ui-ai-raw/item_b_slug.png",
+      "out": "_Inbox/ui-ai-raw/item_b_slug.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -305,7 +305,7 @@
     },
     {
       "id": "s-ui-item-b_heavy",
-      "out": "E:/S/tools/ui-ai-raw/item_b_heavy.png",
+      "out": "_Inbox/ui-ai-raw/item_b_heavy.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -313,7 +313,7 @@
     },
     {
       "id": "s-ui-item-b_pellet",
-      "out": "E:/S/tools/ui-ai-raw/item_b_pellet.png",
+      "out": "_Inbox/ui-ai-raw/item_b_pellet.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -321,7 +321,7 @@
     },
     {
       "id": "s-ui-item-b_pierce",
-      "out": "E:/S/tools/ui-ai-raw/item_b_pierce.png",
+      "out": "_Inbox/ui-ai-raw/item_b_pierce.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -329,7 +329,7 @@
     },
     {
       "id": "s-ui-item-b_ricochet",
-      "out": "E:/S/tools/ui-ai-raw/item_b_ricochet.png",
+      "out": "_Inbox/ui-ai-raw/item_b_ricochet.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -337,7 +337,7 @@
     },
     {
       "id": "s-ui-item-b_plasma",
-      "out": "E:/S/tools/ui-ai-raw/item_b_plasma.png",
+      "out": "_Inbox/ui-ai-raw/item_b_plasma.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -345,7 +345,7 @@
     },
     {
       "id": "s-ui-item-b_incend",
-      "out": "E:/S/tools/ui-ai-raw/item_b_incend.png",
+      "out": "_Inbox/ui-ai-raw/item_b_incend.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -353,7 +353,7 @@
     },
     {
       "id": "s-ui-item-b_cryo",
-      "out": "E:/S/tools/ui-ai-raw/item_b_cryo.png",
+      "out": "_Inbox/ui-ai-raw/item_b_cryo.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -361,7 +361,7 @@
     },
     {
       "id": "s-ui-item-b_null",
-      "out": "E:/S/tools/ui-ai-raw/item_b_null.png",
+      "out": "_Inbox/ui-ai-raw/item_b_null.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -369,7 +369,7 @@
     },
     {
       "id": "s-ui-item-b_lance",
-      "out": "E:/S/tools/ui-ai-raw/item_b_lance.png",
+      "out": "_Inbox/ui-ai-raw/item_b_lance.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -377,7 +377,7 @@
     },
     {
       "id": "s-ui-item-m_dmg_up",
-      "out": "E:/S/tools/ui-ai-raw/item_m_dmg_up.png",
+      "out": "_Inbox/ui-ai-raw/item_m_dmg_up.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -385,7 +385,7 @@
     },
     {
       "id": "s-ui-item-m_dmg_flat",
-      "out": "E:/S/tools/ui-ai-raw/item_m_dmg_flat.png",
+      "out": "_Inbox/ui-ai-raw/item_m_dmg_flat.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -393,7 +393,7 @@
     },
     {
       "id": "s-ui-item-m_crit_up",
-      "out": "E:/S/tools/ui-ai-raw/item_m_crit_up.png",
+      "out": "_Inbox/ui-ai-raw/item_m_crit_up.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -401,7 +401,7 @@
     },
     {
       "id": "s-ui-item-m_critdmg",
-      "out": "E:/S/tools/ui-ai-raw/item_m_critdmg.png",
+      "out": "_Inbox/ui-ai-raw/item_m_critdmg.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -409,7 +409,7 @@
     },
     {
       "id": "s-ui-item-m_spread_down",
-      "out": "E:/S/tools/ui-ai-raw/item_m_spread_down.png",
+      "out": "_Inbox/ui-ai-raw/item_m_spread_down.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -417,7 +417,7 @@
     },
     {
       "id": "s-ui-item-m_life_up",
-      "out": "E:/S/tools/ui-ai-raw/item_m_life_up.png",
+      "out": "_Inbox/ui-ai-raw/item_m_life_up.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -425,7 +425,7 @@
     },
     {
       "id": "s-ui-item-m_ammo_down",
-      "out": "E:/S/tools/ui-ai-raw/item_m_ammo_down.png",
+      "out": "_Inbox/ui-ai-raw/item_m_ammo_down.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -433,7 +433,7 @@
     },
     {
       "id": "s-ui-item-m_speed_up",
-      "out": "E:/S/tools/ui-ai-raw/item_m_speed_up.png",
+      "out": "_Inbox/ui-ai-raw/item_m_speed_up.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -441,7 +441,7 @@
     },
     {
       "id": "s-ui-item-m_split",
-      "out": "E:/S/tools/ui-ai-raw/item_m_split.png",
+      "out": "_Inbox/ui-ai-raw/item_m_split.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -449,7 +449,7 @@
     },
     {
       "id": "s-ui-item-m_pierce",
-      "out": "E:/S/tools/ui-ai-raw/item_m_pierce.png",
+      "out": "_Inbox/ui-ai-raw/item_m_pierce.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -457,7 +457,7 @@
     },
     {
       "id": "s-ui-item-m_homing",
-      "out": "E:/S/tools/ui-ai-raw/item_m_homing.png",
+      "out": "_Inbox/ui-ai-raw/item_m_homing.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -465,7 +465,7 @@
     },
     {
       "id": "s-ui-item-m_blast",
-      "out": "E:/S/tools/ui-ai-raw/item_m_blast.png",
+      "out": "_Inbox/ui-ai-raw/item_m_blast.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -473,7 +473,7 @@
     },
     {
       "id": "s-ui-item-m_mag",
-      "out": "E:/S/tools/ui-ai-raw/item_m_mag.png",
+      "out": "_Inbox/ui-ai-raw/item_m_mag.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -481,7 +481,7 @@
     },
     {
       "id": "s-ui-item-m_rate",
-      "out": "E:/S/tools/ui-ai-raw/item_m_rate.png",
+      "out": "_Inbox/ui-ai-raw/item_m_rate.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,
@@ -489,7 +489,7 @@
     },
     {
       "id": "s-ui-item-m_recoil",
-      "out": "E:/S/tools/ui-ai-raw/item_m_recoil.png",
+      "out": "_Inbox/ui-ai-raw/item_m_recoil.png",
       "size": "1:1",
       "resolution": "1k",
       "no_global_style": true,

@@ -1,19 +1,46 @@
----
-description: 多游戏工作区隔离、文档维护与开发顺序（始终生效）
-alwaysApply: true
----
-
 # 多游戏工作区
 
-工作区根：`E:\Unity Development\`
-游戏枢纽：`Project/<GameName>/`
+## 三层结构
+
+| 层 | 位置 | 说明 |
+|----|------|------|
+| L1 枢纽 | `<HUB>` | 规则、技能、智能体注册、文档、记忆、跨游戏工具链（本仓库） |
+| L2 游戏工程 | `<GAME:id>` | 各自的独立 git 仓库，不进枢纽 |
+| L3 机器绑定 | `machine/profile.local.json` | 本机真实路径（不入库） |
+
+游戏枢纽：`<HUB>/Project/<GameName>/`。
 
 当前已关联：
 
-| 游戏 | 枢纽 | Unity 工程（`unity` 联接目标） |
-|------|------|------------------------------|
-| Kingdom Of Cloud | `Project/Kingdom Of Cloud/` | `D:\Kingdom Of Cloud` |
-| Star Defanse（星轨防线） | `Project/Star Defanse/` | `E:\Star Defanse` |
+| 游戏 | 枢纽 | 真实工程（profile 键） |
+|---|---|---|
+| Kingdom Of Cloud | `Project/Kingdom Of Cloud/` | `Kingdom Of Cloud` |
+| Star Defanse（星轨防线） | `Project/Star Defanse/` | `Star Defanse` |
+| S（ProjectS） | `Project/S/` | `S` |
+
+真实盘符一律查 `machine/profile.local.json`，文档与脚本里写 `<GAME:id>`。
+
+## 路径记号（强制）
+
+文档与脚本**禁止写裸盘符**，统一用：
+
+| 记号 | 含义 |
+|------|------|
+| `<HUB>` | 枢纽根 |
+| `<GAME:id>` | 某游戏真实工程根（id = `Project/` 下目录名） |
+| `<UNITY:6000.6.4f1>` | 指定版本编辑器可执行文件 |
+| `<BLENDER>` | Blender 可执行文件 |
+
+唯一例外：`machine/profile.local.json`（本机实际值）与 `machine/profile.example.json`（模板）。
+
+## 开工前必做
+
+```powershell
+powershell -ExecutionPolicy Bypass -File "<HUB>\machine\doctor.ps1"
+```
+
+`pass` 才动手；`degraded`（退出码 2）必须补查；`fail` 先修。
+换机首次运行看 `<HUB>\docs\跨终端部署.md`。日常只需：复制模板填路径 → `bootstrap.ps1` → `doctor.ps1`。
 
 ## 隔离与放置
 
@@ -21,6 +48,20 @@ alwaysApply: true
 - 不要把整套 Unity 工程搬进 `Project/`（Library、Hub 注册、体积）
 - 一次任务只服务一个 `Project/<Game>/`；禁止跨游戏改动
 - 游戏工程内不存放过程文档目录；已在工程内的文档目录要迁入对应枢纽 `docs/`
+
+## 资产分层（原料 vs 交付件）
+
+| 类别 | 位置 | 入库 | 判据 |
+|------|------|------|------|
+| **交付件** | `<GAME:id>/Assets/` | 是 | 引擎直接读取、丢了就拿不回来 |
+| **原料** | `<GAME:id>/_Inbox/` | **否**（gitignore） | AI 原图、参考图、预览渲染、中间态；可由脚本重生成 |
+| **结论** | `<HUB>/Project/<Game>/docs/` | 是 | 纯文字（`.md`）；图片一律不放 |
+
+- 枢纽 `docs/` **只放 markdown**。不要提交 `docs/models/`、`docs/shots/`、`docs/ui/` 这类图片副本，
+  也不要放 `.docx` / `.psd` 原件——把结论写进 markdown，原图留在 `_Inbox/`。
+- `_Inbox/` 可随时清空重来；清空后靠 `tools/*.json` 清单 + APIMart 重跑。
+- 运行产物（截图、模型对照图）写进工程内 `Shots/`，同样 gitignore。
+- 新建游戏时：工程根建 `_Inbox/`（含 `README.md` 说明），工程 `.gitignore` 加 `/_Inbox/` 与 `/Shots/`。
 
 ## 开发顺序
 
@@ -35,46 +76,66 @@ alwaysApply: true
 2. blockout → 粗形 → 精修（每步跑数值门）
 3. 修改器栈按**目标**排序（没有通用顺序），改序就重跑门
 4. 清理 / 修法线 → 复检
-5. `tools\blender_export_unity.py` 导出 `Modle_*` / `Anim_*`
-6. `tools\blender-gate.ps1` 全门 pass（含 FBX 重新导入的第二通路）
+5. `<HUB>\tools\blender_export_unity.py` 导出 `Modle_*` / `Anim_*`
+6. `<HUB>\tools\blender-gate.ps1` 全门 pass（含 FBX 重新导入的第二通路）
 7. 落进工程后跑该游戏 `check.ps1`
 
-纪律与口径见 `.cursor/rules/blender-asset-pipeline.mdc`，游戏细节见其 `docs/model-pipeline.md`。
+纪律与口径见 `.cursor/rules/blender-asset-pipeline.mdc`；游戏细节见各游戏 `docs/model-pipeline.md`（S 未单列该文件，用 `breakdown/04-art-pipeline.md`）。
 
 ## 文档维护（强制）
 
 - **已有文件**：整文件覆盖重写；禁止在旧文末追加「另见 / 补充 / 引用」
 - **没有的主题**：才新增文件或新章节
+- **只放 markdown**：枢纽 `docs/`、`breakdown/`、`control/`、`memory/` 内不放图片、`.docx`、`.psd`；需要图就把结论写成表格或文字
 - 工程 `README.md` 只保留运行/验证/目录速览，设计与数值一律指向枢纽 `docs/`
 
 ## 路径速查
 
 | 项 | 值 |
 |----|-----|
-| 编辑器（两款游戏共用） | Unity 6000.6.4f1 @ `D:\Unity\6000.6.4f1` |
+| 编辑器（三款游戏共用） | Unity 6000.6.4f1，实际位置由 `profile.tools.unityEditorRoot` 决定 |
 | 客户端 skill（apimart-image） | **只一处**：`.cursor/skills/apimart-image/`（`.agents/skills/` 与根 `apimart-image/` 已在 2026-11 删除，不要再建副本） |
 | Blender skill（blender-asset-pipeline） | **只一处**：`.cursor/skills/blender-asset-pipeline/`（`.codex/skills/` 下那份是 Codex 宿主的**派生改写版**，带 `ADAPTATION.md`，内容有意不同，不要同步） |
-| Blender 可执行 | `E:\SteamLibrary\steamapps\common\Blender\blender.exe`（5.2.3 LTS） |
+| Blender 可执行 | `profile.tools.blender`（Steam 版，5.2；`blender-gate.ps1` 优先读它） |
 | 3D 交付门 | `tools/blender-gate.ps1`（+ `blender_contract.py` / `blender_export_unity.py` / `blender_buried_true.py`） |
-| 工作区 MCP 配置 | `.cursor/mcp.json` + `.codex/config.toml`（改一处要同步另一处） |
+| 工作区 MCP 配置 | `.cursor/mcp.json` + `.codex/config.toml`（**由 `machine/bootstrap.ps1` 按 profile 生成**，不手工维护；`doctor.ps1` 校验一致性） |
 | 工作区凭据 | `tools/.apimart.key`（已 gitignore） |
+| 环境自检 | `machine/doctor.ps1`（三态） / `machine/bootstrap.ps1`（幂等装配） |
 
 ### Kingdom Of Cloud
 
 | 用途 | 路径 |
-|------|------|
-| 枢纽 | `Project/Kingdom Of Cloud/` |
-| Unity | `Project/Kingdom Of Cloud/unity/` → `D:\Kingdom Of Cloud` |
+|---|---|
+| 枢纽 | `<HUB>/Project/Kingdom Of Cloud/` |
+| Unity | `unity/` → `<GAME:Kingdom Of Cloud>` |
 | 运行时根 | `unity/Assets/_Game/` |
 | MCP 桥 | Coplay HTTP `http://127.0.0.1:8765/mcp`（工程 `unity/.cursor/mcp.json`） |
 
 ### Star Defanse（星轨防线）
 
 | 用途 | 路径 |
-|------|------|
-| 枢纽 | `Project/Star Defanse/` |
-| Unity | `Project/Star Defanse/unity/` → `E:\Star Defanse` |
+|---|---|
+| 枢纽 | `<HUB>/Project/Star Defanse/` |
+| Unity | `unity/` → `<GAME:Star Defanse>` |
 | 运行时根 | `unity/Assets/Scripts/`（无 `_Game/` 分层），资源在 `unity/Assets/Resources/` |
 | 验证入口 | `unity/scripts/check.ps1`（tests / verify / build / shots） |
 | MCP 桥 | Coplay HTTP `http://127.0.0.1:8765/mcp`（包 `com.coplaydev.unity-mcp` v10.0.0） |
 | 渲染约定 | 内置管线 + `StarLane/ModelLit`；**禁止给该工程装 URP** |
+
+### S（ProjectS）
+
+| 用途 | 路径 |
+|---|---|
+| 枢纽 | `<HUB>/Project/S/` |
+| Unity | `unity/` → `<GAME:S>` |
+| 工程远端 | `git@github.com:Su092/Project-S.git`（独立仓库，与工作区仓库分开提交） |
+| 运行时根 | `unity/Assets/_Game/`（`Core` 零 Unity 依赖 / `View` / `App` / `Editor`），资源在 `unity/Assets/Resources/` |
+| 验证入口 | `unity/scripts/check.ps1`（tests / setup / assets / ui / build / smoke / shots） |
+| 渲染约定 | URP 17.6（`Assets/Settings/PC_RPAsset`） |
+| 输入 | 仅新 Input System（`activeInputHandler = 1`） |
+| MCP 桥 | Coplay HTTP `http://127.0.0.1:8765/mcp`；**工程尚未装 `com.coplaydev.unity-mcp`**，用前须先装 |
+
+## 真实落位
+
+机器相关的真实盘符（含枢纽联接、工程位置、编辑器与 Blender 路径）只写在 `machine/profile.local.json`。
+排查磁盘占用或联接失效时先跑 `doctor.ps1`，它会直接指出哪条联指向了错误目标。

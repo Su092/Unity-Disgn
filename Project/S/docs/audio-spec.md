@@ -1,7 +1,11 @@
 # 音频规范 — S
 
-> 初版**尚未实装任何音效**（见 `technical-design.md` §7 技术债）。本文件是可执行的规格，
-> 拆解 P3 按此实现，避免到时候临时拍脑袋。
+> **实装状态（2026-11-15 复核）**：音效已实装（`View/SfxBank.cs` 合成 14 个 clip、16 音源池、类别限流、音高 ±8%）；
+> 音量分组已实装（`View/AudioMix.cs` Master/SFX/Music/UI，PlayerPrefs 持久化，`MenuView` 四滑条已接）。
+> 音乐层**代码已写但未接线**：`View/MusicDirector.cs` 由 `GameRoot` 创建，`UpdateMix(...)` 无调用点，
+> 五个层音量恒为 0 —— 实机听不到，按本文件的层次规则接线即可。
+> `enemy_near` 已合成（`SfxBank.PlayEnemyNear`），但无调用点。
+> 本文件是规格，未实装项以本段为准，不作「已实现」的依据。
 
 ## 1. 为什么 FPS 的音频比画面更关键
 
@@ -38,6 +42,9 @@ FPS 里玩家 80% 的威胁感知来自声音：背后有没有爬行者、盾�
 - 溅射 `splashRadius > 0` → 命中时叠加低频爆音。
 
 ## 4. 事件音与优先级
+
+> 实装核对（2026-11-15）：`SfxBank` 已有全部事件接口，但下表有两个**无调用点**：
+> `PlayEnemyNear`（优先级 2）与 `PlayPickup` / `PlayUiHover`（优先级 5–6）。
 
 | 优先级 | 事件 | 处理 |
 |--------|------|------|

@@ -2,15 +2,15 @@
 
 ## 编辑器
 
-- 只用 **Unity 6000.6.4f1**（`D:\Unity\6000.6.4f1\Editor\Unity.exe`）
+- 只用 **Unity 6000.6.4f1**（`<UNITY:6000.6.4f1>`）
 - 勿用 2022 LTS / 团结引擎打开本工程
 
 ## 文档与代码归属
 
 | 类型 | 位置 |
 |------|------|
-| 项目文档 / 拆解 / 本控制文件 / 记忆 | `E:\Unity Development\Project\Kingdom Of Cloud\` |
-| 运行时脚本、资源、场景、预制体 | `unity/Assets/_Game/`（即 `D:\Kingdom Of Cloud\Assets\_Game\`） |
+| 项目文档 / 拆解 / 本控制文件 / 记忆 | `<HUB>\Project\Kingdom Of Cloud\` |
+| 运行时脚本、资源、场景、预制体 | `unity/Assets/_Game/`（即 `<GAME:Kingdom Of Cloud>\Assets\_Game\`） |
 
 不在游戏工程根下再建过程文档目录。
 

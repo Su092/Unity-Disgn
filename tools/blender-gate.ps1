@@ -85,24 +85,27 @@ if (-not (Test-Path $Out)) { New-Item -ItemType Directory -Path $Out -Force | Ou
 $Out = (Resolve-Path $Out).Path
 
 # ---------------------------------------------------------------- 找 Blender
+# 路径优先取 machine/profile.local.json 的 tools.blender；再退回环境变量与 PATH。
+$ProfilePs1 = Join-Path $Workspace "machine\profile.ps1"
+$Candidates = @()
+if (Test-Path $ProfilePs1) {
+    . $ProfilePs1
+    try { $Candidates += (Get-BlenderPath) } catch { }
+}
+if ($env:BLENDER_EXE) { $Candidates += $env:BLENDER_EXE }
+$Candidates += (Join-Path $env:ProgramFiles "Blender Foundation\Blender 5.2\blender.exe")
 
-$Candidates = @(
-    "E:\SteamLibrary\steamapps\common\Blender\blender.exe",
-    "E:\toyxyz_RGBMocap\runtime_character\blender.exe",
-    (Join-Path $env:ProgramFiles "Blender Foundation\Blender 5.2\blender.exe")
-)
 $Blender = ""
 foreach ($c in $Candidates) {
-    if (Test-Path $c) { $Blender = $c; break }
+    if ($c -and (Test-Path $c)) { $Blender = $c; break }
 }
 if (-not $Blender) {
     $cmd = Get-Command blender -ErrorAction SilentlyContinue
     if ($cmd) { $Blender = $cmd.Source }
 }
 if (-not $Blender) {
-    Write-Host "找不到 blender.exe。显式指定：`$env:BLENDER_EXE = <路径>" -ForegroundColor Red
-    if ($env:BLENDER_EXE -and (Test-Path $env:BLENDER_EXE)) { $Blender = $env:BLENDER_EXE }
-    else { exit 3 }
+    Write-Host "找不到 blender.exe。在 machine/profile.local.json 填 tools.blender，或设 `$env:BLENDER_EXE" -ForegroundColor Red
+    exit 3
 }
 
 foreach ($f in @($GatePy, $ContractPy, $FbxGatePy, $BuriedTruePy, $UvGatePy)) {

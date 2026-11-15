@@ -4,10 +4,10 @@
 
 ## 关联
 
-- 枢纽：`E:\Unity Development\Project\Star Defanse\`
-- Unity：`E:\Star Defanse`（`unity\` 目录联接，`mklink /J`，已被 `.gitignore` 的 `Project/*/unity/` 忽略）
+- 枢纽：`<HUB>\Project\Star Defanse\`
+- Unity：`<GAME:Star Defanse>`（`unity\` 目录联接，`mklink /J`，已被 `.gitignore` 的 `Project/*/unity/` 忽略）
 - 工程远端：`git@github.com:Su092/Star-Defanse.git`，`main` @ `6ac1b07`（工作树干净）
-- 编辑器：Unity **6000.6.4f1**（`D:\Unity\6000.6.4f1`）
+- 编辑器：Unity **6000.6.4f1**（`<UNITY:6000.6.4f1>`）
 - 渲染：内置管线 + `StarLane/ModelLit` / `StarLane/Unlit`（**未装 URP**）
 
 ## 已定约定
@@ -44,7 +44,7 @@
 | 资产 | 位置 | 作用 |
 |------|------|------|
 | skill 本体 | `.cursor/skills/blender-asset-pipeline/`（单一源头） | 方法论 + `blender_gate.py` 六道数值门 |
-| 交付门入口 | `E:\Unity Development\tools\blender-gate.ps1` | selftest → `.blend` 数值门 → FBX 重新导入复核 + 契约门 → manifest |
+| 交付门入口 | `<HUB>\tools\blender-gate.ps1` | selftest → `.blend` 数值门 → FBX 重新导入复核 + 契约门 → manifest |
 | FBX 复核 | `tools/blender_fbx_gate.py` | 清场只导 FBX 再跑数值门（换通路复核，技能铁律 B） |
 | 契约门 | `tools/blender_contract.py` | 单位 / 变换 / 单根 / `GEO-` 命名 / 三角预算 / 材质贴图 / `Yaw` 骨架 / 落地 |
 | 导出器 | `tools/blender_export_unity.py` | 固定 -Z/Y 轴、单位、Legacy 动画前提；`Modle_`/`Anim_` 前缀不符拒导 |

@@ -1,6 +1,6 @@
 # 项目文档总览 — S
 
-权威文档树：`E:\Unity Development\Project\S\docs\`
+权威文档树：`<HUB>\Project\S\docs\`
 
 ## 文档索引
 
@@ -19,9 +19,10 @@
 ## 与工程的关系
 
 - **文档只在枢纽**。工程内 `Assets/` 只放代码与运行时资源，不放过程文档。
-- 唯一权威数值是建工程后的 `unity/Assets/Resources/Data/sdata.json`；
+- 唯一权威数值是 `unity/Assets/Resources/Data/sdata.json`（经联接即 `<GAME:S>\Assets\Resources\Data\sdata.json`）；
   `gameplay-spec.md` 与 `loadout-spec.md` 是它的**人读镜像**。改数值必须两边一起改。
-- 工程根 `README.md`（建工程后）面向「打开工程就能跑」的人，只保留运行/验证/目录速览。
+- 工程根 `README.md` 面向「打开工程就能跑」的人，只保留运行/验证/目录速览。
+- 枢纽 `unity/` 是到 `<GAME:S>` 的目录联接：读工程一律走 `unity/...` 相对路径，不要写死盘符。
 
 ## 书写约定
 

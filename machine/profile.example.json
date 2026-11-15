@@ -1,0 +1,39 @@
+{
+  "$comment": [
+    "复制本文件为 profile.local.json，按本机实际路径填写。profile.local.json 不入库。",
+    "只有本文件与 profile.local.json 允许出现绝对盘符；其余文档与脚本一律写 <HUB> / <GAME:id> 记号。",
+    "改完跑 machine/bootstrap.ps1 生成联接与 MCP 配置，再跑 machine/doctor.ps1 验收。"
+  ],
+  "machine": "B",
+  "hub": {
+    "real": "X:\\path\\to\\Unity Development",
+    "link": ""
+  },
+  "tools": {
+    "unityEditorRoot": "X:\\path\\to\\Unity Hub\\Unity",
+    "blender": "X:\\path\\to\\blender.exe",
+    "uvx": "X:\\path\\to\\uvx.exe"
+  },
+  "mcp": {
+    "blenderHost": "127.0.0.1",
+    "blenderPort": 9876,
+    "unityBridgeUrl": "http://127.0.0.1:8765/mcp"
+  },
+  "games": {
+    "Kingdom Of Cloud": {
+      "path": "X:\\path\\to\\Kingdom Of Cloud",
+      "remote": "git@github.com:Su092/Kingdom-Of-Cloud.git",
+      "editor": "6000.6.4f1"
+    },
+    "Star Defanse": {
+      "path": "X:\\path\\to\\Star Defanse",
+      "remote": "git@github.com:Su092/Star-Defanse.git",
+      "editor": "6000.6.4f1"
+    },
+    "S": {
+      "path": "X:\\path\\to\\S",
+      "remote": "git@github.com:Su092/Project-S.git",
+      "editor": "6000.6.4f1"
+    }
+  }
+}

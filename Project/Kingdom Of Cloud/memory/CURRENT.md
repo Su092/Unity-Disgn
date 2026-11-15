@@ -4,9 +4,9 @@
 
 ## 关联
 
-- 枢纽：`E:\Unity Development\Project\Kingdom Of Cloud\`
-- Unity：`D:\Kingdom Of Cloud`（`unity\` 目录联接）
-- 编辑器：Unity **6000.6.4f1**（`D:\Unity\6000.6.4f1`）
+- 枢纽：`<HUB>\Project\Kingdom Of Cloud\`
+- Unity：`<GAME:Kingdom Of Cloud>`（`unity\` 目录联接）
+- 编辑器：Unity **6000.6.4f1**（`<UNITY:6000.6.4f1>`）
 
 ## 已定约定
 
@@ -19,7 +19,7 @@
 
 ## 当前状态
 
-- 游戏端 `Cursor Work Space/` 已删除（控制/笔记/记忆/日志/vendor 已清；概念原文迁至 `docs/source/`）
+- 游戏端 `Cursor Work Space/` 已删除（控制/笔记/记忆/日志/vendor 已清；概念已整理进 `docs/concept.md`，原始 .docx 未保留）
 - MCP 包：`Packages/com.coplaydev.unity-mcp`
 - 基础脚本：`Singleton` / `GameManager` / `PlayerController` / `CameraFollow`
 - 拆解入口：`breakdown/01-foundation-status.md`
