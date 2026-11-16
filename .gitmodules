@@ -1,0 +1,3 @@
+[submodule ".codex/skills/video-shotcraft"]
+	path = .codex/skills/video-shotcraft
+	url = https://atomgit.com/VincentWei/video-shotcraft.git

@@ -1,0 +1,76 @@
+---
+description: UI 素材按功能分类（Common/Frame/Widget/Tag/Icon/Icon-Items），移动必须带 .meta，分类表唯一真相
+alwaysApply: true
+---
+
+# UI 素材分类约定
+
+完整规范见 `<HUB>/docs/ui-asset-taxonomy.md`。本文件是可执行的硬约束。
+
+## 分类判据
+
+按**「服务几个地方」**分类，不按外观：
+
+| 分类 | 判据 |
+|------|------|
+| `Common` | 出现 ≥3 处或跨界面；换掉它等于整体换肤 |
+| `Frame` | 包裹内容、9-slice 拉伸、带 border |
+| `Widget` | 有状态（正常/悬停/危险、空/满）或承载实时数值 |
+| `Tag` | 表达一个离散状态，颜色本身是信息（稀有度等） |
+| `Icon` | 静态语义符号，无状态、不承载数值 |
+| `Icon/Items` | **数据驱动**，按数据 id 取图（配件图标 `item_<id>`） |
+
+拿不准时按顺序问：数量由数据决定？→`Items`；表达离散状态？→`Tag`；自身有状态/吃内边距？→`Widget`；只包内容？→`Frame`；≥3 处共用？→`Common`；剩下→`Icon`。
+
+## 目录
+
+```
+Assets/Resources/UI/
+  Prefabs/            预制体（不动）
+  *.mat               材质，留在根目录
+  Sprites/
+    Common/ Frame/ Widget/ Tag/
+    Icon/
+      Items/          配件图标
+```
+
+**根目录不许有 `.png`**。任何贴图必须在 `Sprites/<Category>/` 下。
+
+## 字体（与贴图同级的共用资源）
+
+| 约定 | 理由 |
+|---|---|
+| 放 `Assets/Resources/Font/`，文件名用 **ASCII** | `Resources.Load` 与构建管线对中文文件名不保证可靠 |
+| 运行时**只有一个**取字体的入口（S：`UiKit.Font`） | 改多处，漏一处就有一批文字仍是旧字体，肉眼难发现 |
+| 预制体序列化要用 `AssetDatabase.LoadAssetAtPath` 取资产本体 | `Resources.Load` 取运行时实例，写不进预制体 |
+| 缺字体时回退内置字体 + `LogWarning` | 退化成"字体不对"，而不是"文字全没" |
+| 预制体 `m_Font` 全部硬 GUID 引用同一字体 | 缺字体会**静默**显示 Missing (Font)，Unity 不报错 |
+
+字体缺失是隐性故障：界面照常打开，只是字没了或变成默认字体，**打包 / 单测都可能全过**。
+必须两道断言：编辑器侧（资产 + Resources 路径 + GUID + 引用数）+ 运行时（字体名非内置回退）。
+
+## 硬约束
+
+1. **素材名 → 分类只有一处真相**。运行时与编辑器都必须查它，不许各自拼路径。
+   S 的真相在 `Assets/_Game/View/UiAssets.cs` 的 `Catalog`。
+2. **移动素材必须 `.png` 与 `.png.meta` 成对搬**。只搬图片会让 GUID 重新生成，
+   预制体引用全变成 `Missing`。新建目录必须写 `folderAsset: yes` 的 folder meta。
+3. **导入设置按文件名匹配，不按目录**。`AssetPostprocessor` 里写 `p.Contains("Resources/UI/")`
+   没问题，但九宫格边距必须按文件名 `switch` —— 按路径判断的规则在分类后全部失效。
+4. **必须有一致性校验并接进 `check.ps1`**。判据七条见规范 §6。
+   缺图是静默失败（界面降级成纯色块，不报错），不靠脚本发现不了。
+5. **新增素材要改两处**：流水线分类表 + 运行时分类表。漏一处不报错，只表现为某张图不显示。
+6. **字体只允许一个运行时入口，且必须有非回退断言**。字体缺失时 Unity 静默显示 Missing (Font)，
+   不报错；预制体里的 `m_Font` 是硬 GUID 引用，重导字体若换了 GUID 会全部断链。
+
+## 新增素材流程
+
+1. 判定分类
+2. 原图放 `_Inbox/ui-ai-raw/`（原料入库）
+3. 流水线分类表登记
+4. 跑流水线 → 产物落 `Sprites/<Category>/`
+5. 运行时分类表登记（S：`UiAssets.Catalog`）
+6. 跑校验，七条全绿
+7. 若参与 9-slice，同步边距表与校验期望值
+
+参考实现：`<GAME:S>/tools/audit_ui_taxonomy.py`，已接入 `check.ps1 -Task tests`。

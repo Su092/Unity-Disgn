@@ -82,8 +82,10 @@ powershell -ExecutionPolicy Bypass -File "<HUB>\machine\doctor.ps1"
 | 工具 | 入口 | 说明 |
 |------|------|------|
 | **换机部署** | `docs/跨终端部署.md` | **新机器从零跑起来，按此文件顺序执行即可** |
+| **UI 素材分类规范** | `docs/ui-asset-taxonomy.md` | 跨项目通用：`Common`/`Frame`/`Widget`/`Tag`/`Icon`/`Icon-Items` 六类判据、目录布局、七条校验 |
 | 环境自检 | `machine/doctor.ps1` | 八项三态判决；换机与每日开工前先跑 |
 | 环境装配 | `machine/bootstrap.ps1` | 幂等建联接、按 profile 生成两份 MCP 配置 |
+| **工程占用探测** | `tools/unity-lock.ps1` | 跑 batchmode 前查工程是否被编辑器占用；`-Force` 直接关编辑器。退出码 0/1/2 |
 | APIMart 生图 | skill `apimart-image` → `.cursor/skills/apimart-image/scripts/apimart_image.py` | 只用 Python 标准库；`gpt-image-2`；约定见 `.cursor/rules/apimart-image.mdc` |
 | Unity CLI 工作流 | skill `unity-6000-cli` | 6000.6 的 `unity` CLI、batchmode、`-executeMethod` 与 MCP 取舍 |
 | Blender 交付门 | `tools/blender-gate.ps1` | 一条命令：门自检 → `.blend` 数值门 → FBX 重新导入复核 + 契约门 → `manifest.json` |

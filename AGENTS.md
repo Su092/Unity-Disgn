@@ -53,5 +53,8 @@ powershell -ExecutionPolicy Bypass -File "<HUB>\machine\doctor.ps1"
 - 技能单一源头 `.cursor/skills/`；`.codex/skills/blender-asset-pipeline` 是有意不同的派生版，不要同步
 - MCP 配置由 `bootstrap.ps1` 生成，不手工编辑
 - 手改 `.ps1` 后确认 UTF-8 **with BOM**（PS 5.1 无 BOM 会按 GBK 解码报 `Unexpected token`）
+- **需要工程锁就关编辑器**：跑 batchmode / `check.ps1` 的 `build` `shots` `setup` `ui` 前直接关掉 Unity，
+  这一轮独占工作全做完再重新打开。带锁跑不是慢，是结果不可信（batchmode 抢不到锁会静默退出且返回 0）。
+  占用探测用 `tools\unity-lock.ps1 -ProjectPath <工程>`（退出码 0 未占用，`-Force` 直接关编辑器）。
 
-细则：`.cursor/rules/multi-project-workspace.mdc`、`agents/registry.md`、`machine/README.md`。
+细则：`.cursor/rules/multi-project-workspace.mdc`、`.cursor/rules/ui-asset-taxonomy.mdc`、`.cursor/rules/unity-editor-lock.mdc`、`agents/registry.md`、`machine/README.md`。

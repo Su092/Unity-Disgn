@@ -42,6 +42,17 @@ powershell -ExecutionPolicy Bypass -File "<HUB>\machine\doctor.ps1"
 `pass` 才动手；`degraded`（退出码 2）必须补查；`fail` 先修。
 换机首次运行看 `<HUB>\docs\跨终端部署.md`。日常只需：复制模板填路径 → `bootstrap.ps1` → `doctor.ps1`。
 
+## Unity 编辑器占用
+
+需要工程锁的任务（batchmode、`check.ps1` 的 `build` / `shots` / `setup` / `ui`、资源重导）
+**直接关掉 Unity 编辑器**，不要把编辑器开着硬跑，也不要为了保编辑状态跳过验证。
+
+顺序：先跑不需要锁的步骤（`tests`、Python 审计）→ 关编辑器 → 确认 `Get-Process Unity` 里目标实例已退出 →
+把这一轮所有独占工作一次做完 → 最后重新打开编辑器并确认新资源被识别。
+
+带锁跑不是慢，是**结果不可信**：batchmode 抢不到锁会静默退出、还返回 0。
+细则见 `.cursor/rules/unity-editor-lock.mdc`。
+
 ## 隔离与放置
 
 - **关联开发**：Unity 工程留在原盘符；文档/拆解/记忆只在枢纽；`unity/` 仅联接
@@ -63,6 +74,17 @@ powershell -ExecutionPolicy Bypass -File "<HUB>\machine\doctor.ps1"
 - `_Inbox/` 入库：换机不用重新生图。若 Raw 体积过大（单仓库 >500 MB），再考虑 LFS。
 - 运行产物（截图、模型对照图）写进工程内 `Shots/`，**不入库**（可重生成）。
 - 新建游戏时：工程根建 `_Inbox/`（含 `README.md` 说明），工程 `.gitignore` 只加 `/Shots/` 等运行产物目录。
+
+### UI 素材分类（所有项目统一）
+
+UI 贴图**不放平**在 `Resources/UI/` 根下，按功能分到 `Sprites/<Category>/`：
+`Common`（通用底盘）/ `Frame`（容器边框）/ `Widget`（有状态的控件）/ `Tag`（离散状态标签）/
+`Icon`（静态符号）/ `Icon/Items`（数据驱动的配件图标）。
+
+判据是「服务几个地方」而不是「长什么样」。移动素材必须 `.png` 与 `.png.meta` 成对搬（否则 GUID 重生成、
+预制体引用全断），分类表只允许有一处真相，并须有一致性校验接进 `check.ps1`。
+
+细则与七条校验判据见 `.cursor/rules/ui-asset-taxonomy.mdc` / `<HUB>/docs/ui-asset-taxonomy.md`。
 
 ## 开发顺序
 
