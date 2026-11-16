@@ -31,10 +31,13 @@
 | 类型 | 主色 | 理由 |
 |------|------|------|
 | 爬行者 `Crawler` | `#E0474C` 红 | 近战冲刺＝紧迫 |
-| 喷吐者 `Spitter` | `#9ED940` 黄绿 | 远程酸液 |
-| 盾卫 `Shield` | `#4D85F2` 蓝 | 装甲＝冷硬 |
-| 无人机 `Drone` | `#EB9E38` 橙 | 空中单位 |
-| Boss 核心 | `#B45CE0` 紫 | 唯一紫色，最高威胁 |
+| 重装 `Brute` | `#8C5A3C` 棕 | 厚甲近战，色相下沉 |
+| 自爆 `Bomber` | `#E8D24A` 黄 | 危险信号，最亮 |
+| 炮台 `Turret` | `#5A7FA8` 蓝灰 | 固定远程，冷而稳 |
+| Boss「铸造核心」 | `#B45CE0` 紫 | 唯一紫色，最高威胁 |
+
+> 四种普通敌人对应 `Enemy.Kind` 枚举：`Crawler` / `Brute` / `Bomber` / `Turret`。
+> 旧文档写过的 `Spitter`（黄绿）与 `Shield`（蓝）**已不在代码里**，不要按旧表配色。
 
 **纪律**：玩家视野里出现紫色 ⇒ 一定是 Boss 或 Boss 技能。不要给任何普通物件用紫色。
 
@@ -51,13 +54,9 @@
 
 ### 2.4 作用域标记（配件卡必备）
 
-| 作用域 | 颜色 | 图标语义 |
-|--------|------|----------|
-| 全场 `Whole` | `#5AA6F0` 蓝 | 环绕全部子弹 |
-| 后继 `After` | `#6BCB77` 绿 | 箭头指向后面 |
-| 枪械 `Gun` | `#E8A33D` 金 | 枪形 |
+作用域标记使用“后一格、前一格、前后各一格、后两格、后三格、前两格、前三格、前后各两格、隔一格、全枪”十种语义，对应 loadout-spec.md 的十个枚举。禁止再把 Next 称为逻辑下一发或主动读取件。
 
-**这三个颜色是世界信息的第二套编码**，全文档、UI、教程统一使用，不得替换。
+金色表示选中/拖动来源，蓝色表示范围覆盖，绿色表示真实生效子弹；覆盖空槽不等于产生加成。卡片等级与 tooltip 必须一致，拖放悬停显示合成后的等级、范围与数值。颜色和图标绑定由 ItemTooltip / InventoryView / UiAssets 的当前实现统一维护。
 
 ### 2.5 配件圆形图标（2026-11-13 新增）
 
@@ -76,8 +75,15 @@
 - 文件名 `item_<配件 id>.png`，256×256，透明底，**暗色圆底板已烘进贴图**
   （因此不能用给黑底字形准备的加色材质，必须 `Image.Type.Simple` 普通混合）。
 - 图形语言：暗金属圆盘 + 内层同心环 + 上缘高光弧 + 骨白字形，字形只表达该件的机制含义
-  （例如 `m_split` 是一个圆分裂成三个，`b_pierce` 是穿透箭头），**不含文字**。
-- 缺图时降级为"稀有度色块 + 名称首字"，绝不留空环或方块 —— 方块在一排圆形里看着像渲染错误。
+  （例如分裂件是一个圆分裂成三个，穿透件是穿透箭头），**不含文字**。
+- 落位：`Assets/_Game/Res/Texture/UI/Icon/Items/item_<id>.png`（分类规则见 `<HUB>/docs/ui-asset-taxonomy.md`）。
+- 现状：**39 张** `item_*.png`，与 `Cfg/*.tsv` 的现行 39 件**一一对应、不多不少**。
+  旧 25 件池的残留已于 2026-11 清理（`b_slug` / `m_split` / `m_dmg_up` 等），
+  同时同步删掉了 `preprocess_ui_assets.py` 与 `gen_ui_assets_ai.py` 两处清单条目 ——
+  不同步的话下次重跑流水线会把它们再生出来。
+- 缺图时降级为「稀有度色块 + 名称首字」，绝不留空环或方块 —— 方块在一排圆形里看着像渲染错误。
+- 校验：`python tools/audit_ui_taxonomy.py` 会比对 `Icon/Items` 的文件名集合与 `Cfg/*.tsv` 的 id 集合，
+  多一张或少一张都判红（已接入 `check.ps1 -Task tests`）。
 
 ## 3. 材质规范
 
@@ -101,7 +107,7 @@
 | 次要文字 | `#9AA4B2` |
 | 强调（数值） | `#F2C14E` 金 |
 | 危险（血量/威胁） | `#E0474C` |
-| 字体 | 内置 `LegacyRuntime.ttf`（初版）；正式版换思源黑体 Medium |
+| 字体 | **`UiRounded`**（`Resources/Font/UiRounded.ttf`，原名「极影毁片圆」）。全部文本统一使用，唯一入口 `UiKit.Font` |
 | 字号阶梯 | 54 / 40 / 30 / 26 / 22 / 20 / 18 / 17 / 16 / 15 / 13（不用 24、28 这类怪值） |
 
 **HUD 纪律**：
@@ -109,18 +115,37 @@
 - 轮转序列条必须常显。玩家看不到「下一发是哪个位」就无法做构筑决策。
 - 数值文本一律带单位（`9.1 发/秒`、`1.20°`、`1.8s`），不要裸数字。
 
+### 4.1 字体
+
+全工程**只用一种字体**：`UiRounded`（`Assets/_Game/Res/Font/UiRounded.ttf`，原名「极影毁片圆」，
+2.2 万码位，中英标点齐全，`dynamic` 动态渲染）。
+
+| 项 | 约定 |
+|---|---|
+| 运行时唯一入口 | `S.View.UiKit.Font` —— 所有 `AddComponent<Text>` 都必须走它 |
+| 编辑器取字体 | `UiKit.FontAssetPath`（`AssetDatabase` 按路径取资产本体，才能序列化进预制体） |
+| 预制体 | 72 处 `m_Font` 全部硬引用该字体的 GUID；**不要**再出现内置 Arial |
+| 缺失时 | 静默回退内置字体并 `LogWarning`（界面难看但可读，不出现空方块） |
+
+**为什么文件名用 ASCII**：字体原名是中文，但 资源地址与构建管线对中文文件名
+不保证可靠（跨平台、以及某些 CI 解压环节）。所以文件改名 `UiRounded.ttf`，
+原名只保留在文档与注释里。
+
+**为什么不用 `Resources.GetBuiltinResource`**：内置字体只有 Arial / LegacyRuntime，
+无法满足中文排版；而 SRes 预加载的 Font 与本项目使用的 Legacy `UI.Text` 配套
+（不是 TMP 的 `TMP_FontAsset`，两者不通用）。
+
+校验两道：
+- 编辑器侧 `S/校验 UI 字体`（`Editor/SUiFontSetup.cs`）：资产 + Resources 路径 + GUID + 72 处引用，
+  已接入 `check.ps1 -Task ui` 的第 5 步；
+- 运行时 `SelfCheck`：断言 `UiKit.Font` 拿到的名字不是内置回退字体，缺字体会直接 FAIL。
+
 ## 5. 特效规范
 
-| 事件 | 表现 | 时长 |
-|------|------|------|
-| 开枪 | 枪口 2 帧高光 + 轻微后坐（`localPosition.z` −0.02） | 0.05 s |
-| 普通命中 | 黄色小球扩散 | 0.08 s |
-| 爆炸 | 半透明球体放大 + 亮度衰减 | 0.18 s |
-| 敌人死亡 | 缩放至 0 + 少量碎块 | 0.15 s |
-| 升级 | 屏幕边缘金色脉冲 | 0.5 s |
-| 受击 | 屏幕边缘红晕（α ≤ 0.35） | 0.5 s |
-
-**禁止**：长时间粒子、屏幕抖动（FPS 里会晕）、全屏闪白。
+ProjectileVisual 为 17 类子弹提供形态、颜色和尾迹；光束、连锁闪电、地雷部署环、持续场与黑洞应能一眼区分，敌方弹丸保留红色威胁提示。
+CombatFx 将枪口、命中和爆炸分为短促闪光、环形扩张与碎屑等层，范围与伤害判定分离；视觉不能带额外 Collider。特效共用 SMat.Combat，活动对象上限 80。
+WeaponMotion 基于现有枪网格做倾枪/弹匣与机件换弹，模型后座使用弹簧恢复；EnemyMotion 基于现有敌人网格做步行、攻击和旋翼动作。动画不改原始网格资产的造型，运行态分件保留材质与几何，暂停冻结。
+视觉检查输出保留在工程 Shots，文档中只记录路径和结论，不复制图片到枢纽。
 
 ## 6. 素材规格与产出
 
@@ -130,8 +155,12 @@
 | 枪械第一人称模型 | ≤2500 三角面，无手部 | Blender；FBX 走 `Modle_*` 命名 |
 | 敌人 | ≤1200 三角面，单骨架（可选） | Blender；`Anim_*` 命名 |
 | UI 图标 | 128×128 PNG，透明底 | APIMart 生成后切图 |
-| 配件圆形图标 | 256×256 PNG（内容为圆底板 + 亮色字形） | APIMart 生成 → 前期处理 → 几何合成，落 `Assets/Resources/UI/item_<id>.png` |
+| 配件圆形图标 | 256×256 PNG（内容为圆底板 + 亮色字形） | APIMart 生成 → 前期处理 → 几何合成，落 `Assets/_Game/Res/Texture/UI/Icon/Items/item_<id>.png` |
 | 天光 | 渐变天空盒（程序化） | 代码生成，不用贴图 |
+
+UI 贴图统一按功能分类到 `Assets/_Game/Res/Texture/UI/<Category>/`（`Common` / `Frame` / `Widget` /
+`Tag` / `Icon` / `Icon/Items`）。分类判据、目录规则与七条校验见 `<HUB>/docs/ui-asset-taxonomy.md`，
+本工程的一致性校验在 `tools/audit_ui_taxonomy.py`。
 
 **Blender 交付纪律**（沿用工作区 `blender-asset-pipeline`）：
 - 分件装配体不跑单体水密门，只跑契约门（`-ContractOnly`）。
@@ -140,17 +169,31 @@
 
 ## 7. 当前实现与规范的差距（已知）
 
-初版代码里所有物体都是 `GameObject.CreatePrimitive`（方块/胶囊/球），**没有任何自制模型**。差距清单：
+> 按 2026-11-16 代码复核。**初版「全是 `CreatePrimitive`」已经过去了**：
+> `Assets/_Game/Res/Model/` 有 12 件 `Modle_*` 低模接入。
 
 | 规范要求 | 现状 |
 |----------|------|
-| 敌人有类型化轮廓 | 全部是胶囊体 + 颜色区分 |
-| 枪械模型 | 一个方块 |
-| 环境是「箱庭」多区域 | 单个 120×120 平面 + 随机方块 |
+| 敌人有类型化轮廓 | **已接入** 4 件低模，映射为 `Brute→Modle_Enemy_Shield`(1.97 m) `Bomber→Modle_Enemy_Spitter`(1.74 m) `Turret→Modle_Enemy_Drone`(0.38 m) `Crawler→Modle_Enemy_Crawler`(0.86 m) |
+| 枪械模型 | **已接入** 3 件（`Modle_Gun_Single` `Modle_Gun_Auto` `Modle_Gun_Grenade`），6 把枪共用 |
+| Boss 模型 | **已接入** `Modle_Boss_ForgeCore` |
+| 环境是「箱庭」多区域 | 单张 **100×100** 竞技场（18 掩体 / 4 高台 / 8 m 墙），非多区域 |
 | 装饰带 / 危险液体 | 无 |
-| 后处理 | 无 Volume Profile |
+| 后处理 | **已接入** `SPostFx` |
+| 网格动画 | 既有枪/敌人网格运行态分件，驱动换弹、后座、行走和攻击，无新骨骼资产 |
+| 新配件独立图标 | 51 个 ID 目前只有 39 个独立图标，新增 12 个复用旧图，尚不满足一 ID 一文件规则 |
 
-这些是拆解 P2/P3 的内容，不是缺陷——垂直切片先验证循环，再换皮。
+**12 件资产清单**：`Modle_Boss_ForgeCore`、`Modle_Enemy_Crawler`、`Modle_Enemy_Drone`、
+`Modle_Enemy_Shield`、`Modle_Enemy_Spitter`、`Modle_Gun_Auto`、`Modle_Gun_Grenade`、
+`Modle_Gun_Single`、`Modle_Prop_Barrel`、`Modle_Prop_Crate`、`Modle_Prop_Pillar`、`Modle_Prop_Wall`。
+
+> 模型文件名沿用了旧的四敌命名（`Drone` / `Shield` / `Spitter`），与代码里的
+> `Enemy.Kind`（`Crawler` / `Brute` / `Bomber` / `Turret`）**不是同名映射**。
+> 映射写死在 `GameRoot.ModelForKind`：
+> `Brute→Modle_Enemy_Shield`、`Bomber→Modle_Enemy_Spitter`、`Turret→Modle_Enemy_Drone`、
+> `Crawler→Modle_Enemy_Crawler`（默认）。
+> **改任何一边的命名，必须同时改 `GameRoot.ModelForKind` 与 `SModelContract` 的 `Spec` 表**，
+> 否则运行时找不到模型（会静默退化），编辑器契约门也报红。
 
 ## 8. 验收判据（美术）
 

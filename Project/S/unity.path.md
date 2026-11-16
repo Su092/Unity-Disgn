@@ -38,5 +38,4 @@ powershell -ExecutionPolicy Bypass -File "<HUB>\machine\doctor.ps1" -OnlyGame S
 powershell -ExecutionPolicy Bypass -File "<HUB>\Project\S\unity\scripts\check.ps1" -Task all
 ```
 
-**换机前置**：`-Task tests` 需要 .NET SDK，且 `tools/loadout-tests/*.csproj` 被工程 `.gitignore` 忽略、
-不随仓库分发，需本地重建；否则只有 `setup/assets/build/shots` 可跑。
+**换机前置**：tests 需要 .NET SDK。tools/loadout-tests/loadout-tests.csproj 已纳入工程 Git，克隆后无需重建；完整验证以 memory/CURRENT.md 的实际结果为准。

@@ -63,7 +63,7 @@ api.download(url, out)
 ## 一次改动的固定顺序
 
 1. **改规格**：`docs/loadout-spec.md`（配件）或 `docs/gameplay-spec.md`（环境）
-2. **改数据**：`unity/Assets/Resources/Data/sdata.json`
+2. **改数据**：`unity/Assets/_Game/Res/Cfg/*.tsv`
 3. **改逻辑**：`unity/Assets/_Game/Core/`（**保持零 Unity 依赖**）
 4. **跑断言**：`dotnet run -c Release`（`tools/loadout-tests`）
 5. **改表现**：`unity/Assets/_Game/View/`（只读 Core 结果，不回写规则）
@@ -80,7 +80,7 @@ powershell -ExecutionPolicy Bypass -File "$proj\scripts\check.ps1" -Task tests  
 powershell -ExecutionPolicy Bypass -File "$proj\scripts\check.ps1" -Task shots  # 只跑实机自检
 ```
 
-**看到 `RESULT ALL PASS` 才算跑完**。任一任务失败，脚本退出码为 1。
+**看到所选任务的 RESULT 全部通过才算完成该范围；只有全量任务通过才能声称全量通过**。任一任务失败，脚本退出码为 1。
 
 只跑实机自检：
 
@@ -109,13 +109,13 @@ Get-Content "<GAME:S>\selfcheck.log"
 | `Application.dataPath` | 播放器里指向 `S_Data` | 向上找含 `Assets` 的工程根 |
 | PowerShell 5.1 编码 | 中文乱码 / `Unexpected token ')'` | `check.ps1` 必须存为 **UTF-8 with BOM** |
 | **Force Single Instance** | 上一个 `S.exe` 还在运行时，新进程**静默退出、不写日志**，表现为 `RESULT shots FAIL（未生成 selfcheck.log）` | `check.ps1` 已在 shots 前自动 `Stop-Process -Name S`；手动重跑自检前也要先确认没有残留进程 |
+| **编辑器占用工程锁** | 编辑器开着时 batchmode 抢不到锁，**静默退出且退出码可能是 0**，日志里才看得出；`build` / `shots` / 资源重导全部不可信 | 直接关编辑器，确认目标编辑器进程退出、数据库锁可独占后再跑（Temp 锁文件可残留）；这一轮独占工作做完再重开。见 `.cursor/rules/unity-editor-lock.mdc` |
 
 ## 场景与入口
 
 `Assets/Scenes/Main.unity` 只有一个 `S` 节点（挂 `Bootstrap`）。
 
-**不要在编辑器里手拖 UI 或组件**：运行时全量重建会覆盖。
-需要调整结构就改 `Bootstrap` / `HudView` / `InventoryView` 的构建代码。
+UI 结构在 Assets/_Game/Res/UIPrefabs，由 Editor 工厂或 MCP 修改；运行态通过 *Refs 绑定。世界入口和实例创建由 Bootstrap / GameRoot 管理。
 
 需要重建场景或应用工程设置时：
 

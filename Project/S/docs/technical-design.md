@@ -1,174 +1,66 @@
 # 技术设计 — S
 
-> 配套：`loadout-spec.md`（规则与数值）、`data-schema.md`（数据字段）。
-> 本文只写**实现结构与硬约束**。
+## 1. 工程与资源
 
-## 1. 分层
+Unity 6000.6.4f1，URP 17.6.0，Input System 1.20.0，Addressables 2.11.2。主场景为 Assets/Scenes/Main.unity，Bootstrap 是启动入口。
+代码在 Assets/_Game，交付资产在 Assets/_Game/Res（Cfg / Model / Texture / UIPrefabs / Font / Shaders / Prefab）；Addressables 配置在 Assets/AddressableAssetsData。
+Bootstrap 先等待 SRes.PreloadAll，再读取 TSV、校验 SData 并创建玩家和 GameRoot。禁止在预加载前读取运行资源。
+场景、预制体由 Unity Editor 工具或 MCP 修改；UI 结构来自 UIPrefabs，运行态通过 *Refs 绑定，不以手改 YAML 作为常规流程。
 
-```
-App     Bootstrap（场景入口，纯代码构建）  SelfCheck（-scheck 实机自检）
-  │
-View    GameRoot（局内编排：刷怪/经验/威胁/暂停）
-        PlayerController  PlayerWeapons  Projectile  Enemy  EnemyBullet
-        HudView（HUD）  InventoryView（背包与三选一）
-  │            只读 Core 的结果，不回写规则
-Core    Loadout（结算）  GunRuntime（轮转/弹匣）  RunState（经验/威胁/背包/抽取）
-        SData（数据解析与查询）  SJson（零依赖 JSON）  LoadoutTypes（数据模型）
-  │            零 UnityEngine 依赖
-Tools   tools/loadout-tests（dotnet 控制台，直接链接 Core 源码跑断言）
-```
+## 2. 分层与职责
 
-**硬约束**：`Core/` 不得出现 `using UnityEngine`（唯一例外是 `SDataLoader.cs`，它是桥）。
+| 层/文件 | 职责 |
+|---|---|
+| Core/Loadout、GunRuntime | 作用域、枪械属性、读取与载荷结算、弹匣/换弹/指针 |
+| Core/ItemFusion、ChainItem | 合成原子事务、实例等级和有效属性；不改共享配置 |
+| Core/RunState、RunDirector、BossState | 经验/奖励/背包、时间轴、Boss 规则 |
+| Core/SCfgLoader、SCfgValidator、STsv | 纯 C# 配置解析和校验；SDataLoader 是唯一 Unity 桥 |
+| View/GameRoot | 对局编排、刷怪、拾取奖励、暂停/光标、结算与清理 |
+| View/ExperiencePickup | 原地经验晶体、1.5 米距离拾取、防重复与暂停 |
+| View/PlayerWeapons、Projectile | 将 ResolveCast 结果实例化并执行碰撞与伤害 |
+| View/ProjectileVisual、CombatFx | 弹丸外形/轨迹、枪口/命中/爆炸/光束表现 |
+| View/RigidMeshRig、WeaponMotion、EnemyMotion | 利用现有网格分件驱动刚性动画 |
+| View/InventoryView、DraggableItem | 四方向拖放、范围高亮、合成预览、奖励领取 |
+| View/SRes、SAssets、SMat、UiAssets | 资源预加载/查找、网格与碰撞、共享材质、UI 资源 |
+| Editor/S*Check | 编辑器静态与运行态专项诊断 |
+| App/SelfCheck、SmokeTest、AutoPlay | 构建后实机检查、启动冒烟和自动游玩 |
 
-这条约束换来的是：整条配件结算可以在 dotnet 下用 121 条断言回归，不用开编辑器。
+## 3. 规则与交互同源
 
-**为什么值得**：本作最贵的 bug 是「链解析顺序错」「弹药算错」「分裂指数爆炸」——这些全是纯函数问题。
-放进 Core 后，改一个数值跑 `dotnet run` 就能 1.6 秒内知道有没有破坏算例。
+Core 除 SDataLoader 外不引用 Unity。Loadout.TargetsOf / EffectRangeOf / AffectedBulletCells 同时支持实战与 UI；Next/Prev 是物理邻格，载荷扫描另走 NextBulletCell。
+预览复制 SlotState，不改变实际布局；真实合成验证来源和目标各有且仅有一个所有权位置，成功后保留目标位并消费来源，失效或重复拖放不产生物品。
+RunState 的确定性随机在同种子、同候选条件下复现奖励。枪奖励每轮最多一把，替换前先验证背包能容纳旧枪配件，避免部分返还。
 
-## 2. 文件职责
+## 4. 碰撞与战斗表现
 
-| 文件 | 层级 | 职责 |
-|------|------|------|
-| `Core/SJson.cs` | Core | 手写 JSON 解析（支持 `//` 注释）。不用 `JsonUtility`（不支持字典/数组嵌套）也不用 `System.Text.Json`（Unity 默认引用里没有） |
-| `Core/LoadoutTypes.cs` | Core | `ProjectileDesc` `BulletDef` `ModifierDef` `GunDef` `ChainItem` `Scope` 等 |
-| `Core/Loadout.cs` | Core | **结算核心**：`ResolveCast`（链解析）`ResolveGun`（枪械件）`ComputeAmmo` `ValidateInsert` |
-| `Core/GunRuntime.cs` | Core | 轮转指针、弹匣、换弹、射速冷却；`TryFire` 是唯一开火入口 |
-| `Core/RunState.cs` | Core | 等级曲线、威胁同步、背包、三选一抽取、mulberry32 |
-| `Core/RunDirector.cs` | Core | **节奏总导演**：时间轴阶段、刷怪规格、威胁曲线、精英与 Boss 触发（纯逻辑，可逐秒断言） |
-| `Core/SData.cs` | Core | `sdata.json` → 强类型；`MakeItem` `BuildStarterSlots` |
-| `Core/SDataLoader.cs` | Core(桥) | **唯一**引用 UnityEngine 的 Core 文件，从 `Resources` 读文本 |
-| `View/GameRoot.cs` | View | 单图编排：时间轴驱动刷怪、精英、Boss、经验结算、暂停、爆炸结算 |
-| `View/ArenaBuilder.cs` | View | 单张 120×120 竞技场：地面、墙、Boss 台、掩体、高台、环形刷怪点 |
-| `View/PlayerController.cs` | View | 第一人称移动/视角/冲刺/跳跃（新 Input System 直读设备） |
-| `View/PlayerWeapons.cs` | View | 持枪、切枪、开火 → 实例化弹丸；散射在瞄准锥内随机 |
-| `View/Projectile.cs` | View | 飞行、重力、追踪、穿透、反弹、命中、爆炸 |
-| `View/Enemy.cs` | View | 四种敌人 AI；吃护甲/燃烧/减速/空蚀 |
-| `View/EnemyBullet.cs` | View | 敌人抛射物 |
-| `View/HudView.cs` | View | 运行时构建 HUD；轮转条与准星散射可视化 |
-| `View/InventoryView.cs` | View | 背包、拖拽配件、三选一界面；打开即 `timeScale=0` |
-| `App/Bootstrap.cs` | App | 唯一场景入口，纯代码组装 |
-| `App/SelfCheck.cs` | App | `-scheck` 实机自检 + 截图 + 退出码 |
-| `Editor/SceneBuilder.cs` | Editor | `S/重建主场景`、`S/应用工程设置`、批处理 `BatchSetup` |
-| `Editor/BuildPlayer.cs` | Editor | 打包到 `Build/Windows/S.exe`，批处理 `BuildBatch` |
+SAssets.MeasureBoundsLocal 将 Renderer.localBounds 的角点直接变换到目标局部空间，避免世界 AABB 二次放大。静态箱/桶/墙板/柱的 MeshCollider 绑定可视 sharedMesh；模型导入旋转保留，墙按真实尺寸适配，柱以正确根节点落地。
+移除视觉原语 Collider 时立即禁用再销毁，避免同帧空气墙或挡弹；Pillar 破坏时关闭子物体碰撞。人物和敌人的运动碰撞仍使用各自控制器，不以视觉动画驱动判定。
 
-## 3. 数据流
+Projectile.Init 统一创建 ProjectileVisual，覆盖 17 种子弹及敌方红弹；不在发射入口重复叠加旧原语。CombatFx 提供枪口、命中、爆炸环/碎屑、光束和连锁闪电，活动特效上限 80。SMat.Combat 共享材质，CombatGlow.shader 纳入 Always Included。
+投射物逐帧扫掠检测，爆炸按目标去重；描述符数量上限 24、载荷递归上限 6。性能边界需要实机长局测试，不能仅凭专项截图认定达标。
 
-```
-sdata.json ──SDataLoader──▶ SData ──┬─▶ RunState（经验/威胁/背包/抽取）
-                                    └─▶ GunRuntime（每把枪：Slots + Cursor + Ammo）
-                                              │  TryFire
-                                              ▼
-                                        Loadout.ResolveCast ──▶ CastResult
-                                              │  （ProjectileDesc[] + AmmoCost + Warnings）
-                                              ▼
-                                        PlayerWeapons.SpawnCast ──▶ Projectile（场景对象）
-                                              │ 命中
-                                              ▼
-                                        Enemy.TakeDamage / GameRoot.Explode
-```
+## 5. 现有网格动画
 
-- **规则 → 表现单向**。View 只读 Core 结果，从不修改 `ProjectileDesc`。
-- 一次开火只经过一条路径：`GunRuntime.TryFire` → `Loadout.ResolveCast`。UI 预览也用同一个函数
-  （`HudView` 调 `ResolveCast` 算「下一发期望」），所以 HUD 数字与实际伤害不可能不一致。
+RigidMeshRig 以连通部分拆分已有可读网格，保留原顶点、三角面、UV、法线和材质；缓存键包含网格实例、分类及局部变换，不依赖浮动世界矩阵。
+WeaponMotion 使用实际 MagBarFill 驱动倾枪、弹匣/弹鼓移出与装回、拉机动作；射击使用弹簧回弹表现后座，仅改变模型，不改变镜头瞄准或弹道。
+EnemyMotion 依据实际速度驱动腿/臂/机体/旋翼；Enemy 的攻击前摇结束后才判断攻击条件。战斗动画使用缩放时间，暂停冻结。
 
-## 4. 确定性
+## 6. 长期约束
 
-| 项 | 做法 |
-|----|------|
-| 抽取随机 | `RunState` 内 mulberry32，种子来自启动时间；**不用** `UnityEngine.Random` |
-| 结算 | 无随机。散射的随机偏移只在 `PlayerWeapons.SpawnCast`（表现层） |
-| 断言可复现 | `tools/loadout-tests` 不走 Unity，输入固定，输出逐位可比 |
-| 为什么表现层随机不影响验收 | 断言测的是「描述符」，不含弹道方向 |
+- 暂停与光标由 GameRoot.SyncCursorToState 统一裁决，所有等待用户操作的面板必须解锁光标。
+- UI 动画需要非缩放时间；战斗逻辑/动画遵循暂停时间。
+- 模型 +Y 上、+Z 前，保留 FBX 导入旋转；不靠任意清零或补偿旋转掩盖问题。
+- 材质由 SMat 缓存；新增着色器必须检查构建包含，避免编辑器可见而播放器被剥离。
+- InputSystemUIInputModule 配套新 Input System；SInputFix 关闭触摸模拟，输入路由允许 Game View 接收设备。
+- EditorSettings 保持默认域/场景重载，避免静态缓存跨 Play 引用已销毁对象。
+- Build/Library/Logs/Shots 可再生且不追踪；_Inbox 原料、Assets 及 .meta 需要追踪。
+- 枢纽和工程是独立仓库，代码不通过枢纽 unity 联接重复入库。
 
-## 5. 性能与实现要点
+## 7. 验证与当前限制
 
-| 点 | 做法 / 理由 |
-|----|-------------|
-| 投射物用 `SphereCast` 逐帧检测 | 高速弹丸（140 m/s）用 `Rigidbody` 会穿模；手动步进可控 |
-| 穿透后推 0.3 m | 避免同一帧重复命中同一个 Collider |
-| 分裂代数上限 3（`MaxSplitGeneration`） | 防止 `分裂×分裂×分裂×分裂` 指数爆炸（3^4 = 81）。上限 3 代 = 最多 27 发/颗 |
-| 爆炸用 `OverlapSphere` + 去重 HashSet | 一个敌人有多个 Collider 时不重复结算 |
-| 材质每次 `new Material` | 初版可接受；后续应改为共享材质 + 顶点色/材质属性块 |
-| HUD 每帧调 `ResolveCast` | 每帧仅 1–3 次链解析（≤6 项），可忽略；换来数字绝对准确 |
-| UI 全部代码构建 | 无 Prefab 引用断链风险；代价是无法在编辑器可视化调布局 |
+统一入口 scripts/check.ps1 支持 tests / setup / assets / ui / build / smoke / shots / all。纯规则测试项目文件已纳入 Git；无需换机手动重建 csproj。
+tests 同时执行规则断言与 UI 分类审计，任一失败均不算全通过。验证结果必须检查日志 RESULT、进程结束及实际产物。
+专项入口包括 SObstacleCollisionCheck、SProjectileVisualCheck、SMeshMotionCheck、SCombatPlayCheck、SFusionPlayCheck；运行态检查通过 Logs/*.request 触发并写日志和截图。
+本轮的次数、迁移编译结果与尚未执行的构建验证记在 memory/CURRENT.md。
 
-## 6. 关键约定（不要回退）
-
-| 约束 | 原因 |
-|------|------|
-| `Core/` 不引用 UnityEngine | 否则 dotnet 断言跑不了，最贵的 bug 失去保护 |
-| 结算只走 `Loadout.ResolveCast` | HUD 预览与实战必须同源，否则数字对不上 |
-| 枪械件只在 `Recalc()` 结算 | 施法时再算会与「同名只生效一次」冲突 |
-| `damageMul` 在链结算**之后**乘 | 保证 §9 算例可复现；也让配件先后不受枪影响 |
-| 弹丸描述符不可变式使用 | View 只读；修改描述符必须发生在 Core 内 |
-| 新 Input System 必须配 `InputSystemUIInputModule` | 混用 `StandaloneInputModule` 会让 UI 完全无响应（已踩过） |
-| 场景只有一个 `S` 节点 | 其余全靠代码；手拖会被运行时覆盖 |
-| 暂停一律走 `Time.timeScale = 0` | 且用 `unscaledDeltaTime` 驱动 UI 动画，否则暂停后 UI 冻结 |
-
-## 7. 已知技术债
-
-> 下表已按 2026-11-15 的代码复核；「已解决」不代表换机后仍验证过。
-
-| 项 | 影响 | 状态 |
-|----|------|------|
-| 每次生成弹丸都 `new Material` | 长时间游玩会累积材质实例 | **已解决**：`SMat` 按 (shader,色,smoothness) 共享缓存，改色走 `MaterialPropertyBlock` |
-| 敌人视觉是胶囊体 + 颜色 | 无打击感、无受击反馈动画 | **已解决**：12 件 `Modle_*` 低模已接入（无骨骼无动画） |
-| 敌人 AI 只有直线趋近/固定距离 | 无掩体寻路、无协同 | 初版够用；箱庭手工摆点 |
-| 无音效 | 开枪/命中/受伤全静音 | **已解决**：`SfxBank` 合成 14 clip + 16 音源池 + 类别限流 |
-| 音乐层未接线 | `MusicDirector.UpdateMix` 无调用点，实机无音乐 | **已解决**：`GameRoot.Update` / `Win` 已接线 |
-| 无 Boss | 第 5 区域清完直接结算 | **已解决**：`BossState` 三阶段 + 冲击波/召唤 |
-| 世界是平面 + 立方体 | 不是真正的「箱庭」多区域 | **已解决**：`ArenaBuilder` 单张 120×120 竞技场（原 `ZoneBuilder` 6 区域已移除） |
-| 敌方威胁值依赖区域推进 | 清区才算完成一个循环 | **已解决**：`RunDirector` 时间轴驱动，4:00 精英 / 8:00 Boss 可逐秒断言 |
-| `SJson` 手写解析 | 无 schema 校验、错误信息不如专用库 | 数据只在开发期改，可接受 |
-| 背包网格用 `GridLayoutGroup` | 拖拽时布局重排可能抖动 | 目前可用，后续换绝对定位 |
-| 无人机爆炸按 3D 距离判定 | `GameRoot.Explode` 用 `Vector3.Distance`，空中目标与地面同判 | 已知，未修 |
-
-## 8. 自检体系
-
-| 入口 | 覆盖 | 判据 |
-|------|------|------|
-| `tools/loadout-tests`（dotnet） | **795 条断言**：24 条 §9 算例、装配校验、轮转/弹药/换弹、枪械件、36 条拖拽预览、时间轴阶段/威胁曲线、4:00 精英与 8:00 Boss 事件、暂停语义、Boss 状态机 | `RESULT n/n passed`，退出码 0 |
-| `S.exe -scheck` | 实机：数据加载、刷怪、开火扣弹、轮转、改装重算、升级、三选一、背包暂停、伤害、竞技场构建、4:00 精英真机刷出、8:00 Boss 与四柱、结算，并出 9 张截图 | `selfcheck.log` 末尾 `SELFCHECK RESULT n/n passed`，退出码 0 |
-| `scripts/check.ps1` | 串起上面两条 + 打包 | `RESULT` 行全绿 |
-
-**前置依赖（换机必查）**：
-- `tools/loadout-tests` 需要 **.NET SDK**；本机若 `dotnet --list-sdks` 为空，`-Task tests` 直接失败。
-- 该目录的 `.csproj` 被工程 `.gitignore` 的 `*.csproj` 规则忽略，**不会随仓库分发**，需本地重建。
-
-**已知坑（会让 CI 莫名其妙变红）**：本工程是 Unity 播放器构建，默认开启 Force Single Instance。
-上一个 `S.exe` 未退出时，新进程**静默退出且不写 `selfcheck.log`**，
-表现为 `RESULT shots FAIL（未生成 selfcheck.log）`。
-`check.ps1` 已在 shots 前自动清理残留实例；手动跑自检前请先 `Get-Process S | Stop-Process -Force`。
-
-**判据纪律**：
-- 断言里的期望值**写死在测试代码里**，不从 `sdata.json` 反算。数据被改坏时测试必须变红。
-- `-scheck` 必须真的 `TryFire` 并检查弹药变化，不能只检查对象存在。
-- 截图不是装饰：UI 布局错位、文字重叠只能靠看图发现。
-
-## 9. 验证命令
-
-```powershell
-# 纯逻辑断言（1.6 秒）
-cd "<GAME:S>\tools\loadout-tests"; dotnet run -c Release
-
-# 一键全量
-powershell -ExecutionPolicy Bypass -File "<GAME:S>\scripts\check.ps1"
-
-# 只跑实机自检
-& "<GAME:S>\Build\Windows\S.exe" -scheck -screen-width 1600 -screen-height 900 -screen-fullscreen 0
-Get-Content "<GAME:S>\selfcheck.log"
-```
-
-## 10. Unity 工程约定
-
-| 项 | 值 |
-|----|-----|
-| 工程根 | `<GAME:S>`（枢纽内 `unity\` 为 Junction） |
-| 编辑器 | Unity 6000.6.4f1 |
-| 渲染 | URP 17.6（`PC_RPAsset`） |
-| 输入 | Input System 1.20.0（`Packages/manifest.json`），后端 `activeInputHandler = 1`（仅新输入） |
-| 运行时根 | `Assets/_Game/` |
-| 数据 | `Assets/Resources/Data/sdata.json`（3 枪 / 10 子弹件 / 15 衍生件） |
-| 场景 | `Assets/Scenes/Main.unity`（只有 `S` 节点） |
-| 运行时资产 | `Assets/Resources/Models/`（12 件 `Modle_*`）、`Assets/Resources/UI/`（58 PNG + `Prefabs/`） |
-| URP 资产 | `Assets/Settings/PC_RPAsset` + `PC_Renderer` |
+当前新增 12 配件通过 UiAssets.ItemIcon 别名复用已有图标，缺少一 ID 一文件的独立 PNG/.meta，UI 分类审计未通过。旧校准数据不代表加入拾取和合成后的平衡；长局性能与完整构建回归仍需另行验收。

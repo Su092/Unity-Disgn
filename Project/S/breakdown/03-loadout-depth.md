@@ -1,51 +1,16 @@
-# 任务 03：配件深度
+# 任务：配件范围预览、扩件与合成
 
-- 状态：**进行中**（P0 拖拽落点预览已实装并通过断言；方案存档与扩件未开始）
-- 依据：`docs/loadout-spec.md` §8 §9
+- 状态：规则与交互完成；独立图标与完整构建验收待完成。
+- 依据：docs/loadout-spec.md、docs/data-schema.md、docs/gameplay-spec.md。
+- 范围：Core/Loadout、ItemFusion、LoadoutTypes、RunState；View/InventoryView、DraggableItem、ItemTooltip；Cfg/Modifier、GunModifier；Editor/SFusionPlayCheck；tools/loadout-tests。
 
-## 已完成：P0 拖拽落点预览（2026-11-12）
+## 已完成
 
-| 改动 | 内容 |
-|------|------|
-| `Core/Loadout.cs` | 新增 `InsertPreview` 结构 + `PreviewInsert()` + `CountAffected()` |
-| `View/InventoryView.cs` | 拖拽悬停时调用预览，落点行染绿/橙/红，底部提示条输出完整结论 |
-| `App/SelfCheck.cs` | 4 条实机断言 |
-| `tools/loadout-tests` | 36 条预览断言（含「预览不得修改原链」） |
+物理前后格与十种作用域；点击/悬停/拖动范围高亮；十二种衍生配件与旧件范围调整；同种同级四方向拖放合成至 Lv.5；实例独立等级、原子所有权校验、预览同源、史诗跨轮重复抽取。
+原有装卸/交换保留；非法合成不消费、不误卸下；满背包合成不需额外空位。
 
-**修复过程中的真实缺陷**：`CountAffected` 初版在同一循环里边入列子弹边施法，
-导致「修正位于子弹之前」时目标集恒为 0（预览全显示「无作用目标」）。
-必须与 `ResolveCast` 同序：先收全部子弹，再逐项施加修正。
+## 验收证据
 
-**验收**：`tests 157/157`、`shots 37/37`、build 0 errors。
-
-## 目标
-
-拖拽本身要成为「技能表达」。玩家必须能看出「插在这里会作用于几颗子弹」。
-
-## 改动范围
-
-```
-unity/Assets/_Game/View/InventoryView.cs   拖拽预览、方案、筛选
-unity/Assets/_Game/Core/Loadout.cs         PreviewInsert（已完成）
-unity/Assets/_Game/Core/RunState.cs        方案存档（局内 3 套）
-```
-
-## 步骤
-
-1. ~~**落点预览（P0）**~~ ✅ 已完成。
-2. **无效装配解释**：三种拒绝文案与图形提示已随预览一起落地（`chain-full` / `same-limit` / `no-target`）。
-   剩余：把「被拒」与「无目标」在**卡片本身**上也标出来（当前只有落点行染色）。
-3. **方案存档**：允许存 3 套「枪 + 链」组合，一键切换（对抗不同敌人）。存引用不存副本，配件共享。
-4. **筛选与排序**：背包按「子弹 / 衍生·全场 / 衍生·后继 / 枪械」分组；支持按稀有度排序。
-5. **扩充配件**：从 25 种扩到 40 种，新增方向建议：
-   - `弹匣溢出`：换弹时溢出弹药转为下一发额外投射物
-   - `临界质量`：暴击率 >100% 的部分转为暴击倍率
-   - `反向装填`：弹药消耗翻倍，伤害 ×1.8
-   - `空链补偿`：该位为空时，其他位伤害 +20%
-6. **断言**：为每个新件补 §9 算例与预览算例，并保证 157 条基线不破。
-
-## 验收
-
-- `tests` 全绿，且新增件各有至少 1 条断言
-- `shots` 新增 `11-drag-preview`（拖拽悬停状态）、`12-invalid-drop`
-- 人工确认：不看文档，仅凭界面能把「后继」件放到正确位置
+纯规则断言 300/300；迁移前 SFusionPlayCheck 41/41，截图 Shots/fusion-inventory.png。
+统一 tests 的 UI 分类检查未通过：十二个新增 item_<id> 独立图标缺失，当前复用已有图标，需按美术管线补齐 PNG/.meta、登记并接入 Addressables 后重跑。
+方案存档、合成后平衡、完整 build/smoke/shots 与长局性能不标记完成。

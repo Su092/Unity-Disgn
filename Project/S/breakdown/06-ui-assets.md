@@ -1,27 +1,33 @@
 # 任务 06：用生成素材替换 UI
 
-- 状态：**完成**（2026-11-12）
+- 状态：基础素材历史验收完成；新增配件独立图标待完成。
 - 依据：`docs/art-style.md` §4 §6、`.cursor/skills/apimart-image/SKILL.md`
 
 ## 产出
 
-**11 张 UI 素材**（`Assets/Resources/UI/`），全部 APIMart 生成，2k/1k 按用途分档：
+**11 张 UI 素材**（`Assets/Resources/UI/`，现按功能分类到 `Sprites/<Category>/`），
+全部 APIMart 生成，2k/1k 按用途分档：
 
-| 文件 | 尺寸 | 用途 | 落地位置 |
-|------|------|------|----------|
-| `panel.png` | 2048² | 背包面板底板 | `InventoryView` 背包区 |
-| `card_frame.png` | 2048² | 配件卡边框 | 链内卡 / 三选一卡 |
-| `bar_frame.png` | 2048² | 条槽外框 | 血 / 弹药 / 经验 / 威胁四条 |
-| `banner.png` | 2048×1152 | 大字横幅底板 | 结算与波次提示 |
-| `vignette.png` | 2048×1152 | 受击暗角 | 屏幕边缘 |
-| `crosshair.png` | 1254² | 准星 | 中心，随散射张缩 |
-| `keycap.png` | 1254² | 键位提示 | 备用 |
-| `icon_bullet/whole/after/gun.png` | 1254² | 作用域图标 | 配件卡右上角 |
+| 文件 | 尺寸 | 用途 | 分类 | 落地位置 |
+|------|------|------|------|----------|
+| `panel.png` | 2048² | 背包面板底板 | Common | `InventoryView` 背包区 |
+| `card_frame.png` | 2048² | 配件卡边框 | Frame | 链内卡 / 三选一卡 |
+| `bar_frame.png` | 2048² | 条槽外框 | Frame | 血 / 弹药 / 经验 / 威胁四条 |
+| `banner.png` | 2048×1152 | 大字横幅底板 | Common | 结算与波次提示 |
+| `vignette.png` | 2048×1152 | 受击暗角 | Common | 屏幕边缘 |
+| `crosshair.png` | 1254² | 准星 | Widget | 中心，随散射张缩 |
+| `keycap.png` | 1254² | 键位提示 | Widget | 备用 |
+| `icon_bullet/whole/after/gun.png` | 1254² | 作用域图标 | Icon | 配件卡右上角 |
+
+> 分类判据与目录规则见 `<HUB>/docs/ui-asset-taxonomy.md`。后续补齐的按钮/槽位/条/标签
+> 分别落在 `Widget` 与 `Tag`，配件图标在 `Icon/Items`。
 
 配套资源：
 - `mat_ui_additive.mat` + `S/UiAdditive` shader（图标黑底加色，避免深色 HUD 上出现黑方块）
-- `Editor/SUiSpriteSetup.cs`：按图片短边百分比写 9-slice 边距，并做「四边之和 < 控件尺寸」硬校验
-- `View/UiAssets.cs`：统一加载 + 缺图降级
+- `Editor/SUiSpriteSetup.cs`：9-slice 边距由 `SAssetPostprocessor.BorderFor` 按**文件名**统一写入
+  （早期按贴图短边百分比算，与 BorderFor 抢着写同一份 border，已废弃），并做「四边之和 < 控件尺寸」硬校验
+- `View/UiAssets.cs`：统一加载 + 分类表 `Catalog` + 缺图降级
+- `tools/audit_ui_taxonomy.py`：七条分类一致性校验，已接入 `check.ps1 -Task tests`
 
 ## 关键取舍：素材当边框，代码保对比
 
@@ -49,7 +55,7 @@
 | 4 | `Unity.Build.NamedBuildTarget` 命名空间错 | 编译错误 | 移除该调用 |
 | 5 | 边距按 1:1 算过大 | 2k 图算出 287px 边距，对 120px 控件无意义 | 按「最小控件尺寸 × 0.4」钳制 |
 
-## 验收
+## 历史验收（不代表当前版本全量通过）
 
 | 项 | 结果 |
 |----|------|
@@ -60,7 +66,7 @@
 
 ## 明确未做
 
-- **未做逐件配件图标**（25 种配件各一张）：成本高，且当前「类别图标 + 文字」已足够辨认
+- 已有 39 个独立图标；新增 12 个仍复用旧图，需要按一 ID 一文件补齐 PNG/.meta 并登记 Addressables，当前分类审计失败。
 - 图标视觉偏精细（金属质感 + 铆钉），与「极简」略有张力；未重跑
 - 无 UI 动画（淡入/缩放），无音效
 - 键位提示素材已生成但未接入任何界面
