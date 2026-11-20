@@ -7,13 +7,14 @@
 | 枢纽 | <HUB>/Project/S |
 | 工程 | <GAME:S>；远端 git@github.com:Su092/Project-S.git，分支 main |
 | 环境 | Unity 6000.6.4f1 / URP 17.6.0 / Input System 1.20.0 / Addressables 2.11.2 |
-| 入口 | Assets/Scenes/Main.unity → Bootstrap → SRes 预加载 → GameRoot |
+| 入口 | Main 场景的 S 启动节点 + FoundryArena 地图预制体 → Bootstrap → SRes → GameRoot |
 | 代码 | Assets/_Game/App、Core、View、Editor |
 | 数据 | Assets/_Game/Res/Cfg/*.tsv，11 张三行表头 |
 | 交付资源 | Assets/_Game/Res/Model、Texture、UIPrefabs、Font、Shaders、Prefab |
-| 内容 | 6 枪 / 17 子弹 + 34 衍生配件 / 10 物理作用域 / Lv.1～5 合成 |
+| 内容 | 6 枪 / 17 子弹 + 34 衍生配件 / 10 物理作用域 / Lv.1～3 合成 / 曲谱背包 15 格 |
+| 地图 | GrandTheater 大剧院，76 模块 / 1191 实例，含舞台与二楼环路 |
 | 局内 | 全武器选 1 开局，升级每轮 10% 概率出枪，击杀掉落经验需走近领取 |
-| 验证 | 规则 300/300；统一 tests 的独立图标审计未通过，详见 memory/CURRENT.md |
+| 验证 | 规则 354/354；控制台 47 项、曲谱交互 42 项，当前 0 错误/0 警告；详见 memory/CURRENT.md |
 
 ## 目录与开发流程
 

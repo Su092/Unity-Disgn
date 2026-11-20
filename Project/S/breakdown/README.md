@@ -25,6 +25,8 @@
 
 | `12-project-migration.md` | 工程与 Git 迁移、枢纽同期同步 | 完成，证据见 CURRENT |
 
+| `13-foundry-map.md` | 交付地图预制体、生产地图替换与联调 | 完成，验证见 CURRENT |
+
 ## 推荐执行顺序与理由
 
 ```
@@ -55,3 +57,15 @@
 - 步骤：……
 - 验收：check.ps1 -Task tests / build / shots 全绿 + 截图确认
 ```
+
+- [14：敌人模型导入与替换](14-enemy-import.md)
+
+- [15：失败重开流程重置](15-run-restart.md)
+
+- [16：HUD V2 拆件与原始素材](16-hud-v2-raw.md)
+
+- [17：HUD V2 加工入库与预制体制作](17-hud-v2-integration.md)
+
+- [18 音律主题 HUD 换肤](18-hud-music-skin.md) — 完成；87 资源，现有布局不变。
+
+- [34 曲谱装配、赛璐璐贴图与控制台修复](34-score-cel-console-release.md)

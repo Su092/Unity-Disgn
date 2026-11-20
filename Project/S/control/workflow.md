@@ -113,7 +113,7 @@ Get-Content "<GAME:S>\selfcheck.log"
 
 ## 场景与入口
 
-`Assets/Scenes/Main.unity` 只有一个 `S` 节点（挂 `Bootstrap`）。
+`Assets/Scenes/Main.unity` 包含 `S` 启动节点（Bootstrap）与 `FoundryArena` 地图预制体实例。
 
 UI 结构在 Assets/_Game/Res/UIPrefabs，由 Editor 工厂或 MCP 修改；运行态通过 *Refs 绑定。世界入口和实例创建由 Bootstrap / GameRoot 管理。
 

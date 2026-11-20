@@ -3,6 +3,7 @@
 ## 1. 工程与资源
 
 Unity 6000.6.4f1，URP 17.6.0，Input System 1.20.0，Addressables 2.11.2。主场景为 Assets/Scenes/Main.unity，Bootstrap 是启动入口。
+正式地图为 Assets/_Game/Res/Prefab/Maps/FoundryArena.prefab，由 51 种交付模块按 layout.json 的 1169 个实例组装。Main 场景包含 S 启动节点和该地图实例；ArenaBuilder 优先绑定已有地图，缺少实例时才从 Addressables 的 S_Map / s_map 加载。
 代码在 Assets/_Game，交付资产在 Assets/_Game/Res（Cfg / Model / Texture / UIPrefabs / Font / Shaders / Prefab）；Addressables 配置在 Assets/AddressableAssetsData。
 Bootstrap 先等待 SRes.PreloadAll，再读取 TSV、校验 SData 并创建玩家和 GameRoot。禁止在预加载前读取运行资源。
 场景、预制体由 Unity Editor 工具或 MCP 修改；UI 结构来自 UIPrefabs，运行态通过 *Refs 绑定，不以手改 YAML 作为常规流程。
@@ -15,6 +16,7 @@ Bootstrap 先等待 SRes.PreloadAll，再读取 TSV、校验 SData 并创建玩�
 | Core/ItemFusion、ChainItem | 合成原子事务、实例等级和有效属性；不改共享配置 |
 | Core/RunState、RunDirector、BossState | 经验/奖励/背包、时间轴、Boss 规则 |
 | Core/SCfgLoader、SCfgValidator、STsv | 纯 C# 配置解析和校验；SDataLoader 是唯一 Unity 桥 |
+| View/FoundryArena、ArenaBuilder、WorldPhysics | 地图标记、地图实例绑定、出生/刷怪/能量柱、角色与弹道碰撞分层 |
 | View/GameRoot | 对局编排、刷怪、拾取奖励、暂停/光标、结算与清理 |
 | View/ExperiencePickup | 原地经验晶体、1.5 米距离拾取、防重复与暂停 |
 | View/PlayerWeapons、Projectile | 将 ResolveCast 结果实例化并执行碰撞与伤害 |
@@ -33,8 +35,10 @@ RunState 的确定性随机在同种子、同候选条件下复现奖励。枪�
 
 ## 4. 碰撞与战斗表现
 
-SAssets.MeasureBoundsLocal 将 Renderer.localBounds 的角点直接变换到目标局部空间，避免世界 AABB 二次放大。静态箱/桶/墙板/柱的 MeshCollider 绑定可视 sharedMesh；模型导入旋转保留，墙按真实尺寸适配，柱以正确根节点落地。
-移除视觉原语 Collider 时立即禁用再销毁，避免同帧空气墙或挡弹；Pillar 破坏时关闭子物体碰撞。人物和敌人的运动碰撞仍使用各自控制器，不以视觉动画驱动判定。
+地图构建由 Editor/SFoundryMapBuilder 读取交付布局并用 PrefabUtility 组装、保存和绑定 Main；保留模块 LOD、共享 URP 材质和独立碰撞体。源布局不在运行时解析。Main 只允许一个活动 FoundryArena；SceneBuilder 重建场景时也必须附带地图。
+16 个外缘刷怪点和玩家/Boss 出生使用预制体 Transform 引用。Boss 站位抬至平台上方 0.35 米。能量柱底座常驻，完整柱只在 Boss 入场启用；破坏时隐藏完整件、禁用其碰撞并启用交付残骸，沿用 BossState 破防通知。
+WorldPhysics 统一楼梯分层：玩家/敌人根对象使用 FoundryPlayer，忽略 FoundryShot；普通弹、光束、地雷/力场、锯刃及敌方弹丸查询排除 FoundryMovement；经验落点查询排除 FoundryShot 并沿用排除角色胶囊的逻辑。
+旧 SAssets 包围盒与即时禁用原语 Collider 的修复仍保留给其他对象；地图不再叠加旧 ArenaFloor、WallX/WallZ 或随机掩体。
 
 Projectile.Init 统一创建 ProjectileVisual，覆盖 17 种子弹及敌方红弹；不在发射入口重复叠加旧原语。CombatFx 提供枪口、命中、爆炸环/碎屑、光束和连锁闪电，活动特效上限 80。SMat.Combat 共享材质，CombatGlow.shader 纳入 Always Included。
 投射物逐帧扫掠检测，爆炸按目标去重；描述符数量上限 24、载荷递归上限 6。性能边界需要实机长局测试，不能仅凭专项截图认定达标。
@@ -58,9 +62,28 @@ EnemyMotion 依据实际速度驱动腿/臂/机体/旋翼；Enemy 的攻击前�
 
 ## 7. 验证与当前限制
 
-统一入口 scripts/check.ps1 支持 tests / setup / assets / ui / build / smoke / shots / all。纯规则测试项目文件已纳入 Git；无需换机手动重建 csproj。
+统一入口 scripts/check.ps1 支持 tests / setup / assets / ui / build / smoke / shots / map / all。纯规则测试项目文件已纳入 Git；无需换机手动重建 csproj。
 tests 同时执行规则断言与 UI 分类审计，任一失败均不算全通过。验证结果必须检查日志 RESULT、进程结束及实际产物。
-专项入口包括 SObstacleCollisionCheck、SProjectileVisualCheck、SMeshMotionCheck、SCombatPlayCheck、SFusionPlayCheck；运行态检查通过 Logs/*.request 触发并写日志和截图。
+地图专项入口为 check.ps1 -Task map（SFoundryMapBuilder.Validate），运行态使用 Logs/foundry-play.request；其他专项入口包括 SObstacleCollisionCheck、SProjectileVisualCheck、SMeshMotionCheck、SCombatPlayCheck、SFusionPlayCheck；运行态检查通过 Logs/*.request 触发并写日志和截图。
 本轮的次数、迁移编译结果与尚未执行的构建验证记在 memory/CURRENT.md。
 
 当前新增 12 配件通过 UiAssets.ItemIcon 别名复用已有图标，缺少一 ID 一文件的独立 PNG/.meta，UI 分类审计未通过。旧校准数据不代表加入拾取和合成后的平衡；长局性能与完整构建回归仍需另行验收。
+
+
+## 敌人资产接入（Review_v002）
+
+使用 <GAME:S>/_Inbox/chr/S_Foundry_Enemies/Review_v002 的 9 个角色与 56 个原地动作。普通与精英分别使用独立预制体和交付尺寸；精英数值倍率保持，取消额外的视觉 1.4 倍缩放。URP 材质按交付图集绑定，三个 LOD 明确配置。模型、动画、碰撞参考保留在 Res/Characters，运行时仅通过 S_Enemy 分组预加载正式预制体。
+
+原有网格拆分动画由导入 Generic 骨骼动作替代；攻击动作按现有伤害前摇对齐，死亡立即结算并关闭碰撞，视觉尸体短暂保留。碰撞代理按绑定骨骼跟随，移动胶囊不参与射击查询；复合受击代理必须按敌人去重，防止一发子弹重复扣血。Boss 使用交付体型、挂点与技能动作。所有 prefab/材质/导入设置通过 Editor API 生成。
+
+交付包标记 REVIEW / NO-SHIP 的美术精修、纹理密度及全帧穿插等未完成项保留，不用游戏导入通过替代原始美术验收。
+
+
+导入实施补充：模型 FBX 保留 ARM_<asset> 层，独立动作 FBX 将该层折叠为根；导入器把动作曲线绑定到模型的真实路径并保存 .anim，避免根轴旋转覆盖和骨骼动作静止。新角色保留 FBX 模型轴转换，动作曲线不覆盖模型根节点或骨架外层转换；按实际攻击/炮口挂点验证 +Z 向前。交付碰撞 FBX 未包含网格，使用 tools/extract_enemy_proxies.py 从原 .blend 只读提取。交付根目录、原始模型及动作不改写。
+
+维护入口：S/Enemies/Import Foundry Delivery、S/Enemies/Validate Foundry Prefabs；统一验证脚本新增 -Task enemies。完整重导前先以 Blender 执行代理提取脚本。生成后的 prefab、.anim、材质和网格均应随游戏仓库追踪；原交付位于 _Inbox。
+
+
+## 失败重开的局状态隔离（2026-11-18）
+
+结算按 R 重开仍重载 Main，并重新选择初始武器。SDataLoader 只缓存配置；GameRoot 每次启动从时间轴配置创建独立 RunDirector，不能推进缓存中的模板。新局计时、威胁、阶段、精英次数、Boss 入场标记均归零，配置中的时间、敌人池及 Boss 阶段保持原值。场景重载负责销毁旧敌人、掉落、弹丸和 UI，并新建玩家、背包与奖励队列。验收覆盖精英前失败、Boss 已入场失败及连续两次重开。

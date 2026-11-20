@@ -8,8 +8,8 @@
 
 | 项 | 决定 |
 |----|------|
-| 多边形量级 | 单件 300–2500 三角面（敌人 ≤1200，掩体 ≤300，枪 ≤2500） |
-| 贴图 | **默认不用贴图**，用材质纯色 + 顶点色；需要细节时用 256² 平铺无接缝图 |
+| 多边形量级 | 单件 300–2500 三角面（旧通用资产预算；新敌人按 §6 的交付规格） |
+| 贴图 | 旧通用资产使用纯色与顶点色；Foundry 地图和新敌人采用交付图集，新敌人为 1024–2048 PBR 贴图 |
 | 描边 | 不用全屏描边。用「暗色底座 + 亮色顶面」两段材质制造硬边感 |
 | 光照 | 单方向光 + 平面环境光；不用烘焙（迭代速度优先） |
 | 后处理 | 轻：Bloom + 轻微 Vignette + 色彩分级（冷色阴影、暖色高光） |
@@ -26,20 +26,21 @@
 | 高亮装饰带 | `#E8A33D` | 琥珀色，标记可交互/危险 |
 | 熔渣/危险液体 | `#D2502B` | 自发光 0.6 |
 
-### 2.2 敌人（**唯一色相编码，不要挪用**）
+### 2.2 敌人：铸造设备家族
 
-| 类型 | 主色 | 理由 |
-|------|------|------|
-| 爬行者 `Crawler` | `#E0474C` 红 | 近战冲刺＝紧迫 |
-| 重装 `Brute` | `#8C5A3C` 棕 | 厚甲近战，色相下沉 |
-| 自爆 `Bomber` | `#E8D24A` 黄 | 危险信号，最亮 |
-| 炮台 `Turret` | `#5A7FA8` 蓝灰 | 固定远程，冷而稳 |
-| Boss「铸造核心」 | `#B45CE0` 紫 | 唯一紫色，最高威胁 |
+当前正式使用 Review_v002 的四类普通敌人、四类独立精英及铸造主机 Boss。以交付模型和图集为外观源：灰白耐火陶瓷、石墨金属、局部氧化痕迹和暖色核心，通过轮廓与机构区分类型，不再套用旧敌人的整体彩色材质。
 
-> 四种普通敌人对应 `Enemy.Kind` 枚举：`Crawler` / `Brute` / `Bomber` / `Turret`。
-> 旧文档写过的 `Spitter`（黄绿）与 `Shield`（蓝）**已不在代码里**，不要按旧表配色。
+| 玩法 ID | 普通 / 精英资产 | 高度（米） |
+|---|---|---|
+| Crawler | SlagHound / SlagHound_Elite_MoldBreaker | 0.72 / 1.00 |
+| Brute | FurnaceWarden / FurnaceWarden_Elite_TwinGate | 2.45 / 2.85 |
+| Bomber | PressureRunner / PressureRunner_Elite_TriplePressure | 1.55 / 1.85 |
+| Turret | RingSentry / RingSentry_Elite_Crown | 机体 1.25 / 1.65，底部悬空 0.40 |
+| Boss | Boss_CrucibleSovereign | 5.80 |
 
-**纪律**：玩家视野里出现紫色 ⇒ 一定是 Boss 或 Boss 技能。不要给任何普通物件用紫色。
+精英保留数值倍率，视觉和碰撞按交付体型，不叠乘旧 scale 配置。全部角色使用三档 LOD；普通和精英共享家族图集，Boss 两套图集。发光通过实例 MaterialPropertyBlock 驱动，不修改共享材质。
+
+交付包仍标记 REVIEW / NO-SHIP：美术细节、完整纹理密度、全帧关节穿插及 Boss 动作精修未完成。本轮导入与游戏功能联调不替代这些美术验收。
 
 ### 2.3 配件稀有度（UI 与掉落光效共用）
 
@@ -144,7 +145,7 @@
 
 ProjectileVisual 为 17 类子弹提供形态、颜色和尾迹；光束、连锁闪电、地雷部署环、持续场与黑洞应能一眼区分，敌方弹丸保留红色威胁提示。
 CombatFx 将枪口、命中和爆炸分为短促闪光、环形扩张与碎屑等层，范围与伤害判定分离；视觉不能带额外 Collider。特效共用 SMat.Combat，活动对象上限 80。
-WeaponMotion 基于现有枪网格做倾枪/弹匣与机件换弹，模型后座使用弹簧恢复；EnemyMotion 基于现有敌人网格做步行、攻击和旋翼动作。动画不改原始网格资产的造型，运行态分件保留材质与几何，暂停冻结。
+WeaponMotion 基于现有枪网格做倾枪/弹匣与机件换弹，模型后座使用弹簧恢复；敌人改由 EnemyVisual 播放交付的 Generic 骨骼动作；模型与动作 FBX 层级差异由导入器重映射，暂停冻结。RigidMeshRig 保留供枪械和旧资产诊断使用。
 视觉检查输出保留在工程 Shots，文档中只记录路径和结论，不复制图片到枢纽。
 
 ## 6. 素材规格与产出
@@ -153,7 +154,7 @@ WeaponMotion 基于现有枪网格做倾枪/弹匣与机件换弹，模型后座
 |------|------|----------|
 | 掩体/结构 | 低模块体，单材质 | Blender 建模 + `blender-gate.ps1` 契约门 |
 | 枪械第一人称模型 | ≤2500 三角面，无手部 | Blender；FBX 走 `Modle_*` 命名 |
-| 敌人 | ≤1200 三角面，单骨架（可选） | Blender；`Anim_*` 命名 |
+| 敌人 | Review_v002 实际 LOD0 1228–4512 tris，Generic 骨架、三档 LOD | 九个独立预制体，56 个动作 |
 | UI 图标 | 128×128 PNG，透明底 | APIMart 生成后切图 |
 | 配件圆形图标 | 256×256 PNG（内容为圆底板 + 亮色字形） | APIMart 生成 → 前期处理 → 几何合成，落 `Assets/_Game/Res/Texture/UI/Icon/Items/item_<id>.png` |
 | 天光 | 渐变天空盒（程序化） | 代码生成，不用贴图 |
@@ -167,33 +168,15 @@ UI 贴图统一按功能分类到 `Assets/_Game/Res/Texture/UI/<Category>/`（`C
 - 导出前必须 apply 变换、单根、材质槽无空槽。
 - UV 若用贴图，必须跑 `-UvUnwrap` 判可用性；纯色材质可跳过。
 
-## 7. 当前实现与规范的差距（已知）
+## 7. 当前资产与交付限制
 
-> 按 2026-11-16 代码复核。**初版「全是 `CreatePrimitive`」已经过去了**：
-> `Assets/_Game/Res/Model/` 有 12 件 `Modle_*` 低模接入。
+正式敌人预制体位于 <GAME:S>/Assets/_Game/Res/Prefab/Enemies，原模型、动作、图集、重映射动画和受击代理网格位于 Res/Characters/Foundry。旧 Modle_Enemy_*、Modle_Boss_ForgeCore 保留用于历史资源兼容，不再由正式刷怪入口使用。
 
-| 规范要求 | 现状 |
-|----------|------|
-| 敌人有类型化轮廓 | **已接入** 4 件低模，映射为 `Brute→Modle_Enemy_Shield`(1.97 m) `Bomber→Modle_Enemy_Spitter`(1.74 m) `Turret→Modle_Enemy_Drone`(0.38 m) `Crawler→Modle_Enemy_Crawler`(0.86 m) |
-| 枪械模型 | **已接入** 3 件（`Modle_Gun_Single` `Modle_Gun_Auto` `Modle_Gun_Grenade`），6 把枪共用 |
-| Boss 模型 | **已接入** `Modle_Boss_ForgeCore` |
-| 环境是「箱庭」多区域 | 单张 **100×100** 竞技场（18 掩体 / 4 高台 / 8 m 墙），非多区域 |
-| 装饰带 / 危险液体 | 无 |
-| 后处理 | **已接入** `SPostFx` |
-| 网格动画 | 既有枪/敌人网格运行态分件，驱动换弹、后座、行走和攻击，无新骨骼资产 |
-| 新配件独立图标 | 51 个 ID 目前只有 39 个独立图标，新增 12 个复用旧图，尚不满足一 ID 一文件规则 |
+导入器 SEnemyImporter 通过 Editor API 生成材质、AnimatorController、LODGroup 与预制体。源模型 FBX 比动画 FBX 多 ARM_<asset> 层，必须重映射曲线，不能直接套用原始动作。源碰撞 FBX 实际只有骨架，tools/extract_enemy_proxies.py 从原 .blend 的 proxy_role/bind_bone 提取碰撞几何；交付源文件保持不变。
 
-**12 件资产清单**：`Modle_Boss_ForgeCore`、`Modle_Enemy_Crawler`、`Modle_Enemy_Drone`、
-`Modle_Enemy_Shield`、`Modle_Enemy_Spitter`、`Modle_Gun_Auto`、`Modle_Gun_Grenade`、
-`Modle_Gun_Single`、`Modle_Prop_Barrel`、`Modle_Prop_Crate`、`Modle_Prop_Pillar`、`Modle_Prop_Wall`。
+运行中以骨骼分件 Trigger 判断受击，移动胶囊不参与射击。穿透弹与光束按敌人去重，环架开口保持可穿透。普通敌人死亡立即结算经验掉落并关闭碰撞，随后完成死亡动作并清理。
 
-> 模型文件名沿用了旧的四敌命名（`Drone` / `Shield` / `Spitter`），与代码里的
-> `Enemy.Kind`（`Crawler` / `Brute` / `Bomber` / `Turret`）**不是同名映射**。
-> 映射写死在 `GameRoot.ModelForKind`：
-> `Brute→Modle_Enemy_Shield`、`Bomber→Modle_Enemy_Spitter`、`Turret→Modle_Enemy_Drone`、
-> `Crawler→Modle_Enemy_Crawler`（默认）。
-> **改任何一边的命名，必须同时改 `GameRoot.ModelForKind` 与 `SModelContract` 的 `Spec` 表**，
-> 否则运行时找不到模型（会静默退化），编辑器契约门也报红。
+现有地图为 FoundryArena 预制体。枪械保留已有模型和程序化换弹/后座。配件仍有 12 个独立图标待补齐，这是既有素材问题。
 
 ## 8. 验收判据（美术）
 

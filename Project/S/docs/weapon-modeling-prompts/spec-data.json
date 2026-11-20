@@ -1,0 +1,732 @@
+[
+  {
+    "id": "SW01_Violin",
+    "name": "小提琴",
+    "gun": "rifle",
+    "size": "琴体 X 0.24 × Y 0.10 × Z 0.60m；独立弓长 0.65m、宽 0.025m；琴颈沿 +Z、演奏面朝 +Y。",
+    "budget": [
+      12000,
+      6000,
+      2500
+    ],
+    "fire": "FireLoop",
+    "duration": 0.7,
+    "shape": "双腰暖木琴体、两道 f 孔、四弦、完整卷首、深蓝下巴托与独立琴弓。",
+    "parts": [
+      [
+        "Body",
+        "厚面板、侧板、背板、金色包边与有内壁的 f 孔",
+        "body"
+      ],
+      [
+        "Neck",
+        "乌木指板、琴颈、卷首",
+        "body"
+      ],
+      [
+        "Strings",
+        "4 根弦、琴桥、尾板，所有弦端有连接",
+        "body"
+      ],
+      [
+        "Bow",
+        "完整弓杆、弓毛、弓尖和弓根；不可焊死在琴上",
+        "bow"
+      ],
+      [
+        "ScoreCartridge",
+        "可抽取象牙乐谱盒与有内壁的插槽",
+        "score_cartridge"
+      ],
+      [
+        "Pegs",
+        "4 个调音轴，其中一个活动",
+        "tuning_peg"
+      ]
+    ],
+    "rig": "root → body；body → bow、score_cartridge、tuning_peg。",
+    "grip": "左手托琴颈，右手抓弓根；右手挂点随 bow。输出点在琴桥前上方，不随弓横摆。",
+    "action": "琴弓沿弦面连续往复，主要反馈来自运弓；琴体共鸣位移 ≤5mm。弓毛不能穿进面板，不把换弓次数与发射次数强制绑定。",
+    "reload": "0–18%：移弓；18–42%：沿实际插槽抽出谱盒；42–62%：维护停留；62–82%：插回锁定；82–100%：轻转调音轴并回到演奏位。",
+    "checks": "完整卷首、琴桥弦路和两道 f 孔；琴背与谱盒插槽；弓杆/弓毛连接。",
+    "clips": [
+      {
+        "state": "Idle",
+        "duration": 2,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Move",
+        "duration": 1,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Equip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Unequip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "FireLoop",
+        "duration": 0.7,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "FireRecover",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Reload",
+        "duration": 1.5,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Inspect",
+        "duration": 3,
+        "loop": false,
+        "fps": 60
+      }
+    ],
+    "game_config": {
+      "id": "rifle",
+      "name": "制式步枪",
+      "desc": "均衡的全能枪械。",
+      "slotCount": "8",
+      "magSize": "30",
+      "reloadTime": "1.5",
+      "fireInterval": "0.14",
+      "spreadBase": "1.2",
+      "castCount": "1",
+      "baseBullet": "std",
+      "color": "#8f9bb3",
+      "zoom": "55",
+      "model": "Modle_Gun_Auto",
+      "starter": "1"
+    }
+  },
+  {
+    "id": "SW02_Kalimba",
+    "name": "拇指琴",
+    "gun": "smg",
+    "size": "X 0.25 × Y 0.055 × Z 0.19m，不含自由垂落腕带；演奏面朝 +Y，音舌自由端靠玩家（-Z）。",
+    "budget": [
+      10000,
+      5000,
+      2000
+    ],
+    "fire": "FireLoop",
+    "duration": 0.3,
+    "shape": "浅厚度圆角木共鸣箱、中央音孔、左右两手拨片分区、金属音舌、压桥与侧握边。",
+    "parts": [
+      [
+        "Body",
+        "封闭胡桃木箱体、圆音孔及内部暗腔",
+        "body"
+      ],
+      [
+        "Tines",
+        "17 根音舌：左8/中1/右8，中央长两侧短，自由端朝玩家",
+        "tine_01..17"
+      ],
+      [
+        "Bridge",
+        "压住音舌固定端的黄铜桥，不能让音舌悬浮",
+        "body"
+      ],
+      [
+        "TuningCam",
+        "中央调律偏心轮、轴和机械止挡",
+        "tuning_cam"
+      ],
+      [
+        "SideGrips",
+        "双侧凹握边，留出手指厚度",
+        "body"
+      ],
+      [
+        "WristStraps",
+        "左右腕带、扣环和真实锚点",
+        "strap_L / strap_R"
+      ]
+    ],
+    "rig": "root → body；body → tuning_cam、tine_01..tine_17、strap_L、strap_R。单根音舌根部固定，末端微弯，总骨骼建议 ≤32。",
+    "grip": "双手托侧边与背板，两只拇指接触音舌自由端；Socket_Thumb_L/R 在演奏区。输出点在远离玩家的桥上方朝 +Z。",
+    "action": "双拇指交替拨片，左右音舌分组微振动，自由端振幅 1–2mm；不能像门板一样翻动整根音舌。",
+    "reload": "音舌停止；中央调律轮转至维护角并回位；末段试音，所有音舌回到静止位置。",
+    "checks": "音舌总数按文字固定17，生成图密集细条数量不是测量依据；固定端在压桥下、自由端可被拇指接触；背板、腕带锚点齐全。",
+    "clips": [
+      {
+        "state": "Idle",
+        "duration": 2,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Move",
+        "duration": 1,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Equip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Unequip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "FireLoop",
+        "duration": 0.3,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "FireRecover",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Reload",
+        "duration": 1.7,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Inspect",
+        "duration": 3,
+        "loop": false,
+        "fps": 60
+      }
+    ],
+    "game_config": {
+      "id": "smg",
+      "name": "冲锋枪",
+      "desc": "高射速、大弹匣，适合挂载低耗配件。",
+      "slotCount": "10",
+      "magSize": "50",
+      "reloadTime": "1.7",
+      "fireInterval": "0.075",
+      "spreadBase": "3.5",
+      "castCount": "1",
+      "baseBullet": "light",
+      "color": "#6fd3c8",
+      "zoom": "60",
+      "model": "Modle_Gun_Auto",
+      "starter": "0"
+    }
+  },
+  {
+    "id": "SW03_FrameDrum",
+    "name": "手鼓",
+    "gun": "shotgun",
+    "size": "鼓面直径 0.34m，鼓圈厚 0.085m，演奏面朝 +Y；背面握柄可向 -Y 额外伸出 0.055m。",
+    "budget": [
+      10000,
+      5000,
+      1800
+    ],
+    "fire": "Fire",
+    "duration": 0.6,
+    "shape": "单个圆形鼓面、两道同心共鸣纹、酒红鼓圈、金色张力件、背面握柄与前臂带；不是盾牌或双鼓。",
+    "parts": [
+      [
+        "Rim",
+        "有厚度的封闭鼓圈、包边、张力卡扣",
+        "body"
+      ],
+      [
+        "Membrane",
+        "有厚度的鼓皮，外缘固定、中央可形变",
+        "membrane"
+      ],
+      [
+        "BackGrip",
+        "背面横跨握柄，两端固定到鼓圈",
+        "body"
+      ],
+      [
+        "ForearmStrap",
+        "前臂带与铆接点，保留手指插入空间",
+        "strap"
+      ],
+      [
+        "TuningRatchet",
+        "调律棘轮、拨柄和轴",
+        "tuning_lever"
+      ]
+    ],
+    "rig": "root → body；body → membrane、strap、tuning_lever。鼓皮边缘权重到 body，中心渐变到 membrane，不能整张鼓皮脱离鼓圈。",
+    "grip": "左手抓背面握柄，右手掌击近玩家一侧鼓面；Socket_Palm_R 标记接触；Socket_Output 在远侧鼓圈上方朝 +Z，不按朝天的鼓面法线发射。",
+    "action": "片段开头表现击打接触，中央内凹3–5mm，0.12s 内回弹、随后衰减；一次击打读取两个子弹配件，不要求连续打两下。",
+    "reload": "手掌离开鼓皮，中段拨动张力棘轮，鼓皮轻微张紧，末段检查后回到抬掌姿态；不拆掉鼓皮充当弹匣。",
+    "checks": "鼓皮到圈边连续、握柄两端有固定、前臂带可用。背面不得封成一个让手穿过去的实心圆盘。",
+    "clips": [
+      {
+        "state": "Idle",
+        "duration": 2,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Move",
+        "duration": 1,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Equip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Unequip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Fire",
+        "duration": 0.6,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "FireRecover",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Reload",
+        "duration": 1.9,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Inspect",
+        "duration": 3,
+        "loop": false,
+        "fps": 60
+      }
+    ],
+    "game_config": {
+      "id": "shotgun",
+      "name": "战术霰弹枪",
+      "desc": "每次射击读取 2 个子弹配件。",
+      "slotCount": "6",
+      "magSize": "10",
+      "reloadTime": "1.9",
+      "fireInterval": "0.6",
+      "spreadBase": "2",
+      "castCount": "2",
+      "baseBullet": "pellet",
+      "color": "#c9a227",
+      "zoom": "60",
+      "model": "Modle_Gun_Grenade",
+      "starter": "1"
+    }
+  },
+  {
+    "id": "SW04_Cello",
+    "name": "大提琴",
+    "gun": "sniper",
+    "size": "便携琴体 X 0.36 × Y 0.18 × Z 0.92m；弓长 0.72m；尾针收起；琴颈沿 +Z、演奏面朝 +Y。",
+    "budget": [
+      16000,
+      8000,
+      3000
+    ],
+    "fire": "Fire",
+    "duration": 0.85,
+    "shape": "宽深下琴腹、长乌木颈、四根重弦、完整卷首、空心黄铜瞄准环、肩部支撑带和折叠尾针；不是简单放大小提琴。",
+    "parts": [
+      [
+        "Body",
+        "宽下琴腹与厚侧板、背板、木纹漆面",
+        "body"
+      ],
+      [
+        "Neck",
+        "长指板、卷首和4个调音轴",
+        "body"
+      ],
+      [
+        "Strings",
+        "4根弦、较高琴桥与尾板",
+        "body"
+      ],
+      [
+        "Bow",
+        "独立完整弓杆与弓毛",
+        "bow"
+      ],
+      [
+        "AlignmentRing",
+        "空心校音/瞄准环及实心支座",
+        "aim_ring"
+      ],
+      [
+        "Endpin",
+        "带铰点与锁扣的折叠尾针",
+        "endpin"
+      ],
+      [
+        "Harness",
+        "肩带锚点与低位支撑托",
+        "strap"
+      ],
+      [
+        "TuningPeg",
+        "一个活动调音轴",
+        "tuning_peg"
+      ]
+    ],
+    "rig": "root → body；body → bow、aim_ring、endpin、strap、tuning_peg。瞄准环不随弓摆动。",
+    "grip": "左手托琴颈、右手执弓；支撑带托琴腹。Socket_Aim 位于透空瞄准环中心，+Z 对准 Socket_Output。",
+    "action": "单次有重量的运弓，发射反馈从开头发生，随后恢复；不添加蓄力前摇。瞄准环稳定，琴弓不长期遮住环中心。",
+    "reload": "弓移开，转动调音轴，检查尾部锁扣并回到演奏位；尾针只在 Inspect 展示折叠，不在换弹时扎地。",
+    "checks": "完整长颈与卷首、琴腹厚度、肩带锚点；瞄准环真正透空。原概念板的 charge 文案不是现有机制，严禁新增按住蓄力。",
+    "clips": [
+      {
+        "state": "Idle",
+        "duration": 2,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Move",
+        "duration": 1,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Equip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Unequip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Fire",
+        "duration": 0.85,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "FireRecover",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Reload",
+        "duration": 2.2,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Inspect",
+        "duration": 3,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "AimIn",
+        "duration": 0.2,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "AimIdle",
+        "duration": 1,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "AimOut",
+        "duration": 0.2,
+        "loop": false,
+        "fps": 60
+      }
+    ],
+    "game_config": {
+      "id": "sniper",
+      "name": "精确射手步枪",
+      "desc": "零散布，右键高倍瞄准。",
+      "slotCount": "6",
+      "magSize": "9",
+      "reloadTime": "2.2",
+      "fireInterval": "0.85",
+      "spreadBase": "0",
+      "castCount": "1",
+      "baseBullet": "ap",
+      "color": "#4a6fa5",
+      "zoom": "28",
+      "model": "Modle_Gun_Single",
+      "starter": "0"
+    }
+  },
+  {
+    "id": "SW05_Harp",
+    "name": "竖琴",
+    "gun": "beam",
+    "size": "X 0.34 × Y 0.44 × Z 0.12m；框架位于 XY 平面，演奏面朝玩家（-Z），根节点发射方向 +Z。",
+    "budget": [
+      14000,
+      7000,
+      2500
+    ],
+    "fire": "FireLoop",
+    "duration": 0.3,
+    "shape": "闭合金色曲线三角框、午夜蓝镶边、7根弦、下共鸣箱、上调律梳和前臂托；不是弓箭或十字弓。",
+    "parts": [
+      [
+        "Frame",
+        "立柱、颈梁、下共鸣箱真实连接成闭合框",
+        "body"
+      ],
+      [
+        "Strings",
+        "严格7根弦，各有上部调音钉和下部锚点",
+        "string_01..07"
+      ],
+      [
+        "TuningComb",
+        "黄铜调律梳和旋转轴",
+        "tuning_comb"
+      ],
+      [
+        "Inlays",
+        "7个紫色低亮度镶嵌件，不能悬空",
+        "body"
+      ],
+      [
+        "ArmCradle",
+        "下缘软托、腕带和扣环",
+        "strap"
+      ]
+    ],
+    "rig": "root → body；body → tuning_comb、string_01..string_07、strap。弦端固定，中段小幅位移；不得缩放整个框架模拟弹奏。",
+    "grip": "左前臂支撑下缘托，右手扫拨琴弦；Socket_Finger_R 为拨弦接触；输出挂点位于上梁外侧朝 +Z。",
+    "action": "连续扫拨与琴弦分组微振动；.30s 对应5个基础发射间隔。闪烁交由引擎材质参数，FBX 不烘焙共享材质发光。",
+    "reload": "停止扫拨，调律梳转入维护位置再回位；末段试音，琴弦与框架全程连接，不拆开框架。",
+    "checks": "必须能逐根沿7根弦追踪上下锚点；检查共鸣箱厚度和前臂托。图上的连续光流只是表现提案，不能把现有高射速弹丸改成按帧伤害。",
+    "clips": [
+      {
+        "state": "Idle",
+        "duration": 2,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Move",
+        "duration": 1,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Equip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Unequip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "FireLoop",
+        "duration": 0.3,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "FireRecover",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Reload",
+        "duration": 2.0,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Inspect",
+        "duration": 3,
+        "loop": false,
+        "fps": 60
+      }
+    ],
+    "game_config": {
+      "id": "beam",
+      "name": "光束发射器",
+      "desc": "能量弹匣容量大，射速极高。",
+      "slotCount": "8",
+      "magSize": "80",
+      "reloadTime": "2",
+      "fireInterval": "0.06",
+      "spreadBase": "0.6",
+      "castCount": "1",
+      "baseBullet": "laser",
+      "color": "#c94fd8",
+      "zoom": "55",
+      "model": "Modle_Gun_Single",
+      "starter": "0"
+    }
+  },
+  {
+    "id": "SW06_Accordion",
+    "name": "手风琴",
+    "gun": "launcher",
+    "size": "半展开 X 0.50 × Y 0.27 × Z 0.19m；收合宽0.40m、最大展开宽0.64m；沿X拉合，控制面朝玩家（-Z）。",
+    "budget": [
+      18000,
+      9000,
+      3500
+    ],
+    "fire": "Fire",
+    "duration": 0.7,
+    "shape": "两个完整木质端箱、右键盘、左低音按钮、连续酒红风箱、手带与打孔乐谱卷；没有吹嘴或圆号喇叭口。",
+    "parts": [
+      [
+        "LeftHousing",
+        "左端箱、8个低音按钮、谱卷仓",
+        "housing_L"
+      ],
+      [
+        "RightHousing",
+        "右端箱、12白键+8黑键及真实键盘转轴",
+        "housing_R"
+      ],
+      [
+        "Bellows",
+        "10组完整折褶，顶底侧壁均连接到端箱",
+        "bellows_01..11"
+      ],
+      [
+        "PianoKeys",
+        "首版4组活动键，其余键固定",
+        "key_01..04"
+      ],
+      [
+        "BassButtons",
+        "2组活动按钮，小幅按压",
+        "bass_01 / bass_02"
+      ],
+      [
+        "ScoreRoll",
+        "可抽取谱卷和有内壁的仓",
+        "score_roll"
+      ],
+      [
+        "HandStraps",
+        "跟随各自端箱的左右手带与下承重肩带",
+        "strap_L / strap_R"
+      ],
+      [
+        "TuningLatch",
+        "上缘调律锁扣",
+        "tuning_latch"
+      ]
+    ],
+    "rig": "root → housing_L、housing_R、bellows_01..11；左箱下挂 bass_01/02、score_roll、strap_L；右箱下挂 key_01..04、strap_R、tuning_latch。风箱用折页旋转与平移，禁负缩放或单张胶皮拉伸。",
+    "grip": "左右握持挂点各跟随端箱，手指目标对应低音按钮/键盘；Socket_Output 独立挂在 root，位于风箱前上方、恒定朝 +Z，不随单边端箱摆动。",
+    "action": "半展开压合至0.40m，再回到半展开；前段压合体现一次重音，按键同步微动；各褶均匀开合、端箱不碰撞。",
+    "reload": "0–18%：停止拉合；18–42%：谱卷沿插槽抽出；42–62%：停留；62–82%：推入锁定；82–100%：短行程拉合试音并复位。",
+    "checks": "收合与最大展开时顶底侧壁都不能断开、穿插或凭空消失。12指配件槽，不是每次发射12枚弹；单次动作只承载现有一次 launcher 发射。",
+    "clips": [
+      {
+        "state": "Idle",
+        "duration": 2,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Move",
+        "duration": 1,
+        "loop": true,
+        "fps": 60
+      },
+      {
+        "state": "Equip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Unequip",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Fire",
+        "duration": 0.7,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "FireRecover",
+        "duration": 0.15,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Reload",
+        "duration": 2.4,
+        "loop": false,
+        "fps": 60
+      },
+      {
+        "state": "Inspect",
+        "duration": 3,
+        "loop": false,
+        "fps": 60
+      }
+    ],
+    "game_config": {
+      "id": "launcher",
+      "name": "多功能发射器",
+      "desc": "槽位最多，适合构筑复杂连锁。",
+      "slotCount": "12",
+      "magSize": "14",
+      "reloadTime": "2.4",
+      "fireInterval": "0.7",
+      "spreadBase": "1",
+      "castCount": "1",
+      "baseBullet": "grenade",
+      "color": "#5f8a5f",
+      "zoom": "55",
+      "model": "Modle_Gun_Grenade",
+      "starter": "0"
+    }
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "status": "pass_with_reference_limitations",
+  "scope": "6 modeling briefs and 12 generated reference images; no 3D model or Unity integration validation performed",
+  "checks": {
+    "imagesDecodedAndHashMatched": 12,
+    "copiedImageHashesMatched": 12,
+    "independentBriefs": 6,
+    "allRelativeImageLinksResolve": true,
+    "gameConfigMatches": 6,
+    "animationFrameCountsIntegral": true
+  },
+  "visualReview": "All 12 images reviewed: plain backgrounds, complete main silhouettes, no hands/scenery/HUD obstructing the subject. Structure sheets include intact principal views and intentionally cropped detail insets.",
+  "limitations": [
+    "AI multi-view references are not calibrated engineering drawings.",
+    "Tine/string/key/pleat counts and small attachments can vary between generated views. Model to explicit counts and dimensions in each brief.",
+    "First-version dimensions and mechanical details are proposed modeling specifications, not measurements of generated images."
+  ],
+  "images": [
+    {
+      "file": "SW01_Violin/reference_01_hero.png",
+      "sha256": "7a14714fe702a17506d15e56bb49d047a2385268d9795e641f3fd7921882265f",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB21QPCHMP6DR65VA1D3PA"
+    },
+    {
+      "file": "SW01_Violin/reference_02_structure.png",
+      "sha256": "567c010de8b8dc5968fcc81ec677aa1b42f264ce47d54a1b1365c1fe223b45b4",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB3B7WRE73CPBHTSAQDZB0"
+    },
+    {
+      "file": "SW02_Kalimba/reference_01_hero.png",
+      "sha256": "985106d9348159cbcc850bcd4d3e1cdd6c1d7b474b6fc8c9995178f704eee041",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB21TB6CDPQMPK3BY3FSNW"
+    },
+    {
+      "file": "SW02_Kalimba/reference_02_structure.png",
+      "sha256": "d49b61ea4da0d44f83f6feff98bd0723fbe8d78e87bf00c3342c9940284aeff6",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB3MGTTAF8NQF08JVX6Z7N"
+    },
+    {
+      "file": "SW03_FrameDrum/reference_01_hero.png",
+      "sha256": "8f697c3cdb8493533c8e3a3902c42b13a45c7321a7238c823067f8119ca44f1f",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB21VMSDA0V7V5Q4RVHAP1"
+    },
+    {
+      "file": "SW03_FrameDrum/reference_02_structure.png",
+      "sha256": "4726bb3d5d0bc321adce203ab5fb9087fe6e469b572a5bd87c9b6419a6f876c4",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB321TFGT5QKH3TNC29GFX"
+    },
+    {
+      "file": "SW04_Cello/reference_01_hero.png",
+      "sha256": "492eab2eb357e9a484f5e46e0bc0045c1c6d1f88465744951b8fa68b6e022367",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB4CJ1Y6NYE4D04NMPV10C"
+    },
+    {
+      "file": "SW04_Cello/reference_02_structure.png",
+      "sha256": "8b1e57b2f48cb781590013904fd032cbdbf1b7fe9b48ed2dc45abe0b93db52a8",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB5YY0FC48K14JP5MFKXDK"
+    },
+    {
+      "file": "SW05_Harp/reference_01_hero.png",
+      "sha256": "75b834cbf42aa3f825fbe0970d06bc2ffeb260252059a15fb0eec913f0647993",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB4MJTZ07SHNDZFX2C0TC2"
+    },
+    {
+      "file": "SW05_Harp/reference_02_structure.png",
+      "sha256": "faedfa2604b3ad27e03f3091393fe5ef1467863c7759c7e0aba49371745b9c17",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB67VGR7GAR5NSDMYQ8V1E"
+    },
+    {
+      "file": "SW06_Accordion/reference_01_hero.png",
+      "sha256": "a51274ef91b08a3cabff44a2541f0845878580738fa3c4bd40abb928ae980200",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB57DXP8PM79X4EZ8R6GX8"
+    },
+    {
+      "file": "SW06_Accordion/reference_02_structure.png",
+      "sha256": "462f2b51b6aa7cd308f5dd3bebbff937e05ba8e57f6fe2c56d26a527330a1c84",
+      "width": 1536,
+      "height": 1024,
+      "apiTaskId": "task_01M7SB6GTZC2J3HYNE9195D4QP"
+    }
+  ]
+}
